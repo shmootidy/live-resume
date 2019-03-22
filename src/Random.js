@@ -9,7 +9,7 @@ export default class Random extends Component {
     return (
       <div id="random">
         <span id="heart">❤</span>
-        <span id="random-msg">Super Jalopy Reindeer</span>
+        <span id="random-msg">Messy Hair • Tidy Code</span>
       </div>
     )
   }
