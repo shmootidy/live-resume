@@ -5,7 +5,7 @@ import './style/tabs.css'
 export default class Tabs extends Component {
   render() {
     return (
-      <div class="margin">
+      <div className="margin">
         <ul className="flex">
           <li className="tab1">Readme</li>
           <li className="tab2 not-selected">Projects</li>

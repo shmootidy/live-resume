@@ -3,7 +3,7 @@
 import React, { Component } from 'react'
 
 import Header from './Header'
-import Main from './Main'
+import Content from './Content'
 import Sidebar from './Sidebar'
 import Footer from './Footer'
 
@@ -14,7 +14,7 @@ export default class Resume extends Component {
     return (
       <div>
         <Header />
-        <Main />
+        <Content />
         <Sidebar />
         <Footer />
       </div>
