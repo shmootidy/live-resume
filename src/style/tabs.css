@@ -25,11 +25,17 @@ li {
   border-color: #FFCD3A;
   background-color: rgba(255, 205, 58, 0.2);
 }
+.tab1.not-selected:hover {
+  background-color: rgb(255, 249, 229);
+}
 
 .tab2 {
   color: #cb3837;
   border-color: #cb3837;
   background-color: rgba(203, 56, 55, 0.2);
+}
+.tab2.not-selected:hover {
+  background: rgb(250, 235, 235);
 }
 
 .tab3 {
@@ -37,11 +43,17 @@ li {
   border-color: #C836C3;
   background-color: rgba(200, 54, 195, 0.2);
 }
+.tab3.not-selected:hover {
+  background: rgb(250, 235, 249);
+}
 
 .tab4 {
   color: rgb(41, 0, 138);
   border-color: #8956FF;
   background-color: rgba(137, 86, 255, 0.2);
+}
+.tab4.not-selected:hover {
+  background: rgb(237, 229, 255);
 }
 
 .not-selected {
