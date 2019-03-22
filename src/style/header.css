@@ -26,4 +26,8 @@
   margin-right: 2rem;
   cursor: pointer;
   text-decoration: none;
+  font-weight: 400;
+  letter-spacing: 0.015625em;
+  line-height: 1.15;
+  white-space: nowrap;
 }
