@@ -1,0 +1,7 @@
+#heart {
+  color: black;
+  font-size: .875rem; /* don't forget to set rem! */
+  margin-right: 1rem;
+  padding-right: 1rem;
+  line-height: 1.25;
+}
