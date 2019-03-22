@@ -2,6 +2,8 @@
 
 import React, { Component } from 'react'
 
+import './style/random.css'
+
 export default class Random extends Component {
   render() {
     return (
