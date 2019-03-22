@@ -10,7 +10,7 @@ export default class Header extends Component {
     return (
       <div>
         <Random />
-        <div>shmoo-ritchie</div>
+        <div id="name">shmoo-ritchie</div>
         <div>Full-Stack Web Developer</div>
       </div>
     )

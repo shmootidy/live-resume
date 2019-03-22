@@ -1,0 +1,14 @@
+@font-face {
+  font-family: 'GubBlaBlo';
+    src: url('./fonts/GUBBLABLO.eot');
+    src: url('./fonts/GUBBLABLO.eot?#iefix') format('embedded-opentype'),
+          url('./fonts/GUBBLABLO.woff') format('woff'),
+          url('./fonts/GUBBLABLO.ttf') format('truetype'),
+          url('./fonts/GUBBLABLO.svg#gubblablo') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+#name {
+  font-family: 'GubBlaBlo';
+}
