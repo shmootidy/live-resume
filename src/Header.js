@@ -1,4 +1,4 @@
-// contains NameJobTitle, Tabs, npmRandom
+// contains NameJobTitle, Tabs, Random
 
 import React, { Component } from 'react'
 import Random from './Random'
