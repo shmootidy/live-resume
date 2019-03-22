@@ -1,6 +1,6 @@
 ul {
   margin: 0;
-  padding: 0 7.5rem;
+  padding: 0 8rem; /* must match #name-title padding in header.css */
   width: 100%;
   list-style-type: none;
   font-family: 'Source Sans Pro', sans-serif;
@@ -8,9 +8,12 @@ ul {
 
 li {
   border-bottom: 2px solid black;
-  padding: .9rem 2rem;
+  padding: .7rem 2rem;
   border-radius: 5px 5px 0 0;
   cursor: pointer;
+  display: block;
+  width: 185px;
+  text-align: center;
 }
 
 .tab1 {
