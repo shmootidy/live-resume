@@ -1,11 +1,16 @@
-// contains NameJobTitle, Summary, Tabs, npmRandom
+// contains NameJobTitle, Tabs, npmRandom
 
 import React, { Component } from 'react'
+import Random from './Random'
 
 export default class Header extends Component {
   render() {
     return (
-      <div>Header</div>
+      <div>
+        <Random />
+        <div>shmoo-ritchie</div>
+        <div>Full-Stack Web Developer</div>
+      </div>
     )
   }
 }

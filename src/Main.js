@@ -1,4 +1,4 @@
-// contains Experience, Education, Projects
+// contains Summary, Experience, Education, Projects
 
 import React, { Component } from 'react'
 
