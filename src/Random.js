@@ -7,7 +7,7 @@ export default class Random extends Component {
     return (
       <div>
         <span id="heart">❤</span>
-        <span>Super Jalopy Reindeer</span>
+        <span id="random">Super Jalopy Reindeer</span>
       </div>
     )
   }

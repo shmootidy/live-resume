@@ -4,4 +4,16 @@
   margin-right: 1rem;
   padding-right: 1rem;
   line-height: 1.25;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+#random {
+  font-family: 'Poppins';
+  color: black;
+  font-size: .875rem;
+  text-align: left;
+  margin-right: 2rem;
+  cursor: pointer;
+  text-decoration: none;
 }
