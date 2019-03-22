@@ -3,6 +3,7 @@
 import React, { Component } from 'react'
 import Random from './Random'
 import NameTitle from './NameTitle'
+import Tabs from './Tabs'
 
 import './style/header.css'
 
@@ -12,6 +13,7 @@ export default class Header extends Component {
       <div>
         <Random />
         <NameTitle />
+        <Tabs />
       </div>
     )
   }
