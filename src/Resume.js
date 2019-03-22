@@ -2,15 +2,19 @@
 
 import React, { Component } from 'react'
 import Header from './Header'
+import Main from './Main'
 import Sidebar from './Sidebar'
-// import
+import Footer from './Footer'
 
-class Resume extends Component {
+export default class Resume extends Component {
   render() {
     return (
-      <Header />
+      <div>
+        <Header />
+        <Main />
+        <Sidebar />
+        <Footer />
+      </div>
     )
   }
 }    
-
-export default Resume
