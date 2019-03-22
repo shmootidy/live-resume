@@ -5,9 +5,9 @@ import React, { Component } from 'react'
 export default class Random extends Component {
   render() {
     return (
-      <div>
+      <div id="random">
         <span id="heart">❤</span>
-        <span id="random">Super Jalopy Reindeer</span>
+        <span id="random-msg">Super Jalopy Reindeer</span>
       </div>
     )
   }
