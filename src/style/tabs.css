@@ -1,6 +1,10 @@
+.margin {
+  margin: 0 8rem; /* must match name-title padding */
+}
+
 ul {
   margin: 0;
-  padding: 0 8rem; /* must match #name-title padding in header.css */
+  padding: 0;
   width: 100%;
   list-style-type: none;
   font-family: 'Source Sans Pro', sans-serif;
@@ -12,7 +16,7 @@ li {
   border-radius: 5px 5px 0 0;
   cursor: pointer;
   display: block;
-  width: 185px;
+  width: 100%;
   text-align: center;
 }
 
