@@ -1,0 +1,23 @@
+ul {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  list-style-type: none;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+#tab1 {
+  color: rgb(158, 119, 0);
+}
+
+#tab2 {
+  color: #cb3837;
+}
+
+#tab3 {
+  color: rgb(120, 33, 117);
+}
+
+#tab4 {
+  color: rgb(41, 0, 138);
+}
