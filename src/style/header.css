@@ -24,7 +24,7 @@
   font-size: .875rem;
   text-align: left;
   margin-right: 2rem;
-  cursor: pointer;
+  cursor: pointer; /* set event to change random */
   text-decoration: none;
   font-weight: 400;
   letter-spacing: 0.015625em;
