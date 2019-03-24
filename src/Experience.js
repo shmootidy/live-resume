@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import Job from './Job'
 
 export default class Experience extends Component {
   constructor(props) {
@@ -33,8 +34,11 @@ export default class Experience extends Component {
     }
   }
   render() {
+    const jobs = this.state.jobs.map(job => {
+      return <Job job={job} key={job.title} />
+    })
     return (
-      <p>Experience</p>
+      <div>{jobs}</div>
     )
   }
 }
