@@ -5,6 +5,8 @@ import Contact from './Contact'
 import Skills from './Skills'
 import CurrentObsession from './CurrentObsession'
 
+import './style/sidebar.css'
+
 export default class Sidebar extends Component {
   render() {
     return (

@@ -1,0 +1,8 @@
+#sidebar {
+  padding: 1rem 0 0 4rem;
+}
+
+#sidebar-fixed {
+  position: sticky;
+  top: 40px;
+}

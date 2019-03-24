@@ -6,6 +6,8 @@ import Experience from './Experience'
 import Education from './Education'
 import Projects from './Projects'
 
+import './style/content.css'
+
 export default class Content extends Component {
   render() {
     return (
