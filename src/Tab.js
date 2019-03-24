@@ -1,7 +1,7 @@
 import React from 'react'
 
 const Tab = (props) => {
-  const tab = props.content.map((tab, index) => {
+  const tab = props.tabs.map((tab, index) => {
     let selectedClass = tab.active ? '' : 'not-selected'
     let tabClass = 'tab' + (index + 1).toString()
     let fullClass =  tabClass + ' ' + selectedClass

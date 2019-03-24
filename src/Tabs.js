@@ -11,18 +11,22 @@ export default class Tabs extends Component {
         {
           text: 'Readme',
           active: true,
+          href: '#summary',
         },
         { 
           text: 'Projects',
           active: false,
+          href: '#projects',
         }, 
         {
           text: 'Education',
           active: false,
+          href: '#education',
         },
         {
           text: 'Experience',
           active: false,
+          href: '#experience',
         }
       ]
     }
@@ -42,7 +46,7 @@ export default class Tabs extends Component {
   render() {
     return (
       <ul className="flex">
-        <Tab content={this.state.tabs} method={this.tabToggle}/>
+        <Tab tabs={this.state.tabs} method={this.tabToggle}/>
       </ul>
     )
   }
