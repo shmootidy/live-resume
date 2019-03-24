@@ -39,7 +39,7 @@ export default class Experience extends Component {
     })
     return (
       <div id="experience">
-        <h3 className="content-title">Experience</h3>
+        <h2 className="content-title">Experience</h2>
         {jobs}
       </div>
     )
