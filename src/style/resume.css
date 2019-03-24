@@ -1,7 +1,7 @@
 body {
   margin: 0;
   font-family: 'Source Sans Pro', sans-serif;
-  /* height: 8000px; */
+  color: rgba(0, 0, 0, .85);
 }
 
 .flex {
