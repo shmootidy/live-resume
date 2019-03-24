@@ -33,6 +33,7 @@ export default class Tabs extends Component {
     tabs[tabIndex].active = true
     tabs.map((tab, index) => {
       if (index !== tabIndex) tab.active = false
+      return null
     })
     this.setState( tabs )
   }

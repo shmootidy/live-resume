@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React from 'react'
 
 const Tab = (props) => {
   const tab = props.content.map((tab, index) => {
@@ -6,7 +6,10 @@ const Tab = (props) => {
     let tabClass = 'tab' + (index + 1).toString()
     let fullClass =  tabClass + ' ' + selectedClass
     let tabText = tab.text
-    return <li className={fullClass} onClick={() => props.method(index)}>{tabText}</li>
+    return <li 
+      key={tab.text}
+      className={fullClass} 
+      onClick={() => props.method(index)}>{tabText}</li>
   })
   return tab
 }
