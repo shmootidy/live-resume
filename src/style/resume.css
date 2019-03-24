@@ -11,6 +11,10 @@ body {
   flex-direction: column;
 }
 
+.sticky {
+  position: sticky;
+}
+
 .green {
   color: rgb(25, 169, 116);
   letter-spacing: 0;
