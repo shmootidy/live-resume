@@ -1,6 +1,7 @@
 body {
   margin: 0;
-  height: 8000px;
+  font-family: 'Source Sans Pro', sans-serif;
+  /* height: 8000px; */
 }
 
 .flex {

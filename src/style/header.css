@@ -21,10 +21,9 @@
 }
 
 #name {
-  font-family: 'Source Sans Pro';
   letter-spacing: -0.8px;
   white-space: nowrap;
-  /* overflow: hidden; */
+  overflow: hidden;
   text-overflow: ellipsis;
   font-size: 2rem;
   font-weight: 700;
