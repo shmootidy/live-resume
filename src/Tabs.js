@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
-import './style/tabs.css'
 import Tab from './Tab'
+
+import './style/tabs.css'
 
 export default class Tabs extends Component {
   constructor(props) {

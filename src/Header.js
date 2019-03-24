@@ -1,9 +1,8 @@
-// contains NameJobTitle, Tabs, Random
+// contains Random, NameTitle
 
 import React, { Component } from 'react'
 import Random from './Random'
 import NameTitle from './NameTitle'
-import Tabs from './Tabs'
 
 import './style/header.css'
 
@@ -12,8 +11,8 @@ export default class Header extends Component {
     return (
       <div>
         <Random />
+        <div id="initials">sr</div>
         <NameTitle />
-        <Tabs />
       </div>
     )
   }
