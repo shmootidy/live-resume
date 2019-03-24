@@ -1,3 +1,8 @@
+#header {
+  top: -120px;
+  background-color: white;
+}
+
 #initials {
   border-top: 1px solid rgba(0, 0, 0, 0.1);
   font-family: 'GubBlaBlo';
@@ -5,13 +10,14 @@
   padding: 2.6rem 2rem 1rem;
 }
 
-#header-sticky {
-  top: 100px;
+#ntt-sticky {
+  /* top: 0; */
 }
 
 #name-title-tabs {
   border-top: 1px solid rgba(0, 0, 0, 0.1);
   padding: 1.5rem 8rem; /* must match .margin */
+  /* top: 0; */
 }
 
 #title {
@@ -22,7 +28,7 @@
   font-family: 'Source Sans Pro';
   letter-spacing: -0.8px;
   white-space: nowrap;
-  overflow: hidden;
+  /* overflow: hidden; */
   text-overflow: ellipsis;
   font-size: 2rem;
   font-weight: 700;

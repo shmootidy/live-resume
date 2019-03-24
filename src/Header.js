@@ -9,7 +9,7 @@ import './style/header.css'
 export default class Header extends Component {
   render() {
     return (
-      <div>
+      <div id="header" className="sticky">
         <Random />
         <div id="initials">sr</div>
         <NameTitleTabs />

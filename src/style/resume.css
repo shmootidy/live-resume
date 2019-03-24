@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  height: 800px;
+  height: 8000px;
 }
 
 .flex {
@@ -13,6 +13,10 @@ body {
 
 .sticky {
   position: sticky;
+}
+
+.relative {
+  position: relative;
 }
 
 .green {
