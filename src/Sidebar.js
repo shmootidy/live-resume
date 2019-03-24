@@ -9,9 +9,11 @@ export default class Sidebar extends Component {
   render() {
     return (
       <div id="sidebar">
-        <Contact />
-        <CurrentObsession />
-        <Skills />
+        <div id="sidebar-fixed">
+          <Contact />
+          <CurrentObsession />
+          <Skills />
+        </div>
       </div>
     )
   }
