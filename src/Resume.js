@@ -14,8 +14,12 @@ export default class Resume extends Component {
     return (
       <div>
         <Header />
-        <Content />
-        <Sidebar />
+        <div className="margin">
+          <div className="flex">
+            <Content />
+            <Sidebar />
+          </div>
+        </div>
         <Footer />
       </div>
     )
