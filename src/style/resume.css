@@ -1,5 +1,6 @@
 body {
   margin: 0;
+  height: 800px;
 }
 
 .flex {
@@ -27,5 +28,6 @@ body {
 }
 
 #sidebar-fixed {
-  position: fixed;
+  position: sticky;
+  top: 40px;
 }
