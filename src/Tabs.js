@@ -41,11 +41,9 @@ export default class Tabs extends Component {
 
   render() {
     return (
-      <div className="margin">
-        <ul className="flex">
-          <Tab content={this.state.tabs} method={this.tabToggle}/>
-        </ul>
-      </div>
+      <ul className="flex">
+        <Tab content={this.state.tabs} method={this.tabToggle}/>
+      </ul>
     )
   }
 }

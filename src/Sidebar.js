@@ -11,7 +11,7 @@ export default class Sidebar extends Component {
   render() {
     return (
       <div id="sidebar">
-        <div id="sidebar-sticky" class="sticky">
+        <div id="sidebar-sticky" className="sticky">
           <Contact />
           <CurrentObsession />
           <Skills />
