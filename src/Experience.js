@@ -38,7 +38,10 @@ export default class Experience extends Component {
       return <Job job={job} key={job.title} />
     })
     return (
-      <div>{jobs}</div>
+      <div>
+        <h3 className="content-title">Experience</h3>
+        {jobs}
+      </div>
     )
   }
 }
