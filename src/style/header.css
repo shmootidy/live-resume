@@ -10,14 +10,10 @@
   padding: 2.6rem 2rem 1rem;
 }
 
-#ntt-sticky {
-  /* top: 0; */
-}
-
 #name-title-tabs {
   border-top: 1px solid rgba(0, 0, 0, 0.1);
-  padding: 1.5rem 8rem; /* must match .margin */
-  /* top: 0; */
+  padding: 1.5rem 8rem 0; /* sides must match .margin */
+  margin-bottom: 1.5rem;
 }
 
 #title {
