@@ -1,5 +1,6 @@
 .project:hover {
-  background: rgb(255, 249, 229);
+  background: linear-gradient(rgb(255, 249, 229), rgb(250, 235, 235), rgb(250, 235, 249), rgb(237, 229, 255));
+  /* rgb(255, 249, 229); */
   border-radius: 5px;
 }
 
