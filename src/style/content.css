@@ -10,3 +10,20 @@ content {
   padding-bottom: 8px;
   border-bottom: 1px solid rgba(0, 0, 0, .1);
 }
+
+#summary-content {
+  position: absolute;
+  top: 8rem;
+}
+#projects-content {
+  position: absolute;
+  top: 30rem;
+}
+#education-content {
+  position: absolute;
+  top: 142rem;
+}
+#experience-content {
+  position: absolute;
+  top: 147rem;
+}

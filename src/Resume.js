@@ -26,8 +26,9 @@ export default class Resume extends Component {
     }
     this.tabToggle = this.tabToggle.bind(this)
   }
-  
+
   tabToggle(tabIndex) {
+    // change which tag is active
     let tabs = this.state.tabs
     tabs[tabIndex].active = true
     tabs.map((tab, index) => {
@@ -35,6 +36,10 @@ export default class Resume extends Component {
       return null
     })
     this.setState( tabs )
+    // tabIndex: 0 - Readme; 1 - Projects; 2 - Education; 3 - Experience
+    const contentAnchors = ['summary-content', 'projects-content', 'education-content', 'experience-content']
+    const selectedContent = document.getElementById(contentAnchors[tabIndex])
+    selectedContent.scrollIntoView()
   }
 
   render() {

@@ -71,3 +71,7 @@ li {
     font-weight: normal;
     font-style: normal;
 }
+
+#footer {
+  height: 800px;
+}

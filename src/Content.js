@@ -13,10 +13,10 @@ const Content = (props) => {
 
   return (
     <content>
-      <Summary />
-      <Projects />
-      <Education />
-      <Experience />
+      <div id="summary-content"></div><Summary />
+      <div id="projects-content"></div><Projects />
+      <div id="education-content"></div><Education />
+      <div id="experience-content"></div><Experience />
     </content>
   )
   // switch(activeTab) {
