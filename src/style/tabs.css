@@ -10,6 +10,7 @@ ul {
 }
 
 li.tab {
+  border-bottom: 2px solid black;
   width: 100%;
 }
 

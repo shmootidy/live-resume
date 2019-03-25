@@ -8,21 +8,24 @@ const Projects = (props) => {
       description: 'Life Skills Education Game',
       dateCompleted: 'Mar \'19',
       myContribution: ['Game logistics', 'Scoring algorithms', 'Conceptual design', 'Workflow'],
-      techStack: ['CraftyJS', 'MongoDB', 'Express/Axios']
+      techStack: ['CraftyJS', 'MongoDB', 'Express/Axios'],
+      url: 'https://github.com/shmootidy/DONT-PANIC'
     },
     {
       title: 'Chatty App',
       description: 'Real-time Chat App',
       dateCompleted: 'Feb \'19',
       myContribution: ['Set up local server', 'Style elements', 'Modularize data structure'],
-      techStack: ['React', 'Websocket']
+      techStack: ['React', 'Websocket'],
+      url: 'https://github.com/shmootidy/Chatty'
     },
     {
       title: 'Smart Cat',
       description: 'Auto-Categorizing To-Do List',
       dateCompleted: 'Feb \'19',
       myContribution: ['Wikipedia API requests', 'Categorizing algorithm', 'Custom styling', 'AJAX requests & Knex calls'],
-      techStack: ['AJAX', 'CSS / SASS', 'Knex', 'PostgreSQL']
+      techStack: ['AJAX', 'CSS / SASS', 'Knex', 'PostgreSQL'],
+      url: 'https://github.com/shmootidy/Smart-Cat'
     },
     // {
     //   title: 'Tweeter',
