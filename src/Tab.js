@@ -7,9 +7,11 @@ const Tab = (props) => {
     let fullClass =  tabClass + ' ' + selectedClass
     let tabText = tab.text
     return <li 
-      key={tab.text}
-      className={fullClass} 
-      onClick={() => props.method(index)}>{tabText}</li>
+        key={tab.text}
+        className={fullClass} 
+        onClick={() => props.method(index)}>
+        {tabText}
+      </li>
   })
   return tab
 }

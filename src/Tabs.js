@@ -11,22 +11,18 @@ export default class Tabs extends Component {
         {
           text: 'Readme',
           active: true,
-          href: '#summary',
         },
         { 
           text: 'Projects',
           active: false,
-          href: '#projects',
         }, 
         {
           text: 'Education',
           active: false,
-          href: '#education',
         },
         {
           text: 'Experience',
           active: false,
-          href: '#experience',
         }
       ]
     }
