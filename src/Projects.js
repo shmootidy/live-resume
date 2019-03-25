@@ -7,8 +7,13 @@ const Projects = (props) => {
       title: 'Don\'t Panic',
       subtitle: 'Life Skills Education Game',
       dateCompleted: 'Mar 2019',
-      myContribution: ['Game logistics', 'Scoring algorithms', 'Conceptual design', 'Workflow'],
-      // myContribution: ['team leadership', 'game logistics', 'scoring algorithms', 'conceptual design', 'group workflow', 'refactoring', 'debugging'],
+      // description: {
+      //   plain: 'This educational prototype lets users experience the ',
+      //   highlight: 'cumulative effects of habits on mental health',
+      //   plain: ''
+      // }
+      description: ['Game logistics', 'Scoring algorithms', 'Conceptual design', 'Workflow'],
+      // description: ['team leadership', 'game logistics', 'scoring algorithms', 'conceptual design', 'group workflow', 'refactoring', 'debugging'],
       techStack: {
         framework: 'crafty.js',
         database: 'mongodb',
@@ -22,7 +27,7 @@ const Projects = (props) => {
       title: 'Chatty App',
       subtitle: 'Real-time Chat App',
       dateCompleted: 'Feb 2019',
-      myContribution: ['Set up local server', 'Style elements', 'Modularize data structure'],
+      description: ['Set up local server', 'Style elements', 'Modularize data structure'],
       techStack: {
         framework: 'react',
         routing: 'websocket',
@@ -35,7 +40,7 @@ const Projects = (props) => {
       title: 'Smart Cat',
       subtitle: 'Auto-Categorizing To-Do List',
       dateCompleted: 'Feb 2019',
-      myContribution: ['Wikipedia API requests', 'Categorizing algorithm', 'Custom styling', 'AJAX requests & Knex calls'],
+      description: ['Wikipedia API requests', 'Categorizing algorithm', 'Custom styling', 'AJAX requests & Knex calls'],
       techStack: {
         database: 'postgreSQL / knex',
         styling: 'CSS / SASS',
@@ -48,14 +53,14 @@ const Projects = (props) => {
     //   title: 'Tweeter',
     //   subtitle: 'Twitter Clone',
     //   dateCompleted: 'Jan \'19',
-    //   myContribution: ['Full-stack development project', 'Styling and DOM manipulation', 'Mongo requests'],
+    //   description: ['Full-stack development project', 'Styling and DOM manipulation', 'Mongo requests'],
     //   techStack: ['jQuery', 'ExpressJS', 'BodyParser', 'MongoDB', 'Nodemon']
     // },
     // {
     //   title: 'Tiny App',
     //   subtitle: 'URL-Shortening App',
     //   dateCompleted: 'Jan \'19',
-    //   myContribution: ['Text-shortening algorithm', 'Connect links', 'Create EJS partials', 'Protect user data with cookies and encryption software'],
+    //   description: ['Text-shortening algorithm', 'Connect links', 'Create EJS partials', 'Protect user data with cookies and encryption software'],
     //   techStack: ['NodeJS', 'EJS', 'bcrypt', 'cookie-session']
     // }
   ]

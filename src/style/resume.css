@@ -48,6 +48,15 @@ li {
   letter-spacing: 0;
 }
 
+.highlight {
+  font-family: 'Fira Mono';
+  font-size: .875rem;
+  line-height: 1.15;
+  padding: .125rem .25rem;
+  border-radius: 3px;
+  background: rgba(0, 0, 0, .2);
+}
+
 @font-face {
   font-family: 'GubBlaBlo';
     src: url('./fonts/GUBBLABLO.eot');
