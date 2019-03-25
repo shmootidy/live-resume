@@ -1,5 +1,8 @@
 .project:hover {
-  background-color: rgba(0, 0, 0, 0.1);
+  /* background-color: rgba(0, 0, 0, 0.1); */
+  /* font-weight: bold; */
+  /* border: 1px solid rgba(0, 0, 0, 0.1); */
+  /* box-shadow: .5rem .5rem 2px 1px rgba(0, 0, 0, .1); */
 }
 
 .project-title {
@@ -9,7 +12,7 @@
 .project-subtitle {
   font-family: 'Fira Mono';
   font-size: .875rem;
-  background: #f7f7f7;
+  /* background: #f7f7f7; */
   border-radius: 2px;
 }
 

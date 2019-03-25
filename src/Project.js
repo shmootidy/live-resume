@@ -7,8 +7,8 @@ const Project = (props) => {
     <li className="project" key={project.title}>
       <a href={project.url} target="_blank" rel="noopener noreferrer">
         <div className="project-title">{project.title.toUpperCase()}</div>
-        <img className="project-img" src={require('./assets/' + project.img)} alt={project.img} />
         <div className="project-subtitle">{project.description} • {project.dateCompleted}</div>
+        <img className="project-img" src={require('./assets/' + project.img)} alt={project.img} />
         <div className="flex space-between">
           <div className="project-contribution">{project.myContribution.map(point => <div key={point}>{point}</div>)}</div>
           <div className="project-tech">{project.techStack.map(tech => <div key={tech}>{tech}</div>)}</div>
