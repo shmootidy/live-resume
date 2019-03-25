@@ -10,6 +10,15 @@ a {
   display: block;
 }
 
+li {
+  border-bottom: 2px solid black;
+  padding: .7rem 2rem;
+  border-radius: 5px 5px 0 0;
+  cursor: pointer;
+  display: block;
+  text-align: center;
+}
+
 .flex {
   display: flex;
 }
