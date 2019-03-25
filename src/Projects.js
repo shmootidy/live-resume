@@ -8,7 +8,11 @@ const Projects = (props) => {
       description: 'Life Skills Education Game',
       dateCompleted: 'Mar 2019',
       myContribution: ['Game logistics', 'Scoring algorithms', 'Conceptual design', 'Workflow'],
-      techStack: ['CraftyJS', 'MongoDB', 'Express/Axios'],
+      techStack: {
+        framework: 'crafty.js',
+        database: 'mongodb',
+        routing: 'express / axios',
+      },
       url: 'https://github.com/shmootidy/DONT-PANIC',
       img: 'dont-panic.gif',
       award: true,
@@ -18,7 +22,10 @@ const Projects = (props) => {
       description: 'Real-time Chat App',
       dateCompleted: 'Feb 2019',
       myContribution: ['Set up local server', 'Style elements', 'Modularize data structure'],
-      techStack: ['React', 'Websocket'],
+      techStack: {
+        framework: 'react',
+        routing: 'websocket',
+      },
       url: 'https://github.com/shmootidy/Chatty',
       img: 'chatty.png'
     },
@@ -27,7 +34,11 @@ const Projects = (props) => {
       description: 'Auto-Categorizing To-Do List',
       dateCompleted: 'Feb 2019',
       myContribution: ['Wikipedia API requests', 'Categorizing algorithm', 'Custom styling', 'AJAX requests & Knex calls'],
-      techStack: ['AJAX', 'CSS / SASS', 'Knex', 'PostgreSQL'],
+      techStack: {
+        database: 'postgreSQL',
+        DOM: 'SASS',
+        routing: 'AJAX / knex', 
+      },
       url: 'https://github.com/shmootidy/Smart-Cat',
       img: 'smart-cat.jpg'
     },

@@ -25,5 +25,23 @@
 }
 
 .project-tech {
-  text-align: right;
+  font-family: 'Source Sans Pro';
+  font-size: .875rem;
+  color: white;
+  margin: .5rem;
+}
+
+.tech {
+  padding: 2px 5px;
+  text-shadow: 0 1px rgba(0, 0, 0, 0.3);
+}
+
+.tech-key {
+  background: #5B5B5B;
+  border-radius: 3px 0 0 3px;
+}
+
+.tech-value {
+  background: #04C504;
+  border-radius: 0 3px 3px 0;
 }
