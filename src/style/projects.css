@@ -1,0 +1,19 @@
+.project:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.project-title {
+  font-size: 1.5rem;
+}
+
+.project-description {
+  font-style: italic;
+}
+
+.project-contribution {
+  text-align: left;
+}
+
+.project-tech {
+  text-align: right;
+}
