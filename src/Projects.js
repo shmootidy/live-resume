@@ -24,20 +24,20 @@ const Projects = (props) => {
       myContribution: ['Wikipedia API requests', 'Categorizing algorithm', 'Custom styling', 'AJAX requests & Knex calls'],
       techStack: ['AJAX', 'CSS / SASS', 'Knex', 'PostgreSQL']
     },
-    {
-      title: 'Tweeter',
-      description: 'Twitter Clone',
-      dateCompleted: 'Jan \'19',
-      myContribution: ['Full-stack development project', 'Styling and DOM manipulation', 'Mongo requests'],
-      techStack: ['jQuery', 'ExpressJS', 'BodyParser', 'MongoDB', 'Nodemon']
-    },
-    {
-      title: 'Tiny App',
-      description: 'URL-Shortening App',
-      dateCompleted: 'Jan \'19',
-      myContribution: ['Text-shortening algorithm', 'Connect links', 'Create EJS partials', 'Protect user data with cookies and encryption software'],
-      techStack: ['NodeJS', 'EJS', 'bcrypt', 'cookie-session']
-    }
+    // {
+    //   title: 'Tweeter',
+    //   description: 'Twitter Clone',
+    //   dateCompleted: 'Jan \'19',
+    //   myContribution: ['Full-stack development project', 'Styling and DOM manipulation', 'Mongo requests'],
+    //   techStack: ['jQuery', 'ExpressJS', 'BodyParser', 'MongoDB', 'Nodemon']
+    // },
+    // {
+    //   title: 'Tiny App',
+    //   description: 'URL-Shortening App',
+    //   dateCompleted: 'Jan \'19',
+    //   myContribution: ['Text-shortening algorithm', 'Connect links', 'Create EJS partials', 'Protect user data with cookies and encryption software'],
+    //   techStack: ['NodeJS', 'EJS', 'bcrypt', 'cookie-session']
+    // }
   ]
 
   return (
