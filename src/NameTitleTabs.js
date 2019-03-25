@@ -1,6 +1,6 @@
 // contains Tabs 
 
-import React, { Component } from 'react'
+import React from 'react'
 import Tabs from './Tabs'
 
 const NameTitleTabs = (props) => {

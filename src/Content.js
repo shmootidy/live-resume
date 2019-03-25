@@ -1,6 +1,6 @@
 // contains Summary, Experience, Education, Projects
 
-import React, { Component } from 'react'
+import React from 'react'
 import Summary from './Summary'
 import Experience from './Experience'
 import Education from './Education'
@@ -9,7 +9,7 @@ import Projects from './Projects'
 import './style/content.css'
 
 const Content = (props) => {
-  let activeTab = props.tabs.filter(content => content.active === true)[0].text
+  // let activeTab = props.tabs.filter(content => content.active === true)[0].text
 
   return (
     <content>

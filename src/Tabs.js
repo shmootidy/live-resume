@@ -1,6 +1,6 @@
 // contains Tab
 
-import React, { Component } from 'react'
+import React from 'react'
 import Tab from './Tab'
 
 import './style/tabs.css'
