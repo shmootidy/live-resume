@@ -5,11 +5,22 @@ export default class Contact extends Component {
     return (
       <div id="contact">
         <div className="sidebar-subtitle">contact</div>
-        <div className="contact-bar" id="phone">> 604.616.0247
+        <div className="contact-bar" id="phone">
+          <img className="contact-icon absolute" src={require("./assets/phone.png")} />
+          <span className="contact-info">> 604.616.0247</span>
         </div>
-        <div className="contact-bar" id="email">> shmooritchie@gmail.com</div>
-        <div className="contact-bar" id="linked-in">> in/shmoo-ritchie</div>
-        <div className="contact-bar" id="github">> /shmootidy</div>
+        <div className="contact-bar" id="email">
+          <img className="contact-icon absolute" src={require("./assets/email.png")} />
+          <span className="contact-info">> shmooritchie@gmail.com</span>
+        </div>
+        <div className="contact-bar" id="linked-in">
+          <img className="contact-icon absolute" src={require("./assets/linked-in.png")} />
+          <span className="contact-info">> in/shmoo-ritchie</span>
+        </div>
+        <div className="contact-bar" id="github">
+          <img className="contact-icon absolute" src={require("./assets/github.png")} />
+          <span className="contact-info">> /shmootidy</span>
+        </div>
       </div>
     )
   }

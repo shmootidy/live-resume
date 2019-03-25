@@ -20,6 +20,10 @@ body {
   position: relative;
 }
 
+.absolute {
+  position: absolute;
+}
+
 .green {
   color: rgb(25, 169, 116);
   letter-spacing: 0;
