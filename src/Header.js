@@ -10,7 +10,7 @@ const Header = (props) => {
   return (
     <div id="header" className="sticky">
       <Random />
-      <div id="initials">sr</div>
+      <div id="initials">shmoo</div>
       <NameTitleTabs tabs={props.tabs} tabToggle={props.tabToggle} />
     </div>
   )
