@@ -30,8 +30,10 @@ export default class Header extends Component {
       <Random />
       <div className="header-section flex">
         <span><span id="shmoo">shmoo</span></span>
+        <span id="shmoo-search">{this.state.message[this.state.iteration]}</span>
+        <span id="shmoo-button" onClick={this.loopMessage}>Click</span>
         {/* <img id="shmoo-img" src={require("./assets/shmoo.jpg")} /> */}
-        <ShmooSearch data={this.state} loopMessage={this.loopMessage}/>
+        {/* <ShmooSearch data={this.state} loopMessage={this.loopMessage}/> */}
       </div>
       <NameTitleTabs tabs={this.props.tabs} tabToggle={this.props.tabToggle} />
     </div>
