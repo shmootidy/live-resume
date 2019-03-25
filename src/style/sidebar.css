@@ -7,7 +7,7 @@
 }
 
 .sidebar-subtitle {
-  margin-top: .5rem;
+  margin: .5rem 0;
   padding-top: .5rem;
   color: rgba(0, 0, 0, .5);
 }
@@ -32,4 +32,28 @@
 .contact-icon {
   height: 1.5rem;
   left: .4rem;
+}
+
+.current-obsession {
+  border-bottom: 2px solid #EAD4FF;
+  /* darker purple: #9826FF or maybe #8956FF */
+  /* more specifically: rgb(137, 86, 255) and rgba(137, 86, 255, .2) */
+}
+
+.obsession-text {
+  text-align: left;
+  font-size: 1.25rem;
+  padding: 0 .5rem .25rem 0;
+  color: rgba(0, 0, 0, .8);
+  font-family: 'Source Sans Pro';
+  font-weight: 600;
+}
+
+#obsession-svg {
+  /* margin-bottom: -5px; */
+  position: relative;
+  top: 5px;
+  right: -42px;
+  width: 165px;
+  height: 40px;
 }

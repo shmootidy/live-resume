@@ -8,12 +8,19 @@ import CurrentObsession from './CurrentObsession'
 import './style/sidebar.css'
 
 export default class Sidebar extends Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      currentObsession: 'React'
+    }
+  }
+
   render() {
     return (
       <div id="sidebar">
         <div id="sidebar-sticky" className="sticky">
           <Contact />
-          <CurrentObsession />
+          <CurrentObsession currentObsession={this.state.currentObsession} />
           <Skills />
         </div>
       </div>
