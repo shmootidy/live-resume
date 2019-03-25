@@ -26,6 +26,7 @@ const Projects = (props) => {
       techStack: {
         framework: 'react',
         routing: 'websocket',
+        // there's more! what about the API?
       },
       url: 'https://github.com/shmootidy/Chatty',
       img: 'chatty.png'
@@ -36,9 +37,9 @@ const Projects = (props) => {
       dateCompleted: 'Feb 2019',
       myContribution: ['Wikipedia API requests', 'Categorizing algorithm', 'Custom styling', 'AJAX requests & Knex calls'],
       techStack: {
-        database: 'postgreSQL',
-        DOM: 'SASS',
-        routing: 'AJAX / knex', 
+        database: 'postgreSQL / knex',
+        styling: 'CSS / SASS',
+        routing: 'AJAX', 
       },
       url: 'https://github.com/shmootidy/Smart-Cat',
       img: 'smart-cat.jpg'
