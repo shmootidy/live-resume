@@ -8,22 +8,14 @@ export default class Tabs extends Component {
     super(props)
     this.state = {
       tabs: [
-        {
-          text: 'Readme',
-          active: true,
-        },
-        { 
-          text: 'Projects',
-          active: false,
-        }, 
-        {
-          text: 'Education',
-          active: false,
-        },
-        {
-          text: 'Experience',
-          active: false,
-        }
+        { text: 'Readme',
+          active: true },
+        { text: 'Projects',
+          active: false }, 
+        { text: 'Education',
+          active: false },
+        { text: 'Experience',
+          active: false }
       ]
     }
     this.tabToggle = this.tabToggle.bind(this)
