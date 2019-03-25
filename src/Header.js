@@ -11,7 +11,7 @@ export default class Header extends Component {
     super(props)
     this.state = {
       iteration: 0,
-      message: ['What is a Shmoo anyway?', 'Shmoo is my name! Well...my real name is Susannah...', '\'Shmoo\' comes from the comic, Lil Abner.', 'My parents gave me the nickname as a baby, and it stuck.']
+      message: ['What is a Shmoo anyway?', 'Shmoo is my name! Well...my real name is Susannah...', '\'Shmoo\' comes from the comic, Lil Abner.', 'My parents gave me the nickname as a baby, and it stuck.', 'Want to know more? Click here.']
     }
     this.loopMessage = this.loopMessage.bind(this)
   }
@@ -28,9 +28,9 @@ export default class Header extends Component {
     <div id="header" className="sticky">
       <Random />
       <div className="header-section flex">
-        <span><span id="shmoo">shmoo</span></span>
-        <span id="shmoo-search">{this.state.message[this.state.iteration]}</span>
-        <span id="shmoo-button" onClick={this.loopMessage}>Click</span>
+        <span><span id="shmoo-npm">shmoo</span></span>
+        <a href="https://hubpages.com/entertainment/The-History-of-the-Shmoo" target="_blank" rel="noopener noreferrer" id="shmoo-search">{this.state.message[this.state.iteration]}</a>
+        <div id="shmoo-button" onClick={this.loopMessage}>Click</div>
         {/* <img id="shmoo-img" src={require("./assets/shmoo.jpg")} /> */}
       </div>
       <NameTitleTabs tabs={this.props.tabs} tabToggle={this.props.tabToggle} />
@@ -38,4 +38,6 @@ export default class Header extends Component {
     )
   }
 }
-// http://lil-abner.com/the-shmoo/
+// alternate links:
+  // http://lil-abner.com/the-shmoo/
+  // https://en.wikipedia.org/wiki/Shmoo
