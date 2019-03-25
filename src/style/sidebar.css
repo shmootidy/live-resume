@@ -11,3 +11,24 @@
   padding-top: .5rem;
   color: rgba(0, 0, 0, .5);
 }
+
+.contact-bar {
+  border: 1px #e8e8e8 solid;
+  border-left: 6px #e1e1e1 solid;
+  font-family: "Fira Mono";
+  letter-spacing: 0px;
+  padding: 5px 1rem;
+  max-width: 95vw;
+  line-height: 24px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: .875rem;
+  margin-bottom: 1rem;
+  color: rgba(0, 0, 0, .8);
+  border-radius: .25rem;
+}
+
+.st1 {
+  fill: rgba(0, 0, 0, .5);
+}
