@@ -68,7 +68,7 @@ const Projects = (props) => {
   return (
     <div id="projects">
       <h2 className="content-title">Projects</h2>
-      <ul><Project projects={projects} /></ul>
+      <Project projects={projects} />
     </div>
   )
 }

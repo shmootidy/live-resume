@@ -5,8 +5,12 @@
   /* box-shadow: .5rem .5rem 2px 1px rgba(0, 0, 0, .1); */
 }
 
+.project {
+  text-align: left;
+}
+
 .project-title {
-  font-size: 1.5rem;
+  margin-bottom: 0;
 }
 
 .project-subtitle {
@@ -17,7 +21,7 @@
 }
 
 .project-img {
-  max-width: 60%;
+  max-width: 90%;
 }
 
 .project-description {
@@ -28,7 +32,7 @@
   font-family: 'Source Sans Pro';
   font-size: .875rem;
   color: white;
-  margin: .5rem;
+  margin-right: 1rem;
 }
 
 .tech {
