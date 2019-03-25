@@ -43,7 +43,7 @@ const Projects = (props) => {
   return (
     <div id="projects">
       <h2 className="content-title">Projects</h2>
-      <Project />
+      <ul><Project projects={projects} /></ul>
     </div>
   )
 }
