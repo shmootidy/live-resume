@@ -6,14 +6,14 @@ import NameTitleTabs from './NameTitleTabs'
 
 import './style/header.css'
 
-export default class Header extends Component {
-  render() {
-    return (
-      <div id="header" className="sticky">
-        <Random />
-        <div id="initials">sr</div>
-        <NameTitleTabs />
-      </div>
-    )
-  }
+const Header = (props) => {
+  return (
+    <div id="header" className="sticky">
+      <Random />
+      <div id="initials">sr</div>
+      <NameTitleTabs tabs={props.tabs} tabToggle={props.tabToggle} />
+    </div>
+  )
 }
+
+export default Header

@@ -9,7 +9,7 @@ const Tab = (props) => {
     return <li 
         key={tab.text}
         className={fullClass} 
-        onClick={() => props.method(index)}>
+        onClick={() => props.tabToggle(index)}>
         {tabText}
       </li>
   })
