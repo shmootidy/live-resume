@@ -6,8 +6,17 @@
   font-size: 1.5rem;
 }
 
-.project-description {
+.project-subtitle {
+  font-family: 'Fira Mono';
+  font-size: .875rem;
+}
+
+/* .project-description {
   font-style: italic;
+} */
+
+.project-img {
+  max-width: 60%;
 }
 
 .project-contribution {

@@ -7,13 +7,12 @@ const Project = (props) => {
     <li className="project" key={project.title}>
       <a href={project.url} target="_blank" rel="noopener noreferrer">
         <div className="project-title">{project.title.toUpperCase()}</div>
-        <div className="project-description">{project.description}</div>
-        <img src={require('./assets/' + project.doc)} />
+        <img className="project-img" src={require('./assets/' + project.img)} />
+        <div className="project-subtitle">{project.description} • {project.dateCompleted}</div>
         <div className="flex space-between">
           <div className="project-contribution">{project.myContribution.map(point => <div>{point}</div>)}</div>
           <div className="project-tech">{project.techStack.map(tech => <div>{tech}</div>)}</div>
         </div>
-        <div className="project-date">{project.dateCompleted}</div>
       </a>
     </li>
     )
