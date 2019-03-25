@@ -9,11 +9,9 @@
 .project-subtitle {
   font-family: 'Fira Mono';
   font-size: .875rem;
+  background: #f7f7f7;
+  border-radius: 2px;
 }
-
-/* .project-description {
-  font-style: italic;
-} */
 
 .project-img {
   max-width: 60%;
