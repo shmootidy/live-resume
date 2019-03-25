@@ -8,6 +8,7 @@ const Projects = (props) => {
       description: 'Life Skills Education Game',
       dateCompleted: 'Mar 2019',
       myContribution: ['Game logistics', 'Scoring algorithms', 'Conceptual design', 'Workflow'],
+      // myContribution: ['team leadership', 'game logistics', 'scoring algorithms', 'conceptual design', 'group workflow', 'refactoring', 'debugging'],
       techStack: {
         framework: 'crafty.js',
         database: 'mongodb',
