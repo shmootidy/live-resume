@@ -25,6 +25,23 @@ export default class Resume extends Component {
       ]
     }
     this.tabToggle = this.tabToggle.bind(this)
+    this.handleScroll = this.handleScroll.bind(this)
+  }
+
+  handleScroll() {
+    console.log(window.scrollY)
+    // summary - 140
+    // projects - 485
+    // education - 2270
+    // experience - 2350
+  }
+
+  componentDidMount() {
+    window.addEventListener('scroll', this.handleScroll);
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('scroll', this.handleScroll);
   }
 
   tabToggle(tabIndex) {
@@ -37,14 +54,16 @@ export default class Resume extends Component {
     })
     this.setState( tabs )
     // tabIndex: 0 - Readme; 1 - Projects; 2 - Education; 3 - Experience
-    const contentAnchors = ['summary-content', 'projects-content', 'education-content', 'experience-content']
-    const selectedContent = document.getElementById(contentAnchors[tabIndex])
-    selectedContent.scrollIntoView()
+    // const contentAnchors = ['summary-content', 'projects-content', 'education-content', 'experience-content']
+    // const selectedContent = document.getElementById(contentAnchors[tabIndex])
+    // selectedContent.scrollIntoView()
+    const scrollLocations = [140, 485, 2270, 2350]
+    window.scrollTo(0, scrollLocations[tabIndex])
   }
 
   render() {
     return (
-      <div>
+      <div onScroll={this.handleScroll}>
         <Header tabs={this.state.tabs} tabToggle={this.tabToggle} />
         <div className="margin">
           <div className="flex">
