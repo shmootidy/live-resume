@@ -1,6 +1,6 @@
 #random {
   border-width: 3px 0 0;
-  border-top-style: solid;
+  border-style: solid;
   border-image: linear-gradient(139deg, #fb8817, #ff4b01, #c12127, #e02aff) 3;
   padding: 1rem 2.25rem;
   margin: 0 auto;
