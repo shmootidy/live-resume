@@ -10,7 +10,8 @@ const Projects = (props) => {
       myContribution: ['Game logistics', 'Scoring algorithms', 'Conceptual design', 'Workflow'],
       techStack: ['CraftyJS', 'MongoDB', 'Express/Axios'],
       url: 'https://github.com/shmootidy/DONT-PANIC',
-      img: 'dont-panic.gif'
+      img: 'dont-panic.gif',
+      award: true,
     },
     {
       title: 'Chatty App',
