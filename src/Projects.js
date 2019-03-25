@@ -9,7 +9,8 @@ const Projects = (props) => {
       dateCompleted: 'Mar \'19',
       myContribution: ['Game logistics', 'Scoring algorithms', 'Conceptual design', 'Workflow'],
       techStack: ['CraftyJS', 'MongoDB', 'Express/Axios'],
-      url: 'https://github.com/shmootidy/DONT-PANIC'
+      url: 'https://github.com/shmootidy/DONT-PANIC',
+      doc: 'dont-panic.gif'
     },
     {
       title: 'Chatty App',
@@ -17,7 +18,8 @@ const Projects = (props) => {
       dateCompleted: 'Feb \'19',
       myContribution: ['Set up local server', 'Style elements', 'Modularize data structure'],
       techStack: ['React', 'Websocket'],
-      url: 'https://github.com/shmootidy/Chatty'
+      url: 'https://github.com/shmootidy/Chatty',
+      doc: 'chatty.png'
     },
     {
       title: 'Smart Cat',
@@ -25,7 +27,8 @@ const Projects = (props) => {
       dateCompleted: 'Feb \'19',
       myContribution: ['Wikipedia API requests', 'Categorizing algorithm', 'Custom styling', 'AJAX requests & Knex calls'],
       techStack: ['AJAX', 'CSS / SASS', 'Knex', 'PostgreSQL'],
-      url: 'https://github.com/shmootidy/Smart-Cat'
+      url: 'https://github.com/shmootidy/Smart-Cat',
+      doc: 'smart-cat.jpg'
     },
     // {
     //   title: 'Tweeter',
