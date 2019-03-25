@@ -19,17 +19,15 @@
 #shmoo-search {
   font-family: 'Fira Mono';
   color: rgba(0, 0, 0, 0.8);
-  padding: .875rem;
+  /* padding: .875rem; */
   padding-left: 1.5rem;
   margin-left: 1rem;
   font-size: .875rem;
   font-weight: lighter;
   background-color: rgba(0, 0, 0, 0.05);
   width: 100%;
-}
-
-#shmoo-img {
-  height: 3rem;
+  height: 40px;
+  line-height: 2.875;
 }
 
 #shmoo-button {
@@ -39,12 +37,17 @@
   font-stretch: 100%;
   font-weight: lighter;
   font-weight: 400;
-  line-height: 1rem;
+  line-height: 2.875;
   background: rgb(251, 62, 68);
-  /* background: #fb3e44; */
   color: white;
-  padding: .5rem 1rem;
+  /* padding: .5rem 1rem; */
+  padding: 0 1rem;
   cursor: pointer;
+  height: 40px;
+}
+
+#shmoo-img {
+  height: 3rem;
 }
 
 #name-title-tabs {
