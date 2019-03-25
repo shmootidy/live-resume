@@ -5,12 +5,39 @@
 
 .header-section {
   border-top: 1px solid rgba(0, 0, 0, 0.1);
-  padding: 2.6rem 2rem 1rem;
+  padding: .5rem 2rem;
+  align-items: center;
 }
 
 #shmoo {
   font-family: 'GubBlaBlo';
   font-size: 3rem;
+  position: relative;
+  top: 6px;
+}
+
+#shmoo-search {
+  font-family: 'Fira Mono';
+  color: rgba(0, 0, 0, 0.8);
+  padding: .875rem;
+  padding-left: 1.5rem;
+  margin-left: 1rem;
+  font-size: .875rem;
+  font-weight: lighter;
+  background-color: rgba(0, 0, 0, 0.05);
+  width: 100%;
+}
+
+#shmoo-img {
+  height: 3rem;
+}
+
+#shmoo-button {
+  font-size: .875rem;
+  font-weight: lighter;
+  background: rgb(251, 62, 68);
+  padding: .875rem;
+  color: white;
 }
 
 #name-title-tabs {
