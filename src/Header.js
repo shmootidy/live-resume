@@ -3,7 +3,6 @@
 import React, { Component } from 'react'
 import Random from './Random'
 import NameTitleTabs from './NameTitleTabs'
-import ShmooSearch from './ShmooSearch'
 
 import './style/header.css'
 
@@ -33,7 +32,6 @@ export default class Header extends Component {
         <span id="shmoo-search">{this.state.message[this.state.iteration]}</span>
         <span id="shmoo-button" onClick={this.loopMessage}>Click</span>
         {/* <img id="shmoo-img" src={require("./assets/shmoo.jpg")} /> */}
-        {/* <ShmooSearch data={this.state} loopMessage={this.loopMessage}/> */}
       </div>
       <NameTitleTabs tabs={this.props.tabs} tabToggle={this.props.tabToggle} />
     </div>
