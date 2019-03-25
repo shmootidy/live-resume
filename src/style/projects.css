@@ -1,16 +1,11 @@
 .project:hover {
   background: rgb(255, 249, 229);
   border-radius: 5px;
-  /* background-color: rgba(0, 0, 0, 0.1);  */
-  /* font-weight: bold; */
-  /* border: 1px solid rgba(0, 0, 0, 0.1); */
-  /* box-shadow: .5rem .5rem 2px 1px rgba(0, 0, 0, .1); */
 }
 
 .project {
   text-align: left;
   padding: 1rem;
-  /* line-height: 1.15; */
 }
 
 .project-title {
