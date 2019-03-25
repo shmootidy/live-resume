@@ -9,7 +9,7 @@
   align-items: center;
 }
 
-#shmoo {
+#shmoo-npm {
   font-family: 'GubBlaBlo';
   font-size: 3rem;
   position: relative;
@@ -33,11 +33,18 @@
 }
 
 #shmoo-button {
+  font-family: 'Poppins';
+  letter-spacing: 0.3px;
   font-size: .875rem;
+  font-stretch: 100%;
   font-weight: lighter;
+  font-weight: 400;
+  line-height: 1rem;
   background: rgb(251, 62, 68);
-  padding: .875rem;
+  /* background: #fb3e44; */
   color: white;
+  padding: .5rem 1rem;
+  cursor: pointer;
 }
 
 #name-title-tabs {
