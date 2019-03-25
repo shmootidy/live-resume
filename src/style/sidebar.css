@@ -5,3 +5,9 @@
 #sidebar-sticky {
   top: 190px;
 }
+
+.sidebar-subtitle {
+  margin-top: .5rem;
+  padding-top: .5rem;
+  color: rgba(0, 0, 0, .5);
+}
