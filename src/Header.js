@@ -19,6 +19,8 @@ export default class Header extends Component {
 
   loopMessage() {
     let iteration = this.state.iteration + 1
+    let maxLoop = this.state.message.length - 1
+    if (iteration > maxLoop) iteration = 0
     this.setState({ iteration })
   }
 
