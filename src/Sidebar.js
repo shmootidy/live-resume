@@ -11,7 +11,8 @@ export default class Sidebar extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      currentObsession: 'React'
+      currentObsession: 'React',
+      // skills: 
     }
   }
 
