@@ -27,6 +27,10 @@ li {
   flex-direction: column;
 }
 
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
 .space-between {
   justify-content: space-between;
 }
