@@ -43,7 +43,7 @@ export default class Resume extends Component {
         <Header tabs={this.state.tabs} tabToggle={this.tabToggle} />
         <div className="margin">
           <div className="flex">
-            <Content />
+            <Content tabs={this.state.tabs} />
             <Sidebar />
           </div>
         </div>
