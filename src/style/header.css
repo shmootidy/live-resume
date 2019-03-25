@@ -19,7 +19,6 @@
 #shmoo-search {
   font-family: 'Fira Mono';
   color: rgba(0, 0, 0, 0.8);
-  /* padding: .875rem; */
   padding-left: 1.5rem;
   margin-left: 1rem;
   font-size: .875rem;
@@ -40,7 +39,6 @@
   line-height: 2.875;
   background: rgb(251, 62, 68);
   color: white;
-  /* padding: .5rem 1rem; */
   padding: 0 1rem;
   cursor: pointer;
   height: 40px;
