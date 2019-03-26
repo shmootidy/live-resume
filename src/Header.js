@@ -11,7 +11,7 @@ export default class Header extends Component {
     super(props)
     this.state = {
       iteration: 0,
-      message: ['What is a Shmoo anyway?', 'Shmoo is my name! Well...my real name is Susannah...', '\'Shmoo\' comes from the comic, Lil Abner.', 'My parents gave me the nickname as a baby, and it stuck.', 'Want to know more? Click here.']
+      message: ['What is a Shmoo anyway?', 'Shmoo is my name! Well...my real name is Susannah...', '\'Shmoo\' comes from the comic, Lil Abner.', 'My parents gave me the nickname as a baby, and it stuck.', 'Click here to learn more about the Shmoo!']
     }
     this.loopMessage = this.loopMessage.bind(this)
   }
