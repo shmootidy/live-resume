@@ -36,8 +36,8 @@ export default class Resume extends Component {
     this.tabToggle = this.tabToggle.bind(this)
     this.scrollToContent = this.scrollToContent.bind(this)
     this.handleScroll = this.handleScroll.bind(this) 
-    this.getContentPositions = this.getContentPositions.bind(this)
-    this.getHeaderHeight = this.getHeaderHeight.bind(this)
+    this.setContentPositions = this.setContentPositions.bind(this)
+    this.setHeaderHeight = this.setHeaderHeight.bind(this)
   }
 
   // for testing only
@@ -80,8 +80,8 @@ export default class Resume extends Component {
     if (window.scrollY >= experiencePosition) this.tabToggle(3)
   }
 
-    // setState on content positions 1ms after componentDidMount
-  getContentPositions() {
+  // setState on content positions 1ms after componentDidMount
+  setContentPositions() {
     const headerHeight = this.state.headerHeight
     const summary = document.getElementById('summary').offsetTop
     const projects = document.getElementById('projects').offsetTop
@@ -96,15 +96,15 @@ export default class Resume extends Component {
     // this.setState( tabs ) // it seems this is adding another object to state... what is with my syntax?
   }
 
-  getHeaderHeight() {
+  setHeaderHeight() {
     const headerHeight = document.getElementById('name-title-tabs').offsetHeight
     this.setState({ headerHeight })
     console.log(this.state)
   }
 
   componentDidMount() {
-    setTimeout(this.getHeaderHeight, 100) // this one must fire first
-    setTimeout(this.getContentPositions, 100) // delay IS necessary for accuracy
+    setTimeout(this.setHeaderHeight, 100) // delay is necessary for accuracy
+    setTimeout(this.setContentPositions, 100) // fire setHeaderHeight before setContentPositions to ensure position is set with headerHeight
     window.addEventListener('scroll', this.handleScroll);
   }
 
