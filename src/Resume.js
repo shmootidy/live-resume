@@ -38,6 +38,7 @@ export default class Resume extends Component {
     this.handleScroll = this.handleScroll.bind(this) 
     this.setContentPositions = this.setContentPositions.bind(this)
     this.setHeaderHeight = this.setHeaderHeight.bind(this)
+    this.handleResize = this.handleResize.bind(this)
   }
 
   // for testing only
@@ -103,10 +104,16 @@ export default class Resume extends Component {
     console.log(this.state)
   }
 
+  handleResize() {
+    this.setHeaderHeight()
+    this.setContentPositions()
+  }
+
   componentDidMount() {
     setTimeout(this.setHeaderHeight, 100) // delay is necessary for accuracy
     setTimeout(this.setContentPositions, 100) // fire setHeaderHeight before setContentPositions to ensure position is set with headerHeight
-    window.addEventListener('scroll', this.handleScroll);
+    window.addEventListener('scroll', this.handleScroll)
+    window.addEventListener('resize', this.handleResize)
   }
 
   componentWillUnmount() {
