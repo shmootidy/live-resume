@@ -90,6 +90,7 @@ export default class Resume extends Component {
 
     // setState on content positions 1ms after componentDidMount
   getContentPositions() {
+    const headerHeight = this.state.headerHeight
     const summary = document.getElementById('summary').offsetTop
     const projects = document.getElementById('projects').offsetTop
     const education = document.getElementById('education').offsetTop
@@ -98,20 +99,22 @@ export default class Resume extends Component {
 
     let tabs = this.state.tabs
     currentPositions.forEach((position, i) => {
-      tabs[i].position = position
+      tabs[i].position = position - headerHeight
     })
     // this.setState( tabs ) // it seems this is adding another object to state... what is with my syntax?
   }
 
   getHeaderHeight() {
     const headerHeight = document.getElementById('header').offsetHeight
+    // const nameTitleTags = document.getElementById('name-title-tags')
+    // console.log(nameTitleTags)
     this.setState({ headerHeight })
     console.log(this.state)
   }
 
   componentDidMount() {
+    setTimeout(this.getHeaderHeight, 100) // this one must fire first
     setTimeout(this.getContentPositions, 100) // delay IS necessary for accuracy
-    setTimeout(this.getHeaderHeight, 100)
     window.addEventListener('scroll', this.handleScroll);
   }
 
