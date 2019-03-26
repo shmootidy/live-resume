@@ -15,13 +15,21 @@ export default class Resume extends Component {
     this.state = {
       tabs: [
         { text: 'Readme',
-          active: true },
+          active: true,
+          position: null
+         },
         { text: 'Projects',
-          active: false }, 
+          active: false,
+          position: null
+         }, 
         { text: 'Education',
-          active: false },
+          active: false,
+          position: null
+         },
         { text: 'Experience',
-          active: false }
+          active: false,
+          position: null
+         }
       ]
     }
     this.tabToggle = this.tabToggle.bind(this)
@@ -29,7 +37,19 @@ export default class Resume extends Component {
   }
 
   handleScroll() {
-    console.log(window.scrollY)
+    if (window.scrollY >= 0 && window.scrollY < 485) {
+      this.tabToggle(0)
+    } 
+    if (window.scrollY >= 485 && window.scrollY < 2270) {
+      this.tabToggle(1)
+    }
+    if (window.scrollY >= 2270 && window.scrollY < 2350) {
+      this.tabToggle(2)
+    }
+    if (window.scrollY >= 2350) {
+      this.tabToggle(3)
+    }
+    // console.log(window.scrollY)
     // summary - 140
     // projects - 485
     // education - 2270
@@ -38,6 +58,20 @@ export default class Resume extends Component {
 
   componentDidMount() {
     window.addEventListener('scroll', this.handleScroll);
+    const summary = document.getElementById('summary').getBoundingClientRect().top
+    const projects = document.getElementById('projects').getBoundingClientRect().top
+    const education = document.getElementById('education').getBoundingClientRect().top
+    const experience = document.getElementById('experience').getBoundingClientRect().top
+    const positions = [summary, projects, education, experience]
+    let contentPosition = this.state.tabs.map((tab, i) => {
+      tab.position = positions[i]
+    })
+    this.setState(contentPosition)
+    console.log(this.state)
+    // console.log('summary', summary.top)
+    // console.log('projects', projects.top)
+    // console.log('education', education.top)
+    // console.log('experience', experience.top)
   }
 
   componentWillUnmount() {
@@ -57,6 +91,11 @@ export default class Resume extends Component {
     // const contentAnchors = ['summary-content', 'projects-content', 'education-content', 'experience-content']
     // const selectedContent = document.getElementById(contentAnchors[tabIndex])
     // selectedContent.scrollIntoView()
+
+    // this.scrollToContent(tabIndex) // commented out to avoid recursion
+  }
+
+  scrollToContent(tabIndex) {
     const scrollLocations = [140, 485, 2270, 2350]
     window.scrollTo(0, scrollLocations[tabIndex])
   }
