@@ -37,6 +37,17 @@ export default class Resume extends Component {
     this.handleScroll = this.handleScroll.bind(this) // for testing
   }
 
+  // toggle active tag - change its color - THAT'S IT!
+  tabToggle(tabIndex) {
+    let tabs = this.state.tabs
+    tabs[tabIndex].active = true
+    tabs.map((tab, index) => {
+      if (index !== tabIndex) tab.active = false
+      return null
+    })
+    this.setState( tabs )
+  }
+  
   // for testing only
   handleClick(e) {
     // console.log(`screenY: ${e.screenY}`)
@@ -67,6 +78,13 @@ export default class Resume extends Component {
     // console.log(window.scrollY)
   }
 
+
+
+  // scrollToContent(tabIndex) {
+  //   const scrollLocations = [140, 485, 2270, 2350]
+  //   window.scrollTo(0, scrollLocations[tabIndex])
+  // }
+
   componentDidMount() {
     // set position of each content element in state
     // console.log(document.getElementById('summary')) // clientHeight; clientTop; offsetHeight; offsetTop; scrollHeight; scrollTop; 
@@ -89,22 +107,6 @@ export default class Resume extends Component {
   componentWillUnmount() {
     window.removeEventListener('scroll', this.handleScroll);
   }
-
-  // toggle active tag - change its color - THAT'S IT!
-  tabToggle(tabIndex) {
-    let tabs = this.state.tabs
-    tabs[tabIndex].active = true
-    tabs.map((tab, index) => {
-      if (index !== tabIndex) tab.active = false
-      return null
-    })
-    this.setState( tabs )
-  }
-
-  // scrollToContent(tabIndex) {
-  //   const scrollLocations = [140, 485, 2270, 2350]
-  //   window.scrollTo(0, scrollLocations[tabIndex])
-  // }
 
   render() {
     return (
