@@ -13,7 +13,6 @@ export default class Resume extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      // headerHeight: 0,
       tabs: [
         { text: 'Readme',
           active: true,
@@ -34,7 +33,14 @@ export default class Resume extends Component {
       ]
     }
     this.tabToggle = this.tabToggle.bind(this)
-    this.handleScroll = this.handleScroll.bind(this) // for testing
+    this.scrollToContent = this.scrollToContent.bind(this)
+    this.handleScroll = this.handleScroll.bind(this) 
+  }
+
+  // for testing only
+  handleClick(e) {
+    console.log(`pageY: ${e.pageY}`)
+    console.log('offsetTop of #education:', document.getElementById('education').offsetTop) // 1573
   }
 
   // toggle active tag - change its color - THAT'S IT!
@@ -47,61 +53,20 @@ export default class Resume extends Component {
     })
     this.setState( tabs )
   }
-  
-  // for testing only
-  handleClick(e) {
-    // console.log(`screenY: ${e.screenY}`)
-    // console.log(`clientY: ${e.clientY}`)
-    console.log(`pageY: ${e.pageY}`)
-    console.log('offsetTop of #education:', document.getElementById('education').offsetTop) // 1573
 
-    // console.log(e)
-  }
-
-  handleScroll() {
-    // const summaryPosition = this.state.tabs[0].position
-    const projectsPosition = this.state.tabs[1].position
-    const educationPosition = this.state.tabs[2].position
-    const experiencePosition = this.state.tabs[3].position
-    if (window.scrollY < projectsPosition) {
-      this.tabToggle(0)
-    } 
-    if (window.scrollY >= projectsPosition && window.scrollY < educationPosition) {
-      this.tabToggle(1)
+    // scroll to appropriate place when tab is clicked
+    scrollToContent(tabIndex) {
+      //
     }
-    if (window.scrollY >= educationPosition && window.scrollY < experiencePosition) {
-      this.tabToggle(2)
+
+    // trigger tabToggle at certain scroll points
+    handleScroll() {
+      //
     }
-    if (window.scrollY >= experiencePosition) {
-      this.tabToggle(3)
-    }
-    // console.log(window.scrollY)
-  }
 
-
-
-  // scrollToContent(tabIndex) {
-  //   const scrollLocations = [140, 485, 2270, 2350]
-  //   window.scrollTo(0, scrollLocations[tabIndex])
-  // }
 
   componentDidMount() {
-    // set position of each content element in state
-    // console.log(document.getElementById('summary')) // clientHeight; clientTop; offsetHeight; offsetTop; scrollHeight; scrollTop; 
-    
-    // let contentPosition = this.state.tabs.map((tab, i) => {
-    //   tab.position = positions[i]
-    //   return null
-    // })
-    // this.setState(contentPosition)
-    // console.log('component has mounted:', this.state.tabs.map(tab => tab.text + ': ' + tab.position))
-    // console.log('header:', this.state.headerHeight)
-    
     window.addEventListener('scroll', this.handleScroll);
-    // console.log('summary', summary.top)
-    // console.log('projects', projects.top)
-    // console.log('education', education.top)
-    // console.log('experience', experience.top)
   }
 
   componentWillUnmount() {
@@ -114,7 +79,7 @@ export default class Resume extends Component {
         <Header tabs={this.state.tabs} tabToggle={this.tabToggle} />
         <div className="margin">
           <div className="flex">
-            <Content tabs={this.state.tabs} />
+            <Content tabs={this.state.tabs} scrollToContent={this.scrollToContent} />
             <Sidebar />
           </div>
         </div>
@@ -123,3 +88,45 @@ export default class Resume extends Component {
     )
   }
 }    
+
+/* GARBAGE DUMP OF POTENTIALLY REUSABLE CODE: 
+
+  // set position of each content element in state
+    // console.log(document.getElementById('summary')) // clientHeight; clientTop; offsetHeight; offsetTop; scrollHeight; scrollTop; 
+    
+    // let contentPosition = this.state.tabs.map((tab, i) => {
+    //   tab.position = positions[i]
+    //   return null
+    // })
+    // this.setState(contentPosition)
+    // console.log('component has mounted:', this.state.tabs.map(tab => tab.text + ': ' + tab.position))
+    // console.log('header:', this.state.headerHeight)
+    
+    // // const summaryPosition = this.state.tabs[0].position
+    // const projectsPosition = this.state.tabs[1].position
+    // const educationPosition = this.state.tabs[2].position
+    // const experiencePosition = this.state.tabs[3].position
+    // if (window.scrollY < projectsPosition) {
+    //   this.tabToggle(0)
+    // } 
+    // if (window.scrollY >= projectsPosition && window.scrollY < educationPosition) {
+    //   this.tabToggle(1)
+    // }
+    // if (window.scrollY >= educationPosition && window.scrollY < experiencePosition) {
+    //   this.tabToggle(2)
+    // }
+    // if (window.scrollY >= experiencePosition) {
+    //   this.tabToggle(3)
+    // }
+    // console.log(window.scrollY)
+
+
+  //   const scrollLocations = [140, 485, 2270, 2350]
+  //   window.scrollTo(0, scrollLocations[tabIndex])
+
+  // console.log(`screenY: ${e.screenY}`)
+    // console.log(`clientY: ${e.clientY}`)
+    // console.log('summary', summary.top)
+    // console.log('projects', projects.top)
+    // console.log('education', education.top)
+    // console.log('experience', experience.top) */
