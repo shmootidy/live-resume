@@ -74,18 +74,10 @@ export default class Resume extends Component {
     const projectsPosition = this.state.tabs[1].position
     const educationPosition = this.state.tabs[2].position
     const experiencePosition = this.state.tabs[3].position
-    if (window.scrollY < projectsPosition) {
-      this.tabToggle(0)
-    } 
-    if (window.scrollY >= projectsPosition && window.scrollY < educationPosition) {
-      this.tabToggle(1)
-    }
-    if (window.scrollY >= educationPosition && window.scrollY < experiencePosition) {
-      this.tabToggle(2)
-    }
-    if (window.scrollY >= experiencePosition) {
-      this.tabToggle(3)
-    }
+    if (window.scrollY < projectsPosition) this.tabToggle(0)
+    if (window.scrollY >= projectsPosition && window.scrollY < educationPosition) this.tabToggle(1)
+    if (window.scrollY >= educationPosition && window.scrollY < experiencePosition) this.tabToggle(2)
+    if (window.scrollY >= experiencePosition) this.tabToggle(3)
   }
 
     // setState on content positions 1ms after componentDidMount
