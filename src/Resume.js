@@ -13,6 +13,7 @@ export default class Resume extends Component {
   constructor(props) {
     super(props)
     this.state = {
+      // headerHeight: 0,
       tabs: [
         { text: 'Readme',
           active: true,
@@ -33,41 +34,52 @@ export default class Resume extends Component {
       ]
     }
     this.tabToggle = this.tabToggle.bind(this)
-    this.handleScroll = this.handleScroll.bind(this)
+    this.handleScroll = this.handleScroll.bind(this) // for testing
+  }
+
+  // for testing only
+  handleClick(e) {
+    // console.log(`screenY: ${e.screenY}`)
+    // console.log(`clientY: ${e.clientY}`)
+    console.log(`pageY: ${e.pageY}`)
+    console.log('offsetTop of #education:', document.getElementById('education').offsetTop) // 1573
+
+    // console.log(e)
   }
 
   handleScroll() {
-    if (window.scrollY >= 0 && window.scrollY < 485) {
+    // const summaryPosition = this.state.tabs[0].position
+    const projectsPosition = this.state.tabs[1].position
+    const educationPosition = this.state.tabs[2].position
+    const experiencePosition = this.state.tabs[3].position
+    if (window.scrollY < projectsPosition) {
       this.tabToggle(0)
     } 
-    if (window.scrollY >= 485 && window.scrollY < 2270) {
+    if (window.scrollY >= projectsPosition && window.scrollY < educationPosition) {
       this.tabToggle(1)
     }
-    if (window.scrollY >= 2270 && window.scrollY < 2350) {
+    if (window.scrollY >= educationPosition && window.scrollY < experiencePosition) {
       this.tabToggle(2)
     }
-    if (window.scrollY >= 2350) {
+    if (window.scrollY >= experiencePosition) {
       this.tabToggle(3)
     }
     // console.log(window.scrollY)
-    // summary - 140
-    // projects - 485
-    // education - 2270
-    // experience - 2350
   }
 
   componentDidMount() {
+    // set position of each content element in state
+    // console.log(document.getElementById('summary')) // clientHeight; clientTop; offsetHeight; offsetTop; scrollHeight; scrollTop; 
+    
+    // let contentPosition = this.state.tabs.map((tab, i) => {
+    //   tab.position = positions[i]
+    //   return null
+    // })
+    // this.setState(contentPosition)
+    // console.log('component has mounted:', this.state.tabs.map(tab => tab.text + ': ' + tab.position))
+    // console.log('header:', this.state.headerHeight)
+    
     window.addEventListener('scroll', this.handleScroll);
-    const summary = document.getElementById('summary').getBoundingClientRect().top
-    const projects = document.getElementById('projects').getBoundingClientRect().top
-    const education = document.getElementById('education').getBoundingClientRect().top
-    const experience = document.getElementById('experience').getBoundingClientRect().top
-    const positions = [summary, projects, education, experience]
-    let contentPosition = this.state.tabs.map((tab, i) => {
-      tab.position = positions[i]
-    })
-    this.setState(contentPosition)
-    console.log(this.state)
     // console.log('summary', summary.top)
     // console.log('projects', projects.top)
     // console.log('education', education.top)
@@ -95,14 +107,14 @@ export default class Resume extends Component {
     // this.scrollToContent(tabIndex) // commented out to avoid recursion
   }
 
-  scrollToContent(tabIndex) {
-    const scrollLocations = [140, 485, 2270, 2350]
-    window.scrollTo(0, scrollLocations[tabIndex])
-  }
+  // scrollToContent(tabIndex) {
+  //   const scrollLocations = [140, 485, 2270, 2350]
+  //   window.scrollTo(0, scrollLocations[tabIndex])
+  // }
 
   render() {
     return (
-      <div onScroll={this.handleScroll}>
+      <div onScroll={this.handleScroll} onClick={this.handleClick}>
         <Header tabs={this.state.tabs} tabToggle={this.tabToggle} />
         <div className="margin">
           <div className="flex">
