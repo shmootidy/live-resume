@@ -13,6 +13,7 @@ export default class Resume extends Component {
   constructor(props) {
     super(props)
     this.state = {
+      headerHeight: null,
       tabs: [
         { text: 'Readme',
           active: true,
@@ -36,11 +37,13 @@ export default class Resume extends Component {
     this.scrollToContent = this.scrollToContent.bind(this)
     this.handleScroll = this.handleScroll.bind(this) 
     this.getContentPositions = this.getContentPositions.bind(this)
+    this.getHeaderHeight = this.getHeaderHeight.bind(this)
   }
 
   // for testing only
   handleClick(e) {
     // console.log(`pageY: ${e.pageY}`)
+    console.log('headerHeight:', document.getElementById('header').offsetHeight) 
     console.log('summary:', document.getElementById('summary').offsetTop) 
     console.log('projects:', document.getElementById('projects').offsetTop) 
     console.log('education:', document.getElementById('education').offsetTop) 
@@ -58,51 +61,57 @@ export default class Resume extends Component {
     this.setState( tabs )
   }
 
-    // scroll to appropriate place when tab is clicked
-    // it may be better for the Content component to hold this method, bc I'd like for hitting the tabs to NOT scroll the top div. 
-    // But first, I'll see if i can get the scrollToC and handleScroll to work as desired without getting all recursive on me
-    scrollToContent(tabIndex) { 
-      //
-    }
+  // scroll to appropriate place when tab is clicked
+  // it may be better for the Content component to hold this method, bc I'd like for hitting the tabs to NOT scroll the top div. 
+  // But first, I'll see if i can get the scrollToC and handleScroll to work as desired without getting all recursive on me
+  scrollToContent(tabIndex) { 
+    //
+  }
 
-    // trigger tabToggle at certain scroll points
-    handleScroll() {
-      // const summaryPosition = this.state.tabs[0].position
-      const projectsPosition = this.state.tabs[1].position
-      const educationPosition = this.state.tabs[2].position
-      const experiencePosition = this.state.tabs[3].position
-      if (window.scrollY < projectsPosition) {
-        this.tabToggle(0)
-      } 
-      if (window.scrollY >= projectsPosition && window.scrollY < educationPosition) {
-        this.tabToggle(1)
-      }
-      if (window.scrollY >= educationPosition && window.scrollY < experiencePosition) {
-        this.tabToggle(2)
-      }
-      if (window.scrollY >= experiencePosition) {
-        this.tabToggle(3)
-      }
+  // trigger tabToggle at certain scroll points
+  handleScroll() {
+    // const summaryPosition = this.state.tabs[0].position
+    const projectsPosition = this.state.tabs[1].position
+    const educationPosition = this.state.tabs[2].position
+    const experiencePosition = this.state.tabs[3].position
+    if (window.scrollY < projectsPosition) {
+      this.tabToggle(0)
+    } 
+    if (window.scrollY >= projectsPosition && window.scrollY < educationPosition) {
+      this.tabToggle(1)
     }
+    if (window.scrollY >= educationPosition && window.scrollY < experiencePosition) {
+      this.tabToggle(2)
+    }
+    if (window.scrollY >= experiencePosition) {
+      this.tabToggle(3)
+    }
+  }
 
     // setState on content positions 1ms after componentDidMount
-    getContentPositions() {
-      const summary = document.getElementById('summary').offsetTop
-      const projects = document.getElementById('projects').offsetTop
-      const education = document.getElementById('education').offsetTop
-      const experience = document.getElementById('experience').offsetTop
-      const currentPositions = [summary, projects, education, experience]
+  getContentPositions() {
+    const summary = document.getElementById('summary').offsetTop
+    const projects = document.getElementById('projects').offsetTop
+    const education = document.getElementById('education').offsetTop
+    const experience = document.getElementById('experience').offsetTop
+    const currentPositions = [summary, projects, education, experience]
 
-      let tabs = this.state.tabs
-      currentPositions.forEach((position, i) => {
-        tabs[i].position = position
-      })
-      // this.setState( tabs ) // it seems this is adding another object to state... what is with my syntax?
-      console.log(this.state)
-    }
+    let tabs = this.state.tabs
+    currentPositions.forEach((position, i) => {
+      tabs[i].position = position
+    })
+    // this.setState( tabs ) // it seems this is adding another object to state... what is with my syntax?
+  }
+
+  getHeaderHeight() {
+    const headerHeight = document.getElementById('header').offsetHeight
+    this.setState({ headerHeight })
+    console.log(this.state)
+  }
 
   componentDidMount() {
     setTimeout(this.getContentPositions, 100) // delay IS necessary for accuracy
+    setTimeout(this.getHeaderHeight, 100)
     window.addEventListener('scroll', this.handleScroll);
   }
 
