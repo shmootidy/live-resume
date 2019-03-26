@@ -7,12 +7,17 @@ const Projects = (props) => {
       title: 'Don\'t Panic',
       subtitle: 'Life Skills Education Game',
       dateCompleted: 'Mar 2019',
+      description: {
+        leadership: 'led a team of 3 developers from conception to presention in 13 days',
+        teamwork: 'collaboratively developed the concept, gameplay, design, and construction of the game with the team',
+        'design & development': ['conceptualized and implemented the scoring logic', 'integrated disparate features', 'fixed repository conflicts', 'consistently refactored code to maximize reusability and simplify debugging']
+      },
       // description: {
       //   plain: 'This educational prototype lets users experience the ',
       //   highlight: 'cumulative effects of habits on mental health',
       //   plain: ''
       // }
-      description: ['Game logistics', 'Scoring algorithms', 'Conceptual design', 'Workflow'],
+      // description: ['Game logistics', 'Scoring algorithms', 'Conceptual design', 'Workflow'],
       // description: ['team leadership', 'game logistics', 'scoring algorithms', 'conceptual design', 'group workflow', 'refactoring', 'debugging'],
       techStack: {
         framework: 'crafty.js',
