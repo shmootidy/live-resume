@@ -88,7 +88,7 @@ export default class Resume extends Component {
     }
 
   componentDidMount() {
-    setTimeout(this.getContentPositions, 100)
+    setTimeout(this.getContentPositions, 100) // delay IS necessary for accuracy
     window.addEventListener('scroll', this.handleScroll);
   }
 
