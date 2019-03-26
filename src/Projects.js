@@ -2,6 +2,18 @@ import React, { Component } from 'react'
 import Project from './Project'
 
 export default class Projects extends Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      position: 0
+    }
+  }
+
+  componentDidMount() {
+    const projectsPosition = document.getElementById('projects').offsetTop // 
+    this.setState({ position: projectsPosition }, () => console.log('SDSDS', this.state))
+  }
+
   render () {
     const projects = [
       { 
