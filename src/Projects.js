@@ -11,7 +11,7 @@ export default class Projects extends Component {
 
   componentDidMount() {
     const projectsPosition = document.getElementById('projects').offsetTop // 
-    this.setState({ position: projectsPosition }, () => console.log('SDSDS', this.state))
+    this.setState({ position: projectsPosition }, () => console.log('PROJECTS', this.state))
   }
 
   render () {
