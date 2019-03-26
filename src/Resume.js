@@ -67,11 +67,25 @@ export default class Resume extends Component {
 
     // trigger tabToggle at certain scroll points
     handleScroll() {
-      //
+      // const summaryPosition = this.state.tabs[0].position
+      const projectsPosition = this.state.tabs[1].position
+      const educationPosition = this.state.tabs[2].position
+      const experiencePosition = this.state.tabs[3].position
+      if (window.scrollY < projectsPosition) {
+        this.tabToggle(0)
+      } 
+      if (window.scrollY >= projectsPosition && window.scrollY < educationPosition) {
+        this.tabToggle(1)
+      }
+      if (window.scrollY >= educationPosition && window.scrollY < experiencePosition) {
+        this.tabToggle(2)
+      }
+      if (window.scrollY >= experiencePosition) {
+        this.tabToggle(3)
+      }
     }
 
     // setState on content positions 1ms after componentDidMount
-      // will the delay render accurate positions?
     getContentPositions() {
       const summary = document.getElementById('summary').offsetTop
       const projects = document.getElementById('projects').offsetTop
@@ -121,22 +135,7 @@ export default class Resume extends Component {
     // console.log('component has mounted:', this.state.tabs.map(tab => tab.text + ': ' + tab.position))
     // console.log('header:', this.state.headerHeight)
     
-    // // const summaryPosition = this.state.tabs[0].position
-    // const projectsPosition = this.state.tabs[1].position
-    // const educationPosition = this.state.tabs[2].position
-    // const experiencePosition = this.state.tabs[3].position
-    // if (window.scrollY < projectsPosition) {
-    //   this.tabToggle(0)
-    // } 
-    // if (window.scrollY >= projectsPosition && window.scrollY < educationPosition) {
-    //   this.tabToggle(1)
-    // }
-    // if (window.scrollY >= educationPosition && window.scrollY < experiencePosition) {
-    //   this.tabToggle(2)
-    // }
-    // if (window.scrollY >= experiencePosition) {
-    //   this.tabToggle(3)
-    // }
+   
     // console.log(window.scrollY)
 
 
