@@ -64,8 +64,11 @@ export default class Resume extends Component {
   // scroll to appropriate place when tab is clicked
   // it may be better for the Content component to hold this method, bc I'd like for hitting the tabs to NOT scroll the top div. 
   // But first, I'll see if i can get the scrollToC and handleScroll to work as desired without getting all recursive on me
-  scrollToContent(tabIndex) { 
-    //
+  scrollToContent(tabIndex) {
+    const scrollLocation = this.state.tabs[tabIndex].position
+    window.scrollTo(0, scrollLocation)
+  //   const scrollLocations = [140, 485, 2270, 2350]
+  //   window.scrollTo(0, scrollLocations[tabIndex])
   }
 
   // trigger tabToggle at certain scroll points
@@ -115,10 +118,10 @@ export default class Resume extends Component {
   render() {
     return (
       <div onScroll={this.handleScroll} onClick={this.handleClick}>
-        <Header tabs={this.state.tabs} tabToggle={this.tabToggle} />
+        <Header tabs={this.state.tabs} tabToggle={this.tabToggle} scrollToContent={this.scrollToContent} />
         <div className="margin">
           <div className="flex">
-            <Content tabs={this.state.tabs} scrollToContent={this.scrollToContent} />
+            <Content tabs={this.state.tabs} />
             <Sidebar />
           </div>
         </div>
@@ -140,9 +143,6 @@ export default class Resume extends Component {
    
     // console.log(window.scrollY)
 
-
-  //   const scrollLocations = [140, 485, 2270, 2350]
-  //   window.scrollTo(0, scrollLocations[tabIndex])
 
   // console.log(`screenY: ${e.screenY}`)
     // console.log(`clientY: ${e.clientY}`)

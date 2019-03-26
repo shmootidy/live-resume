@@ -33,7 +33,7 @@ export default class Header extends Component {
         <div id="shmoo-button" onClick={this.loopMessage}>Click</div>
         {/* <img id="shmoo-img" src={require("./assets/shmoo.jpg")} /> */}
       </div>
-      <NameTitleTabs tabs={this.props.tabs} tabToggle={this.props.tabToggle} />
+      <NameTitleTabs tabs={this.props.tabs} tabToggle={this.props.tabToggle} scrollToContent={this.props.scrollToContent} />
     </div>
     )
   }
