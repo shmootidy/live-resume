@@ -35,12 +35,16 @@ export default class Resume extends Component {
     this.tabToggle = this.tabToggle.bind(this)
     this.scrollToContent = this.scrollToContent.bind(this)
     this.handleScroll = this.handleScroll.bind(this) 
+    this.getContentPositions = this.getContentPositions.bind(this)
   }
 
   // for testing only
   handleClick(e) {
     // console.log(`pageY: ${e.pageY}`)
-    // console.log('offsetTop of #education:', document.getElementById('education').offsetTop) // 1573
+    console.log('summary:', document.getElementById('summary').offsetTop) 
+    console.log('projects:', document.getElementById('projects').offsetTop) 
+    console.log('education:', document.getElementById('education').offsetTop) 
+    console.log('experience:', document.getElementById('experience').offsetTop) 
   }
 
   // toggle active tag - change its color - THAT'S IT!
@@ -66,8 +70,25 @@ export default class Resume extends Component {
       //
     }
 
+    // setState on content positions 1ms after componentDidMount
+      // will the delay render accurate positions?
+    getContentPositions() {
+      const summary = document.getElementById('summary').offsetTop
+      const projects = document.getElementById('projects').offsetTop
+      const education = document.getElementById('education').offsetTop
+      const experience = document.getElementById('experience').offsetTop
+      const currentPositions = [summary, projects, education, experience]
+
+      let tabs = this.state.tabs
+      currentPositions.forEach((position, i) => {
+        tabs[i].position = position
+      })
+      // this.setState( tabs ) // it seems this is adding another object to state... what is with my syntax?
+      console.log(this.state)
+    }
 
   componentDidMount() {
+    setTimeout(this.getContentPositions, 100)
     window.addEventListener('scroll', this.handleScroll);
   }
 
@@ -96,11 +117,7 @@ export default class Resume extends Component {
   // set position of each content element in state
     // console.log(document.getElementById('summary')) // clientHeight; clientTop; offsetHeight; offsetTop; scrollHeight; scrollTop; 
     
-    // let contentPosition = this.state.tabs.map((tab, i) => {
-    //   tab.position = positions[i]
-    //   return null
-    // })
-    // this.setState(contentPosition)
+    // 
     // console.log('component has mounted:', this.state.tabs.map(tab => tab.text + ': ' + tab.position))
     // console.log('header:', this.state.headerHeight)
     
