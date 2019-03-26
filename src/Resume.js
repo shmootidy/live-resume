@@ -67,8 +67,6 @@ export default class Resume extends Component {
   scrollToContent(tabIndex) {
     const scrollLocation = this.state.tabs[tabIndex].position
     window.scrollTo(0, scrollLocation)
-  //   const scrollLocations = [140, 485, 2270, 2350]
-  //   window.scrollTo(0, scrollLocations[tabIndex])
   }
 
   // trigger tabToggle at certain scroll points
@@ -130,23 +128,3 @@ export default class Resume extends Component {
     )
   }
 }    
-
-/* GARBAGE DUMP OF POTENTIALLY REUSABLE CODE: 
-
-  // set position of each content element in state
-    // console.log(document.getElementById('summary')) // clientHeight; clientTop; offsetHeight; offsetTop; scrollHeight; scrollTop; 
-    
-    // 
-    // console.log('component has mounted:', this.state.tabs.map(tab => tab.text + ': ' + tab.position))
-    // console.log('header:', this.state.headerHeight)
-    
-   
-    // console.log(window.scrollY)
-
-
-  // console.log(`screenY: ${e.screenY}`)
-    // console.log(`clientY: ${e.clientY}`)
-    // console.log('summary', summary.top)
-    // console.log('projects', projects.top)
-    // console.log('education', education.top)
-    // console.log('experience', experience.top) */
