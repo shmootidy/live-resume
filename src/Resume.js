@@ -39,8 +39,8 @@ export default class Resume extends Component {
 
   // for testing only
   handleClick(e) {
-    console.log(`pageY: ${e.pageY}`)
-    console.log('offsetTop of #education:', document.getElementById('education').offsetTop) // 1573
+    // console.log(`pageY: ${e.pageY}`)
+    // console.log('offsetTop of #education:', document.getElementById('education').offsetTop) // 1573
   }
 
   // toggle active tag - change its color - THAT'S IT!
