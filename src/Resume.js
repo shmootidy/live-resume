@@ -105,9 +105,7 @@ export default class Resume extends Component {
   }
 
   getHeaderHeight() {
-    const headerHeight = document.getElementById('header').offsetHeight
-    // const nameTitleTags = document.getElementById('name-title-tags')
-    // console.log(nameTitleTags)
+    const headerHeight = document.getElementById('name-title-tabs').offsetHeight
     this.setState({ headerHeight })
     console.log(this.state)
   }
