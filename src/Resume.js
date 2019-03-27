@@ -2,10 +2,10 @@
 
 import React, { Component } from 'react'
 
-import Header from './Header'
-import Content from './Content'
-import Sidebar from './Sidebar'
-import Footer from './Footer'
+import Header from './header/Header'
+import Content from './content/Content'
+import Sidebar from './sidebar/Sidebar'
+import Footer from './footer/Footer'
 
 import './style/resume.css'
 

@@ -4,7 +4,7 @@ import React, { Component } from 'react'
 import Random from './Random'
 import NameTitleTabs from './NameTitleTabs'
 
-import './style/header.css'
+import '../style/header.css'
 
 export default class Header extends Component {
   constructor(props) {
