@@ -14,12 +14,11 @@ const Project = (props) => {
       <a href={project.url} target="_blank" rel="noopener noreferrer">
         <h3 className="project-title">{project.title.toUpperCase()}</h3>
         <div className="project-subtitle">{project.subtitle}{awardDot}<span className="green">{award}</span> • {project.dateCompleted}</div>
-        <img className="project-img" src={require('../assets/' + project.img)} alt={project.img} />
-        <ProjectDescription descriptions={descriptions} />
-        <div className="description">
-          <div className="description-key">tech stack</div>
-          <div className="description-value"><TechStack techStack={project.techStack} /></div>
+        <div className="img-tech-box flex flex-column">
+          <img className="project-img" src={require('../assets/' + project.img)} alt={project.img} />
+          <div className="description description-value"><TechStack techStack={project.techStack} /></div>
         </div>
+        <ProjectDescription descriptions={descriptions} />
       </a>
     </div>
     )

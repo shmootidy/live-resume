@@ -19,6 +19,10 @@
   padding-bottom: .5rem;
 }
 
+.img-tech-box {
+  align-content: center;
+}
+
 .project-img {
   max-width: 90%;
 }
