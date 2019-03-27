@@ -5,11 +5,7 @@ const ProjectDescription = (props) => {
     let key = description[0]
     let value = description[1]
     if (typeof value === 'object' && value.length) {
-      value = value.map(note => {
-        return (
-          <div className="">{note}</div>
-        )
-      })
+      value = value.map(note => <div className="">{note}</div>)
     }
     return (
       <div className="">
