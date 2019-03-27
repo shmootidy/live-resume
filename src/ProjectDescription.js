@@ -9,7 +9,7 @@ const ProjectDescription = (props) => {
     }
     return (
       <div className="description">
-        <span className="description-key">{key}</span>
+        <span className="description-key">{key} • </span>
         <span className="description-value">{value}</span>
       </div>
     )
