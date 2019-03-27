@@ -125,7 +125,7 @@ export default class Resume extends Component {
       <div onScroll={this.handleScroll} onClick={this.handleClick}>
         <Header tabs={this.state.tabs} tabToggle={this.tabToggle} scrollToContent={this.scrollToContent} />
         <div className="margin">
-          <div className="flex">
+          <div className="flex space-between">
             <Content tabs={this.state.tabs} />
             <Sidebar />
           </div>
