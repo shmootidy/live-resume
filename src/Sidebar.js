@@ -12,7 +12,19 @@ export default class Sidebar extends Component {
     super(props)
     this.state = {
       currentObsession: 'React',
-      // skills: 
+      skills: {
+        database: 'PostgreSQL',
+        knex: 'Knex',
+        styling: 'CSS',
+        sass: 'SASS',
+        routing: 'AJAX', 
+        framework: 'CraftyJS',
+        database: 'MongoDB',
+        routing: 'Express',
+        axios: 'Axios',
+        framework: 'React',
+        routing: 'Websocket',
+      }
     }
   }
 

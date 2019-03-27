@@ -14,12 +14,6 @@ const Projects = (props) => {
         'design & development': ['Conceptualized and implemented the scoring logic.', 'Integrated disparate features.']
       },
       techStack: ['CraftyJS', 'MongoDB', 'Express', 'Axios'],
-      // techStack: {
-      //   framework: 'CraftyJS',
-      //   database: 'MongoDB',
-      //   routing: 'Express',
-      //   axios: 'Axios'
-      // },
       url: 'https://github.com/shmootidy/DONT-PANIC',
       img: 'dont-panic.gif',
       award: true,
@@ -30,11 +24,7 @@ const Projects = (props) => {
       dateCompleted: 'Feb 2019',
       description: {beep:['Set up local server', 'Style elements', 'Modularize data structure']},
       techStack: ['React', 'Websocket'],
-      // {
-      //   framework: 'React',
-      //   routing: 'Websocket',
-      //   // there's more! what about the API?
-      // },
+        // there's more! what about the API?
       url: 'https://github.com/shmootidy/Chatty',
       img: 'chatty.png'
     },
@@ -44,13 +34,6 @@ const Projects = (props) => {
       dateCompleted: 'Feb 2019',
       description: {boop:['Wikipedia API requests', 'Categorizing algorithm', 'Custom styling', 'AJAX requests & Knex calls']},
       techStack: ['PostgreSQL', 'Knex', 'CSS', 'SASS', 'AJAX'],
-      // {
-      //   database: 'PostgreSQL',
-      //   knex: 'Knex',
-      //   styling: 'CSS',
-      //   sass: 'SASS',
-      //   routing: 'AJAX', 
-      // },
       url: 'https://github.com/shmootidy/Smart-Cat',
       img: 'smart-cat.jpg'
     },

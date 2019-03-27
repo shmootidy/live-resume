@@ -20,7 +20,6 @@ const Project = (props) => {
           <div className="description-key">tech stack</div>
           <div className="description-value"><TechStack techStack={project.techStack} /></div>
         </div>
-        {/* <div className="flex flex-wrap"><TechStack techStack={project.techStack} /></div> */}
       </a>
     </div>
     )

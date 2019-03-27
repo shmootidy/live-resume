@@ -1,7 +1,6 @@
 import React from 'react'
 
 const TechStack = (props) => {
-  // let techStack = Object.values(props.techStack)
   let techStack = props.techStack
     .join(' *|* ')
     .split('*')
