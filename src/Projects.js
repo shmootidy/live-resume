@@ -9,7 +9,7 @@ const Projects = (props) => {
       dateCompleted: 'Mar 2019',
       description: {
         leadership: 'led a team of 3 developers from conception to presention in 13 days',
-        teamwork: 'collaboratively developed the concept, gameplay, design, and construction of the game with the team',
+        teamwork: 'collaboratively developed the concept, gameplay, design, and construction of the game',
         'design & development': ['conceptualized and implemented the scoring logic', 'integrated disparate features', 'fixed repository conflicts', 'consistently refactored code to maximize reusability and simplify debugging']
       },
       techStack: {
