@@ -28,7 +28,7 @@ export default class Header extends Component {
     <div id="header" className="sticky">
       <Random />
       <div className="header-section flex">
-        <span><span id="shmoo-npm">shmoo</span></span>
+        <span id="shmoo-npm">shmoo</span>
         <a href="https://hubpages.com/entertainment/The-History-of-the-Shmoo" target="_blank" rel="noopener noreferrer" id="shmoo-search">{this.state.message[this.state.iteration]}</a>
         <div id="shmoo-button" onClick={this.loopMessage}>Click</div>
         {/* <img id="shmoo-img" src={require("./assets/shmoo.jpg")} /> */}
