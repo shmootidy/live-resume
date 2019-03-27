@@ -29,7 +29,7 @@ export default class Header extends Component {
       <Random />
       <div className="header-section flex">
         <span><span id="shmoo-npm">shmoo</span></span>
-        <a href="https://hubpages.com/entertainment/The-History-of-the-Shmoo" target="_blank" rel="noopener noreferrer" id="shmoo-search">{this.state.message[this.state.iteration]}</a>
+        <a href="https://en.wikipedia.org/wiki/Shmoo" target="_blank" rel="noopener noreferrer" id="shmoo-search">{this.state.message[this.state.iteration]}</a>
         <div id="shmoo-button" onClick={this.loopMessage}>Click</div>
         {/* <img id="shmoo-img" src={require("./assets/shmoo.jpg")} /> */}
       </div>
@@ -41,3 +41,4 @@ export default class Header extends Component {
 // alternate links:
   // http://lil-abner.com/the-shmoo/
   // https://en.wikipedia.org/wiki/Shmoo
+  // https://hubpages.com/entertainment/The-History-of-the-Shmoo
