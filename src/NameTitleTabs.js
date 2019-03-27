@@ -7,7 +7,7 @@ const NameTitleTabs = (props) => {
   return (
     <div id="name-title-tabs" className="flex flex-column">
       <span id="name">susannah-ritchie</span>
-      <span id="title">Full-stack <span className="green">Web</span> Developer</span>
+      <span id="title">Full-stack <span className="green">Web</span> Developer • Vancouver, BC</span>
       <Tabs tabs={props.tabs} tabToggle={props.tabToggle} scrollToContent={props.scrollToContent} />
     </div>
   )
