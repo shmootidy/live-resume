@@ -55,8 +55,9 @@
 }
 
 .description {
-  font-family: 'Fira Mono';
-  font-size: .875rem;
+  /* font-family: 'Fira Mono'; */
+  /* font-family: 'Poppins'; */
+  /* font-size: .875rem; */
 }
 
 .description-key {
