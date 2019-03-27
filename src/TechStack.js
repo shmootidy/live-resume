@@ -1,6 +1,17 @@
 import React from 'react'
 
 const TechStack = (props) => {
+  let techStack = Object.values(props.techStack)
+    .join(' *|* ')
+    .split('*')
+    .map(tech => <span className="tech-stack">{tech}</span>)
+  return techStack
+}
+
+export default TechStack
+
+/* HOLDING - will likely use this for skills in SideBar 
+
   let key = 0;
   let techStack = Object.entries(props.techStack).map(tech => {
     key++
@@ -15,6 +26,4 @@ const TechStack = (props) => {
     )
 })
   return techStack
-}
-
-export default TechStack
+  */
