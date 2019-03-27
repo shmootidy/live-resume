@@ -4,13 +4,11 @@ const ProjectDescription = (props) => {
   let descriptions = props.descriptions.map(description => {
     let key = description[0]
     let value = description[1]
-    if (typeof value === 'object' && value.length) {
-      value = value.map(note => <div className="">{note}</div>)
-    }
+    let note = value.map(note => <div className="description-value">{note}</div>)
     return (
       <div className="description">
-        <span className="description-key">{key} • </span>
-        <span className="description-value">{value}</span>
+        <div className="description-key">{key}</div>
+        <span>{note}</span>
       </div>
     )
   })
