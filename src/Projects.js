@@ -13,12 +13,13 @@ const Projects = (props) => {
         workflow: ['Fixed repository conflicts.', 'Refactored code to maximize reusability and simplify debugging.'],
         'design & development': ['Conceptualized and implemented the scoring logic.', 'Integrated disparate features.']
       },
-      techStack: {
-        framework: 'CraftyJS',
-        database: 'MongoDB',
-        routing: 'Express',
-        axios: 'Axios'
-      },
+      techStack: ['CraftyJS', 'MongoDB', 'Express', 'Axios'],
+      // techStack: {
+      //   framework: 'CraftyJS',
+      //   database: 'MongoDB',
+      //   routing: 'Express',
+      //   axios: 'Axios'
+      // },
       url: 'https://github.com/shmootidy/DONT-PANIC',
       img: 'dont-panic.gif',
       award: true,
@@ -28,11 +29,12 @@ const Projects = (props) => {
       subtitle: 'Real-time Chat App',
       dateCompleted: 'Feb 2019',
       description: {beep:['Set up local server', 'Style elements', 'Modularize data structure']},
-      techStack: {
-        framework: 'React',
-        routing: 'Websocket',
-        // there's more! what about the API?
-      },
+      techStack: ['React', 'Websocket'],
+      // {
+      //   framework: 'React',
+      //   routing: 'Websocket',
+      //   // there's more! what about the API?
+      // },
       url: 'https://github.com/shmootidy/Chatty',
       img: 'chatty.png'
     },
@@ -41,13 +43,14 @@ const Projects = (props) => {
       subtitle: 'Auto-Categorizing To-Do List',
       dateCompleted: 'Feb 2019',
       description: {boop:['Wikipedia API requests', 'Categorizing algorithm', 'Custom styling', 'AJAX requests & Knex calls']},
-      techStack: {
-        database: 'PostgreSQL',
-        knex: 'Knex',
-        styling: 'CSS',
-        sass: 'SASS',
-        routing: 'AJAX', 
-      },
+      techStack: ['PostgreSQL', 'Knex', 'CSS', 'SASS', 'AJAX'],
+      // {
+      //   database: 'PostgreSQL',
+      //   knex: 'Knex',
+      //   styling: 'CSS',
+      //   sass: 'SASS',
+      //   routing: 'AJAX', 
+      // },
       url: 'https://github.com/shmootidy/Smart-Cat',
       img: 'smart-cat.jpg'
     },
