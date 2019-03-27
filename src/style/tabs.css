@@ -1,3 +1,10 @@
+@media (max-width: 960px) {
+  li.tab {
+    border-left: 3px solid black;
+    border-radius: 0 5px 5px 0;
+  }
+}
+
 .margin {
   margin: 0 8rem; /* must match name-title-tabs padding */
 }
@@ -52,4 +59,13 @@ li.tab4.not-selected:hover {
 
 li.not-selected {
   background-color: white;
+}
+
+@media (max-width: 960px) {
+  ul {
+    flex-direction: column;
+  }
+  li.tab {
+    border-bottom: none;
+  }
 }
