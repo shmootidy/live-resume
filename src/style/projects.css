@@ -55,22 +55,14 @@
 }
 
 .description {
-  /* font-family: 'Fira Mono'; */
-  /* font-family: 'Poppins'; */
-  /* font-size: .875rem; */
-  /* width: 90%; */
   margin: 0 1rem .5rem;
 }
 
 .description-key {
-  /* background: yellow; */
-  /* padding: .25rem .5rem;
-  border-radius: 5px; */
   font-weight: bold;
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 }
 
 .description-value {
-  /* text-align: right; */
   margin-left: 1rem;
 }
