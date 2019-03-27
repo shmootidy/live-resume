@@ -26,7 +26,7 @@ const Projects = (props) => {
       techStack: ['React', 'Websocket'],
         // there's more! what about the API?
       url: 'https://github.com/shmootidy/Chatty',
-      img: 'chatty.png'
+      img: 'chatty.jpg'
     },
     {
       title: 'Smart Cat',
