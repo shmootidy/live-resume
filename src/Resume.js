@@ -14,6 +14,7 @@ export default class Resume extends Component {
     super(props)
     this.state = {
       nameTitleTabsHeight: null,
+      headerHeight: null,
       tabs: [
         { text: 'Readme',
           active: true,
@@ -100,8 +101,9 @@ export default class Resume extends Component {
 
   setHeaderHeight() {
     const nameTitleTabsHeight = document.getElementById('name-title-tabs').offsetHeight
-    this.setState({ nameTitleTabsHeight })
-    console.log(this.state)
+    const headerHeight = document.getElementById('header').offsetHeight
+    this.setState({ nameTitleTabsHeight, headerHeight })
+    // console.log(this.state)
   }
 
   handleResize() {
