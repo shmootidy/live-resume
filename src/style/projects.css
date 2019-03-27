@@ -53,3 +53,14 @@
   border-radius: 0 3px 3px 0;
   background: #E45637;
 }
+
+.description {
+  font-family: 'Fira Mono';
+  font-size: .875rem;
+}
+
+.description-key {
+  background: yellow;
+  padding: .25rem .5rem;
+  border-radius: 5px;
+}

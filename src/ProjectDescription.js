@@ -8,9 +8,9 @@ const ProjectDescription = (props) => {
       value = value.map(note => <div className="">{note}</div>)
     }
     return (
-      <div className="">
-        <span className="">{key}</span>
-        <span className="highlight">{value}</span>
+      <div className="description">
+        <span className="description-key">{key}</span>
+        <span className="description-value">{value}</span>
       </div>
     )
   })
