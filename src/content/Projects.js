@@ -35,7 +35,7 @@ const Projects = (props) => {
       description: {boop:['Wikipedia API requests', 'Categorizing algorithm', 'Custom styling', 'AJAX requests & Knex calls']},
       techStack: ['PostgreSQL', 'Knex', 'CSS', 'SASS', 'AJAX'],
       url: 'https://github.com/shmootidy/Smart-Cat',
-      img: 'smart-cat.jpg'
+      img: 'smart-cat.gif'
     },
     // {
     //   title: 'Tweeter',
