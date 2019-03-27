@@ -8,10 +8,10 @@ const Projects = (props) => {
       subtitle: 'Life Skills Education Game',
       dateCompleted: 'Mar 2019',
       description: {
-        leadership: ['led a team of 3 developers from conception to presention in 13 days'],
-        teamwork: ['collaboratively developed the concept, gameplay, design, and construction of the game'],
-        workflow: ['fixed repository conflicts', 'consistently refactored code to maximize reusability and simplify debugging'],
-        'design & development': ['conceptualized and implemented the scoring logic', 'integrated disparate features']
+        leadership: ['Led a team of 3 developers from conception to presention in 13 days.'],
+        // teamwork: ['collaboratively developed the concept, gameplay, design, and construction of the game'],
+        workflow: ['Fixed repository conflicts.', 'Refactored code to maximize reusability and simplify debugging.'],
+        'design & development': ['Conceptualized and implemented the scoring logic.', 'Integrated disparate features.']
       },
       techStack: {
         framework: 'crafty.js',
@@ -26,7 +26,7 @@ const Projects = (props) => {
       title: 'Chatty App',
       subtitle: 'Real-time Chat App',
       dateCompleted: 'Feb 2019',
-      description: ['Set up local server', 'Style elements', 'Modularize data structure'],
+      description: {beep:['Set up local server', 'Style elements', 'Modularize data structure']},
       techStack: {
         framework: 'react',
         routing: 'websocket',
@@ -39,7 +39,7 @@ const Projects = (props) => {
       title: 'Smart Cat',
       subtitle: 'Auto-Categorizing To-Do List',
       dateCompleted: 'Feb 2019',
-      description: ['Wikipedia API requests', 'Categorizing algorithm', 'Custom styling', 'AJAX requests & Knex calls'],
+      description: {boop:['Wikipedia API requests', 'Categorizing algorithm', 'Custom styling', 'AJAX requests & Knex calls']},
       techStack: {
         database: 'postgreSQL / knex',
         styling: 'CSS / SASS',
