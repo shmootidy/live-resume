@@ -14,9 +14,10 @@ const Projects = (props) => {
         'design & development': ['Conceptualized and implemented the scoring logic.', 'Integrated disparate features.']
       },
       techStack: {
-        framework: 'crafty.js',
-        database: 'mongodb',
-        routing: 'express / axios',
+        framework: 'CraftyJS',
+        database: 'MongoDB',
+        routing: 'Express',
+        axios: 'Axios'
       },
       url: 'https://github.com/shmootidy/DONT-PANIC',
       img: 'dont-panic.gif',
@@ -28,8 +29,8 @@ const Projects = (props) => {
       dateCompleted: 'Feb 2019',
       description: {beep:['Set up local server', 'Style elements', 'Modularize data structure']},
       techStack: {
-        framework: 'react',
-        routing: 'websocket',
+        framework: 'React',
+        routing: 'Websocket',
         // there's more! what about the API?
       },
       url: 'https://github.com/shmootidy/Chatty',
@@ -41,8 +42,10 @@ const Projects = (props) => {
       dateCompleted: 'Feb 2019',
       description: {boop:['Wikipedia API requests', 'Categorizing algorithm', 'Custom styling', 'AJAX requests & Knex calls']},
       techStack: {
-        database: 'postgreSQL / knex',
-        styling: 'CSS / SASS',
+        database: 'PostgreSQL',
+        knex: 'Knex',
+        styling: 'CSS',
+        sass: 'SASS',
         routing: 'AJAX', 
       },
       url: 'https://github.com/shmootidy/Smart-Cat',
