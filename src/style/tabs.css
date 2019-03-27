@@ -19,6 +19,8 @@ ul {
 li.tab {
   border-bottom: 2px solid black;
   width: 100%;
+  font-weight: 600;
+  -webkit-font-smoothing: auto;
 }
 
 li.tab1 {
