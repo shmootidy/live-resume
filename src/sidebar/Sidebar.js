@@ -11,7 +11,6 @@ export default class Sidebar extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      position: null,
       currentObsession: 'React',
       skills: {
         database: 'PostgreSQL',
@@ -30,9 +29,13 @@ export default class Sidebar extends Component {
   }
 
   render() {
+    const sidebarStickyStyle = {
+      top: this.props.position
+    }
+
     return (
       <div id="sidebar">
-        <div id="sidebar-sticky" className="sticky">
+        <div style={sidebarStickyStyle} className="sticky">
           <Contact />
           <CurrentObsession currentObsession={this.state.currentObsession} />
           <Skills skills={this.state.skills} />

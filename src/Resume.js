@@ -14,7 +14,6 @@ export default class Resume extends Component {
     super(props)
     this.state = {
       nameTitleTabsHeight: null,
-      headerHeight: null,
       tabs: [
         { text: 'Readme',
           active: true,
@@ -101,8 +100,7 @@ export default class Resume extends Component {
 
   setHeaderHeight() {
     const nameTitleTabsHeight = document.getElementById('name-title-tabs').offsetHeight
-    const headerHeight = document.getElementById('header').offsetHeight
-    this.setState({ nameTitleTabsHeight, headerHeight })
+    this.setState({ nameTitleTabsHeight })
     // console.log(this.state)
   }
 
@@ -129,7 +127,7 @@ export default class Resume extends Component {
         <div className="margin">
           <div className="flex space-between">
             <Content tabs={this.state.tabs} />
-            <Sidebar />
+            <Sidebar position={this.state.nameTitleTabsHeight} />
           </div>
         </div>
         <Footer />
