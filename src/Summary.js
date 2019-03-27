@@ -4,9 +4,7 @@ const Summary = (props) => {
   return (
     <div id="summary">
       <h1 className='content-title'>shmoo-ritchie</h1>
-      <p>Passionate about creative problem solving, collaborative work, and honing the craft of writing elegant code.</p>
-      <p>Driven self-starter with an eye for detail and high levels of integrity, resourcefulness, and tenacity, from years as a teacher, entrepreneur, and musician.</p>
-      <p>Always keen to learn and improve.</p>
+      <p>Passionate about development, design, and writing clean code. Integrity, resourcefulness, and creativity honed from experience as a teacher, musician, and entrepreneur. A driven self-starter who enjoys working collaboratively and is always keen to learn and improve.</p>
     </div>
   )
 }
