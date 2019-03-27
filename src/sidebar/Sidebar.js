@@ -11,6 +11,7 @@ export default class Sidebar extends Component {
   constructor(props) {
     super(props)
     this.state = {
+      position: null,
       currentObsession: 'React',
       skills: {
         database: 'PostgreSQL',

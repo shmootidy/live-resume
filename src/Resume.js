@@ -13,7 +13,7 @@ export default class Resume extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      headerHeight: null,
+      nameTitleTabsHeight: null,
       tabs: [
         { text: 'Readme',
           active: true,
@@ -43,12 +43,12 @@ export default class Resume extends Component {
 
   // for testing only
   handleClick(e) {
-    // console.log(`pageY: ${e.pageY}`)
-    console.log('headerHeight:', document.getElementById('header').offsetHeight) 
-    console.log('summary:', document.getElementById('summary').offsetTop) 
-    console.log('projects:', document.getElementById('projects').offsetTop) 
-    console.log('education:', document.getElementById('education').offsetTop) 
-    console.log('experience:', document.getElementById('experience').offsetTop) 
+    console.log(`pageY: ${e.pageY}`)
+    console.log('nameTitleTabsHeight:', document.getElementById('header').offsetHeight) 
+    // console.log('summary:', document.getElementById('summary').offsetTop) 
+    // console.log('projects:', document.getElementById('projects').offsetTop) 
+    // console.log('education:', document.getElementById('education').offsetTop) 
+    // console.log('experience:', document.getElementById('experience').offsetTop) 
   }
 
   // toggle active tag - change its color - THAT'S IT!
@@ -84,7 +84,7 @@ export default class Resume extends Component {
 
   // setState on content positions 1ms after componentDidMount
   setContentPositions() {
-    const headerHeight = this.state.headerHeight
+    const nameTitleTabsHeight = this.state.nameTitleTabsHeight
     const summary = document.getElementById('summary').offsetTop
     const projects = document.getElementById('projects').offsetTop
     const education = document.getElementById('education').offsetTop
@@ -93,14 +93,14 @@ export default class Resume extends Component {
 
     let tabs = this.state.tabs
     currentPositions.forEach((position, i) => {
-      tabs[i].position = position - headerHeight
+      tabs[i].position = position - nameTitleTabsHeight
     })
     // this.setState( tabs ) // it seems this is adding another object to state... what is with my syntax?
   }
 
   setHeaderHeight() {
-    const headerHeight = document.getElementById('name-title-tabs').offsetHeight
-    this.setState({ headerHeight })
+    const nameTitleTabsHeight = document.getElementById('name-title-tabs').offsetHeight
+    this.setState({ nameTitleTabsHeight })
     console.log(this.state)
   }
 
@@ -111,7 +111,7 @@ export default class Resume extends Component {
 
   componentDidMount() {
     setTimeout(this.setHeaderHeight, 100) // delay is necessary for accuracy
-    setTimeout(this.setContentPositions, 100) // fire setHeaderHeight before setContentPositions to ensure position is set with headerHeight
+    setTimeout(this.setContentPositions, 100) // fire setHeaderHeight before setContentPositions to ensure position is set with nameTitleTabsHeight
     window.addEventListener('scroll', this.handleScroll)
     window.addEventListener('resize', this.handleResize)
   }
