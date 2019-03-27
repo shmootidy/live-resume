@@ -34,7 +34,7 @@ export default class Sidebar extends Component {
         <div id="sidebar-sticky" className="sticky">
           <Contact />
           <CurrentObsession currentObsession={this.state.currentObsession} />
-          <Skills />
+          <Skills skills={this.state.skills} />
         </div>
       </div>
     )
