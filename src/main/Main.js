@@ -2,7 +2,8 @@ import React, { Component } from 'react'
  
 import Content from './content/Content'
 import Sidebar from './sidebar/Sidebar'
-import NameTitleTabs from './name-title-tabs/NameTitleTabs'
+import Tabs from './name-title-tabs/Tabs'
+import NameTitle from './name-title-tabs/NameTitle'
 
 import './main.css'
 
@@ -120,11 +121,12 @@ export default class Main extends Component {
   render() {
     return (
       <div onScroll={this.handleScroll} className="flex flex-column" id="main">
-        <div id="ntt" className="sticky">
-          <NameTitleTabs 
+        {/* <div id="ntt" className="sticky"> */}
+        <div id="ntt">
+          <NameTitle 
             tabToggle={this.tabToggle} 
-            scrollToContent={this.scrollToContent} 
-            tabs={this.state.tabs} />
+            scrollToContent={this.scrollToContent} />
+          <Tabs tabs={this.state.tabs} tabToggle={this.state.tabToggle} scrollToContent={this.state.scrollToContent} />
         </div>
         <div id="content-sidebar" className="flex space-between responsive-padding">
           <Content />
