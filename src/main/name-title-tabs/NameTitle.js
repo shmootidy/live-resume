@@ -1,4 +1,5 @@
 import React from 'react'
+import TabsResponsive from './Tabs'
 
 import './name-title-tabs.css'
 
@@ -7,6 +8,11 @@ const NameTitle = (props) => {
     <span className="flex flex-column responsive-padding sticky name-title ntt">
       <span id="name">susannah-ritchie</span>
       <span id="title">Full-stack <span className="green">Web</span> Developer • Vancouver, BC</span>
+      <TabsResponsive 
+        tabs={props.tabs} 
+        tabToggle={props.tabToggle} 
+        scrollToContent={props.scrollToContent} 
+      />
     </span>
   )
 }
