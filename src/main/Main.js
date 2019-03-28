@@ -11,7 +11,7 @@ export default class Main extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      nameTitleHeight: null,
+      nameTitleHeight: '109',
       tabs: [
         { text: 'Readme',
           active: true,
@@ -43,7 +43,7 @@ export default class Main extends Component {
   // for testing only
   handleClick(e) {
     console.log(`pageY: ${e.pageY}`)
-    console.log('nameTitleHeight:', document.getElementById('name-title').offsetHeight)
+    console.log('nameTitleHeight:', document.getElementsByClassName('name-title')[0].offsetHeight)
     console.log('this.state.nameTitleHeight:', this.state.nameTitleHeight)
     // console.log('nameTitleHeight:', document.getElementById('header').offsetHeight) 
     // console.log('summary:', document.getElementById('summary').offsetTop) 
@@ -97,7 +97,8 @@ export default class Main extends Component {
   }
 
   setHeaderHeight() {
-    const nameTitleHeight = document.getElementById('name-title').offsetHeight
+    // const nameTitleHeight = document.getElementById('name-title').offsetHeight
+    const nameTitleHeight = document.getElementsByClassName('name-title')[0].offsetHeight
     this.setState({ nameTitleHeight })
   }
 
@@ -119,17 +120,28 @@ export default class Main extends Component {
 
   render() {
     return (
-      <div onScroll={this.handleScroll} className="flex flex-column" id="main" onClick={this.handleClick}>
+      <div 
+        onScroll={this.handleScroll} 
+        className="flex flex-column" 
+        id="main" 
+        onClick={this.handleClick}
+      >
         <NameTitle 
           tabToggle={this.tabToggle} 
-          scrollToContent={this.scrollToContent} />
-        <span id="tabs">
+          scrollToContent={this.scrollToContent} 
+        />
+        <span 
+          id="tabs" 
+          className="sticky" 
+          style={{ top: this.state.nameTitleHeight + 'px' }}
+        >
           <Tabs 
             tabs={this.state.tabs} 
             tabToggle={this.tabToggle} 
-            scrollToContent={this.scrollToContent} 
+            scrollToContent={this.scrollToContent}
+            position={this.state.nameTitleHeight} 
           />
-          </span>
+        </span>
         <div id="content-sidebar" className="flex space-between responsive-padding">
           <Content />
           <Sidebar position={this.state.nameTitleHeight} />
