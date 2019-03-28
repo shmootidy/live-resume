@@ -4,7 +4,7 @@ import React, { Component } from 'react'
 import Random from './Random'
 import ShmooSearch from './ShmooSearch';
 
-import '../style/header.css'
+import './header.css'
 
 export default class Header extends Component {
   render() {
