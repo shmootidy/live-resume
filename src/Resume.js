@@ -126,7 +126,6 @@ export default class Resume extends Component {
         <Header  />
         <div className="margin">
           <div className="flex space-between">
-            {/* <NameTitleTabs tabs={this.props.tabs} tabToggle={this.props.tabToggle} scrollToContent={this.props.scrollToContent} /> */}
             <Content tabToggle={this.tabToggle} scrollToContent={this.scrollToContent} tabs={this.state.tabs} />
             <Sidebar position={this.state.nameTitleTabsHeight} />
           </div>
