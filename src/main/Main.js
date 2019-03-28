@@ -11,6 +11,7 @@ export default class Main extends Component {
   constructor(props) {
     super(props)
     this.state = {
+      tabsAreSticky: true,
       nameTitleHeight: '109',
       tabs: [
         { text: 'Readme',
@@ -38,13 +39,15 @@ export default class Main extends Component {
     this.setHeaderHeight = this.setHeaderHeight.bind(this)
     this.handleResize = this.handleResize.bind(this)
     this.handleClick = this.handleClick.bind(this)
+    this.setViewportWidth = this.setViewportWidth.bind(this)
   }
 
   // for testing only
   handleClick(e) {
-    console.log(`pageY: ${e.pageY}`)
-    console.log('nameTitleHeight:', document.getElementsByClassName('name-title')[0].offsetHeight)
-    console.log('this.state.nameTitleHeight:', this.state.nameTitleHeight)
+    console.log(this.state)
+    // console.log(`pageY: ${e.pageY}`)
+    // console.log('nameTitleHeight:', document.getElementsByClassName('name-title')[0].offsetHeight)
+    // console.log('this.state.nameTitleHeight:', this.state.nameTitleHeight)
     // console.log('nameTitleHeight:', document.getElementById('header').offsetHeight) 
     // console.log('summary:', document.getElementById('summary').offsetTop) 
     // console.log('projects:', document.getElementById('projects').offsetTop) 
@@ -104,13 +107,24 @@ export default class Main extends Component {
   }
 
   handleResize() {
+    this.setViewportWidth()
     this.setHeaderHeight()
     this.setContentPositions()
+  }
+
+  setViewportWidth() {
+    const viewportWidth = document.documentElement.clientWidth
+    if (viewportWidth <= 960) {
+      this.setState({ tabsAreSticky: false })
+    } else {
+      this.setState({ tabsAreSticky: true })
+    }
   }
 
   componentDidMount() {
     setTimeout(this.setHeaderHeight, 100) // delay is necessary for accuracy
     setTimeout(this.setContentPositions, 100) // fire setHeaderHeight before setContentPositions to ensure position is set with nameTitleHeight
+    this.setViewportWidth()
     window.addEventListener('scroll', this.handleScroll)
     window.addEventListener('resize', this.handleResize)
   }
