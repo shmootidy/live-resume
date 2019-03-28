@@ -7,8 +7,6 @@ import ShmooSearch from './ShmooSearch';
 import '../style/header.css'
 
 export default class Header extends Component {
-
-
   render() {
     return (
     <div id="header" className="sticky">
