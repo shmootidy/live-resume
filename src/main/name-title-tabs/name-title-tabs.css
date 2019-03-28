@@ -1,12 +1,14 @@
 .ntt {
-  background: white;
-  z-index: 10;
+  /* background: white; */
+  /* z-index: 10; */
 }
 
 .name-title {
   top: 0;
   background: white;
   padding: 1.5rem 0;
+  background: white;
+  z-index: 10;
 }
 
 #name {
@@ -30,4 +32,6 @@
 #tabs {
   position: sticky;
   margin-bottom: 2rem;
+  background: white;
+  z-index: 9;
 }
