@@ -15,9 +15,6 @@
   #content-sidebar {
     flex-direction: column-reverse;
   }
-  #sidebar {
-    padding: 0;
-  }
   #name {
     padding-top: 2rem;
   }
