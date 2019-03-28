@@ -5,6 +5,8 @@ import Main from './main/Main'
 import Footer from './footer/Footer';
 // import Resume from './Resume'
 
+import './index.css'
+
 const Resume = () => {
   return (
     <div>
