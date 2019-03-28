@@ -27,3 +27,9 @@ export default class ShmooSearch extends Component {
     )
   }
 }
+
+// alternate links:
+  // http://lil-abner.com/the-shmoo/
+  // https://en.wikipedia.org/wiki/Shmoo
+  // https://hubpages.com/entertainment/The-History-of-the-Shmoo
+  
