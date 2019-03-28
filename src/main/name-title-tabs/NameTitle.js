@@ -10,11 +10,11 @@ const NameTitle = (props) => {
         <span id="name">susannah-ritchie</span>
         <span id="title">Full-stack <span className="green">Web</span> Developer • Vancouver, BC</span>
       </span>
-      <TabsResponsive 
+      {/* <TabsResponsive 
         tabs={props.tabs} 
         tabToggle={props.tabToggle} 
         scrollToContent={props.scrollToContent}
-      />
+      /> */}
     </span>
   )
 }

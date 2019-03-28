@@ -134,7 +134,8 @@ export default class Main extends Component {
   }
 
   render() {
-    let tabsStickyPosition = this.state.tabsAreSticky ? { top: this.state.nameTitleHeight + 'px' } : { top: 'auto' }
+    // let tabsStickyPosition = this.state.tabsAreSticky ? { top: this.state.nameTitleHeight + 'px' } : { top: 'auto' }
+    let tabsStickyPosition = { top: this.state.nameTitleHeight }
     return (
       <div 
         onScroll={this.handleScroll} 
@@ -149,6 +150,7 @@ export default class Main extends Component {
         />
         <span 
           id="tabs" 
+          className="sticky"
           style={tabsStickyPosition}
         >
           <Tabs 

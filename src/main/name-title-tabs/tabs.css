@@ -1,9 +1,9 @@
-@media (max-width: 960px) {
+/* @media (max-width: 960px) {
   li.tab {
     border-left: 3px solid black;
     border-radius: 0 5px 5px 0;
   }
-}
+} */
 
 ul {
   margin: 0;
@@ -59,7 +59,7 @@ li.not-selected {
   background-color: white;
 }
 
-@media (max-width: 960px) {
+/* @media (max-width: 960px) {
   ul {
     flex-direction: column;
   }
@@ -68,4 +68,4 @@ li.not-selected {
     width: auto;
     margin-right: .5rem;
   }
-}
+} */
