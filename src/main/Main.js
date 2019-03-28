@@ -120,10 +120,12 @@ export default class Main extends Component {
   render() {
     return (
       <div onScroll={this.handleScroll} className="flex flex-column">
-        <NameTitleTabs 
-          tabToggle={this.tabToggle} 
-          scrollToContent={this.scrollToContent} 
-          tabs={this.state.tabs} />
+        <div id="ntt">
+          <NameTitleTabs 
+            tabToggle={this.tabToggle} 
+            scrollToContent={this.scrollToContent} 
+            tabs={this.state.tabs} />
+        </div>
         <div className="flex">
           <Content />
           <Sidebar position={this.state.nameTitleTabsHeight} />
