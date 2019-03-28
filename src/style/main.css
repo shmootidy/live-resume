@@ -1,0 +1,77 @@
+body {
+  margin: 0;
+  font-family: 'Source Sans Pro', sans-serif;
+  color: rgba(0, 0, 0, .85);
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+li {
+  padding: .7rem 2rem;
+  border-radius: 5px 5px 0 0;
+  cursor: pointer;
+  display: block;
+  text-align: center;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.space-between {
+  justify-content: space-between;
+}
+
+.sticky {
+  position: sticky;
+}
+
+.relative {
+  position: relative;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.green {
+  color: rgb(25, 169, 116);
+  letter-spacing: 0;
+}
+
+.highlight {
+  font-family: 'Fira Mono';
+  font-size: .875rem;
+  line-height: 1.15;
+  padding: .125rem .25rem;
+  border-radius: 3px;
+  background: rgba(0, 0, 0, .2);
+}
+
+@font-face {
+  font-family: 'GubBlaBlo';
+    src: url('./fonts/GUBBLABLO.eot');
+    src: url('./fonts/GUBBLABLO.eot?#iefix') format('embedded-opentype'),
+          url('./fonts/GUBBLABLO.woff') format('woff'),
+          url('./fonts/GUBBLABLO.ttf') format('truetype'),
+          url('./fonts/GUBBLABLO.svg#gubblablo') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+#footer {
+  height: 800px;
+}
