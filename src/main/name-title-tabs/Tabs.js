@@ -16,7 +16,7 @@ const Tabs = (props) => {
           scrollToContent={props.scrollToContent} 
         />
       </ul>
-      <div id="contact-responsive"><ContactResponsive /></div>
+      {/* <div id="contact-responsive"><ContactResponsive /></div> */}
     </div>
   )
 }
