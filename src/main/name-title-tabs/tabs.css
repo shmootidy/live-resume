@@ -65,5 +65,6 @@ li.not-selected {
   }
   li.tab {
     border-bottom: none;
+    width: auto;
   }
 }
