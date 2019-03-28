@@ -4,7 +4,7 @@ import Content from '../content/Content'
 import Sidebar from '../sidebar/Sidebar'
 import NameTitleTabs from '../content/NameTitleTabs'
 
-import '../style/resume.css'
+import '../style/main.css'
 
 export default class Main extends Component {
   constructor(props) {
