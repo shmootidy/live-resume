@@ -2,7 +2,6 @@
 
 import React from 'react'
 import Tab from './Tab'
-import ContactResponsive from '../sidebar/Contact'
 
 import './tabs.css'
 
@@ -16,7 +15,6 @@ const Tabs = (props) => {
           scrollToContent={props.scrollToContent} 
         />
       </ul>
-      {/* <div id="contact-responsive"><ContactResponsive /></div> */}
     </div>
   )
 }
