@@ -1,15 +1,13 @@
 // this is the top level component
 
 import React, { Component } from 'react'
+ 
+import Content from '../content/Content'
+import Sidebar from '../sidebar/Sidebar'
 
-import Header from './header/Header'
-import Content from './content/Content'
-import Sidebar from './sidebar/Sidebar'
-import Footer from './footer/Footer'
+import '../style/resume.css'
 
-import './style/resume.css'
-
-export default class Resume extends Component {
+export default class Main extends Component {
   constructor(props) {
     super(props)
     this.state = {
@@ -123,14 +121,12 @@ export default class Resume extends Component {
   render() {
     return (
       <div onScroll={this.handleScroll} onClick={this.handleClick}>
-        <Header  />
         <div className="margin">
           <div className="flex space-between">
             <Content tabToggle={this.tabToggle} scrollToContent={this.scrollToContent} tabs={this.state.tabs} />
             <Sidebar position={this.state.nameTitleTabsHeight} />
           </div>
         </div>
-        <Footer />
       </div>
     )
   }
