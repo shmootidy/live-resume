@@ -12,10 +12,7 @@ import '../style/content.css'
 const Content = (props) => {
   return (
     <content>
-      <NameTitleTabs 
-        tabs={props.tabs} 
-        tabToggle={props.tabToggle} 
-        scrollToContent={props.scrollToContent} />
+      <NameTitleTabs tabs={props.tabs} tabToggle={props.tabToggle} scrollToContent={props.scrollToContent} />
       <Summary />
       <Projects />
       <Education />
