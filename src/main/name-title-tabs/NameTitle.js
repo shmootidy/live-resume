@@ -6,18 +6,10 @@ import './name-title-tabs.css'
 
 const NameTitle = (props) => {
   return (
-    <span className="flex space-between ntt sticky name-title responsive-padding">
-      <span className="flex flex-column">
-        <span id="name">susannah-ritchie</span>
-        <span id="title">Full-stack <span className="green">Web</span> Developer • Vancouver, BC</span>
-      </span>
-      <ContactResponsive />
-      {/* <TabsResponsive 
-        tabs={props.tabs} 
-        tabToggle={props.tabToggle} 
-        scrollToContent={props.scrollToContent}
-      /> */}
-    </span>
+    <span className="flex flex-column sticky name-title responsive-padding">
+      <span id="name">susannah-ritchie</span>
+      <span id="title">Full-stack <span className="green">Web</span> Developer • Vancouver, BC</span>
+  </span>
   )
 }
 

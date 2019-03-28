@@ -144,7 +144,6 @@ export default class Main extends Component {
         onClick={this.handleClick}
       >
         <NameTitle 
-          tabs={this.state.tabs}
           tabToggle={this.tabToggle} 
           scrollToContent={this.scrollToContent} 
         />
