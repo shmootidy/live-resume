@@ -3,6 +3,8 @@
 import React from 'react'
 import Tabs from './Tabs'
 
+// import './name-title-tabs.css'
+
 const NameTitleTabs = (props) => {
   return (
     <div id="name-title-tabs" className="flex flex-column">
