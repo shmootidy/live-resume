@@ -61,8 +61,6 @@ export default class Main extends Component {
   }
 
   // scroll to appropriate place when tab is clicked
-  // it may be better for the Content component to hold this method, bc I'd like for hitting the tabs to NOT scroll the top div. 
-  // But first, I'll see if i can get the scrollToC and handleScroll to work as desired without getting all recursive on me
   scrollToContent(tabIndex) {
     const scrollLocation = this.state.tabs[tabIndex].position
     window.scrollTo(0, scrollLocation)
