@@ -3,7 +3,7 @@
 import React from 'react'
 import Tabs from './Tabs'
 
-// import './name-title-tabs.css'
+import './name-title-tabs.css'
 
 const NameTitleTabs = (props) => {
   return (
