@@ -6,13 +6,9 @@ import Tab from './Tab'
 import './tabs.css'
 
 const Tabs = (props) => {
-  const tabsStickyPosition = {
-    top: props.position + 'px'
-  }
-
   return (
     <div>
-      <ul className="flex" style={tabsStickyPosition}>
+      <ul className="flex">
         <Tab 
           tabs={props.tabs} 
           tabToggle={props.tabToggle} 

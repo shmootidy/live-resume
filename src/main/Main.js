@@ -134,6 +134,7 @@ export default class Main extends Component {
   }
 
   render() {
+    let tabsStickyPosition = this.state.tabsAreSticky ? { top: this.state.nameTitleHeight + 'px' } : { top: 'auto' }
     return (
       <div 
         onScroll={this.handleScroll} 
@@ -148,13 +149,12 @@ export default class Main extends Component {
         <span 
           id="tabs" 
           className="ntt" 
-          style={{ top: this.state.nameTitleHeight + 'px' }}
+          style={tabsStickyPosition}
         >
           <Tabs 
             tabs={this.state.tabs} 
             tabToggle={this.tabToggle} 
             scrollToContent={this.scrollToContent}
-            position={this.state.nameTitleHeight} 
           />
         </span>
         <div id="content-sidebar" className="flex space-between responsive-padding">
