@@ -126,7 +126,7 @@ export default class Main extends Component {
             scrollToContent={this.scrollToContent} 
             tabs={this.state.tabs} />
         </div>
-        <div id="content-sidebar" className="flex">
+        <div id="content-sidebar" className="flex space-between">
           <Content />
           <Sidebar position={this.state.nameTitleTabsHeight} />
         </div>
