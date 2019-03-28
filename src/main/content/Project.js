@@ -1,5 +1,5 @@
 import React from 'react'
-import '../style/projects.css'
+import '../../style/projects.css'
 import TechStack from './TechStack'
 import ProjectDescription from './ProjectDescription'
 
@@ -15,7 +15,7 @@ const Project = (props) => {
         <h3 className="project-title">{project.title.toUpperCase()}</h3>
         <div className="project-subtitle">{project.subtitle}{awardDot}<span className="green">{award}</span> • {project.dateCompleted}</div>
         <div className="img-tech-box flex flex-column">
-          <img className="project-img" src={require('../assets/' + project.img)} alt={project.img} />
+          <img className="project-img" src={require('../../assets/' + project.img)} alt={project.img} />
           <div className="description description-value"><TechStack techStack={project.techStack} /></div>
         </div>
         <ProjectDescription descriptions={descriptions} />

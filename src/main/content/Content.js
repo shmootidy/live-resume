@@ -6,7 +6,7 @@ import Experience from './Experience'
 import Education from './Education'
 import Projects from './Projects'
 
-import '../style/content.css'
+import '../../style/content.css'
 
 const Content = (props) => {
   return (

@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
  
-import Content from '../content/Content'
-import Sidebar from '../sidebar/Sidebar'
-import NameTitleTabs from '../content/NameTitleTabs'
+import Content from './content/Content'
+import Sidebar from './sidebar/Sidebar'
+import NameTitleTabs from './name-title-tabs/NameTitleTabs'
 
 import '../style/main.css'
 
