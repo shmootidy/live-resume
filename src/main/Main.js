@@ -148,7 +148,6 @@ export default class Main extends Component {
         />
         <span 
           id="tabs" 
-          className="ntt" 
           style={tabsStickyPosition}
         >
           <Tabs 
