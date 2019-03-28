@@ -34,3 +34,13 @@
   background: white;
   z-index: 9;
 }
+
+.tabs-responsive {
+  display: none;
+}
+
+@media (max-width: 960px) {
+  .tabs-responsive {
+    display: block;
+  }
+}
