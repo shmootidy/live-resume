@@ -133,7 +133,7 @@ export default class Main extends Component {
         />
         <span 
           id="tabs" 
-          className="sticky ntt" 
+          className="ntt" 
           style={{ top: this.state.nameTitleHeight + 'px' }}
         >
           <Tabs 
