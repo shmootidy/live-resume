@@ -13,10 +13,10 @@ const Content = (props) => {
   return (
     <content>
       <NameTitleTabs tabs={props.tabs} tabToggle={props.tabToggle} scrollToContent={props.scrollToContent} />
-      <Summary />
-      <Projects />
-      <Education />
-      <Experience />
+      <div id="summary-content"></div><Summary />
+      <div id="projects-content"></div><Projects />
+      <div id="education-content"></div><Education />
+      <div id="experience-content"></div><Experience />
     </content>
   )
 }
