@@ -134,8 +134,8 @@ export default class Main extends Component {
   }
 
   render() {
-    // let tabsStickyPosition = this.state.tabsAreSticky ? { top: this.state.nameTitleHeight + 'px' } : { top: 'auto' }
-    let tabsStickyPosition = { top: this.state.nameTitleHeight }
+    let tabsStickyPosition = this.state.tabsAreSticky ? { top: this.state.nameTitleHeight + 'px' } : { top: 'auto' }
+    // let tabsStickyPosition = { top: this.state.nameTitleHeight }
     return (
       <div 
         onScroll={this.handleScroll} 
@@ -150,14 +150,14 @@ export default class Main extends Component {
         />
         <span 
           id="tabs" 
-          className="sticky"
+          className="sticky tabs-web"
           style={tabsStickyPosition}
         >
-          <span className="tabs-web"><Tabs 
+          <Tabs 
             tabs={this.state.tabs} 
             tabToggle={this.tabToggle} 
             scrollToContent={this.scrollToContent}
-          /></span>
+          />
         </span>
         <div id="content-sidebar" className="flex space-between responsive-padding">
           <Content />
