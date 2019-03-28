@@ -2,6 +2,10 @@
   color: rgba(0, 0, 0, .5);
 }
 
+.contact {
+  position: relative;
+}
+
 .contact-bar {
   border: 1px #e8e8e8 solid;
   border-left: 35px #e1e1e1 solid;
