@@ -99,7 +99,8 @@ export default class Main extends Component {
   setHeaderHeight() {
     // const nameTitleHeight = document.getElementById('name-title').offsetHeight
     const nameTitleHeight = document.getElementsByClassName('name-title')[0].offsetHeight
-    this.setState({ nameTitleHeight })
+    const nameTitleTabsHeight = document.getElementById('tabs').offsetHeight + nameTitleHeight
+    this.setState({ nameTitleHeight, nameTitleTabsHeight })
   }
 
   handleResize() {
@@ -144,7 +145,7 @@ export default class Main extends Component {
         </span>
         <div id="content-sidebar" className="flex space-between responsive-padding">
           <Content />
-          <Sidebar position={this.state.nameTitleHeight} />
+          <Sidebar position={this.state.nameTitleTabsHeight} />
         </div>
       </div>
     )
