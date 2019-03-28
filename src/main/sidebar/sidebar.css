@@ -56,7 +56,7 @@
 }
 
 @media (max-width: 960px) {
-  #contact-web {
+  .contact-web {
     display: none;
   }
 }

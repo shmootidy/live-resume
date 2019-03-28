@@ -59,7 +59,14 @@ li.not-selected {
   background-color: white;
 }
 
+#contact-responsive {
+  display: none;
+}
+
 @media (max-width: 960px) {
+  #contact-responsive {
+    display: block;
+  }
   ul {
     flex-direction: column;
   }
