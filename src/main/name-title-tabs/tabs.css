@@ -67,6 +67,9 @@ li.not-selected {
   #contact-responsive {
     display: block;
   }
+  .contact {
+    display: flex;
+  }
   ul {
     flex-direction: column;
   }
