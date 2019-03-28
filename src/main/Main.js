@@ -120,7 +120,7 @@ export default class Main extends Component {
   render() {
     return (
       <div onScroll={this.handleScroll} className="flex flex-column" id="main">
-        <div id="ntt">
+        <div id="ntt" className="sticky">
           <NameTitleTabs 
             tabToggle={this.tabToggle} 
             scrollToContent={this.scrollToContent} 
