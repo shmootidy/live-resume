@@ -66,5 +66,6 @@ li.not-selected {
   li.tab {
     border-bottom: none;
     width: auto;
+    margin-right: .5rem;
   }
 }
