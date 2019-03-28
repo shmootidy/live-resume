@@ -2,6 +2,7 @@ import React, { Component } from 'react'
  
 import Content from '../content/Content'
 import Sidebar from '../sidebar/Sidebar'
+import NameTitleTabs from '../content/NameTitleTabs'
 
 import '../style/resume.css'
 
@@ -119,9 +120,10 @@ export default class Main extends Component {
   render() {
     return (
       <div onScroll={this.handleScroll} onClick={this.handleClick}>
+        <NameTitleTabs tabToggle={this.tabToggle} scrollToContent={this.scrollToContent} tabs={this.state.tabs} />
         <div className="margin">
           <div className="flex space-between">
-            <Content tabToggle={this.tabToggle} scrollToContent={this.scrollToContent} tabs={this.state.tabs} />
+            <Content />
             <Sidebar position={this.state.nameTitleTabsHeight} />
           </div>
         </div>
