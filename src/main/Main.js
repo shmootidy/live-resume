@@ -42,7 +42,8 @@ export default class Main extends Component {
   // for testing only
   handleClick(e) {
     console.log(`pageY: ${e.pageY}`)
-    console.log('nameTitleTabsHeight:', document.getElementById('header').offsetHeight) 
+    console.log('nameTitleHeight:', document.getElementById('name-title').offsetHeight)
+    // console.log('nameTitleTabsHeight:', document.getElementById('header').offsetHeight) 
     // console.log('summary:', document.getElementById('summary').offsetTop) 
     // console.log('projects:', document.getElementById('projects').offsetTop) 
     // console.log('education:', document.getElementById('education').offsetTop) 
@@ -91,13 +92,11 @@ export default class Main extends Component {
     currentPositions.forEach((position, i) => {
       tabs[i].position = position - nameTitleTabsHeight
     })
-    // this.setState( tabs ) // it seems this is adding another object to state... what is with my syntax?
   }
 
   setHeaderHeight() {
-    // const nameTitleTabsHeight = document.getElementById('name-title-tabs').offsetHeight
-    // this.setState({ nameTitleTabsHeight })
-    // console.log(this.state)
+    const nameTitleHeight = document.getElementById('name-title').offsetHeight
+    this.setState({ nameTitleHeight })
   }
 
   handleResize() {
@@ -118,15 +117,15 @@ export default class Main extends Component {
 
   render() {
     return (
-      <div onScroll={this.handleScroll} className="flex flex-column" id="main">
+      <div onScroll={this.handleScroll} className="flex flex-column" id="main" onClick={this.handleClick}>
         <NameTitle 
           tabToggle={this.tabToggle} 
           scrollToContent={this.scrollToContent} />
         <span id="tabs">
           <Tabs 
             tabs={this.state.tabs} 
-            tabToggle={this.state.tabToggle} 
-            scrollToContent={this.state.scrollToContent} 
+            tabToggle={this.tabToggle} 
+            scrollToContent={this.scrollToContent} 
           />
           </span>
         <div id="content-sidebar" className="flex space-between responsive-padding">

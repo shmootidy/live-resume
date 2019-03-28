@@ -8,7 +8,11 @@ import './tabs.css'
 const Tabs = (props) => {
   return (
     <ul className="flex">
-      <Tab tabs={props.tabs} tabToggle={props.tabToggle} scrollToContent={props.scrollToContent} />
+      <Tab 
+        tabs={props.tabs} 
+        tabToggle={props.tabToggle} 
+        scrollToContent={props.scrollToContent} 
+      />
     </ul>
   )
 }
