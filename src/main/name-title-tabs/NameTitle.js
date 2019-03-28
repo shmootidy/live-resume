@@ -1,11 +1,8 @@
-// contains Tabs 
-
 import React from 'react'
-import Tabs from './Tabs'
 
 import './name-title-tabs.css'
 
-const NameTitleTabs = (props) => {
+const NameTitle = (props) => {
   return (
     <span id="name-title" className="flex flex-column responsive-padding sticky">
       <span id="name">susannah-ritchie</span>
@@ -14,4 +11,4 @@ const NameTitleTabs = (props) => {
   )
 }
 
-export default NameTitleTabs
+export default NameTitle
