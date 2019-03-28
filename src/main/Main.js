@@ -11,7 +11,7 @@ export default class Main extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      nameTitleTabsHeight: null,
+      nameTitleHeight: null,
       tabs: [
         { text: 'Readme',
           active: true,
@@ -37,13 +37,15 @@ export default class Main extends Component {
     this.setContentPositions = this.setContentPositions.bind(this)
     this.setHeaderHeight = this.setHeaderHeight.bind(this)
     this.handleResize = this.handleResize.bind(this)
+    this.handleClick = this.handleClick.bind(this)
   }
 
   // for testing only
   handleClick(e) {
     console.log(`pageY: ${e.pageY}`)
     console.log('nameTitleHeight:', document.getElementById('name-title').offsetHeight)
-    // console.log('nameTitleTabsHeight:', document.getElementById('header').offsetHeight) 
+    console.log('this.state.nameTitleHeight:', this.state.nameTitleHeight)
+    // console.log('nameTitleHeight:', document.getElementById('header').offsetHeight) 
     // console.log('summary:', document.getElementById('summary').offsetTop) 
     // console.log('projects:', document.getElementById('projects').offsetTop) 
     // console.log('education:', document.getElementById('education').offsetTop) 
@@ -81,7 +83,7 @@ export default class Main extends Component {
 
   // setState on content positions 1ms after componentDidMount
   setContentPositions() {
-    const nameTitleTabsHeight = this.state.nameTitleTabsHeight
+    const nameTitleHeight = this.state.nameTitleHeight
     const summary = document.getElementById('summary').offsetTop
     const projects = document.getElementById('projects').offsetTop
     const education = document.getElementById('education').offsetTop
@@ -90,7 +92,7 @@ export default class Main extends Component {
 
     let tabs = this.state.tabs
     currentPositions.forEach((position, i) => {
-      tabs[i].position = position - nameTitleTabsHeight
+      tabs[i].position = position - nameTitleHeight
     })
   }
 
@@ -106,7 +108,7 @@ export default class Main extends Component {
 
   componentDidMount() {
     setTimeout(this.setHeaderHeight, 100) // delay is necessary for accuracy
-    setTimeout(this.setContentPositions, 100) // fire setHeaderHeight before setContentPositions to ensure position is set with nameTitleTabsHeight
+    setTimeout(this.setContentPositions, 100) // fire setHeaderHeight before setContentPositions to ensure position is set with nameTitleHeight
     window.addEventListener('scroll', this.handleScroll)
     window.addEventListener('resize', this.handleResize)
   }
@@ -130,7 +132,7 @@ export default class Main extends Component {
           </span>
         <div id="content-sidebar" className="flex space-between responsive-padding">
           <Content />
-          <Sidebar position={this.state.nameTitleTabsHeight} />
+          <Sidebar position={this.state.nameTitleHeight} />
         </div>
       </div>
     )
