@@ -3,7 +3,7 @@
 import React from 'react'
 import Tab from './Tab'
 
-import '../../style/tabs.css'
+import './tabs.css'
 
 const Tabs = (props) => {
   return (

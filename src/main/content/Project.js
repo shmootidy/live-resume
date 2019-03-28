@@ -1,5 +1,4 @@
 import React from 'react'
-import '../../style/projects.css'
 import TechStack from './TechStack'
 import ProjectDescription from './ProjectDescription'
 
