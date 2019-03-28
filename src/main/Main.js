@@ -121,11 +121,16 @@ export default class Main extends Component {
   render() {
     return (
       <div onScroll={this.handleScroll} className="flex flex-column" id="main">
-        {/* <div id="ntt" className="sticky"> */}
         <NameTitle 
           tabToggle={this.tabToggle} 
           scrollToContent={this.scrollToContent} />
-        <Tabs tabs={this.state.tabs} tabToggle={this.state.tabToggle} scrollToContent={this.state.scrollToContent} />
+        <span id="tabs">
+          <Tabs 
+            tabs={this.state.tabs} 
+            tabToggle={this.state.tabToggle} 
+            scrollToContent={this.state.scrollToContent} 
+          />
+          </span>
         <div id="content-sidebar" className="flex space-between responsive-padding">
           <Content />
           <Sidebar position={this.state.nameTitleTabsHeight} />
