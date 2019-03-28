@@ -99,8 +99,8 @@ export default class Resume extends Component {
   }
 
   setHeaderHeight() {
-    const nameTitleTabsHeight = document.getElementById('name-title-tabs').offsetHeight
-    this.setState({ nameTitleTabsHeight })
+    // const nameTitleTabsHeight = document.getElementById('name-title-tabs').offsetHeight
+    // this.setState({ nameTitleTabsHeight })
     // console.log(this.state)
   }
 
@@ -123,10 +123,11 @@ export default class Resume extends Component {
   render() {
     return (
       <div onScroll={this.handleScroll} onClick={this.handleClick}>
-        <Header tabs={this.state.tabs} tabToggle={this.tabToggle} scrollToContent={this.scrollToContent} />
+        <Header  />
         <div className="margin">
           <div className="flex space-between">
-            <Content tabs={this.state.tabs} />
+            {/* <NameTitleTabs tabs={this.props.tabs} tabToggle={this.props.tabToggle} scrollToContent={this.props.scrollToContent} /> */}
+            <Content tabToggle={this.tabToggle} scrollToContent={this.scrollToContent} tabs={this.state.tabs} />
             <Sidebar position={this.state.nameTitleTabsHeight} />
           </div>
         </div>

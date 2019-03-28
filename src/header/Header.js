@@ -1,8 +1,7 @@
-// contains Random, NameTitleTabs
+// contains Random
 
 import React, { Component } from 'react'
 import Random from './Random'
-import NameTitleTabs from './NameTitleTabs'
 import ShmooSearch from './ShmooSearch';
 
 import '../style/header.css'
@@ -15,7 +14,6 @@ export default class Header extends Component {
     <div id="header" className="sticky">
       <Random />
       <ShmooSearch />
-      <NameTitleTabs tabs={this.props.tabs} tabToggle={this.props.tabToggle} scrollToContent={this.props.scrollToContent} />
     </div>
     )
   }
