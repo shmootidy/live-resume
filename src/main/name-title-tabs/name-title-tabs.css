@@ -1,3 +1,7 @@
+#name-title {
+  top: 1rem;
+}
+
 #name {
   letter-spacing: -0.8px;
   white-space: nowrap;
