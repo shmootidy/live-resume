@@ -1,5 +1,3 @@
-// this is the top level component
-
 import React, { Component } from 'react'
  
 import Content from '../content/Content'
