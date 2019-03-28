@@ -153,11 +153,11 @@ export default class Main extends Component {
           className="sticky"
           style={tabsStickyPosition}
         >
-          <Tabs 
+          <span className="tabs-web"><Tabs 
             tabs={this.state.tabs} 
             tabToggle={this.tabToggle} 
             scrollToContent={this.scrollToContent}
-          />
+          /></span>
         </span>
         <div id="content-sidebar" className="flex space-between responsive-padding">
           <Content />
