@@ -51,7 +51,7 @@
 
 #name-title-tabs {
   border-top: 1px solid rgba(0, 0, 0, 0.1);
-  padding: 1.5rem 8rem 0; /* sides must match .margin */
+  /* padding: 1.5rem 8rem 0; sides must match .margin */
   /* margin-bottom: 1.5rem; */
 }
 
