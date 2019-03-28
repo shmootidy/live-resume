@@ -49,24 +49,3 @@
   height: 3rem;
 }
 
-#title {
-  padding-bottom: 1.5rem;
-}
-
-#name {
-  letter-spacing: -0.8px;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  font-size: 2rem;
-  font-weight: 1000;
-  line-height: 1.15;
-}
-
-#title {
-  font-family: 'Fira Mono';
-  margin-top: .5rem;
-  white-space: nowrap;
-  font-size: .875rem;
-  color: rgba(0, 0, 0, 0.8);
-}

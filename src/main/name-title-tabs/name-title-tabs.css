@@ -1,6 +1,7 @@
 #name-title {
-  top: 1rem;
+  top: 0;
   background: white;
+  padding: 1.5rem 0;
 }
 
 #name {
@@ -19,5 +20,4 @@
   white-space: nowrap;
   font-size: .875rem;
   color: rgba(0, 0, 0, 0.8);
-  padding-bottom: 1.5rem;
 }
