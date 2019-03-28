@@ -12,6 +12,9 @@
     width: 100%;
     margin: auto;
   }
+  #content-sidebar {
+    flex-direction: column-reverse;
+  }
   #name {
     padding-top: 2rem;
   }
