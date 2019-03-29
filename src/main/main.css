@@ -7,7 +7,7 @@
   height: 800px;
 }
 
-@media (max-width: 960px) {
+/* @media (max-width: 960px) {
   #main {
     width: 100%;
     margin: auto;
@@ -21,4 +21,4 @@
   .responsive-padding {
     padding: 0 2rem;
   }
-}
+} */
