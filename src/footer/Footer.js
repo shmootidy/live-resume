@@ -1,11 +1,9 @@
-// contains Tagline, ContactLinks, Logo(?)
+import React from 'react'
 
-import React, { Component } from 'react'
-
-export default class Footer extends Component {
-  render() {
-    return (
-      <div id="footer">Footer</div>
-    )
-  }
+const Footer = (props) => {
+  return (
+    <div id="footer">Footer</div>
+  )
 }
+
+export default Footer
