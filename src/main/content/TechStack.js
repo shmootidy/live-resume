@@ -8,10 +8,10 @@ const TechStack = (props) => {
     let techValueClass = 'tech tech-value-' + techValueColor
 
     return (
-      <span className="project-tech" key={key}>
+      <div className="project-tech" key={key}>
         <span className="tech-key tech">{tech[0]}</span>
         <span className={techValueClass}>{tech[1]}</span>
-      </span>
+      </div>
     )
   })
   return (
