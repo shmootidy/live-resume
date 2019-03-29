@@ -10,17 +10,17 @@ const NameTitle = (props) => {
       <span className="flex space-between">
         <span className="flex flex-column">
           <span id="name">susannah-ritchie</span>
-          <span id="title">Full-stack <span className="green">Web</span> Developer • Vancouver, BC</span>
+          <span id="title">Full-stack <span className="green">Web</span> Developer<span id="vancouver"> • Vancouver, BC</span></span>
         </span>
-        <span className="tabs-responsive">
+        {/* <span className="tabs-responsive">
           <TabsResponsive 
             tabs={props.tabs} 
             tabToggle={props.tabToggle} 
             scrollToContent={props.scrollToContent}
-          />
-        </span>
+          /> */}
+        {/* </span> */}
       </span>
-      <span id="contact-responsive"><ContactResponsive /></span>
+      {/* <span id="contact-responsive"><ContactResponsive /></span> */}
     </span>
   )
 }

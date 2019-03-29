@@ -1,7 +1,7 @@
 @media (max-width: 960px) {
   li.tab {
-    border-left: 3px solid black;
-    border-radius: 0 5px 5px 0;
+    /* border-left: 3px solid black;
+    border-radius: 0 5px 5px 0; */
   }
 }
 
@@ -68,14 +68,14 @@ li.not-selected {
     display: block;
   }
   .contact {
-    display: flex;
+    /* display: flex; */
   }
   ul {
-    flex-direction: column;
+    /* flex-direction: column; */
   }
   li.tab {
-    border-bottom: none;
+    /* border-bottom: none;
     width: auto;
-    margin-right: .5rem;
+    margin-right: .5rem; */
   }
 }

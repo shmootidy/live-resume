@@ -71,3 +71,13 @@ li {
     font-weight: normal;
     font-style: normal;
 }
+
+@media (max-width: 960px) {
+  li {
+    /* padding: 0; */
+  }
+  .flex {
+    /* flex-wrap: wrap;
+    justify-content: center; */
+  }
+}

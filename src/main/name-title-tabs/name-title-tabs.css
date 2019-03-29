@@ -43,4 +43,7 @@
   .tabs-responsive {
     display: block;
   }
+  #vancouver {
+    display: none;
+  }
 }

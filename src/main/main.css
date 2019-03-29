@@ -16,7 +16,7 @@
     margin: auto;
   }
   .tabs-web {
-    display: none;
+    /* display: none; */
   }
   #content-sidebar {
     flex-direction: column-reverse;
