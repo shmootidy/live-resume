@@ -13,18 +13,19 @@ export default class Sidebar extends Component {
     this.state = {
       currentObsession: 'React',
       skills: {
-        database: 'PostgreSQL',
-        knex: 'Knex',
-        styling: 'CSS',
-        sass: 'SASS',
-        routing: 'AJAX', 
-        framework: 'CraftyJS',
-        database: 'MongoDB',
-        routing: 'Express',
-        axios: 'Axios',
-        framework: 'React',
-        routing: 'Websocket',
-      }
+        'general practices': ['DRY code', 'RESTful applications', 'Frequent, helpful commit messages'],
+        'web technologies': [{'APIs': ['Wikipedia', 'Yelp', 'Github']}, 'AJAX'],
+        'authentication': ['bcrpyt', 'session-cookies', 'md5'],
+        'middleware': ['body-parser', 'Babel'],
+        'languages': ['JavaScript', 'Ruby', 'HTML5', 'CSS3', 'SQL'],
+        'libraries & frameworks': ['ReactJS', 'jQuery', 'Rails', 'Knex', 'CraftyJS', 'EJS', 'SASS', 'JSX'],
+        'servers / routing': ['Express', 'Rails', 'React', 'Websocket', 'Axios'],
+        'testing': ['Mocha / Chai', 'RSpec'],
+        'database': ['PostgreSQL', 'mySqlite', 'MongoDB'],
+        'web debug tools': ['Chrome dev tools'],
+        'version control': ['git', 'github'],
+        'package managers': ['node', 'yarn', 'gems'],
+      },
     }
   }
 
