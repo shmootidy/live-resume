@@ -22,7 +22,7 @@ const Education = (props) => {
   let education = educationArr.map(education => {
     return (
       <div>
-        <div className="awarded description-key">{education.awarded.toUpperCase()}</div>
+        <div className="awarded">{education.awarded.toUpperCase()}</div>
         <span className="flex space-between project-subtitle">
           <span className="school">{education.school}</span>
           <span className="year">{education.year}</span>
