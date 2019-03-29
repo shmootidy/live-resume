@@ -44,9 +44,14 @@ const Projects = (props) => {
       title: 'Smart Cat',
       subtitle: 'Auto-Categorizing To-Do List',
       dateCompleted: 'Feb 2019',
-      description: {boop:['Wikipedia API requests', 'Categorizing algorithm', 'Custom styling', 'AJAX requests & Knex calls']},
+      description: {
+        styling: ['Custom styled all elements using SASS and CSS3.'],
+        'APIs': ['Wrote custom algorithms that processed unfiltered data from the Wikipedia API.', 'Developed categorizing logic.'],
+        // boop:['Wikipedia API requests', 'Categorizing algorithm', 'Custom styling', 'AJAX requests & Knex calls']
+      },
       techStack: {
         'lang-ext': 'SASS',
+        library: 'jQuery',
         client: 'AJAX',
         database: 'postgreSQL',
         queries: 'knex.js',
