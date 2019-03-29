@@ -47,7 +47,6 @@ const Projects = (props) => {
       description: {
         styling: ['Custom styled all elements using SASS and CSS3.'],
         'APIs': ['Wrote custom algorithms that processed unfiltered data from the Wikipedia API.', 'Developed categorizing logic.'],
-        // boop:['Wikipedia API requests', 'Categorizing algorithm', 'Custom styling', 'AJAX requests & Knex calls']
       },
       techStack: {
         'lang-ext': 'SASS',
