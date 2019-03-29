@@ -61,4 +61,9 @@
 
 .skills-list {
   padding-bottom: .5rem;
+  color: red;
+}
+
+.skill-items {
+  margin-right: .875rem;
 }

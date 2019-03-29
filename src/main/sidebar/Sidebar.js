@@ -13,7 +13,7 @@ export default class Sidebar extends Component {
     this.state = {
       currentObsession: 'React',
       skills: {
-        'general practices': ['DRY code', 'RESTful applications', 'helpful commit messages'],
+        'general practices': ['DRY code', 'RESTful applications', 'Helpful commit messages'],
         'web technologies': ['APIs (Wikipedia, Yelp, Github)', 'AJAX'],
         'authentication': ['bcrpyt', 'session-cookies', 'md5'],
         'middleware': ['body-parser', 'Babel'],
