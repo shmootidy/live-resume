@@ -9,7 +9,7 @@ const Skills = (props) => {
       .map(skillItem => <span className="tech-stack">{skillItem}</span>)
 
     return (
-      <div>
+      <div className="">
         <div className="skill-subtitle description-key">{skillType}</div>
         <div className="skills-list">{skillList}</div>
       </div>
@@ -18,8 +18,8 @@ const Skills = (props) => {
 
   return (
     <div id="skills">
-      <div className="sidebar-subtitle">skills</div>
-      <div className="">{skills}</div>
+      <div className="sidebar-subtitle">skills (scroll to see all)</div>
+      <div className="all-skills">{skills}</div>
     </div>
   )
 }

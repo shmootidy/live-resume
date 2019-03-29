@@ -50,6 +50,11 @@
   height: 40px;
 }
 
+.all-skills {
+  height: 12rem;
+  overflow: scroll;
+}
+
 .skill-subtitle {
   font-weight: bold;
 }
