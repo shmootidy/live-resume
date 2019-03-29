@@ -6,19 +6,3 @@
 #footer {
   height: 800px;
 }
-
-/* @media (max-width: 960px) {
-  #main {
-    width: 100%;
-    margin: auto;
-  }
-  #content-sidebar {
-    flex-direction: column-reverse;
-  }
-  #name {
-    padding-top: 2rem;
-  }
-  .responsive-padding {
-    padding: 0 2rem;
-  }
-} */
