@@ -14,7 +14,13 @@ const Projects = (props) => {
         workflow: ['Fixed repository conflicts.', 'Refactored code to maximize reusability and simplify debugging.'],
         'design & development': ['Conceptualized and implemented the scoring logic.', 'Integrated disparate features.']
       },
-      techStack: ['CraftyJS', 'MongoDB', 'Express', 'Axios'],
+      techStack: {
+        framework: 'crafty.js',
+        database: 'mongodb',
+        router: 'express',
+        client: 'axios'
+      },
+      // techStack: ['CraftyJS', 'MongoDB', 'Express', 'Axios'],
       url: 'https://github.com/shmootidy/DONT-PANIC',
       img: 'dont-panic.gif',
       award: true,
@@ -24,7 +30,11 @@ const Projects = (props) => {
       subtitle: 'Real-time Chat App',
       dateCompleted: 'Feb 2019',
       description: {beep:['Set up local server', 'Style elements', 'Modularize data structure']},
-      techStack: ['React', 'Websocket'],
+      techStack: {
+        framework: 'react.js',
+        API: 'websocket'
+      },
+      // techStack: ['React', 'Websocket'],
         // there's more! what about the API?
       url: 'https://github.com/shmootidy/Chatty',
       img: 'chatty.jpg'
@@ -34,7 +44,13 @@ const Projects = (props) => {
       subtitle: 'Auto-Categorizing To-Do List',
       dateCompleted: 'Feb 2019',
       description: {boop:['Wikipedia API requests', 'Categorizing algorithm', 'Custom styling', 'AJAX requests & Knex calls']},
-      techStack: ['PostgreSQL', 'Knex', 'CSS', 'SASS', 'AJAX'],
+      // techStack: ['PostgreSQL', 'Knex', 'CSS', 'SASS', 'AJAX'],
+      techStack: {
+        'lang-ext': 'SASS',
+        client: 'AJAX',
+        database: 'postgreSQL',
+        queries: 'knex.js',
+      },
       url: 'https://github.com/shmootidy/Smart-Cat',
       img: 'smart-cat.gif'
     },
