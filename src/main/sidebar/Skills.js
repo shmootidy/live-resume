@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 
 const Skills = (props) => {
   let skills = Object.entries(props.skills).map(skill => {
-    let skillType = skill[0]
+    let skillType = makeTitleCase(skill[0])
     let skillList = skill[1]
       .join(' *|* ')
       .split('*')
