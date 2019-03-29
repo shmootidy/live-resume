@@ -19,11 +19,12 @@ const TechStack = (props) => {
       <div className="flex flex-wrap">{techStack}</div>
     </div>
   )
+}
+
+export default TechStack
+
   // let techStack = props.techStack
   //   .join(' *|* ')
   //   .split('*')
   //   .map(tech => <span className="tech-stack">{tech}</span>)
   // return techStack
-}
-
-export default TechStack
