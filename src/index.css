@@ -58,7 +58,7 @@ li {
   line-height: 1.15;
   padding: .125rem .25rem;
   border-radius: 3px;
-  background: rgba(0, 0, 0, .2);
+  background: rgba(0, 0, 0, .1);
 }
 
 @font-face {
