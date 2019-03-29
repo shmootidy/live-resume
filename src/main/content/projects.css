@@ -1,13 +1,3 @@
-/* #projects {
-  position: relative;
-  left: -1rem;
-}
-
-#projects > h2 {
-  position: relative;
-  left: 1rem;
-} */
-
 .project:hover {
   background: linear-gradient(rgb(255, 249, 229), rgb(250, 235, 235), rgb(250, 235, 249), rgb(237, 229, 255));
   border-radius: 5px;
@@ -16,6 +6,10 @@
 .project, .experience {
   text-align: left;
   padding: 1rem;
+}
+
+.experience {
+  padding-left: 0;
 }
 
 .project-title {
