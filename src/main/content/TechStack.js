@@ -15,8 +15,7 @@ const TechStack = (props) => {
     )
   })
   return (
-    <div id="techStack">
-      <div className="sidebar-subtitle">languages &amp; frameworks</div>
+    <div id="tech-stack">
       <div className="flex flex-wrap">{techStack}</div>
     </div>
   )
