@@ -4,14 +4,14 @@ const Skills = (props) => {
   let skills = Object.entries(props.skills).map(skill => {
     let skillType = makeTitleCase(skill[0])
     let skillList = skill[1]
-      .join(' *|* ')
+      .join('*,* ')
       .split('*')
       .map(skillItem => <span className="tech-stack">{skillItem}</span>)
 
     return (
       <div>
-        <span className="skill-subtitle">{skillType}</span>
-        <span>{skillList}</span>
+        <div className="skill-subtitle description-key">{skillType}</div>
+        <div className="skills-list">{skillList}</div>
       </div>
     )
   })
