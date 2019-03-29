@@ -7,25 +7,25 @@ const Experience = (props) => {
       title: 'Bartender',
       employer: 'The Emerald Lounge',
       duration: 'Mar \'18 - Dec \'18',
-      skills: 'Solid Team Player'
+      skills: ['Solid Team Player']
     },
     {
       title: 'Company Owner',
       employer: 'Lionheart Sleep School',
       duration: 'Jul \'16 - Nov \'18',
-      skills: 'Brand Development'
+      skills: ['Brand Development']
     },
     {
       title: 'High School Teacher',
       employer: 'Avenir School Society',
       duration: 'Feb \'14 - Jun \'15',
-      skills: 'Managing Long-Term, Complex Projects'
+      skills: ['Managing Long-Term, Complex Projects']
     },
     {
       title: 'Musician',
       employer: 'The Organ / Keep Tidy',
       duration: 'Nov \'04 - Sep \'12',
-      skills: 'Live Performance'
+      skills: ['Live Performance']
     }
   ]
 
@@ -37,7 +37,7 @@ const Experience = (props) => {
           <div className="job-employer">{job.employer}</div>
           <div className="job-duration">{job.duration}</div>
         </div>
-        <div className="job-skill description-value">{job.skills}</div>
+        <div className="job-skill description-value">{job.skills.map(skill => <div>{skill}</div>)}</div>
       </div>
     )
   })
