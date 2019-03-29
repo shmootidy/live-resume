@@ -32,9 +32,11 @@ const Experience = (props) => {
   const job = jobs.map(job => {
     return (
       <div>
-        <div className="job-title">{job.title}</div>
-        <div className="job-employer">{job.employer}</div>
-        <div className="job-duration">{job.duration}</div>
+        <div className="job-title description-key">{job.title.toUpperCase()}</div>
+        <div className="flex space-between project-subtitle">
+          <div className="job-employer">{job.employer}</div>
+          <div className="job-duration">{job.duration}</div>
+        </div>
         <div className="job-skill">{job.skills}</div>
       </div>
     )
