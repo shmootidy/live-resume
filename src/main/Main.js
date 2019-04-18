@@ -42,9 +42,9 @@ export default class Main extends Component {
 
   // for testing only
   handleClick(e) {
-    console.log(`pageY: ${e.pageY}`)
-    console.log('nameTitleHeight:', document.getElementsByClassName('name-title')[0].offsetHeight)
-    console.log('this.state.nameTitleHeight:', this.state.nameTitleHeight)
+    // console.log(`pageY: ${e.pageY}`)
+    // console.log('nameTitleHeight:', document.getElementsByClassName('name-title')[0].offsetHeight)
+    // console.log('this.state.nameTitleHeight:', this.state.nameTitleHeight)
     // console.log('nameTitleHeight:', document.getElementById('header').offsetHeight) 
     // console.log('summary:', document.getElementById('summary').offsetTop) 
     // console.log('projects:', document.getElementById('projects').offsetTop) 
