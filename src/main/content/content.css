@@ -1,7 +1,7 @@
 content {
   font-size: 18px;
   color: rgba(0, 0, 0, .85);
-  width: 50vw;
+  /* width: 50vw; */
   line-height: 1.65;
   letter-spacing: 0.1px;
 }

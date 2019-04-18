@@ -68,3 +68,7 @@
 .skill-items {
   margin-right: .875rem;
 }
+
+#sidebar {
+  min-width: 30vw;
+}
