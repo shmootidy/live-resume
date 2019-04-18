@@ -4,6 +4,7 @@ content {
   /* width: 50vw; */
   line-height: 1.65;
   letter-spacing: 0.1px;
+  padding-right: 3rem;
 }
 
 .content-title {
