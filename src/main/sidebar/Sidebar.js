@@ -31,7 +31,7 @@ export default class Sidebar extends Component {
 
   render() {
     const sidebarStickyStyle = {
-      top: this.props.position + 32
+      top: this.props.position + 32 + 10
     }
 
     return (
