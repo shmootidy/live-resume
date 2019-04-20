@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React from 'react'
 
 const Skills = (props) => {
   let skills = Object.entries(props.skills).map(skill => {

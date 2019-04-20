@@ -1,5 +1,4 @@
-import React, { Component } from 'react'
-// import Job from './Job'
+import React from 'react'
 
 const Experience = (props) => {
   const jobs = [
