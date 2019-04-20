@@ -36,10 +36,6 @@ self.__precacheManifest = [
     "url": "/live-resume/static/media/smart-cat.7c154840.gif"
   },
   {
-    "revision": "be3e039827b8cff09ef7200ed5c35f63",
-    "url": "/live-resume/static/media/GUBBLABLO.be3e0398.ttf"
-  },
-  {
     "revision": "408ce17d646fec29b598082487bd0a25",
     "url": "/live-resume/static/media/GUBBLABLO.408ce17d.woff"
   },
@@ -48,11 +44,15 @@ self.__precacheManifest = [
     "url": "/live-resume/static/media/GUBBLABLO.e398ffa0.eot"
   },
   {
+    "revision": "be3e039827b8cff09ef7200ed5c35f63",
+    "url": "/live-resume/static/media/GUBBLABLO.be3e0398.ttf"
+  },
+  {
     "revision": "166e4de116d640c491f0d260d781ab99",
     "url": "/live-resume/static/media/GUBBLABLO.166e4de1.svg"
   },
   {
-    "revision": "08ed4325dbcbd62ecda88d16d2f8796e",
+    "revision": "65bde0ee1f67814ee395d95ecd5cf2d4",
     "url": "/live-resume/index.html"
   }
 ];
