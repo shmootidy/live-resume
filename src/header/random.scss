@@ -12,22 +12,29 @@
 
   > div:first-child {
     display: none;
+    width: 70%;
 
     @media (min-width: 500px) {
-      display: block;
+      display: flex;
     }
   }
   > div:last-child {
     width: 100%;
     display: flex;
     justify-content: space-between;
+    overflow: hidden;
+
+    span {
+      @media (min-width: 500px) {
+        margin: 0 .5rem;
+      }
+    }
   }
 }
 
 #heart {
   color: black;
   font-size: .875rem; /* don't forget to set rem! */
-  margin-right: 1rem;
   padding-right: 1rem;
   line-height: 1.25;
   text-decoration: none;
@@ -38,7 +45,8 @@
   text-align: left;
   margin-right: 2rem;
   text-decoration: none;
-  font-weight: 400;
+  font-weight: 100;
+  font-size: 14px;
   letter-spacing: 0.015625em;
   line-height: 1.15;
   white-space: nowrap;

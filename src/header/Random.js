@@ -6,7 +6,7 @@ import './random.scss'
 
 export default class Random extends Component {
   displayQualities() {
-    const randomQualities = ['Proactive', 'Concise', 'Reliable', 'Approachable', 'Creative', 'Resourceful', 'Knowledgeable']
+    const randomQualities = ['Thorough', 'Proactive', 'Concise', 'Reliable', 'Approachable', 'Creative', 'Resourceful', 'Knowledgeable']
       .map(a => ({ sort: Math.random(), value: a }))
       .sort((a, b) => a.sort - b.sort)
       .map(a => a.value)
