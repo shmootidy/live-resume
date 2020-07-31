@@ -6,6 +6,8 @@
   margin: 0 auto;
   max-width: 96rem;
   display: flex;
+  font-family: 'Poppins', sans-serif;
+  font-size: .75rem;
 }
 
 #heart {
@@ -18,9 +20,7 @@
 }
 
 #random-msg {
-  font-family: 'Poppins', sans-serif;
   color: black;
-  font-size: .875rem;
   text-align: left;
   margin-right: 2rem;
   text-decoration: none;
