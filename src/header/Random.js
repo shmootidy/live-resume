@@ -2,7 +2,7 @@
 
 import React, { Component } from 'react'
 
-import './random.css'
+import './random.scss'
 
 export default class Random extends Component {
   render() {
