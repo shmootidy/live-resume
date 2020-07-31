@@ -71,4 +71,5 @@
 
 #sidebar {
   min-width: 30vw;
+  display: none;
 }
