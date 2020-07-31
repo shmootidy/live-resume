@@ -3,7 +3,7 @@
 import React from 'react'
 import Tab from './Tab'
 
-import './tabs.css'
+import './tabs.scss'
 
 const Tabs = (props) => {
   const tabsStickyPosition = {

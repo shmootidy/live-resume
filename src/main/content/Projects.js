@@ -1,6 +1,6 @@
 import React from 'react'
 import Project from './Project'
-import './projects.css'
+import './projects.scss'
 
 const Projects = (props) => {
   const projects = [

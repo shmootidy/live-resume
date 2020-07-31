@@ -5,8 +5,8 @@ import Sidebar from './sidebar/Sidebar'
 import Tabs from './name-title-tabs/Tabs'
 import NameTitle from './name-title-tabs/NameTitle'
 
-import './main.css'
-import './_responsive.css'
+import './main.scss'
+import './_responsive.scss'
 
 export default class Main extends Component {
   constructor(props) {

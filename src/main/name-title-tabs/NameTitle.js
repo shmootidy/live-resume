@@ -1,6 +1,6 @@
 import React from 'react'
 
-import './name-title-tabs.css'
+import './name-title-tabs.scss'
 
 const NameTitle = (props) => {
   return (

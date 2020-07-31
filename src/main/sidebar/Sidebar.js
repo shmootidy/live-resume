@@ -5,7 +5,7 @@ import Contact from './Contact'
 import Skills from './Skills'
 import CurrentObsession from './CurrentObsession'
 
-import './sidebar.css'
+import './sidebar.scss'
 
 export default class Sidebar extends Component {
   constructor(props) {
