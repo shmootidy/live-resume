@@ -2,7 +2,7 @@
   color: rgba(0, 0, 0, .5);
   margin: 1rem 0;
   -webkit-font-smoothing: auto;
-  font-weight: bold;
+  font-weight: 900;
 }
 
 .contact-bar {
@@ -71,5 +71,9 @@
 
 #sidebar {
   min-width: 30vw;
-  display: none;
+}
+
+#content-sidebar {
+  flex-wrap: wrap-reverse;
+  padding: 1rem;
 }

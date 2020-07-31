@@ -3,7 +3,7 @@ import React from 'react'
 const Contact = (props) => {
   return (
     <div id="contact">
-      <div className="sidebar-subtitle">contact</div>
+      <div className="sidebar-subtitle">Contact</div>
       <a href="tel:+1-604-616-0247" className="contact-bar" id="phone">
         <img className="contact-icon absolute" alt="Phone icon" src={require("../../assets/phone.png")} />
         <span className="contact-info">> 604.616.0247</span>
