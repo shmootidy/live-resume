@@ -2,7 +2,7 @@
   border-width: 10px 0 0;
   border-style: solid;
   border-image: linear-gradient(139deg, #fb8817, #ff4b01, #c12127, #e02aff) 3;
-  padding: 1rem 2.25rem;
+  padding: 1rem;
   margin: 0 auto;
   max-width: 96rem;
   display: flex;
@@ -23,6 +23,7 @@
     display: flex;
     justify-content: space-between;
     overflow: hidden;
+    // margin: 0 .25rem;
 
     span {
       @media (min-width: 500px) {
