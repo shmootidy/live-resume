@@ -1,16 +1,11 @@
 #random {
-  border-width: 3px 0 0;
+  border-width: 10px 0 0;
   border-style: solid;
   border-image: linear-gradient(139deg, #fb8817, #ff4b01, #c12127, #e02aff) 3;
   padding: 1rem 2.25rem;
   margin: 0 auto;
   max-width: 96rem;
   display: flex;
-  border-width: 10px 0 0;
-  
-  @media (min-width: 750px) {
-    border-width: 3px 0 0;
-  }
 }
 
 #heart {
