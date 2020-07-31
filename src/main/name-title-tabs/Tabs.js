@@ -12,7 +12,7 @@ const Tabs = (props) => {
 
   return (
     <div>
-      <ul className="flex sticky" style={tabsStickyPosition}>
+      <ul className="flex sticky tabs" style={tabsStickyPosition}>
         <Tab 
           tabs={props.tabs} 
           tabToggle={props.tabToggle} 
