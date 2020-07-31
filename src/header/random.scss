@@ -8,6 +8,20 @@
   display: flex;
   font-family: 'Poppins', sans-serif;
   font-size: .75rem;
+  font-weight: 600;
+
+  > div:first-child {
+    display: none;
+
+    @media (min-width: 500px) {
+      display: block;
+    }
+  }
+  > div:last-child {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
 }
 
 #heart {
