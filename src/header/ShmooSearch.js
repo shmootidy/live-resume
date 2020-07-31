@@ -19,10 +19,14 @@ export default class ShmooSearch extends Component {
    render() {
     return (
     <div className="header-section flex">
-      <span><span id="shmoo-npm">shmoo</span></span>
-      <a href="https://en.wikipedia.org/wiki/Shmoo" target="_blank" rel="noopener noreferrer" id="shmoo-search">{this.state.message[this.state.iteration]}</a>
-      <div id="shmoo-button" onClick={this.loopMessage}>Click</div>
-      {/* <img id="shmoo-img" src={require("./assets/shmoo.jpg")} /> */}
+      <span>
+        <span id="shmoo-npm">shmoo</span>
+        <a href="mailto:shmooritchie@gmail.com">Contact Me</a>
+      </span>
+      <span>
+        <a href="https://en.wikipedia.org/wiki/Shmoo" target="_blank" rel="noopener noreferrer" id="shmoo-search">{this.state.message[this.state.iteration]}</a>
+        <div id="shmoo-button" onClick={this.loopMessage}>Click</div>
+      </span>
     </div>
     )
   }
