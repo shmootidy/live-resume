@@ -7,6 +7,7 @@
   top: 0;
   padding: 1rem;
   background: transparent;
+  z-index: 11;
 }
 
 #name {
@@ -28,6 +29,5 @@
 }
 
 #tabs {
-  position: sticky;
   margin-bottom: 1rem;
 }

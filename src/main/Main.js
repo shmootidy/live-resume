@@ -134,8 +134,7 @@ export default class Main extends Component {
         />
         <span 
           id="tabs" 
-          className="sticky ntt" 
-          style={{ top: this.state.nameTitleHeight + 'px' }}
+          className="ntt" 
         >
           <Tabs 
             tabs={this.state.tabs} 
