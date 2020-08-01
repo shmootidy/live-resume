@@ -12,11 +12,12 @@ const Tabs = (props) => {
 
   return (
     <div>
-      <ul className="flex sticky tabs" style={tabsStickyPosition}>
+      <ul className="flex tabs">
         <Tab 
-          tabs={props.tabs} 
+          tabs={props.tabs}
           tabToggle={props.tabToggle} 
           scrollToContent={props.scrollToContent} 
+          style={tabsStickyPosition}
         />
       </ul>
     </div>

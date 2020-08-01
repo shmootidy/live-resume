@@ -6,9 +6,10 @@ const Tab = (props) => {
     let tabClass = 'tab tab' + (index + 1).toString()
     let fullClass =  tabClass + ' ' + selectedClass
     let tabText = tab.text
-    return <li 
+    return <li
+        style={props.style}
         key={tab.text}
-        className={fullClass} 
+        className={fullClass + ' sticky'} 
         onClick={() => { props.tabToggle(index); props.scrollToContent(index) }}>
         {tabText}
       </li>
