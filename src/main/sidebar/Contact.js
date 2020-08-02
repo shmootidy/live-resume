@@ -1,8 +1,21 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 
 const Contact = (props) => {
+  useEffect(() => {
+    const contact = document.querySelector('#sidebar .contact')
+    const mobileContact = document.querySelector('.mobile-contact .contact')
+    const observer = new IntersectionObserver(
+      ([e]) => {
+        // e.target.classList.toggle('at-top', e.intersectionRatio < 1)
+        mobileContact.classList.toggle('at-top', e.intersectionRatio < 1)
+      },
+      {threshold: [1]}
+    )
+    observer.observe(contact)
+  })
+
   return (
-    <div id="contact">
+    <div className="contact">
       <div className="sidebar-subtitle">Contact</div>
       <a href="tel:+1-604-616-0247" className="contact-bar" id="phone">
         <img className="contact-icon absolute" alt="Phone icon" src={require("../../assets/phone.png")} />

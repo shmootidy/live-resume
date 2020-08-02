@@ -22,6 +22,39 @@
   border-radius: .25rem;
 }
 
+.mobile-contact {
+  .contact {
+    display: flex;
+    justify-content: space-around;
+    overflow: hidden;
+    position: relative;
+    top: -40px;
+    height: 0;
+    margin: 0;
+    transition: all .5s;
+
+    &.at-top {
+      height: 40px;
+      top: 0;
+      margin-top: 1rem;
+      transition: top .5s;
+    }
+  }
+  .sidebar-subtitle {
+    display: none;
+  }
+  .contact-bar {
+    border: 0;
+    background: #e1e1e1;
+  }
+  .contact-info {
+    display: none;
+  }
+  img.contact-icon.absolute {
+    position: static;
+  }
+}
+
 .contact-icon {
   height: 1.5rem;
   left: .35rem;

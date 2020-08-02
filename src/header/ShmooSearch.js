@@ -5,7 +5,8 @@ export default class ShmooSearch extends Component {
     super(props)
     this.state = {
       iteration: 0,
-      message: ['What is a Shmoo anyway?', 'Shmoo is my name! Well...my real name is Susannah...', '\'Shmoo\' comes from the comic, Lil Abner.', 'My parents gave me the nickname as a baby, and it stuck.', 'Click here to learn more about the Shmoo!']
+      // message: ['What is a Shmoo anyway?', 'Shmoo is my name! Well...my real name is Susannah...', '\'Shmoo\' comes from the comic, Lil Abner.', 'My parents gave me the nickname as a baby, and it stuck.', 'Click here to learn more about the Shmoo!']
+      message: ['Hi, I\'m Shmoo!', 'It\'s a nickname.', 'But it\'s my nickname, you know?']
     }
     this.loopMessage = this.loopMessage.bind(this)
   }
@@ -24,7 +25,7 @@ export default class ShmooSearch extends Component {
         <a href="mailto:shmooritchie@gmail.com">Contact Me</a>
       </span>
       <span>
-        <a href="https://en.wikipedia.org/wiki/Shmoo" target="_blank" rel="noopener noreferrer" id="shmoo-search">{this.state.message[this.state.iteration]}</a>
+        {/* <a href="https://en.wikipedia.org/wiki/Shmoo" target="_blank" rel="noopener noreferrer" id="shmoo-search">*/}<a id="shmoo-search">{this.state.message[this.state.iteration]}</a>
         <div id="shmoo-button" onClick={this.loopMessage}>More</div>
       </span>
     </div>

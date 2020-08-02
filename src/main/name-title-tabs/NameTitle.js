@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react'
 import Tab from './Tab'
+import Contact from '../sidebar/Contact'
 
 import './name-title-tabs.scss'
 
@@ -29,6 +30,9 @@ const NameTitle = (props) => {
           tabMobile={true}
         />
       </ul>
+      <div className="mobile-contact">
+        <Contact />
+      </div>
     </span>
   )
 }
