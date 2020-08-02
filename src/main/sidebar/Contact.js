@@ -7,7 +7,8 @@ const Contact = (props) => {
     const observer = new IntersectionObserver(
       ([e]) => {
         // e.target.classList.toggle('at-top', e.intersectionRatio < 1)
-        mobileContact.classList.toggle('at-top', e.intersectionRatio < 1)
+        if (e.intersectionRect.top < 1) mobileContact.classList.toggle('at-top', e.intersectionRatio < 1)
+        
       },
       {threshold: [1]}
     )

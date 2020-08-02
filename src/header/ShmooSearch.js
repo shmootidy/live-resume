@@ -6,7 +6,7 @@ export default class ShmooSearch extends Component {
     this.state = {
       iteration: 0,
       // message: ['What is a Shmoo anyway?', 'Shmoo is my name! Well...my real name is Susannah...', '\'Shmoo\' comes from the comic, Lil Abner.', 'My parents gave me the nickname as a baby, and it stuck.', 'Click here to learn more about the Shmoo!']
-      message: ['Hi, I\'m Shmoo!', 'It\'s a nickname.', 'But it\'s my nickname, you know?']
+      message: ['Hi, I\'m Shmoo!', 'It\'s a nickname.', 'Susannah is my real name...', '...even though it\'s my real name']
     }
     this.loopMessage = this.loopMessage.bind(this)
   }
