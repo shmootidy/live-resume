@@ -15,18 +15,22 @@ export default class Main extends Component {
       nameTitleHeight: '109',
       tabs: [
         { text: 'Readme',
+          icon: 'R',
           active: true,
           position: null
          },
         { text: 'Projects',
+          icon: 'P',
           active: false,
           position: null
          }, 
         { text: 'Education',
+          icon: 'Ed',
           active: false,
           position: null
          },
         { text: 'Experience',
+          icon: 'Ex',
           active: false,
           position: null
          }
@@ -129,8 +133,10 @@ export default class Main extends Component {
         onClick={this.handleClick}
       >
         <NameTitle 
+          tabs={this.state.tabs}
           tabToggle={this.tabToggle} 
           scrollToContent={this.scrollToContent} 
+          tabsPosition={this.state.nameTitleHeight}
         />
         <span 
           id="tabs" 

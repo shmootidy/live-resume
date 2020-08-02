@@ -17,7 +17,7 @@ const Tabs = (props) => {
           tabs={props.tabs}
           tabToggle={props.tabToggle} 
           scrollToContent={props.scrollToContent} 
-          style={tabsStickyPosition}
+          tabMobile={false}
         />
       </ul>
     </div>

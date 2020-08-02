@@ -4,10 +4,14 @@
 }
 
 .name-title {
-  top: 0;
-  padding: 1rem;
+  top: -1px;
+  padding: 1rem 1rem calc(1rem + 1px);
   background: transparent;
   z-index: 11;
+
+  &.is-sticky {
+    background: white;;
+  }
 }
 
 #name {
@@ -27,7 +31,17 @@
   font-size: .875rem;
   color: rgba(0, 0, 0, 0.8);
 }
-
 #tabs {
   margin-bottom: 1rem;
+}
+.mobile-tabs {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 1rem;
+  position: relative;
+  top: -70px;
+  transition: top .5s;
+}
+.is-sticky .mobile-tabs {
+  top: 0;
 }
