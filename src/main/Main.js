@@ -12,7 +12,7 @@ export default class Main extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      nameTitleHeight: '109',
+      nameTitleHeight: '94',
       tabs: [
         { text: 'Readme',
           icon: 'R',
@@ -123,7 +123,6 @@ export default class Main extends Component {
   componentWillUnmount() {
     window.removeEventListener('scroll', this.handleScroll);
   }
-
   render() {
     return (
       <div 

@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { Component, useEffect } from 'react'
 
 export default class Tab extends Component {
   constructor(props) {
