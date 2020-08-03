@@ -78,13 +78,13 @@ export default class Main extends Component {
   // trigger tabToggle at certain scroll points
   handleScroll() {
     // const summaryPosition = this.state.tabs[0].position
-    const projectsPosition = this.state.tabs[1].position
-    const educationPosition = this.state.tabs[2].position
-    const experiencePosition = this.state.tabs[3].position
-    if (window.scrollY < projectsPosition) this.tabToggle(0)
-    if (window.scrollY >= projectsPosition && window.scrollY < educationPosition) this.tabToggle(1)
-    if (window.scrollY >= educationPosition && window.scrollY < experiencePosition) this.tabToggle(2)
-    if (window.scrollY >= experiencePosition) this.tabToggle(3)
+    // const projectsPosition = this.state.tabs[1].position
+    // const educationPosition = this.state.tabs[2].position
+    // const experiencePosition = this.state.tabs[3].position
+    // if (window.scrollY < projectsPosition) this.tabToggle(0)
+    // if (window.scrollY >= projectsPosition && window.scrollY < educationPosition) this.tabToggle(1)
+    // if (window.scrollY >= educationPosition && window.scrollY < experiencePosition) this.tabToggle(2)
+    // if (window.scrollY >= experiencePosition) this.tabToggle(3)
   }
 
   // setState on content positions 1ms after componentDidMount
@@ -127,7 +127,7 @@ export default class Main extends Component {
   render() {
     return (
       <div 
-        onScroll={this.handleScroll} 
+        // onScroll={this.handleScroll} 
         className="flex flex-column" 
         id="main" 
         onClick={this.handleClick}
