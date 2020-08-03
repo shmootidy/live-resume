@@ -4,6 +4,7 @@ import Content from './content/Content'
 import Sidebar from './sidebar/Sidebar'
 import Tabs from './name-title-tabs/Tabs'
 import NameTitle from './name-title-tabs/NameTitle'
+import Contact from './sidebar/Contact'
 
 import './main.scss'
 import './_responsive.scss'
@@ -148,6 +149,7 @@ export default class Main extends Component {
             position={this.state.nameTitleHeight} 
           />
         </span>
+        <Contact />
         <div id="content-sidebar" className="flex space-between responsive-padding">
           <Content />
           <Sidebar position={this.state.nameTitleTabsHeight} />

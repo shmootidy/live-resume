@@ -2,7 +2,7 @@ import React, { useEffect } from 'react'
 
 const Contact = (props) => {
   useEffect(() => {
-    const contact = document.querySelector('#sidebar .contact')
+    const contact = document.querySelector('#main > .contact')
     const mobileContact = document.querySelector('.mobile-contact .contact')
     const observer = new IntersectionObserver(
       ([e]) => {
