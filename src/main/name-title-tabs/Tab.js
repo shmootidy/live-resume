@@ -1,7 +1,19 @@
 import React, { Component, useEffect } from 'react'
 
  const Tab = (props) => {
-// useEffect
+  useEffect(() => {
+    const tabs = document.querySelectorAll('.tabs .tab')
+    tabs.forEach(tab => {
+      const observer = new IntersectionObserver(
+        ([e]) => {
+          console.log(e)
+          e.target.classList.toggle('stuck')
+        },
+        {threshold: [0]}
+      )
+      observer.observe(tab)
+    })
+  })
   const tab = props.tabs.map((tab, index) => {
     let selectedClass = tab.active ? '' : 'not-selected'
     let tabClass = 'tab tab' + (index + 1).toString()
