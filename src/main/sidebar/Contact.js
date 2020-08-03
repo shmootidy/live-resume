@@ -11,7 +11,6 @@ const Contact = (props) => {
         } else {
           mobileContact.classList.remove('at-top', e.intersectionRatio < 1)
         }
-        console.log(e.boundingClientRect.top)
       },
       {threshold: [1]}
     )
