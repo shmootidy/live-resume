@@ -6,12 +6,12 @@ const Contact = (props) => {
     const mobileContact = document.querySelector('.mobile-contact .contact')
     const observer = new IntersectionObserver(
       ([e]) => {
-        // e.target.classList.toggle('at-top', e.intersectionRatio < 1)
-        if (e.intersectionRect.top < 1) {
+        if (e.boundingClientRect.top <= 0) {
           mobileContact.classList.add('at-top', e.intersectionRatio < 1)
         } else {
           mobileContact.classList.remove('at-top', e.intersectionRatio < 1)
         }
+        console.log(e.boundingClientRect.top)
       },
       {threshold: [1]}
     )
