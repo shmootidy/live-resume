@@ -1,4 +1,4 @@
-import React, { Component, useEffect } from 'react'
+import React from 'react'
 
  const Tab = (props) => {
   const tab = props.tabs.map((tab, index) => {

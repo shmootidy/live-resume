@@ -25,7 +25,7 @@ export default class ShmooSearch extends Component {
         <a href="mailto:shmooritchie@gmail.com">Contact Me</a>
       </span>
       <span>
-        {/* <a href="https://en.wikipedia.org/wiki/Shmoo" target="_blank" rel="noopener noreferrer" id="shmoo-search">*/}<a id="shmoo-search">{this.state.message[this.state.iteration]}</a>
+        {/* <a href="https://en.wikipedia.org/wiki/Shmoo" target="_blank" rel="noopener noreferrer" id="shmoo-search">*/}<div id="shmoo-search">{this.state.message[this.state.iteration]}</div>
         <div id="shmoo-button" onClick={this.loopMessage}>More</div>
       </span>
     </div>

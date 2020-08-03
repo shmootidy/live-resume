@@ -11,9 +11,7 @@ export default class Random extends Component {
       .sort((a, b) => a.sort - b.sort)
       .map(a => a.value)
     return randomQualities.map((quality, i) => {
-      if (i < 4) {
-        return <span key={ quality }>{ quality }</span>
-      }
+      return i < 4 ? <span key={ quality }>{ quality }</span> : null
     })
   }
 
