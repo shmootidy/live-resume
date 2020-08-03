@@ -71,8 +71,9 @@ export default class Main extends Component {
 
   // scroll to appropriate place when tab is clicked
   scrollToContent(tabIndex) {
-    const scrollLocation = this.state.tabs[tabIndex].position
-    window.scrollTo(0, scrollLocation)
+    // const scrollLocation = this.state.tabs[tabIndex].position
+    // window.scrollTo(0, scrollLocation)
+    this.setState( { visibleTab: tabIndex } )
   }
 
   // trigger tabToggle at certain scroll points
@@ -90,10 +91,10 @@ export default class Main extends Component {
   // setState on content positions 1ms after componentDidMount
   setContentPositions() {
     const nameTitleHeight = this.state.nameTitleHeight
-    const summary = document.getElementById('summary').offsetTop
-    const projects = document.getElementById('projects').offsetTop
-    const education = document.getElementById('education').offsetTop
-    const experience = document.getElementById('experience').offsetTop
+    const summary = 0//document.getElementById('summary').offsetTop
+    const projects = 0//document.getElementById('projects').offsetTop
+    const education = 0//document.getElementById('education').offsetTop
+    const experience = 0//document.getElementById('experience').offsetTop
     const currentPositions = [summary, projects, education, experience]
 
     let tabs = this.state.tabs
@@ -150,7 +151,7 @@ export default class Main extends Component {
           />
         </span>
         <Contact />
-        <Content />
+        <Content visibleTab={this.state.visibleTab ? this.state.visibleTab : 0 } />
         {/* <div id="content-sidebar" className="flex space-between responsive-padding">
           <Content />
           <Sidebar position={this.state.nameTitleTabsHeight} />

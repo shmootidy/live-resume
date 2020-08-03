@@ -10,15 +10,37 @@ import Skills from '../sidebar/Skills'
 import './content.scss'
 
 const Content = (props) => {
-  return (
-    <content>
-      <Summary />
-      <Skills />
-      <Projects />
-      <Education />
-      <Experience />
-    </content>
-  )
+  const visibleTab = props.visibleTab
+  if (visibleTab === 0) {
+    return (
+      <content>
+        <Summary />
+        <Skills />
+      </content>
+    )
+  } else if (visibleTab === 1) {
+    return (
+      <content>
+        <Projects />
+      </content>
+    )
+  } else if (visibleTab === 2) {
+    return (
+      <content>
+        <Education />
+      </content>
+    )
+  } else if (visibleTab === 3) {
+    return (
+      <content>
+        <Experience />
+      </content>
+    )
+  } else {
+    return (
+      <div>butts</div>
+    )
+  }
 }
 
 export default Content

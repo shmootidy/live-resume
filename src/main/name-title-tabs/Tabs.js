@@ -16,7 +16,7 @@ const Tabs = (props) => {
       ([e]) => {
         mobileTabs.classList.toggle('at-top', e.intersectionRatio < 1)
       },
-      {threshold: [0]}
+      {threshold: [1]}
     )
     if (tabs) observer.observe(tabs)
   })
