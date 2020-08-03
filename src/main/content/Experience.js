@@ -30,7 +30,7 @@ const Experience = (props) => {
 
   const job = jobs.map(job => {
     return (
-      <div className="experience">
+      <div key={ job.icon } className="experience">
         <div className="job-title description-key">{job.title.toUpperCase()}</div>
         <div className="flex space-between project-subtitle">
           <div className="job-employer">{job.employer}</div>

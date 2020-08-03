@@ -18,10 +18,10 @@ const Skills = (props) => {
   let skills = Object.entries(_skills).map(skill => {
     let skillType = makeTitleCase(skill[0])
     let skillList = skill[1]
-      .map(skillItem => <span className="skill-items">{skillItem}</span>)
+      .map(skillItem => <span key={ skillItem } className="skill-items">{skillItem}</span>)
 
     return (
-      <div className="">
+      <div key={ skillType } className="">
         <div className="skill-subtitle description-key">{skillType}</div>
         <div className="skills-list">{skillList}</div>
       </div>

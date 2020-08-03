@@ -12,7 +12,7 @@ export default class Random extends Component {
       .map(a => a.value)
     return randomQualities.map((quality, i) => {
       if (i < 4) {
-        return <span>{quality}</span>
+        return <span key={ quality }>{ quality }</span>
       }
     })
   }
