@@ -150,10 +150,11 @@ export default class Main extends Component {
           />
         </span>
         <Contact />
-        <div id="content-sidebar" className="flex space-between responsive-padding">
+        <Content />
+        {/* <div id="content-sidebar" className="flex space-between responsive-padding">
           <Content />
           <Sidebar position={this.state.nameTitleTabsHeight} />
-        </div>
+        </div> */}
       </div>
     )
   }

@@ -1,7 +1,21 @@
 import React from 'react'
 
 const Skills = (props) => {
-  let skills = Object.entries(props.skills).map(skill => {
+  const _skills = {
+    'general practices': ['DRY code', 'RESTful applications', 'Helpful commit messages'],
+    'web technologies': ['APIs (Wikipedia, Yelp, Github)', 'AJAX'],
+    'authentication': ['bcrpyt', 'session-cookies', 'md5'],
+    'middleware': ['body-parser', 'Babel'],
+    'languages': ['JavaScript', 'Ruby', 'HTML5', 'CSS3', 'SQL'],
+    'libraries & frameworks': ['ReactJS', 'jQuery', 'Rails', 'Knex', 'CraftyJS', 'EJS', 'SASS', 'JSX'],
+    'servers / routing': ['Express', 'Rails', 'React', 'Websocket', 'Axios'],
+    'testing': ['Mocha / Chai', 'RSpec'],
+    'database': ['PostgreSQL', 'mySqlite', 'MongoDB'],
+    'web debug tools': ['Chrome dev tools'],
+    'version control': ['git', 'github'],
+    'package managers': ['node', 'yarn', 'gems'],
+  }
+  let skills = Object.entries(_skills).map(skill => {
     let skillType = makeTitleCase(skill[0])
     let skillList = skill[1]
       .map(skillItem => <span className="skill-items">{skillItem}</span>)

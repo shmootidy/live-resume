@@ -84,8 +84,8 @@
 }
 
 .all-skills {
-  height: 12rem;
-  overflow: scroll;
+  // height: 12rem;
+  // overflow: scroll;
 }
 
 .skill-subtitle {
@@ -96,6 +96,8 @@
 .skills-list {
   padding-bottom: .5rem;
   color: red;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .skill-items {
