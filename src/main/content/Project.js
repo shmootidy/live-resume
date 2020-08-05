@@ -15,7 +15,7 @@ const Project = (props) => {
         <div className="project-subtitle">{project.subtitle}{awardDot}<span className="green">{award}</span> • {project.dateCompleted}</div>
         <div className="img-tech-box flex flex-column">
           <img className="project-img" src={require('../../assets/' + project.img)} alt={project.img} />
-          <div className="description description-value"><TechStack techStack={project.techStack} /></div>
+          <div className="project-tech"><TechStack techStack={project.techStack} /></div>
         </div>
         <ProjectDescription descriptions={descriptions} />
       </a>

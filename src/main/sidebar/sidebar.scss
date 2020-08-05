@@ -4,7 +4,9 @@
   -webkit-font-smoothing: auto;
   font-weight: 900;
 }
-
+.contact {
+  padding: 0 .25rem;
+}
 .contact-bar {
   border: 1px #e8e8e8 solid;
   border-left: 35px #e1e1e1 solid;
@@ -35,7 +37,7 @@
     &.at-top {
       height: 40px;
       top: 0;
-      margin-top: 1rem;
+      margin-top: .5rem;
       transition: top .5s;
     }
   }
@@ -58,7 +60,7 @@
 
 .contact-icon {
   height: 1.5rem;
-  left: .35rem;
+  left: 10px;
 }
 
 .current-obsession {

@@ -22,14 +22,14 @@ const NameTitle = (props) => {
         <span id="name">susannah ritchie (shmoo)</span>
         <span id="title">1.4.3 • <span className="green">Web Developer</span> • Vancouver, BC</span>
       </span>
-      <ul className="mobile-tabs">
+      {/* <ul className="mobile-tabs">
         <Tab 
           tabs={props.tabs}
           tabToggle={props.tabToggle}
           scrollToContent={props.scrollToContent}
           tabMobile={true}
         />
-      </ul>
+      </ul> */}
       <div className="mobile-contact">
         <Contact />
       </div>

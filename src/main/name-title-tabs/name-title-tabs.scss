@@ -5,13 +5,13 @@
 
 .name-title {
   top: -1px;
-  padding: 1rem 1rem calc(1rem + 1px);
+  padding: 1rem 1.25rem calc(1rem + 1px);
   background: transparent;
   z-index: 11;
 
   &.is-sticky {
     background: white;
-    // box-shadow: 0 4px 13px -3px rgba(0, 0, 0, 0.10196);
+    box-shadow: 0 4px 13px -3px rgba(0, 0, 0, 0.10196);
   }
 }
 
@@ -27,13 +27,18 @@
 
 #title {
   font-family: 'Fira Mono';
-  margin-top: .5rem;
+  margin: .5rem 0;
   white-space: nowrap;
   font-size: .875rem;
   color: rgba(0, 0, 0, 0.8);
 }
 #tabs {
   margin-bottom: 1rem;
+  padding: 0 .25rem;
+  
+  @media (min-width: 500px) {
+    padding-left: 0;
+  }
 }
 .mobile-tabs {
   display: flex;
