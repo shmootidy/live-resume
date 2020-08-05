@@ -40,22 +40,3 @@
     padding-left: 0;
   }
 }
-.mobile-tabs {
-  display: flex;
-  justify-content: space-around;
-  margin-top: 1rem;
-  position: relative;
-  top: -40px;
-  height: 0;
-  margin: 0;
-  transition: all .5s;
-  background: white;
-
-  &.at-top {
-    top: 0;
-    margin: .5rem 0;
-    height: 35px;
-    transition: top .5s;
-    z-index: 1;
-  }
-}

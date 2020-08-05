@@ -18,7 +18,7 @@ const NameTitle = (props) => {
     <span className="flex flex-column responsive-padding sticky name-title ntt">
       <span 
         className="flex flex-column"
-        style={{background:'white', zIndex: 1}}>
+        style={{background:'white', zIndex: 2}}>
         <span id="name">susannah ritchie (shmoo)</span>
         <span id="title">1.4.3 • <span className="green">Web Developer</span> • Vancouver, BC</span>
       </span>

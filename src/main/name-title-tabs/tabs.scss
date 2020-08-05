@@ -28,7 +28,7 @@ li.tab {
 
 li.tab1 {
   color: rgb(158, 119, 0);
-  border-color: #FFCD3A;
+  border-color: #FFCD3A!important;
   background-color: rgba(255, 205, 58, 0.2);
 }
 li.tab1.not-selected:hover {
@@ -37,7 +37,7 @@ li.tab1.not-selected:hover {
 
 li.tab2 {
   color: #cb3837;
-  border-color: #cb3837;
+  border-color: #cb3837!important;
   background-color: rgba(203, 56, 55, 0.2);
 }
 li.tab2.not-selected:hover {
@@ -46,7 +46,7 @@ li.tab2.not-selected:hover {
 
 li.tab3 {
   color: rgb(120, 33, 117);
-  border-color: #C836C3;
+  border-color: #C836C3!important;
   background-color: rgba(200, 54, 195, 0.2);
 }
 li.tab3.not-selected:hover {
@@ -55,7 +55,7 @@ li.tab3.not-selected:hover {
 
 li.tab4 {
   color: rgb(41, 0, 138);
-  border-color: #8956FF;
+  border-color: #8956FF!important;
   background-color: rgba(137, 86, 255, 0.2);
 }
 li.tab4.not-selected:hover {
@@ -64,4 +64,38 @@ li.tab4.not-selected:hover {
 
 li.not-selected {
   background-color: white;
+}
+.tab svg {
+  width: 1.2rem;
+  height: 1.2rem;
+}
+.mobile-tabs {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 1rem;
+  position: relative;
+  top: -43px;
+  height: 0;
+  margin: 0;
+  transition: all .5s;
+  background: white;
+
+  &.at-top {
+    top: 0;
+    margin: .5rem 0;
+    height: 40px;
+    transition: top .5s;
+    z-index: 1;
+  }
+  li.tab {
+    border: 0;
+    border-bottom: 3px solid black;
+    padding: 0;
+    height: 40px;
+    width: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: .25rem .25rem 0 0;
+  }
 }
