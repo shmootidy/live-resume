@@ -6,7 +6,7 @@ const Skills = (props) => {
     'web technologies': ['APIs (Wikipedia, Yelp, Github)', 'AJAX'],
     'authentication': ['bcrpyt', 'session-cookies', 'md5'],
     'middleware': ['body-parser', 'Babel'],
-    'languages': ['JavaScript', 'Ruby', 'HTML5', 'CSS3', 'SQL'],
+    'languages': ['JavaScript', 'PHP', 'Ruby', 'HTML5', 'CSS3', 'SQL'],
     'libraries & frameworks': ['ReactJS', 'jQuery', 'Rails', 'Knex', 'CraftyJS', 'EJS', 'SASS', 'JSX'],
     'servers / routing': ['Express', 'Rails', 'React', 'Websocket', 'Axios'],
     'testing': ['Mocha / Chai', 'RSpec'],
@@ -30,7 +30,7 @@ const Skills = (props) => {
 
   return (
     <div id="skills">
-      <div className="sidebar-subtitle">skills (pls scroll down)</div>
+      <div className="sidebar-subtitle">Skills</div>
       <div className="all-skills">{skills}</div>
     </div>
   )

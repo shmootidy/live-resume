@@ -16,25 +16,30 @@ export default class Main extends Component {
       nameTitleHeight: '94',
       tabs: [
         { text: 'Readme',
-          icon: 'R',
+          icon: 'far fa-file-alt',
           active: true,
           position: null
          },
         { text: 'Projects',
-          icon: 'P',
+          icon: 'fas fa-file-archive',
           active: false,
           position: null
          }, 
         { text: 'Education',
-          icon: 'Ed',
+          icon: 'fas fa-cube',
           active: false,
           position: null
          },
         { text: 'Experience',
-          icon: 'Ex',
+          icon: 'fas fa-cubes',
           active: false,
           position: null
-         }
+         },
+        //  { text: 'New one?',
+        //    icon: 'fas fa-tags',
+        //    active: false,
+        //    position: null
+        //   }
       ]
     }
     this.tabToggle = this.tabToggle.bind(this)
