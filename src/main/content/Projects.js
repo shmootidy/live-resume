@@ -15,8 +15,8 @@ const Projects = (props) => {
       },
       techStack: {
         framework: 'react.js',
-        styling: 'CSS',
-          hosting: 'github',
+        styling: 'SASS',
+        hosting: 'github',
       },
       url: 'https://www.npmjs.com/package/react',
       img: 'resume.png'
@@ -49,7 +49,7 @@ const Projects = (props) => {
         'APIs': ['Wrote custom algorithms that processed unfiltered data from the Wikipedia API.', 'Developed categorizing logic.'],
       },
       techStack: {
-        'lang-ext': 'SASS',
+        styling: 'SASS',
         library: 'jQuery',
         client: 'AJAX',
         database: 'postgreSQL',
