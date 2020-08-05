@@ -9,7 +9,7 @@ const Tabs = (props) => {
   const tabsStickyPosition = {
     top: props.position + 'px'
   }
-  useEffect(() => { // OLD NOW RIGHT?
+  useEffect(() => {
     const tabs = document.querySelector('.tabs') ? document.querySelector('.tabs') : null
     const mobileTabs = document.querySelector('.mobile-tabs')
     const observer = new IntersectionObserver(

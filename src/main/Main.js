@@ -16,27 +16,23 @@ export default class Main extends Component {
       nameTitleHeight: '94',
       tabs: [
         { text: 'Readme',
-          icon: 'far fa-file-alt',
           active: true,
           position: null
          },
         { text: 'Projects',
-          icon: 'fas fa-file-archive',
           active: false,
           position: null
          }, 
         { text: 'Education',
-          icon: 'fas fa-cube',
           active: false,
           position: null
          },
         { text: 'Experience',
-          icon: 'fas fa-cubes',
           active: false,
           position: null
          },
         //  { text: 'New one?',
-        //    icon: 'fas fa-tags',
+        //    icon: 'faTags',
         //    active: false,
         //    position: null
         //   }

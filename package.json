@@ -4,6 +4,9 @@
   "homepage": "https://shmootidy.github.io/live-resume",
   "private": true,
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.30",
+    "@fortawesome/free-solid-svg-icons": "^5.14.0",
+    "@fortawesome/react-fontawesome": "^0.1.11",
     "gh-pages": "^2.0.1",
     "node-sass": "^4.14.1",
     "react": "^16.8.4",
