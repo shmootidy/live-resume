@@ -6,8 +6,8 @@ const Projects = (props) => {
   const projects = [
     {
       title: 'This Resume',
-      subtitle: 'Professional Document',
-      dateCompleted: 'Mar 2019',
+      subtitle: 'Professional Reference',
+      dateCompleted: 'Jul 2020',
       description: {
         design: ['Mimicked the style of npmjs.com through close study.'],
         development: ['Mobile-first design.', 'Adapted npm\'s layout to emphasize pertinent resume information.'],

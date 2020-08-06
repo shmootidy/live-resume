@@ -55,7 +55,7 @@ const Experience = (props) => {
          point: 'Arranged field trips and school events to enrich students\' education',
          subpoints: []
        },{
-         point: 'Ran the school\' lunch department to ensure students had access to varied, nutritious food',
+         point: 'Ran the school\'s lunch department to ensure students had access to varied, nutritious food',
          subpoints: []
        }]
     },

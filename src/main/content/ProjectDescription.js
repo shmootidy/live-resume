@@ -4,11 +4,11 @@ const ProjectDescription = (props) => {
   let descriptions = props.descriptions.map(description => {
     let key = description[0]
     let value = description[1]
-    let note = value.map(note => <div className="description-value">{note}</div>)
+    let note = value.map(note => <li className="description-value">{note}</li>)
     return (
       <div className="description">
         <div className="description-key">{key.replace(key.substring(0,1), key.substring(0,1).toUpperCase())}</div>
-        <span>{note}</span>
+        <ul>{note}</ul>
       </div>
     )
   })
