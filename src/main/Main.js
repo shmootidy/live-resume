@@ -127,35 +127,37 @@ export default class Main extends Component {
   }
   render() {
     return (
-      <div 
-        // onScroll={this.handleScroll} 
-        className="flex flex-column" 
-        id="main" 
-        onClick={this.handleClick}
-      >
+      <div>
         <NameTitle 
           tabs={this.state.tabs}
           tabToggle={this.tabToggle} 
           scrollToContent={this.scrollToContent} 
           tabsPosition={this.state.nameTitleHeight}
         />
-        <span 
-          id="tabs" 
-          className="ntt" 
+        <div 
+        // onScroll={this.handleScroll} 
+        className="flex flex-column" 
+        id="main" 
+        onClick={this.handleClick}
         >
-          <Tabs 
-            tabs={this.state.tabs} 
-            tabToggle={this.tabToggle} 
-            scrollToContent={this.scrollToContent}
-            position={this.state.nameTitleHeight} 
-          />
-        </span>
-        <Contact />
-        <Content visibleTab={this.state.visibleTab ? this.state.visibleTab : 0 } />
-        {/* <div id="content-sidebar" className="flex space-between responsive-padding">
-          <Content />
-          <Sidebar position={this.state.nameTitleTabsHeight} />
-        </div> */}
+          <span 
+            id="tabs" 
+            className="ntt" 
+          >
+            <Tabs 
+              tabs={this.state.tabs} 
+              tabToggle={this.tabToggle} 
+              scrollToContent={this.scrollToContent}
+              position={this.state.nameTitleHeight} 
+            />
+          </span>
+          <Contact />
+          <Content visibleTab={this.state.visibleTab ? this.state.visibleTab : 0 } />
+          {/* <div id="content-sidebar" className="flex space-between responsive-padding">
+            <Content />
+            <Sidebar position={this.state.nameTitleTabsHeight} />
+          </div> */}
+        </div>
       </div>
     )
   }

@@ -9,7 +9,7 @@ ul {
   flex-wrap: wrap;
 
   @media (min-width: 960px) {
-    flex-wrap: nowrap;
+    display: none!important;
   }
 }
 
@@ -85,6 +85,13 @@ li.not-selected {
   background: white;
 
   &.at-top {
+    top: 0;
+    margin: .5rem 0;
+    height: 40px;
+    transition: top .5s;
+    z-index: 1;
+  }
+  @media (min-width: 960px) {
     top: 0;
     margin: .5rem 0;
     height: 40px;
