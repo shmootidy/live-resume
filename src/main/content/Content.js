@@ -1,11 +1,10 @@
-// contains Summary, Experience, Education, Projects, NameTitleTabs
-
 import React from 'react'
 import Summary from './Summary'
 import Experience from './Experience'
 import Education from './Education'
 import Projects from './Projects'
 import Skills from '../sidebar/Skills'
+import Contact from '../sidebar/Contact'
 
 import './content.scss'
 
@@ -14,31 +13,43 @@ const Content = (props) => {
   if (visibleTab === 0) {
     return (
       <content>
-        <Summary />
-        <Skills />
+        <Contact />
+        <div className="content">
+          <Summary />
+          <Skills />
+        </div>
       </content>
     )
   } else if (visibleTab === 1) {
     return (
       <content>
-        <Projects />
+        <Contact />
+        <div className="content">
+          <Projects />
+        </div>
       </content>
     )
   } else if (visibleTab === 2) {
     return (
       <content>
-        <Experience />
+        <Contact />
+        <div className="content">
+          <Experience />
+        </div>
       </content>
     )
   } else if (visibleTab === 3) {
     return (
       <content>
-        <Education />
+        <Contact />
+        <div className="content">
+          <Education />
+        </div>
       </content>
     )
   } else {
     return (
-      <div>butts</div>
+      <div>Whoops! Something went wrong in Content.js</div>
     )
   }
 }

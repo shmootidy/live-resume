@@ -92,7 +92,7 @@ export default class Main extends Component {
               position={this.state.nameTitleHeight} 
             />
           </span>
-          <Contact />
+          {/* <Contact /> */}
           <Content visibleTab={this.state.visibleTab ? this.state.visibleTab : 0 } />
         </div>
       </div>

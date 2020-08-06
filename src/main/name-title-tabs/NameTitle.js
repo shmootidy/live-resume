@@ -30,9 +30,9 @@ const NameTitle = (props) => {
           tabMobile={true}
         />
       </ul>
-      <div className="mobile-contact">
+      {/* <div className="mobile-contact">
         <Contact />
-      </div>
+      </div> */}
     </span>
   )
 }

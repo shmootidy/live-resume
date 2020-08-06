@@ -6,7 +6,7 @@
   font-size: 1rem;
 }
 .contact {
-  margin: 0 1rem;
+  margin: 0;
 }
 .contact-bar {
   border: 1px #e8e8e8 solid;
@@ -15,7 +15,6 @@
   max-width: 95vw;
   line-height: 24px;
   white-space: nowrap;
-  overflow: hidden;
   text-overflow: ellipsis;
   font-size: .875rem;
   margin-bottom: 1rem;
@@ -23,6 +22,7 @@
   letter-spacing: 0px;
   padding: .35rem 1rem .2rem;
   border-radius: .25rem;
+  position: relative;
 }
 .mobile-contact {
   .contact {
@@ -34,13 +34,6 @@
     height: 0;
     margin: 0;
     transition: all .5s;
-
-    &.at-top {
-      // height: 40px;
-      // top: 0;
-      // margin-top: .5rem;
-      // transition: top .5s;
-    }
   }
   .sidebar-subtitle {
     display: none;
@@ -64,7 +57,7 @@
 
 .contact-icon {
   height: 1.5rem;
-  left: 22px;
+  left: -29px;
 }
 
 .current-obsession {
@@ -115,6 +108,12 @@
   min-width: 30vw;
 }
 
+.sidebar {
+  @media (min-width: 960px) {
+    width: 33%;
+    margin-left: 1rem;
+  }
+}
 #content-sidebar {
   flex-wrap: wrap-reverse;
   padding: 1rem;

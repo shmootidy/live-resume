@@ -4,12 +4,26 @@ content {
   line-height: 1.65;
   letter-spacing: 0.1px;
   padding: 0 .75rem;
+  @media (min-width: 960px) {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
 }
-
+.content {
+  @media (min-width: 960px) {
+    width: 66%;
+    margin-right: 3rem;
+  }
+}
 .content-title {
   padding-bottom: 8px;
   border-bottom: 1px solid rgba(0, 0, 0, .1);
   margin-bottom: 0;
+
+  @media (min-width: 960px) {
+    margin-top: 0;
+  }
 }
 /* 
 #summary-content {
