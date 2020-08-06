@@ -76,7 +76,6 @@ export default class Main extends Component {
           tabs={this.state.tabs}
           tabToggle={this.tabToggle} 
           displayContent={this.displayContent} 
-          tabsPosition={this.state.nameTitleHeight}
         />
         <div 
         className="flex flex-column" 
