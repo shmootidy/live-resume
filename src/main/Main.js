@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
- 
 import Content from './content/Content'
 import Sidebar from './sidebar/Sidebar'
 import Tabs from './name-title-tabs/Tabs'

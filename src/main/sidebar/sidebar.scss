@@ -1,11 +1,11 @@
 .sidebar-subtitle {
   color: rgba(0, 0, 0, .5);
-  margin: 1rem 0;
-  -webkit-font-smoothing: auto;
-  font-weight: 900;
+  margin: 1rem 0 .875rem;
+  -webkit-font-smoothing: antialiased;
+  font-weight: 700;
 }
 .contact {
-  padding: 0 .25rem;
+  margin: 0 1.5rem;
 }
 .contact-bar {
   border: 1px #e8e8e8 solid;
@@ -63,7 +63,7 @@
 
 .contact-icon {
   height: 1.5rem;
-  left: 10px;
+  left: 30px;
 }
 
 .current-obsession {

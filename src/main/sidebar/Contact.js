@@ -1,41 +1,62 @@
-import React, { useEffect } from 'react'
+import React from 'react'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 const Contact = (props) => {
-  useEffect(() => {
-    const contact = document.querySelector('#main > .contact')
-    const mobileContact = document.querySelector('.mobile-contact .contact')
-    const observer = new IntersectionObserver(
-      ([e]) => {
-        if (e.boundingClientRect.top <= 0 && e.intersectionRatio < 1) {
-          mobileContact.classList.add('at-top')
-        } else {
-          mobileContact.classList.remove('at-top')
-        }
-      },
-      {threshold: [1]}
-    )
-    observer.observe(contact)
-  })
+  // useEffect(() => {
+  //   const contact = document.querySelector('#main > .contact')
+  //   const mobileContact = document.querySelector('.mobile-contact .contact')
+  //   const observer = new IntersectionObserver(
+  //     ([e]) => {
+  //       if (e.boundingClientRect.top <= 0 && e.intersectionRatio < 1) {
+  //         mobileContact.classList.add('at-top')
+  //       } else {
+  //         mobileContact.classList.remove('at-top')
+  //       }
+  //     },
+  //     {threshold: [1]}
+  //   )
+  //   observer.observe(contact)
+  // })
 
+  const style = {
+    fontSize: '18px',
+    fontWeight: 'bold',
+    margin: '.5rem 0 1rem',
+    color: 'rgba(0,0,0,.8)'
+  }
   return (
-    <div className="contact">
-      <div className="sidebar-subtitle">Contact</div>
-      <a href="mailto:shmooritchie@gmail.com?subject=I saw your resume!" className="contact-bar" id="email">
-        <img className="contact-icon absolute" alt="Email icon" src={require("../../assets/email.png")} />
-        <span className="contact-info">> shmooritchie@gmail.com</span>
-      </a>
-      <a href="tel:+1-604-616-0247" className="contact-bar" id="phone">
-        <img className="contact-icon absolute" alt="Phone icon" src={require("../../assets/phone.png")} />
-        <span className="contact-info">> 604.616.0247</span>
-      </a>
-      <a href="https://www.linkedin.com/in/shmoo-ritchie" target="_blank" rel="noopener noreferrer" className="contact-bar" id="linked-in">
-        <img className="contact-icon absolute" alt="Linked-in icon" src={require("../../assets/linked-in.png")} />
-        <span className="contact-info">> in/shmoo-ritchie</span>
-      </a>
-      <a href="https://www.github.com/shmootidy" target="_blank" rel="noopener noreferrer" className="contact-bar" id="github">
-        <img className="contact-icon absolute" alt="Github icon" src={require("../../assets/github.png")} />
-        <span className="contact-info">> /shmootidy</span>
-      </a>
+    <div>
+      <div className="contact">
+        <div className="sidebar-subtitle">Contact</div>
+        <a href="mailto:shmooritchie@gmail.com?subject=I saw your resume!" className="contact-bar" id="email">
+          <img className="contact-icon absolute" alt="Email icon" src={require("../../assets/email.png")} />
+          <span className="contact-info">> shmooritchie@gmail.com</span>
+        </a>
+        <a href="tel:+1-604-616-0247" className="contact-bar" id="phone">
+          <img className="contact-icon absolute" alt="Phone icon" src={require("../../assets/phone.png")} />
+          <span className="contact-info">> 604.616.0247</span>
+        </a>
+      </div>
+      <div style={{borderBottom: '1px solid #e1e1e1'}} className="contact">
+        <div className="sidebar-subtitle">Linked In</div>
+        <a style={style} href="https://www.linkedin.com/in/shmoo-ritchie" target="_blank" rel="noopener noreferrer">
+          <FontAwesomeIcon icon={['fab', 'linkedin']} />
+          <span style={{marginLeft: '.5rem'}}>linkedin.com/in/shmoo-ritchie</span>
+        </a>
+      </div>
+      <div style={{borderBottom: '1px solid #e1e1e1'}} className="contact">
+        <div className="sidebar-subtitle">Repository</div>
+        <a style={style} href="https://www.github.com/shmootidy" target="_blank" rel="noopener noreferrer">
+          <FontAwesomeIcon icon={['fab', 'github']} />
+          <span style={{marginLeft: '.5rem'}}>github.com/shmootidy</span>
+        </a>
+      </div>
+      <div className="contact">
+        <div className="sidebar-subtitle">Collaborators</div>
+        <div style={style}>
+          <img style={{width: '42px', height: '42px', minWidth: '42px', borderRadius: '4%'}} alt="avatar" src={require('../../assets/headshot.png')} />
+        </div>
+      </div>
     </div>
   )
 }
