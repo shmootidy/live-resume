@@ -2,21 +2,6 @@ import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 const Contact = (props) => {
-  // useEffect(() => {
-  //   const contact = document.querySelector('#main > .contact')
-  //   const mobileContact = document.querySelector('.mobile-contact .contact')
-  //   const observer = new IntersectionObserver(
-  //     ([e]) => {
-  //       if (e.boundingClientRect.top <= 0 && e.intersectionRatio < 1) {
-  //         mobileContact.classList.add('at-top')
-  //       } else {
-  //         mobileContact.classList.remove('at-top')
-  //       }
-  //     },
-  //     {threshold: [1]}
-  //   )
-  //   observer.observe(contact)
-  // })
   const style = {
     fontSize: '18px',
     fontWeight: 'bold',
