@@ -7,6 +7,10 @@ ul {
 
 .tabs {
   flex-wrap: wrap;
+
+  @media (min-width: 960px) {
+    flex-wrap: nowrap;
+  }
 }
 
 li.tab {
