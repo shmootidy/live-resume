@@ -34,7 +34,6 @@ export default class Main extends Component {
     }
     this.tabToggle = this.tabToggle.bind(this)
     this.scrollToContent = this.scrollToContent.bind(this)
-    this.setContentPositions = this.setContentPositions.bind(this)
     this.setHeaderHeight = this.setHeaderHeight.bind(this)
     this.handleResize = this.handleResize.bind(this)
   }
@@ -52,24 +51,7 @@ export default class Main extends Component {
 
   // scroll to appropriate place when tab is clicked
   scrollToContent(tabIndex) {
-    // const scrollLocation = this.state.tabs[tabIndex].position
-    // window.scrollTo(0, scrollLocation)
     this.setState( { visibleTab: tabIndex } )
-  }
-
-  // setState on content positions 1ms after componentDidMount
-  setContentPositions() {
-    const nameTitleHeight = this.state.nameTitleHeight
-    const summary = 0//document.getElementById('summary').offsetTop
-    const projects = 0//document.getElementById('projects').offsetTop
-    const education = 0//document.getElementById('education').offsetTop
-    const experience = 0//document.getElementById('experience').offsetTop
-    const currentPositions = [summary, projects, education, experience]
-
-    let tabs = this.state.tabs
-    currentPositions.forEach((position, i) => {
-      tabs[i].position = position - nameTitleHeight
-    })
   }
 
   setHeaderHeight() {
@@ -81,12 +63,10 @@ export default class Main extends Component {
 
   handleResize() {
     this.setHeaderHeight()
-    this.setContentPositions()
   }
 
   componentDidMount() {
     setTimeout(this.setHeaderHeight, 100) // delay is necessary for accuracy
-    setTimeout(this.setContentPositions, 100) // fire setHeaderHeight before setContentPositions to ensure position is set with nameTitleHeight
     window.addEventListener('resize', this.handleResize)
   }
 
