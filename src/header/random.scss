@@ -24,14 +24,17 @@
     }
   }
   > div:last-child {
-    // width: 100%;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     overflow: hidden;
     align-items: center;
     // margin: 0 .25rem;
-
+    @media (min-width: 500px) {
+      width: unset;
+    }
     span {
+      width: unset;
       @media (min-width: 500px) {
         margin: 0 .5rem;
       }
