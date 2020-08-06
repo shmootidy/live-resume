@@ -134,10 +134,6 @@ export default class Main extends Component {
           </span>
           <Contact />
           <Content visibleTab={this.state.visibleTab ? this.state.visibleTab : 0 } />
-          {/* <div id="content-sidebar" className="flex space-between responsive-padding">
-            <Content />
-            <Sidebar position={this.state.nameTitleTabsHeight} />
-          </div> */}
         </div>
       </div>
     )
