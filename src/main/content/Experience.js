@@ -28,50 +28,56 @@ const Experience = (props) => {
     },
     {
       title: 'Owner & Web Developer',
-      employer: 'Lionheart Sleep School',
-      duration: 'Jul\'16 – Nov\'18',
+      employer: 'S. Ritchie Consulting',
+      duration: 'Jul\'16 – Dec\'18',
       accomplishments: [{
-        point: 'Helped anxious new parents improve their baby\'s sleep:',
+        point: 'Researched and applied best-practices in e-marketing:',
+        subpoints: ['Web design', 'Automated email streams', 'Content creation']
+      },{
+        point: 'Developed custom features to improve UX/UI with minimal overhead costs',
         subpoints: []
       },{
-        point: 'Developed consistent branding across all platforms:',
-        subpoints: []
-      },{
-        point: 'Organized community outreach events:',
+        point: 'Supported clients in achieving their goals through education, goal setting and accountability',
         subpoints: []
       }]
     },
     {
-      title: 'Teacher & Program Director',
+      title: 'Teacher & Program Manager',
       employer: 'Avenir School Society',
       duration: 'Feb\'14 – Jun\'15',
       accomplishments: [{
-        point: 'Adapted curriculum to meet diverse student needs:',
+        point: 'Developed individualized education plans to improve learning outcomes of diverse students',
         subpoints: []
        },{
-        point: 'Managed school-wide programs, such as daily hot lunches, field trips, and meditation breaks:',
+        point: 'Liaised with parents and faculty to increase support and intervention for struggling and at-risk students',
         subpoints: []
+       },{
+         point: 'Arranged field trips and school events to enrich students\' education',
+         subpoints: []
+       },{
+         point: 'Ran the school\' lunch department to ensure students had access to varied, nutritious food',
+         subpoints: []
        }]
     },
-    {
-      title: 'Musician',
-      employer: 'The Organ / Keep Tidy',
-      duration: 'Nov\'04 – Sep\'12',
-      accomplishments: [{
-        point: 'Performed 100s of live shows in venues worldwide:',
-        subpoint: []
-       },{
-        point: 'Wrote and recorded original music:',
-        subpoints: []
-       }]
-    }
+    // {
+    //   title: 'Musician',
+    //   employer: 'The Organ / Keep Tidy',
+    //   duration: 'Nov\'04 – Sep\'12',
+    //   accomplishments: [{
+    //     point: 'Performed 100s of live shows in venues worldwide:',
+    //     subpoint: []
+    //    },{
+    //     point: 'Wrote and recorded original music:',
+    //     subpoints: []
+    //    }]
+    // }
   ]
 
   const job = jobs.map(job => {
     return (
       <div key={ job.icon } className="experience">
         <div className="flex space-between job-underline">
-          <div className="job-title">{job.title.toUpperCase()}</div>
+          <div className="job-title green">{job.title.toUpperCase()}</div>
           <div className="job-location">Van, BC</div>
         </div>
         <div className="flex space-between">
