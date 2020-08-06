@@ -73,6 +73,7 @@
   ul {
     list-style-type: disc;
     margin-left: 1rem;
+    width: initial;
   }
 }
 
@@ -94,13 +95,32 @@
 .job-underline {
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
   align-items: flex-end;
+
+  @media (max-width: 320px) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 }
-.job-title {
+.job-subline {
+  @media (max-width: 320px) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+.job-title, .job-employer {
   font-weight: bold;
+
+  @media (min-width: 320px) {
+    white-space: nowrap;
+  }
 }
 .job-employer, .job-location, .job-duration {
   font-family: 'Fira Mono';
   font-size: .875rem;
+
+  @media (min-width: 320px) {
+    white-space: nowrap;
+  }
 }
 .job-accomplishments {
   list-style: disc outside;

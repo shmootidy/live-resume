@@ -21,15 +21,15 @@ export default class Main extends Component {
         { text: 'Projects',
           active: false,
           position: null
-         },
-         { text: 'Work History',
-           active: false,
-           position: null
-          },
-        { text: 'Education',
+        },
+        { text: 'Work',
           active: false,
           position: null
-         },
+        },{ 
+          text: 'Education',
+          active: false,
+          position: null
+        },
         //  { text: 'New one?',
         //    icon: 'faTags',
         //    active: false,

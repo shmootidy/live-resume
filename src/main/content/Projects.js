@@ -7,7 +7,7 @@ const Projects = (props) => {
     {
       title: 'This Resume',
       subtitle: 'Professional Reference',
-      dateCompleted: 'Jul 2020',
+      dateCompleted: 'Jul\'20',
       description: {
         design: ['Mimicked the style of npmjs.com through close study.'],
         development: ['Mobile-first design.', 'Adapted npm\'s layout to emphasize pertinent resume information.'],
@@ -24,7 +24,7 @@ const Projects = (props) => {
     { 
       title: 'Don\'t Panic',
       subtitle: 'Life Skills Education Game',
-      dateCompleted: 'Mar 2019',
+      dateCompleted: 'Mar\'19',
       description: {
         teamwork: ['Led a team of 3 developers from conception to presention in 13 days.', 'Assigned tasks and managed workflow.'],
         workflow: ['Fixed repository conflicts.', 'Refactored code to maximize reusability and simplify debugging.'],
@@ -43,7 +43,7 @@ const Projects = (props) => {
     {
       title: 'Smart Cat',
       subtitle: 'Auto-Categorizing To-Do List',
-      dateCompleted: 'Feb 2019',
+      dateCompleted: 'Feb\'19',
       description: {
         styling: ['Custom styled all elements using SASS and CSS3.'],
         'APIs': ['Wrote custom algorithms that processed unfiltered data from the Wikipedia API.', 'Developed categorizing logic.'],

@@ -80,7 +80,7 @@ const Experience = (props) => {
           <div className="job-title green">{job.title.toUpperCase()}</div>
           <div className="job-location">Van, BC</div>
         </div>
-        <div className="flex space-between">
+        <div className="job-subline flex space-between">
           <div className="job-employer">{job.employer}</div>
           <div className="job-duration">{job.duration}</div>
         </div>

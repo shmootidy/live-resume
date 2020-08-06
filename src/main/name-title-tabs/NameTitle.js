@@ -20,7 +20,7 @@ const NameTitle = (props) => {
         className="flex flex-column"
         style={{background:'white', zIndex: 2}}>
         <span id="name">susannah ritchie (shmoo)</span>
-        <span id="title">1.4.3 • <span className="green">Web Developer</span> • Vancouver, BC</span>
+        <span id="title">1.4.3 • <span className="green">Web Developer</span> • Van<span className="hide-for-tiny-screens">couver</span>, BC</span>
       </span>
       <ul className="mobile-tabs">
         <Tab 
