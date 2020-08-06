@@ -27,7 +27,7 @@ export default class Main extends Component {
           active: false,
           position: null
          },
-        { text: 'Experience',
+        { text: 'Employment',
           active: false,
           position: null
          },
