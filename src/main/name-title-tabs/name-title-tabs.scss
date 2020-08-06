@@ -10,7 +10,8 @@
   z-index: 11;
 
   @media (min-width: 960px) {
-    padding: 1rem 7.5rem;
+    padding: 4rem 7.5rem 1rem;
+    top: -50px;
   }
   &.is-sticky {
     background: white;
