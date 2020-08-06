@@ -34,7 +34,6 @@ export default class Main extends Component {
     }
     this.tabToggle = this.tabToggle.bind(this)
     this.scrollToContent = this.scrollToContent.bind(this)
-    this.handleScroll = this.handleScroll.bind(this) 
     this.setContentPositions = this.setContentPositions.bind(this)
     this.setHeaderHeight = this.setHeaderHeight.bind(this)
     this.handleResize = this.handleResize.bind(this)
@@ -56,18 +55,6 @@ export default class Main extends Component {
     // const scrollLocation = this.state.tabs[tabIndex].position
     // window.scrollTo(0, scrollLocation)
     this.setState( { visibleTab: tabIndex } )
-  }
-
-  // trigger tabToggle at certain scroll points
-  handleScroll() {
-    // const summaryPosition = this.state.tabs[0].position
-    // const projectsPosition = this.state.tabs[1].position
-    // const educationPosition = this.state.tabs[2].position
-    // const experiencePosition = this.state.tabs[3].position
-    // if (window.scrollY < projectsPosition) this.tabToggle(0)
-    // if (window.scrollY >= projectsPosition && window.scrollY < educationPosition) this.tabToggle(1)
-    // if (window.scrollY >= educationPosition && window.scrollY < experiencePosition) this.tabToggle(2)
-    // if (window.scrollY >= experiencePosition) this.tabToggle(3)
   }
 
   // setState on content positions 1ms after componentDidMount
@@ -100,13 +87,9 @@ export default class Main extends Component {
   componentDidMount() {
     setTimeout(this.setHeaderHeight, 100) // delay is necessary for accuracy
     setTimeout(this.setContentPositions, 100) // fire setHeaderHeight before setContentPositions to ensure position is set with nameTitleHeight
-    window.addEventListener('scroll', this.handleScroll)
     window.addEventListener('resize', this.handleResize)
   }
 
-  componentWillUnmount() {
-    window.removeEventListener('scroll', this.handleScroll);
-  }
   render() {
     return (
       <div>
@@ -117,7 +100,6 @@ export default class Main extends Component {
           tabsPosition={this.state.nameTitleHeight}
         />
         <div 
-        // onScroll={this.handleScroll} 
         className="flex flex-column" 
         id="main" 
         >
