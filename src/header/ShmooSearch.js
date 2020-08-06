@@ -22,7 +22,7 @@ export default class ShmooSearch extends Component {
     <div className="header-section flex">
       <span>
         <span id="shmoo-npm">shmoo</span>
-        <a href="mailto:shmooritchie@gmail.com">Contact Me</a>
+        <a href="mailto:shmooritchie@gmail.com?subject=I saw your resume!">Contact Me</a>
       </span>
       <span>
         {/* <a href="https://en.wikipedia.org/wiki/Shmoo" target="_blank" rel="noopener noreferrer" id="shmoo-search">*/}<div id="shmoo-search">{this.state.message[this.state.iteration]}</div>

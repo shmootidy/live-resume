@@ -20,7 +20,7 @@ const Contact = (props) => {
   return (
     <div className="contact">
       <div className="sidebar-subtitle">Contact</div>
-      <a href="mailto:shmooritchie@gmail.com" className="contact-bar" id="email">
+      <a href="mailto:shmooritchie@gmail.com?subject=I saw your resume!" className="contact-bar" id="email">
         <img className="contact-icon absolute" alt="Email icon" src={require("../../assets/email.png")} />
         <span className="contact-info">> shmooritchie@gmail.com</span>
       </a>

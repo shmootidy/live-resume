@@ -10,7 +10,7 @@ const Projects = (props) => {
       dateCompleted: 'Mar 2019',
       description: {
         design: ['Mimicked the style of npmjs.com through close study.'],
-        development: ['Adapted npm\'s layout to emphasize pertinent resume information.'],
+        development: ['Mobile-first design.', 'Adapted npm\'s layout to emphasize pertinent resume information.'],
         workflow: ['Frequent, clear commit messages.', 'On-the-go code clean up and refactoring.'],
       },
       techStack: {

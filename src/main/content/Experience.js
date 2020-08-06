@@ -9,13 +9,19 @@ const Experience = (props) => {
     //   skills: ['Served cocktails with charm, accuracy, and speed.', '']
     // },
     {
-      title: 'Company Owner',
+      title: 'Web Developer & Designer',
+      employer: 'Manacan Enterprises',
+      duration: 'Apr \'19 - Mar \'20',
+      skills: ['did this, did that']
+    },
+    {
+      title: 'Owner & Web Developer',
       employer: 'Lionheart Sleep School',
       duration: 'Jul \'16 - Nov \'18',
       skills: ['Helped anxious new parents improve their baby\'s sleep.', 'Developed consistent branding across all platforms.', 'Organized community outreach events.']
     },
     {
-      title: 'High School Teacher',
+      title: 'Teacher & Program Director',
       employer: 'Avenir School Society',
       duration: 'Feb \'14 - Jun \'15',
       skills: ['Adapted curriculum to meet diverse student needs.', 'Managed school-wide programs, such as daily hot lunches, field trips, and meditation breaks.']

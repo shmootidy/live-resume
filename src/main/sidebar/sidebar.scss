@@ -49,6 +49,9 @@
     background: #e1e1e1;
     margin: 0;
     padding: .35rem .5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   .contact-info {
     display: none;
