@@ -10,6 +10,9 @@
   font-size: .75rem;
   font-weight: 600;
 
+  @media (min-width: 960px) {
+    padding: 1rem 2rem;
+  }
   > div:first-child {
     display: none;
     width: 70%;
@@ -28,6 +31,9 @@
     span {
       @media (min-width: 500px) {
         margin: 0 .5rem;
+      }
+      @media (min-width: 960px) {
+        font-size: 14px;
       }
     }
   }

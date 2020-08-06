@@ -5,10 +5,13 @@
 
 .name-title {
   top: -1px;
-  padding: 1rem 7.5rem;
+  padding: 1rem 1.25rem;
   background: transparent;
   z-index: 11;
 
+  @media (min-width: 960px) {
+    padding: 1rem 7.5rem;
+  }
   &.is-sticky {
     background: white;
     box-shadow: 0 4px 13px -3px rgba(0, 0, 0, 0.10196);
