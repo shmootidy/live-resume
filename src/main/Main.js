@@ -55,7 +55,6 @@ export default class Main extends Component {
   }
 
   setHeaderHeight() {
-    // const nameTitleHeight = document.getElementById('name-title').offsetHeight
     const nameTitleHeight = document.getElementsByClassName('name-title')[0].offsetHeight
     const nameTitleTabsHeight = document.getElementById('tabs').offsetHeight + nameTitleHeight
     this.setState({ nameTitleHeight, nameTitleTabsHeight })
