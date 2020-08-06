@@ -29,12 +29,7 @@ export default class Main extends Component {
           text: 'Education',
           active: false,
           position: null
-        },
-        //  { text: 'New one?',
-        //    icon: 'faTags',
-        //    active: false,
-        //    position: null
-        //   }
+        }
       ]
     }
     this.tabToggle = this.tabToggle.bind(this)
@@ -43,19 +38,6 @@ export default class Main extends Component {
     this.setContentPositions = this.setContentPositions.bind(this)
     this.setHeaderHeight = this.setHeaderHeight.bind(this)
     this.handleResize = this.handleResize.bind(this)
-    this.handleClick = this.handleClick.bind(this)
-  }
-
-  // for testing only
-  handleClick(e) {
-    // console.log(`pageY: ${e.pageY}`)
-    // console.log('nameTitleHeight:', document.getElementsByClassName('name-title')[0].offsetHeight)
-    // console.log('this.state.nameTitleHeight:', this.state.nameTitleHeight)
-    // console.log('nameTitleHeight:', document.getElementById('header').offsetHeight) 
-    // console.log('summary:', document.getElementById('summary').offsetTop) 
-    // console.log('projects:', document.getElementById('projects').offsetTop) 
-    // console.log('education:', document.getElementById('education').offsetTop) 
-    // console.log('experience:', document.getElementById('experience').offsetTop) 
   }
 
   // toggle active tag - change its color - THAT'S IT!
@@ -138,7 +120,6 @@ export default class Main extends Component {
         // onScroll={this.handleScroll} 
         className="flex flex-column" 
         id="main" 
-        onClick={this.handleClick}
         >
           <span 
             id="tabs" 
