@@ -93,3 +93,26 @@
   font-family: 'Fira Mono';
   font-size: .875rem;
 }
+.job-accomplishments {
+  list-style: disc outside;
+  margin: .5rem;
+  margin-left: 1rem;
+  width: initial;
+
+  ul {
+    list-style: circle outside;
+    margin: .5rem;
+    margin-left: 1rem;
+  }
+  li {
+    text-align: left;
+    padding: 0;
+    display: list-item;
+  }
+  > li {
+    font-size: 1rem;
+
+    li {
+    }
+  }
+}
