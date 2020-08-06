@@ -102,7 +102,7 @@ const Experience = (props) => {
 
   return (
     <div id="experience">
-      <h2 className="content-title">Employment</h2>
+      <h2 className="content-title">Work History</h2>
       <div>{job}</div>
     </div>
   )

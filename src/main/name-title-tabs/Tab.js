@@ -1,16 +1,16 @@
 import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faFileArchive, faCube, faCubes } from '@fortawesome/free-solid-svg-icons'
+import { faTags, faFolderOpen, faGraduationCap, faCubes } from '@fortawesome/free-solid-svg-icons'
 import { faFileAlt } from '@fortawesome/free-regular-svg-icons'
 
 const Tab = (props) => {
-  const tabIcons = [faFileAlt, faFileArchive, faCube, faCubes]
+  const tabIcons = [faFileAlt, faTags, faCubes, faGraduationCap]
   const tab = props.tabs.map((tab, index) => {
     let selectedClass = tab.active ? '' : 'not-selected'
     let tabClass = 'tab tab' + (index + 1).toString()
     let fullClass =  tabClass + ' ' + selectedClass
     let tabIcon = <FontAwesomeIcon icon={tabIcons[index]} />
-    let tabText = props.tabMobile ? '' : tab.text
+    let tabText = tab.text // props.tabMobile ? '' : tab.text
     return <li
         key={tab.text}
         className={fullClass} 

@@ -27,13 +27,13 @@ const Content = (props) => {
   } else if (visibleTab === 2) {
     return (
       <content>
-        <Education />
+        <Experience />
       </content>
     )
   } else if (visibleTab === 3) {
     return (
       <content>
-        <Experience />
+        <Education />
       </content>
     )
   } else {

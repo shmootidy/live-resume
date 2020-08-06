@@ -22,12 +22,12 @@ export default class Main extends Component {
         { text: 'Projects',
           active: false,
           position: null
-         }, 
-        { text: 'Education',
-          active: false,
-          position: null
          },
-        { text: 'Employment',
+         { text: 'Work History',
+           active: false,
+           position: null
+          },
+        { text: 'Education',
           active: false,
           position: null
          },

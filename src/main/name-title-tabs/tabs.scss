@@ -97,5 +97,12 @@ li.not-selected {
     justify-content: center;
     align-items: center;
     border-radius: .25rem .25rem 0 0;
+    font-size: 14px;
+    display: flex;
+    flex-direction: column;
+
+    svg {
+      font-size: 1rem;
+    }
   }
 }
