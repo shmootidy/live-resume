@@ -33,7 +33,7 @@ export default class Main extends Component {
       ]
     }
     this.tabToggle = this.tabToggle.bind(this)
-    this.scrollToContent = this.scrollToContent.bind(this)
+    this.displayContent = this.displayContent.bind(this)
     this.setHeaderHeight = this.setHeaderHeight.bind(this)
     this.handleResize = this.handleResize.bind(this)
   }
@@ -50,7 +50,7 @@ export default class Main extends Component {
   }
 
   // scroll to appropriate place when tab is clicked
-  scrollToContent(tabIndex) {
+  displayContent(tabIndex) {
     this.setState( { visibleTab: tabIndex } )
   }
 
@@ -76,7 +76,7 @@ export default class Main extends Component {
         <NameTitle 
           tabs={this.state.tabs}
           tabToggle={this.tabToggle} 
-          scrollToContent={this.scrollToContent} 
+          displayContent={this.displayContent} 
           tabsPosition={this.state.nameTitleHeight}
         />
         <div 
@@ -90,7 +90,7 @@ export default class Main extends Component {
             <Tabs 
               tabs={this.state.tabs} 
               tabToggle={this.tabToggle} 
-              scrollToContent={this.scrollToContent}
+              displayContent={this.displayContent}
               position={this.state.nameTitleHeight} 
             />
           </span>

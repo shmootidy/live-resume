@@ -26,7 +26,7 @@ const Tabs = (props) => {
         <Tab 
           tabs={props.tabs}
           tabToggle={props.tabToggle} 
-          scrollToContent={props.scrollToContent} 
+          displayContent={props.displayContent} 
         />
       </ul>
     </div>
