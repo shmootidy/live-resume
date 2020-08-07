@@ -5,6 +5,7 @@ import NameTitle from './name-title-tabs/NameTitle'
 
 import './main.scss'
 import './_responsive.scss'
+import './sidebar/sidebar.scss'
 
 export default class Main extends Component {
   constructor(props) {
