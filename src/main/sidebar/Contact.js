@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 const Contact = (props) => {
@@ -8,13 +8,20 @@ const Contact = (props) => {
     margin: '.5rem 0 1rem',
     color: 'rgba(0,0,0,.8)'
   }
-  let seeMoreToggle = false
-  let seeMoreText = '[ see more ]'
-  
+  const [ seeMoreToggle, setToggle ] = useState(true)
+  const [ seeMoreText, setText ] = useState('[ see more + ]')
+  const [ contactStyle, setStyle ] = useState({ maxHeight: '0', overflow: 'hidden', transition: 'max-height 0.2s ease-out', background: 'white' })
+
   function handleToggle() {
-    seeMoreText = seeMoreToggle ? '[ see more ]' : '[ see less ]'
-    seeMoreToggle = seeMoreToggle ? false : true
-    console.log(seeMoreText)
+    if (seeMoreToggle) {
+      setText('[ see less - ]')
+      setToggle(false)
+      setStyle({ maxHeight: '345px', overflow: 'hidden', transition: 'max-height 0.2s ease-out', background: 'white' })
+    } else {
+      setText('[ see more + ]')
+      setToggle(true)
+      setStyle({ maxHeight: '0', overflow: 'hidden', transition: 'max-height 0.2s ease-out', background: 'white' })
+    }
   }
   return (
     <div className="sidebar">
@@ -25,7 +32,7 @@ const Contact = (props) => {
           <span className="contact-info">> shmooritchie@gmail.com</span>
         </a>
       </div>
-      <div className="contact collapseable-contact" style={{display: 'none', overflow: 'hidden'}}>
+      <div className="contact collapseable-contact" style={contactStyle}>
         <a href="tel:+1-604-616-0247" className="contact-bar" id="phone">
           <img className="contact-icon absolute" alt="Phone icon" src={require("../../assets/phone.png")} />
           <span className="contact-info">> 604.616.0247</span>
