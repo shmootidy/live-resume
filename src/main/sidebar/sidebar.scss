@@ -17,18 +17,18 @@
 .contact {
   margin: 0;
 }
-.collapseable-sidebar {
+.collapseable-contact {
   transition: max-height .2s ease-out;
   background: white;
   overflow: hidden;
 
-  .see-more {
+  &.see-more {
     max-height: 0;
     @media (min-width: 960px) {
       max-height: unset;
     }
   }
-  .see-less {
+  &.see-less {
     max-height: 345px;;
   }
 }

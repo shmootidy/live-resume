@@ -1,5 +1,3 @@
-// contains Tab
-
 import React, { useEffect } from 'react'
 import Tab from './Tab'
 
