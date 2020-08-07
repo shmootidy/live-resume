@@ -10,17 +10,17 @@ const Contact = (props) => {
   }
   const [ seeMoreToggle, setToggle ] = useState(true)
   const [ seeMoreText, setText ] = useState('[ see more + ]')
-  const [ contactStyle, setStyle ] = useState({ maxHeight: '0', overflow: 'hidden', transition: 'max-height 0.2s ease-out', background: 'white' })
+  const [ contactClass, setClass ] = useState('see-more')
 
   function handleToggle() {
     if (seeMoreToggle) {
       setText('[ see less - ]')
       setToggle(false)
-      setStyle({ maxHeight: '345px', overflow: 'hidden', transition: 'max-height 0.2s ease-out', background: 'white' })
+      setClass('see-less')
     } else {
       setText('[ see more + ]')
       setToggle(true)
-      setStyle({ maxHeight: '0', overflow: 'hidden', transition: 'max-height 0.2s ease-out', background: 'white' })
+      setClass('see-more')
     }
   }
   return (
@@ -32,7 +32,7 @@ const Contact = (props) => {
           <span className="contact-info">> shmooritchie@gmail.com</span>
         </a>
       </div>
-      <div className="contact collapseable-contact" style={contactStyle}>
+      <div className={"contact collapseable-contact " + contactClass} >
         <a href="tel:+1-604-616-0247" className="contact-bar" id="phone">
           <img className="contact-icon absolute" alt="Phone icon" src={require("../../assets/phone.png")} />
           <span className="contact-info">> 604.616.0247</span>

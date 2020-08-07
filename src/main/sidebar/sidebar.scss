@@ -4,9 +4,33 @@
   -webkit-font-smoothing: antialiased;
   font-weight: 700;
   font-size: 1rem;
+
+  .see-more {
+    border: 0;
+    background: white;
+    color: inherit;
+    @media (min-width: 960px) {
+      display: none;
+    }
+  }
 }
 .contact {
   margin: 0;
+}
+.collapseable-sidebar {
+  transition: max-height .2s ease-out;
+  background: white;
+  overflow: hidden;
+
+  .see-more {
+    max-height: 0;
+    @media (min-width: 960px) {
+      max-height: unset;
+    }
+  }
+  .see-less {
+    max-height: 345px;;
+  }
 }
 .contact-bar {
   border: 1px #e8e8e8 solid;

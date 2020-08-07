@@ -88,6 +88,10 @@
   text-align: left;
   display: list-item;
   padding: 0;
+
+  @media (min-width: 768px) {
+    font-size: 18px;
+  }
 }
 
 // EXPERIENCE
@@ -141,8 +145,8 @@
   }
   > li {
     font-size: 1rem;
-
-    li {
+    @media (min-width: 768px) {
+      font-size: 18px;
     }
   }
 }
