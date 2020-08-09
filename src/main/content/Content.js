@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useRef } from 'react'
 import Summary from './Summary'
 import Experience from './Experience'
 import Education from './Education'
@@ -8,19 +8,28 @@ import Contact from '../sidebar/Contact'
 
 import './content.scss'
 
+const scrollToRef = (ref) => window.scrollTo(0, ref.current.offsetTop - 170)
+
 const Content = (props) => {
+  const myRef = useRef(null)
+  const executeScroll = () => scrollToRef(myRef)
   const [ previousTab, setPreviousTab ] = useState(props.visibleTab)
   const [ hideContact, setHideContact ] = useState(true)
 
   const visibleTab = props.visibleTab
   if (previousTab !== visibleTab) {
     setPreviousTab(visibleTab)
-    if (props.mainTab) setHideContact(true)
+    setHideContact(true)
+    if (props.mainTab) {
+      // setHideContact(true)
+    } else {
+      executeScroll()
+    }
   }
   
   if (visibleTab === 0) {
     return (
-      <content>
+      <content ref={myRef}>
         <Contact 
           hideContact={hideContact} 
           toggleHideContact={setHideContact} 
@@ -33,7 +42,7 @@ const Content = (props) => {
     )
   } else if (visibleTab === 1) {
     return (
-      <content>
+      <content ref={myRef}>
         <Contact 
           hideContact={hideContact} 
           toggleHideContact={setHideContact} 
@@ -45,7 +54,7 @@ const Content = (props) => {
     )
   } else if (visibleTab === 2) {
     return (
-      <content>
+      <content ref={myRef}>
         <Contact 
           hideContact={hideContact} 
           toggleHideContact={setHideContact} 
@@ -57,7 +66,7 @@ const Content = (props) => {
     )
   } else if (visibleTab === 3) {
     return (
-      <content>
+      <content ref={myRef}>
         <Contact 
           hideContact={hideContact} 
           toggleHideContact={setHideContact} 
