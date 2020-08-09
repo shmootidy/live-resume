@@ -1,5 +1,4 @@
 import React, { useEffect } from 'react'
-// import Tab from './Tab'
 import Tabs from './Tabs'
 
 import './name-title-tabs.scss'
