@@ -84,6 +84,17 @@ li.not-selected {
   transition: all .5s;
   background: white;
 
+  &.large-screen {
+    display: none;
+    @media(min-width: 960px) {
+      display: flex;
+    }
+  }
+  &.reg-tabs {
+    @media(min-width: 960px) {
+      display: none;
+    }
+  }
   &.at-top {
     top: 0;
     margin: .5rem 0;

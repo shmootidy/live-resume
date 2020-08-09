@@ -19,7 +19,7 @@ const Tabs = (props) => {
     if (tabs) observer.observe(tabs)
   })
   const listClasses = props.tabTop ? 'tabs-top' : 'flex tabs'
-  const moreClasses = props.largeScreenTabs ? listClasses + ' large-screen' : listClasses
+  const moreClasses = props.largeScreenTabs ? listClasses + ' large-screen' : listClasses + ' reg-tabs'
   return (
     <div>
       <ul className={moreClasses}>
