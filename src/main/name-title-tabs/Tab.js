@@ -1,6 +1,6 @@
 import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faTags, faFolderOpen, faGraduationCap, faCubes } from '@fortawesome/free-solid-svg-icons'
+import { faTags, faGraduationCap, faCubes } from '@fortawesome/free-solid-svg-icons'
 import { faFileAlt } from '@fortawesome/free-regular-svg-icons'
 
 const Tab = (props) => {
