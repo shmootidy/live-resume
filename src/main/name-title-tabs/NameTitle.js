@@ -27,6 +27,7 @@ const NameTitle = (props) => {
         tabToggle={props.tabToggle}
         displayContent={props.displayContent}
         tabMobile={true}
+        setMainTab={props.setMainTab}
       />
     </span>
   )

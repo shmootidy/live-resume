@@ -15,7 +15,7 @@ const Content = (props) => {
   const visibleTab = props.visibleTab
   if (previousTab !== visibleTab) {
     setPreviousTab(visibleTab)
-    setHideContact(true)
+    if (props.mainTab) setHideContact(true)
   }
   
   if (visibleTab === 0) {

@@ -27,6 +27,8 @@ const Tabs = (props) => {
           tabToggle={props.tabToggle} 
           displayContent={props.displayContent}
           tabMobile={props.tabMobile}
+          setMainTab={props.setMainTab}
+          mainTab={props.mainTab}
         />
       </ul>
     </div>

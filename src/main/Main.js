@@ -30,9 +30,11 @@ export default class Main extends Component {
         }
       ],
       visibleTab: 0,
+      mainTab: null
     }
     this.tabToggle = this.tabToggle.bind(this)
     this.displayContent = this.displayContent.bind(this)
+    this.setMainTab = this.setMainTab.bind(this)
   }
 
   tabToggle(tabIndex) {
@@ -49,6 +51,11 @@ export default class Main extends Component {
     this.setState( { visibleTab: tabIndex } )
   }
 
+  setMainTab(bool) {
+    this.setState({ mainTab: bool })
+    console.log(this.state.mainTab)
+  }
+
   componentDidMount() {
     setTimeout(this.setHeaderHeight, 100) // delay is necessary for accuracy
     window.addEventListener('resize', this.handleResize)
@@ -61,6 +68,7 @@ export default class Main extends Component {
           tabs={this.state.tabs}
           tabToggle={this.tabToggle} 
           displayContent={this.displayContent} 
+          setMainTab={this.setMainTab}
         />
         <div 
         className="flex flex-column" 
@@ -74,9 +82,11 @@ export default class Main extends Component {
               tabs={this.state.tabs} 
               tabToggle={this.tabToggle} 
               displayContent={this.displayContent}
+              setMainTab={this.setMainTab}
+              mainTab={true}
             />
           </span>
-          <Content visibleTab={this.state.visibleTab} />
+          <Content visibleTab={this.state.visibleTab} mainTab={this.state.mainTab} />
         </div>
       </main>
     )

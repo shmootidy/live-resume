@@ -12,7 +12,7 @@ const Tab = (props) => {
     return <li
         key={tab.text}
         className={fullClass} 
-        onClick={() => { props.tabToggle(index); props.displayContent(index) }}>
+        onClick={() => { props.tabToggle(index); props.displayContent(index); props.setMainTab(props.mainTab) }}>
         {<FontAwesomeIcon icon={tabIcons[index]} />}
         {tab.text}
       </li>
