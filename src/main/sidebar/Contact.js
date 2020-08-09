@@ -52,12 +52,12 @@ const Contact = (props) => {
               <span style={{marginLeft: '.5rem'}}>github.com/shmootidy</span>
             </a>
           </div>
-          <div>
+          {/* <div>
             <div className="sidebar-subtitle">Collaborators</div>
             <div style={style}>
               <img style={{width: '42px', height: '42px', minWidth: '42px', borderRadius: '4%'}} alt="avatar" src={require('../../assets/headshot.png')} />
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </div>
