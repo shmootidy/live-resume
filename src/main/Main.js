@@ -29,7 +29,8 @@ export default class Main extends Component {
           active: false,
           position: null
         }
-      ]
+      ],
+      visibleTab: 0,
     }
     this.tabToggle = this.tabToggle.bind(this)
     this.displayContent = this.displayContent.bind(this)
@@ -56,7 +57,7 @@ export default class Main extends Component {
 
   render() {
     return (
-      <div style={{minHeight: '100vh'}}>
+      <main style={{minHeight: '100vh'}}>
         <NameTitle 
           tabs={this.state.tabs}
           tabToggle={this.tabToggle} 
@@ -76,9 +77,9 @@ export default class Main extends Component {
               displayContent={this.displayContent}
             />
           </span>
-          <Content visibleTab={this.state.visibleTab ? this.state.visibleTab : 0 } />
+          <Content test={this.state.test} visibleTab={this.state.visibleTab} />
         </div>
-      </div>
+      </main>
     )
   }
 }    
