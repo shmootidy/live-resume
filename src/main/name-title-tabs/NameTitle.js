@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react'
 import Tab from './Tab'
-import Contact from '../sidebar/Contact'
 
 import './name-title-tabs.scss'
 
