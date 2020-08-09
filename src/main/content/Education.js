@@ -19,9 +19,9 @@ const Education = (props) => {
     }
   ]
 
-  let education = educationArr.map(education => {
+  let education = educationArr.map((education, i) => {
     return (
-      <div>
+      <div key={i}>
         <h3 style={{margin: '1rem 0 0'}} className="awarded">{education.awarded.toUpperCase()}</h3>
         <span style={{margin: 0}} className="flex space-between project-subtitle">
           <span className="school">{education.school}</span>

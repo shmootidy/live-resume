@@ -75,7 +75,7 @@ const Experience = (props) => {
 
   const job = jobs.map(job => {
     return (
-      <div key={ job.icon } className="experience">
+      <div key={ job.title } className="experience">
         <div className="flex space-between job-underline">
           <div className="job-title green">{job.title.toUpperCase()}</div>
           <div className="job-location">Van, BC</div>
@@ -85,12 +85,12 @@ const Experience = (props) => {
           <div className="job-duration">{job.duration}</div>
         </div>
         <ul className="job-accomplishments description-value">
-          {job.accomplishments.map(accomplishment => {
+          {job.accomplishments.map((accomplishment, i) => {
             return (
-              <li>
+              <li key={i}>
                 {accomplishment.point}
                 <ul>
-                  {accomplishment.subpoints ? accomplishment.subpoints.map(subpoint => <li>{subpoint}</li>) : ''}
+                  {accomplishment.subpoints ? accomplishment.subpoints.map((subpoint, i) => <li key={i}>{subpoint}</li>) : ''}
                 </ul>
               </li>
             )

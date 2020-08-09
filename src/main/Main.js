@@ -37,7 +37,6 @@ export default class Main extends Component {
     this.handleResize = this.handleResize.bind(this)
   }
 
-  // toggle active tag - change its color - THAT'S IT!
   tabToggle(tabIndex) {
     let tabs = this.state.tabs
     tabs[tabIndex].active = true
@@ -48,7 +47,6 @@ export default class Main extends Component {
     this.setState( tabs )
   }
 
-  // scroll to appropriate place when tab is clicked
   displayContent(tabIndex) {
     this.setState( { visibleTab: tabIndex } )
   }
