@@ -11,7 +11,7 @@ export default class Main extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      nameTitleHeight: '94',
+      // nameTitleHeight: '94',
       tabs: [
         { text: 'Readme',
           active: true,
@@ -33,8 +33,6 @@ export default class Main extends Component {
     }
     this.tabToggle = this.tabToggle.bind(this)
     this.displayContent = this.displayContent.bind(this)
-    this.setHeaderHeight = this.setHeaderHeight.bind(this)
-    this.handleResize = this.handleResize.bind(this)
   }
 
   tabToggle(tabIndex) {
@@ -49,16 +47,6 @@ export default class Main extends Component {
 
   displayContent(tabIndex) {
     this.setState( { visibleTab: tabIndex } )
-  }
-
-  setHeaderHeight() {
-    const nameTitleHeight = document.getElementsByClassName('name-title')[0].offsetHeight
-    const nameTitleTabsHeight = document.getElementById('tabs').offsetHeight + nameTitleHeight
-    this.setState({ nameTitleHeight, nameTitleTabsHeight })
-  }
-
-  handleResize() {
-    this.setHeaderHeight()
   }
 
   componentDidMount() {
@@ -86,7 +74,6 @@ export default class Main extends Component {
               tabs={this.state.tabs} 
               tabToggle={this.tabToggle} 
               displayContent={this.displayContent}
-              position={this.state.nameTitleHeight} 
             />
           </span>
           <Content visibleTab={this.state.visibleTab ? this.state.visibleTab : 0 } />

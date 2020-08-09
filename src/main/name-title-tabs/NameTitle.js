@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react'
-import Tab from './Tab'
+// import Tab from './Tab'
+import Tabs from './Tabs'
 
 import './name-title-tabs.scss'
 
@@ -21,14 +22,12 @@ const NameTitle = (props) => {
         <span id="name">susannah ritchie (shmoo)</span>
         <span id="title">1.4.3 • <span className="green">Web Developer</span> • Van<span className="hide-for-tiny-screens">couver</span>, BC</span>
       </span>
-      <ul className="mobile-tabs">
-        <Tab 
-          tabs={props.tabs}
-          tabToggle={props.tabToggle}
-          displayContent={props.displayContent}
-          tabMobile={true}
-        />
-      </ul>
+      <Tabs 
+        tabs={props.tabs}
+        tabToggle={props.tabToggle}
+        displayContent={props.displayContent}
+        tabMobile={true}
+      />
     </span>
   )
 }
