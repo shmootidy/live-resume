@@ -6,7 +6,7 @@ import './tabs.scss'
 const Tabs = (props) => {
   useEffect(() => {
     const tabs = document.querySelector('.tabs') ? document.querySelector('.tabs') : null
-    const mobileTabs = document.querySelector('.mobile-tabs')
+    const mobileTabs = document.querySelector('.tabs-top')
     const observer = new IntersectionObserver(
       ([e]) => {
         mobileTabs.classList.toggle('at-top', e.intersectionRatio < 1)
@@ -18,17 +18,19 @@ const Tabs = (props) => {
     )
     if (tabs) observer.observe(tabs)
   })
-  const listClasses = props.tabMobile ? 'mobile-tabs' : 'flex tabs'
+  const listClasses = props.tabTop ? 'tabs-top' : 'flex tabs'
+  const moreClasses = props.largeScreenTabs ? listClasses + ' large-screen' : listClasses
   return (
     <div>
-      <ul className={listClasses}>
+      <ul className={moreClasses}>
         <Tab 
           tabs={props.tabs}
           tabToggle={props.tabToggle} 
           displayContent={props.displayContent}
-          tabMobile={props.tabMobile}
+          tabTop={props.tabTop}
           setMainTab={props.setMainTab}
           mainTab={props.mainTab}
+          largeScreenTab={props.largeScreenTabs}
         />
       </ul>
     </div>

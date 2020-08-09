@@ -25,8 +25,16 @@ const NameTitle = (props) => {
         tabs={props.tabs}
         tabToggle={props.tabToggle}
         displayContent={props.displayContent}
-        tabMobile={true}
+        tabTop={true}
         setMainTab={props.setMainTab}
+      />
+      <Tabs 
+        tabs={props.tabs}
+        tabToggle={props.tabToggle}
+        displayContent={props.displayContent}
+        tabTop={true}
+        setMainTab={props.setMainTab}
+        largeScreenTabs={true}
       />
     </span>
   )

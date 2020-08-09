@@ -47,8 +47,9 @@ export default class Main extends Component {
     this.setState( tabs )
   }
 
-  displayContent(tabIndex) {
+  displayContent(tabIndex, largeScreenTab) {
     this.setState( { visibleTab: tabIndex } )
+    this.setState( { largeScreenTab })
   }
 
   setMainTab(bool) {
@@ -80,7 +81,7 @@ export default class Main extends Component {
               mainTab={true}
             />
           </span>
-          <Content visibleTab={this.state.visibleTab} mainTab={this.state.mainTab} />
+          <Content largeScreenTab={this.state.largeScreenTab} visibleTab={this.state.visibleTab} mainTab={this.state.mainTab} />
         </div>
       </main>
     )

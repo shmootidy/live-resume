@@ -24,7 +24,7 @@ const Content = (props) => {
     if (props.mainTab) {
       // setHideContact(true)
     } else {
-      executeScroll()
+      if (!props.largeScreenTab) executeScroll()
     }
   }
   
