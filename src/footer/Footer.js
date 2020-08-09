@@ -8,7 +8,7 @@ const Footer = (props) => {
   return (
     <div id="footer-container">
       <div className="footer-content">
-        <svg style={{overflow: 'unset', maxHeight: '50px'}} viewBox="0 0 27.23 27.23">
+        <svg viewBox="0 0 27.23 27.23">
           <rect fill="#333333" width="27.23" height="27.23" rx="2"></rect>
           <polygon fill="#fff" points={points}></polygon>
         </svg>

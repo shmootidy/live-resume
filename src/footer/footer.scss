@@ -17,17 +17,32 @@
 }
 .footer-content {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   margin: 4rem 7rem 4rem 4rem;
   font-size: 1rem;
 
-  .footer-heading {
-    font-weight: bold;
+
+  svg {
+    margin-bottom: 1rem;
+    overflow: unset;
+    max-height: 50px;
   }
   .footer-column {
-    > * {
+    width: 30%;
+    min-width: 212px;
+
+    .footer-heading {
+      font-weight: bold;
+      font-size: 20px;
+      letter-spacing: 1.3px;
+      margin: 0 0 1rem;
+    }
+    a {
       margin: .5rem 0;
       color: rgba(0, 0, 0, .7);
+      line-height: 2;
+      font-size: 18px;
       &:hover {
         color: rgba(0,0,0,.9);
       }
@@ -41,7 +56,7 @@
   a {
     color: rgba(0, 0, 0, .5);
     margin: 2rem 1rem;
-    font-size: 18px;
+    font-size: 22px;
     
     &:hover {
       color: rgba(0,0,0,.8);
