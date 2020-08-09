@@ -7,12 +7,14 @@ const Tabs = (props) => {
   useEffect(() => {
     const tabs = document.querySelector('.tabs') ? document.querySelector('.tabs') : null
     const mobileTabs = document.querySelector('.mobile-tabs')
-    
     const observer = new IntersectionObserver(
       ([e]) => {
         mobileTabs.classList.toggle('at-top', e.intersectionRatio < 1)
       },
-      {threshold: [1]}
+      {
+        threshold: [1],
+        rootMargin: '0px 0px 100%'
+      }
     )
     if (tabs) observer.observe(tabs)
   })
