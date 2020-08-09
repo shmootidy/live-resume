@@ -53,7 +53,6 @@ export default class Main extends Component {
 
   setMainTab(bool) {
     this.setState({ mainTab: bool })
-    console.log(this.state.mainTab)
   }
 
   componentDidMount() {
