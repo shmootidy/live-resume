@@ -56,7 +56,7 @@ export default class Main extends Component {
 
   render() {
     return (
-      <div>
+      <div style={{minHeight: '100vh'}}>
         <NameTitle 
           tabs={this.state.tabs}
           tabToggle={this.tabToggle} 
