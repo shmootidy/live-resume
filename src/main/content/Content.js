@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Summary from './Summary'
 import Experience from './Experience'
 import Education from './Education'
@@ -9,11 +9,22 @@ import Contact from '../sidebar/Contact'
 import './content.scss'
 
 const Content = (props) => {
+  const [ previousTab, setPreviousTab ] = useState(props.visibleTab)
+  const [ hideContact, setHideContact ] = useState(true)
+
   const visibleTab = props.visibleTab
+  if (previousTab != visibleTab) {
+    setPreviousTab(visibleTab)
+    setHideContact(true)
+  }
+  
   if (visibleTab === 0) {
     return (
       <content>
-        <Contact />
+        <Contact 
+          hideContact={hideContact} 
+          toggleHideContact={setHideContact} 
+        />
         <div className="content">
           <Summary />
           <Skills />
@@ -23,7 +34,10 @@ const Content = (props) => {
   } else if (visibleTab === 1) {
     return (
       <content>
-        <Contact />
+        <Contact 
+          hideContact={hideContact} 
+          toggleHideContact={setHideContact} 
+        />
         <div className="content">
           <Projects />
         </div>
@@ -32,7 +46,10 @@ const Content = (props) => {
   } else if (visibleTab === 2) {
     return (
       <content>
-        <Contact />
+        <Contact 
+          hideContact={hideContact} 
+          toggleHideContact={setHideContact} 
+        />
         <div className="content">
           <Experience />
         </div>
@@ -41,7 +58,10 @@ const Content = (props) => {
   } else if (visibleTab === 3) {
     return (
       <content>
-        <Contact />
+        <Contact 
+          hideContact={hideContact} 
+          toggleHideContact={setHideContact} 
+        />
         <div className="content">
           <Education />
         </div>

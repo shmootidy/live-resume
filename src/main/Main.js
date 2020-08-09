@@ -77,7 +77,7 @@ export default class Main extends Component {
               displayContent={this.displayContent}
             />
           </span>
-          <Content test={this.state.test} visibleTab={this.state.visibleTab} />
+          <Content visibleTab={this.state.visibleTab} />
         </div>
       </main>
     )

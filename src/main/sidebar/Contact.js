@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 const Contact = (props) => {
@@ -8,20 +8,31 @@ const Contact = (props) => {
     margin: '.5rem 0 1rem',
     color: 'rgba(0,0,0,.8)'
   }
-  const [ seeMoreToggle, setToggle ] = useState(true)
   const [ seeMoreText, setText ] = useState('[ see more + ]')
   const [ contactClass, setClass ] = useState('see-more')
+  const [ hideContact, setHideContact ] = useState(true)
+
+  useEffect(() => {
+    if (props.hideContact !== hideContact) {
+      collapseContact()
+    }
+  })
 
   function handleToggle() {
-    if (seeMoreToggle) {
+    if (props.hideContact) {
       setText('[ see less - ]')
-      setToggle(false)
+      props.toggleHideContact(false)
+      setHideContact(false)
       setClass('see-less')
     } else {
-      setText('[ see more + ]')
-      setToggle(true)
-      setClass('see-more')
+      collapseContact()
     }
+  }
+  function collapseContact() {
+    setText('[ see more + ]')
+    props.toggleHideContact(true)
+    setHideContact(true)
+    setClass('see-more')
   }
   return (
     <div className="sidebar">
