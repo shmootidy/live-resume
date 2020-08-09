@@ -12,6 +12,7 @@ const Projects = (props) => {
         design: ['Mimicked the style of npmjs.com through close study.'],
         development: ['Mobile-first design.', 'Adapted npm\'s layout to emphasize pertinent resume information.'],
         workflow: ['Frequent, clear commit messages.', 'On-the-go code clean up and refactoring.'],
+        // new thing I learned: svg, React Hooks, IntersectionObserver, FontAwesome components
       },
       techStack: {
         framework: 'react.js',

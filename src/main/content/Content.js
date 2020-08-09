@@ -8,7 +8,8 @@ import Contact from '../sidebar/Contact'
 
 import './content.scss'
 
-const scrollToRef = (ref) => window.scroll({top:ref.current.offsetTop - 170, behavior: 'smooth'})
+// const scrollToRef = (ref) => window.scroll({top:ref.current.offsetTop - 170, behavior: 'smooth'})
+const scrollToRef = (ref) => window.scrollTo(0, ref.current.offsetTop - 170)
 
 const Content = (props) => {
   const myRef = useRef(null)
