@@ -55,11 +55,6 @@ export default class Main extends Component {
     this.setState({ mainTab: bool })
   }
 
-  componentDidMount() {
-    setTimeout(this.setHeaderHeight, 100) // delay is necessary for accuracy
-    window.addEventListener('resize', this.handleResize)
-  }
-
   render() {
     return (
       <main style={{minHeight: '100vh'}}>
