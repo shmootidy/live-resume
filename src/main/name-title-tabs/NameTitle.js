@@ -1,13 +1,21 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import Tabs from './Tabs'
 
 import './name-title-tabs.scss'
 
 const NameTitle = (props) => {
+  const [ isSticky, setIsSticky ] = useState(false)
   useEffect(() => {
     const nameTitleElm = document.querySelector('.name-title')
     const observer = new IntersectionObserver(
-      ([e]) => e.target.classList.toggle('is-sticky', e.intersectionRatio < 1),
+      ([e]) => {
+        e.target.classList.toggle('is-sticky', e.intersectionRatio < 1)
+        if (e.intersectionRatio < 1) {
+          setIsSticky(true)
+        } else {
+          setIsSticky(false)
+        }
+      },
       {threshold: [1]}
     )
     observer.observe(nameTitleElm)
@@ -27,6 +35,7 @@ const NameTitle = (props) => {
         displayContent={props.displayContent}
         tabTop={true}
         setMainTab={props.setMainTab}
+        nameTitleIsSticky={isSticky}
       />
       <Tabs 
         tabs={props.tabs}
@@ -35,6 +44,7 @@ const NameTitle = (props) => {
         tabTop={true}
         setMainTab={props.setMainTab}
         largeScreenTabs={true}
+        nameTitleIsSticky={isSticky}
       />
     </span>
   )

@@ -20,9 +20,10 @@ const Tabs = (props) => {
   })
   const listClasses = props.tabTop ? 'tabs-top' : 'flex tabs'
   const moreClasses = props.largeScreenTabs ? listClasses + ' large-screen' : listClasses + ' reg-tabs'
+  const evenMoreClasses = props.nameTitleIsSticky ? moreClasses + ' name-title-is-sticky' : moreClasses
   return (
     <div>
-      <ul className={moreClasses}>
+      <ul className={evenMoreClasses}>
         <Tab 
           tabs={props.tabs}
           tabToggle={props.tabToggle} 

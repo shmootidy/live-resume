@@ -88,11 +88,17 @@ li.not-selected {
     display: none;
     @media(min-width: 960px) {
       display: flex;
+      &.name-title-is-sticky {
+        display: none;
+      }
     }
   }
   &.reg-tabs {
     @media(min-width: 960px) {
       display: none;
+      &.name-title-is-sticky {
+        display: flex;
+      }
     }
   }
   &.at-top {
