@@ -83,6 +83,7 @@ li.not-selected {
   margin: 0;
   transition: all .5s;
   background: white;
+  max-width: 1200px;
 
   &.large-screen {
     display: none;
@@ -103,14 +104,14 @@ li.not-selected {
   }
   &.at-top {
     top: 0;
-    margin: .5rem 0;
+    margin: .5rem auto;
     height: 40px;
     transition: top .5s;
     z-index: 1;
   }
   @media (min-width: 960px) {
     top: 0;
-    margin: .5rem 0;
+    margin: .5rem auto;
     height: 40px;
     transition: top .5s;
     z-index: 1;
