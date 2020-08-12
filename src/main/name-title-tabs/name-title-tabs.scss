@@ -28,6 +28,13 @@
   font-weight: 1000;
   line-height: 1.15;
 }
+.name {
+  background: white;
+  z-index: 2;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+}
 
 #title {
   font-family: 'Fira Mono';

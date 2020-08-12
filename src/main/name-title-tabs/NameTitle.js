@@ -23,12 +23,10 @@ const NameTitle = (props) => {
 
   return (
     <span className="flex flex-column responsive-padding sticky name-title ntt">
-      <span 
-        className="flex flex-column"
-        style={{background:'white', zIndex: 2}}>
+      <div className="flex flex-column name" >
         <span id="name">susannah ritchie (shmoo)</span>
         <span id="title">1.4.3 • <span className="green">Web Developer</span> • Van<span className="hide-for-tiny-screens">couver</span>, BC</span>
-      </span>
+      </div>
       <Tabs 
         tabs={props.tabs}
         tabToggle={props.tabToggle}
