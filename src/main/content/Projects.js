@@ -20,7 +20,7 @@ const Projects = (props) => {
         hosting: 'github',
       },
       url: 'https://www.npmjs.com/package/react',
-      img: 'resume.png'
+      img: 'resume20.png'
     },
     { 
       title: 'Don\'t Panic',
