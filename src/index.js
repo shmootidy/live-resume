@@ -3,9 +3,13 @@ import ReactDOM from 'react-dom'
 import Header from './header/Header'
 import Main from './main/Main'
 import Footer from './footer/Footer';
-// import Resume from './Resume'
+import './index.scss'
 
-import './index.css'
+import { fab } from '@fortawesome/free-brands-svg-icons'
+import { library } from '@fortawesome/fontawesome-svg-core'
+
+library.add(fab)
+
 
 const Resume = () => {
   return (

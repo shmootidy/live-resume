@@ -1,22 +1,37 @@
-// contains Tab
-
-import React from 'react'
+import React, { useEffect } from 'react'
 import Tab from './Tab'
 
-import './tabs.css'
+import './tabs.scss'
 
 const Tabs = (props) => {
-  const tabsStickyPosition = {
-    top: props.position + 'px'
-  }
-
+  useEffect(() => {
+    const tabs = document.querySelector('.tabs') ? document.querySelector('.tabs') : null
+    const mobileTabs = document.querySelector('.tabs-top')
+    const observer = new IntersectionObserver(
+      ([e]) => {
+        mobileTabs.classList.toggle('at-top', e.intersectionRatio < 1)
+      },
+      {
+        threshold: [1],
+        rootMargin: '0px 0px 100%'
+      }
+    )
+    if (tabs) observer.observe(tabs)
+  })
+  const listClasses = props.tabTop ? 'tabs-top' : 'flex tabs'
+  const moreClasses = props.largeScreenTabs ? listClasses + ' large-screen' : listClasses + ' reg-tabs'
+  const evenMoreClasses = props.nameTitleIsSticky ? moreClasses + ' name-title-is-sticky' : moreClasses
   return (
     <div>
-      <ul className="flex sticky" style={tabsStickyPosition}>
+      <ul className={evenMoreClasses}>
         <Tab 
-          tabs={props.tabs} 
+          tabs={props.tabs}
           tabToggle={props.tabToggle} 
-          scrollToContent={props.scrollToContent} 
+          displayContent={props.displayContent}
+          tabTop={props.tabTop}
+          setMainTab={props.setMainTab}
+          mainTab={props.mainTab}
+          largeScreenTab={props.largeScreenTabs}
         />
       </ul>
     </div>

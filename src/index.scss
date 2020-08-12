@@ -13,8 +13,6 @@ a {
 
 li {
   padding: .7rem 2rem;
-  border-radius: 5px 5px 0 0;
-  cursor: pointer;
   display: block;
   text-align: center;
 }
@@ -61,6 +59,14 @@ li {
   background: rgba(0, 0, 0, .1);
 }
 
+.hide-for-tiny-screens {
+  @media (max-width: 320px) {
+    display: none;
+  }
+}
+.hide {
+  display: none;
+}
 @font-face {
   font-family: 'GubBlaBlo';
     src: url('./style/fonts/GUBBLABLO.eot');

@@ -5,7 +5,8 @@ export default class ShmooSearch extends Component {
     super(props)
     this.state = {
       iteration: 0,
-      message: ['What is a Shmoo anyway?', 'Shmoo is my name! Well...my real name is Susannah...', '\'Shmoo\' comes from the comic, Lil Abner.', 'My parents gave me the nickname as a baby, and it stuck.', 'Click here to learn more about the Shmoo!']
+      // message: ['What is a Shmoo anyway?', 'Shmoo is my name! Well...my real name is Susannah...', '\'Shmoo\' comes from the comic, Lil Abner.', 'My parents gave me the nickname as a baby, and it stuck.', 'Click here to learn more about the Shmoo!']
+      message: ['Hi, I\'m Shmoo!', 'It\'s a nickname...', 'Susannah is "real".', 'But I go by Shmoo.']
     }
     this.loopMessage = this.loopMessage.bind(this)
   }
@@ -19,10 +20,14 @@ export default class ShmooSearch extends Component {
    render() {
     return (
     <div className="header-section flex">
-      <span><span id="shmoo-npm">shmoo</span></span>
-      <a href="https://en.wikipedia.org/wiki/Shmoo" target="_blank" rel="noopener noreferrer" id="shmoo-search">{this.state.message[this.state.iteration]}</a>
-      <div id="shmoo-button" onClick={this.loopMessage}>Click</div>
-      {/* <img id="shmoo-img" src={require("./assets/shmoo.jpg")} /> */}
+      <span>
+        <span id="shmoo-npm">shmoo</span>
+        <a href="mailto:shmooritchie@gmail.com?subject=I saw your resume!">Contact Me</a>
+      </span>
+      <span>
+        {/* <a href="https://en.wikipedia.org/wiki/Shmoo" target="_blank" rel="noopener noreferrer" id="shmoo-search">*/}<div id="shmoo-search">{this.state.message[this.state.iteration]}</div>
+        <div id="shmoo-button" onClick={this.loopMessage}>More</div>
+      </span>
     </div>
     )
   }

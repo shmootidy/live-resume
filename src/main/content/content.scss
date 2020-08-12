@@ -1,0 +1,59 @@
+content {
+  font-size: 18px;
+  color: rgba(0, 0, 0, .85);
+  line-height: 1.65;
+  letter-spacing: 0.1px;
+  padding: 0 .75rem;
+  @media (min-width: 960px) {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    padding: 0 1.25rem;
+  }
+}
+.content {
+  @media (min-width: 960px) {
+    width: 66%;
+    margin-right: 3rem;
+  }
+}
+.content-title {
+  padding-bottom: 8px;
+  border-bottom: 1px solid rgba(0, 0, 0, .1);
+  margin-bottom: 0;
+
+  @media (min-width: 960px) {
+    margin-top: 0;
+  }
+}
+.education {
+  ul {
+    list-style-type: disc;
+    margin-left: 1.25rem;
+    width: calc(100% - 1.25rem);
+
+    li {
+      display: list-item;
+      padding: 0;
+      text-align: left;
+      margin-bottom: .75rem;
+    }
+  }
+}
+/* 
+#summary-content {
+  position: absolute;
+  top: 8rem;
+}
+#projects-content {
+  position: absolute;
+  top: 30rem;
+}
+#education-content {
+  position: absolute;
+  top: 142rem;
+}
+#experience-content {
+  position: absolute;
+  top: 147rem;
+} */

@@ -1,0 +1,156 @@
+// .project {
+//   opacity: .9;
+// }
+// .project:hover {
+//   // background: linear-gradient(rgb(255, 249, 229), rgb(250, 235, 235), rgb(250, 235, 249), rgb(237, 229, 255));
+//   // border-radius: 5px;
+//   opacity: 1;
+// }
+
+.project, .experience {
+  text-align: left;
+  padding: .5rem 0;
+  margin-top: 1rem;
+}
+
+.experience {
+  padding-left: 0;
+}
+
+.project-title {
+  margin: 0 .5rem;
+}
+
+.project-subtitle {
+  font-family: 'Fira Mono';
+  font-size: .875rem;
+  padding-bottom: .5rem;
+  margin: 0 .5rem;
+}
+
+.img-tech-box {
+  align-content: center;
+  margin: 0 0 0 .5rem;
+}
+
+.project-img {
+  max-width: 90%;
+}
+.project-tech {
+  margin: 0;
+}
+
+.project-description {
+  text-align: left;
+}
+
+.project-tech {
+  font-family: 'Source Sans Pro';
+  font-size: .875rem;
+  color: white;
+  margin: .8rem .2rem .5rem 0rem;
+}
+
+.tech {
+  padding: 2px 5px;
+  text-shadow: 0 1px rgba(0, 0, 0, 0.3);
+}
+
+.tech-key {
+  background: #5B5B5B;
+  border-radius: 3px 0 0 3px;
+}
+
+.tech-value-green {
+  background: #04C504;
+  border-radius: 0 3px 3px 0;
+}
+
+.tech-value-red {
+  border-radius: 0 3px 3px 0;
+  background: #E45637;
+}
+
+.description {
+  margin: 0 .5rem .5rem;
+
+  ul {
+    list-style-type: disc;
+    margin-left: 1rem;
+    width: initial;
+  }
+}
+
+.description-key {
+  font-weight: bold;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.description-value {
+  margin: 0;
+  font-size: 1rem;
+  text-align: left;
+  display: list-item;
+  padding: 0;
+
+  @media (min-width: 768px) {
+    font-size: 18px;
+  }
+}
+
+// EXPERIENCE
+
+.job-underline {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  align-items: flex-end;
+
+  @media (max-width: 320px) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+.job-subline {
+  @media (max-width: 320px) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+.job-title, .job-employer {
+  font-weight: bold;
+
+  @media (min-width: 320px) {
+    white-space: nowrap;
+  }
+}
+.job-employer, .job-location, .job-duration {
+  font-family: 'Fira Mono';
+  font-size: .875rem;
+
+  @media (min-width: 320px) {
+    white-space: nowrap;
+  }
+}
+.job-accomplishments {
+  list-style: disc outside;
+  margin: .5rem;
+  margin-left: 1.25rem;
+  width: initial;
+
+  ul {
+    list-style: circle outside;
+    margin: .5rem;
+    margin-left: 1rem;
+    width: initial;
+  }
+  li {
+    text-align: left;
+    padding: 0;
+    display: list-item;
+  }
+  > li {
+    font-size: 1rem;
+    @media (min-width: 768px) {
+      font-size: 18px;
+    }
+  }
+}
