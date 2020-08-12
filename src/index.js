@@ -4,12 +4,12 @@ import Header from './header/Header'
 import Main from './main/Main'
 import Footer from './footer/Footer';
 import './index.scss'
+import './polyfill'
 
 import { fab } from '@fortawesome/free-brands-svg-icons'
 import { library } from '@fortawesome/fontawesome-svg-core'
 
 library.add(fab)
-
 
 const Resume = () => {
   return (
