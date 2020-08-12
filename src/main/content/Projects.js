@@ -19,7 +19,7 @@ const Projects = (props) => {
         styling: 'SASS',
         hosting: 'github',
       },
-      url: 'https://www.npmjs.com/package/react',
+      url: 'https://shmootidy.github.io/live-resume/',
       img: 'resume20.png'
     },
     { 
