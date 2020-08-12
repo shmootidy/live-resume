@@ -19,9 +19,12 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  margin: 4rem 7rem 4rem 4rem;
   font-size: 1rem;
+  margin: 2rem 7rem 1rem 4rem;
 
+  @media (min-width: 500px) {
+    margin: 4rem 7rem 1rem 4rem;
+  }
 
   svg {
     margin-bottom: 1rem;
