@@ -4,11 +4,12 @@ import { faAt, faPhoneSquare } from '@fortawesome/free-solid-svg-icons'
 import './footer.scss'
 
 const Footer = (props) => {
-  const points = "5.8,6.06 21.52,6.06 21.52,9.98 17.58,9.98 17.59,13 21.52,13 21.52,21.75 5.8,21.75 5.8,18.5 13.67,18.5 13.67,15.5 5.8,15.5"
+  // const points = "5.8,6.06 21.52,6.06 21.52,9.98 17.58,9.98 17.59,13 21.52,13 21.52,21.75 5.8,21.75 5.8,18.5 13.67,18.5 13.67,15.5 5.8,15.5"
+  const points = "5.8 6.06 21.52 6.06 21.52 9.98 17.58 9.98 17.59 13 21.52 13 21.52 21.75 5.8 21.75 5.8 18.5 13.67 18.5 13.67 15.5 5.8 15.5"
   return (
     <div id="footer-container">
       <div className="footer-content">
-        <svg viewBox="0 0 27.23 27.23">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 27.23 27.23">
           <rect fill="#333333" width="27.23" height="27.23" rx="2"></rect>
           <polygon fill="#fff" points={points}></polygon>
         </svg>
