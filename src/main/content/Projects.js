@@ -4,10 +4,42 @@ import './projects.scss'
 
 const Projects = (props) => {
   const projects = [
+    // {
+    //   title: 'Categorization Algorithm',
+    //   subtitle: 'Product filtering system',
+    //   dateCompleted: 'Dec\'19',
+    //   description: {
+    //     process: ['conceived of and brought to life'],
+    //     teamwork: ['onboarded merch staff with in-person and written instruction']
+    //   },
+    //   techStack: {
+    //     CMS: 'Wordpress',
+    //     language: 'SQL'
+    //   },
+    //   url: '',
+    //   img: ''
+    // },
+    // {
+    //   title: 'Sliding Product Menu',
+    //   subtitle: 'Lightweight Navigation for Mobile',
+    //   dateCompleted: 'Jan\'20',
+    //   description: {
+    //     process: ['Brought static, 3rd-party designs to life.'],
+    //     development: []
+    //   },
+    //   techStack: {
+    //     library: 'jQuery',
+    //     styling: 'SASS',
+    //     CMS: 'Wordpress',
+    //     language: 'PHP'
+    //   },
+    //   url: '',
+    //   img: ''
+    // },
     {
       title: 'This Resume',
       subtitle: 'Professional Reference',
-      dateCompleted: 'Jul\'20',
+      dateCompleted: 'Aug\'20',
       description: {
         design: ['Mimicked the style of npmjs.com through close study.'],
         development: ['Mobile-first design.', 'Adapted npm\'s layout to emphasize pertinent resume information.'],
