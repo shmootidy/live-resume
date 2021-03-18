@@ -2,12 +2,25 @@ import React from 'react'
 
 const Experience = (props) => {
   const jobs = [
-    // { 
-    //   title: 'Bartender',
-    //   employer: 'The Emerald Lounge',
-    //   duration: 'Mar\'18 – Dec\'18',
-    //   accomplishments: ['Served cocktails with charm, accuracy, and speed.', '']
-    // },
+    {
+      title: 'Developer & UX/UI Consultant',
+      employer: 'Self-employed',
+      duration: 'Sept\'20 – now',
+      location: 'Galiano Isl., BC',
+      accomplishments: [{
+        point: 'Creating custom plugins for clients\' e-commerce stores',
+        subpoints: ['Building back-end portals on Wordpress for easy customization', 'Creating front-end components that seamlessly adapt various pre-established themes']
+      }, {
+        point: 'Transferring sites from one host to another',
+        subpoints: ['Setting up SSL certificates', 'Resolving permission errors from transfer in SFTP']
+      }, {
+        point: 'Clear, prompt, friendly communication with clients',
+        subpoints: ['Ensuring clients understand the work I\'ve done and how I\'ve done it, so clients remain in control of their site.']
+      }, {
+        point: 'Providing consultation, feedback and advice on UX/UI, copy, and other customer-facing features',
+        subpoints: ['Serving as a "final eye" on many new features', 'Sketching wireframes for redesigns', 'Giving advice on email marketing, email capture, and brand-cohesion']
+    }]
+    },
     {
       title: 'Web Developer & Designer',
       employer: 'Manacan Enterprises',
@@ -78,7 +91,7 @@ const Experience = (props) => {
       <div key={ job.title } className="experience">
         <div className="flex space-between job-underline">
           <div className="job-title green">{job.title.toUpperCase()}</div>
-          <div className="job-location">Van, BC</div>
+          <div className="job-location">{job.location ? job.location : 'Van, BC'}</div>
         </div>
         <div className="job-subline flex space-between">
           <div className="job-employer">{job.employer}</div>

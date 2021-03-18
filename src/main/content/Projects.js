@@ -42,11 +42,11 @@ const Projects = (props) => {
       dateCompleted: 'Mar\'21',
       description: {
         inspiration: ['Combining my love of watercolour painting, Greek mythology, and dungeon maze games.', 'Keeping the pandemic blues at bay.'],
-        'Design & development': ['Hand-painted assets (by moi).', 'Fully responsive design.']
+        'Design & development': ['Hand-painted assets (by moi 💅).', 'Fully responsive design.']
       },
       techStack: {
         framework: 'react.js',
-        styling: 'CSS',
+        dependency: 'React Transition Group',
         hosting: 'github'
       },
       url: 'https://shmootidy.github.io/medusas_revenge/',
