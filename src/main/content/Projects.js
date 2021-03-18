@@ -37,6 +37,22 @@ const Projects = (props) => {
     //   img: ''
     // },
     {
+      title: 'Medusa\'s Revenge',
+      subtitle: 'Maze puzzle',
+      dateCompleted: 'Mar\'21',
+      description: {
+        inspiration: ['Combining my love of watercolour painting, Greek mythology, and dungeon maze games.', 'Keeping the pandemic blues at bay.'],
+        'Design & development': ['Hand-painted assets (by moi).', 'Fully responsive design.']
+      },
+      techStack: {
+        framework: 'react.js',
+        styling: 'CSS',
+        hosting: 'github'
+      },
+      url: 'https://shmootidy.github.io/medusas_revenge/',
+      img: 'medusa.png'
+    },
+    {
       title: 'This Resume',
       subtitle: 'Professional Reference',
       dateCompleted: 'Aug\'20',
