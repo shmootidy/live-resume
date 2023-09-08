@@ -3,9 +3,73 @@ import React from 'react'
 const Experience = (props) => {
   const jobs = [
     {
+      title: 'Intermediate Software Developer',
+      employer: 'Clir Renewables',
+      duration: 'Jun\'21 – now',
+      location: 'Vancouver, BC',
+      accomplishments: [
+      {
+        point: 'Build end-to-end custom features',
+      },
+      {
+        point: 'Write and maintain documentation',
+        subpoints: ['Outline processes and pitfalls of our stack', 'Write "how-tos" that are shared company wide (eg., "How to write a SQL Procedure combining Yaml & liquibase")']
+      },{
+        point: 'Design and build custom UI features',
+        subpoints: ['Using libraries (AgGrid, Highcharts, ReactMapGL, MaterialUI, etc) and building from scratch', 'Scrolling, interactive carousels', 'Modals, sidepanels, and toasts']
+      },{
+        point: 'Work closely with Product Manager to achieve quartery goals',
+        subpoints: ['Participate in grooming sessions', 'Provide context and pushback where necessary', 'Write spikes and other documents to inform the scope and direction of upcoming epics']
+      },{
+        point: 'UI expertise',
+        subpoints: ['Work with lead designer to conduct and implement findings of UX research', 'Implement designs to perfection', 'Build zooming feature on a custom, interactive PDF-previewer']
+      },{
+        point: '"CSS Wizard" of the front-end team',
+        subpoints: ['Mentor and debug tricky CSS issues', 'Restyle and refactor customized third-party libraries (AgGrid, Highcharts, MapBoxGL, etc)'],
+      },{
+        point: 'Scrum leader',
+        subpoints: ['Lead morning standups', 'Collaborate on ticket and sprint grooming',],
+      }, {
+        point: 'Webserver and API development',
+        subpoints: ['Build APIs in Python and TypeScript (React-Query)', 'Write integration tests'],
+      }, {
+        point: 'Develop, maintain and protect coding standards',
+        subpoints: ['Review PRs', 'Mentor new hires', 'Collaborate to determine best practices']
+      }, {
+        point: 'Customize 3rd party libraries',
+        subpoints: ['Extend classes',]
+      }, {
+        point: 'Write and maintain Unit, Component and E2E testing',
+        subpoints: ['Cypress, Jest and React Testing Library', 'Fine tune testing strategies to be general enough to pass and specific enough to be useful'],
+      }, {
+        point: 'Lightning talks',
+        subpoints: ['Contributed to overall team knowledge']
+      }, {
+        point: 'Conducted interviews',
+        subpoints: [''],
+      },{
+        point: 'Team rapport',
+        subpoints: ['Develop close friendships with my teammates, improving team cohesion and keeping up morale', 'Telling someone "nonsense" when impostor syndrome kicks in'],
+      },{
+        point: 'Improve and maintain packages and code infrastructure',
+        subpoints: ['Slack integrations', 'Update critical packages without breaking the app', '']
+      },{
+        point: 'Other things',
+        subpoints: ['Error handling, loading state, debugging', 'Modernize legacy front-end APIs and components']
+      }, {
+        point: 'Pairing and peer reviewing',
+      },{
+        point: 'Collaboration'
+      },{
+        point: 'Data Visualization'
+      },{
+        point: 'Epic champion'
+      }]
+    },
+    {
       title: 'Developer & UX/UI Consultant',
       employer: 'Self-employed',
-      duration: 'Sept\'20 – now',
+      duration: 'Sept\'20 – Jun\'21',
       location: 'Galiano Isl., BC',
       accomplishments: [{
         point: 'Creating custom plugins for clients\' e-commerce stores',
@@ -27,7 +91,7 @@ const Experience = (props) => {
       duration: 'Apr\'19 – Mar\'20',
       accomplishments: [{
         point: 'Led site-wide restyling on various client ecommerce sites to improve UX/UI and conversion:',
-        subpoints: ['Wireframing and drafting designs', 'Resolving cross-browser compatibility issues', 'Building new custom features (navigation bars, category sidebars, footers, product pages, modals', 'Optimizing lead generation', 'Refactoring legacy stylesheets following SMACSS architecture']
+        subpoints: ['Wireframing and drafting designs', 'Resolving cross-browser compatibility issues', 'Building new custom features (navigation bars, category sidebars, footers, product pages, modals)', 'Optimizing lead generation', 'Refactoring legacy stylesheets following SMACSS architecture']
       }, {
         point: 'Liaised with 3rd-party consultants to improve operations:',
         subpoints: ['Developing better systems and workflows between the web team and other departments', 'Establishing and analysing analytics']
