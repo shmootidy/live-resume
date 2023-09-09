@@ -41,7 +41,7 @@ const Content = (props) => {
         </div>
       </content>
     )
-  } else if (visibleTab === 1) {
+  } else if (visibleTab === 2) {
     return (
       <content ref={myRef}>
         <Contact 
@@ -53,7 +53,7 @@ const Content = (props) => {
         </div>
       </content>
     )
-  } else if (visibleTab === 2) {
+  } else if (visibleTab === 1) {
     return (
       <content ref={myRef}>
         <Contact 

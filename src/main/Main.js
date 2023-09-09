@@ -15,15 +15,18 @@ export default class Main extends Component {
         { text: 'Readme',
           active: true,
           position: null
-         },
-        { text: 'Projects',
+        },
+        {
+          text: 'Work',
           active: false,
           position: null
         },
-        { text: 'Work',
+        {
+          text: 'Projects',
           active: false,
           position: null
-        },{ 
+        },
+        { 
           text: 'Education',
           active: false,
           position: null
