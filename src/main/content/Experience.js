@@ -1,14 +1,9 @@
 import React, { useState } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faFolderClosed, faFileLines } from '@fortawesome/free-regular-svg-icons'
+import { faFileLines } from '@fortawesome/free-regular-svg-icons'
 import { faChevronLeft } from '@fortawesome/free-solid-svg-icons'
 
 const Experience = (props) => {
-  function camelCaseMe(input) {
-    return input.replace(/\W+(.)/g, function(match, chr) {
-      return chr.toUpperCase()
-    })
-  }
   function removeSpaces(input) {
     return input.replace(/\s/g, '')
   }
@@ -111,6 +106,8 @@ const Experience = (props) => {
           steps: [
             'write custom Wordpress hook to meet client needs (eg. track sales, display floating add-to-cart button)',
             'adapt Wordpress themes for more cohesive branding',
+            'implement Google Analytics',
+            'consult clients on appropriate plug-ins and assist in installation',
           ],
           returnValue: 'goodSiteHappyClient',
         },
