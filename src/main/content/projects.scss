@@ -17,6 +17,17 @@
   padding-left: 0;
 }
 
+.experience-button {
+  padding-left: 6px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-weight: inherit;
+  font-size: inherit;
+  &:hover {
+    text-decoration: underline;
+  }
+}
 .project-title {
   margin: 0 .5rem;
 }

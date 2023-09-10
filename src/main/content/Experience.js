@@ -1,8 +1,16 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faFolderClosed } from '@fortawesome/free-regular-svg-icons'
+import { faFolderClosed, faFileLines } from '@fortawesome/free-regular-svg-icons'
 
 const Experience = (props) => {
+  function camelCaseMe(input) {
+    return input.replace(/\W+(.)/g, function(match, chr) {
+      return chr.toUpperCase()
+    })
+  }
+  function removeSpaces(input) {
+    return input.replace(/\s/g, '')
+  }
   const jobs = [
     {
       title: 'Intermediate Software Developer',
@@ -10,6 +18,60 @@ const Experience = (props) => {
       duration: 'Jun 21 – now',
       location: 'Vancouver, BC',
       techStack: ['TypeScript', 'Python', 'ReactJS', 'CSS', 'Liquibase', 'SQL', 'ReactQuery', 'AWS', 'Jest', 'Cypress'],
+      accomplishments2: [
+        {
+          functionName: 'buildCustomFeatures',
+          steps: [
+            'UI design consultation',
+            'work closely with Production Manager',
+            'API development (AgGrid, QuillJS, Highcharts, ReactPdfRenderer)',
+            'relational DB design (MariaDB)',
+            'thorough unit & E2E testing (Jest, Cypress)',
+            'meaningful code reviews'
+          ],
+          returnValue: 'customEndToEndFeature',
+        },
+        {
+          functionName: 'squashBugs',
+          steps: [
+            'evaluate urgency',
+            'explore root cause and estimate time it will take to remedy',
+            'if quick to fix: fix it, write test to ensure it never happens again',
+            'if needs time and is urgent: implement quicker fix; leave thorough documentation and create follow-up ticket',
+            'discuss at next stand up',
+          ],
+          returnValue: 'betterCodeMoreTeamKnowledge',
+        },
+        {
+          functionName: 'scrumLeader',
+          steps: [
+            'greet team: chit chat and settle in',
+            'review PRs and ticket - ask questions, leave space for group discussion',
+            'check in on what everyone is doing today',
+            'ask for developments from Product Manager',
+          ],
+          returnValue: 'cohesiveTeamWithDirection',
+        },
+        {
+          functionName: 'cssWizardOfTheTeam',
+          steps: [
+            'reliably translate designs into dynamic front end interfaces',
+            'utilize and override 3rd-party APIs as needed',
+            'mentor colleagues on solving complex style bugs',
+          ],
+          returnValue: 'beautifulInterfaces',
+        },
+        {
+          functionName: 'leadSpikes',
+          steps: [
+            'evaluate scope of spiked challenge; discuss with PM and dev team for clarity as needed',
+            'explore solutions on Stack Overflow, in API documentation and through trial-and-error',
+            'write documentation with code samples, links, and screen recordings; outline possible solutions and (un)promising leads',
+            'lead discussion with team to determine next steps',
+          ],
+          returnValue: 'streamlinedStrategiesAndEnhancedTeamKnowledge',
+        },
+      ],
       accomplishments: [
         {
           point: 'Building end-to-end custom features, including UI design consultation, API development, DB architecture, thorough unit & E2E testing, and code reviews.'
@@ -33,6 +95,25 @@ const Experience = (props) => {
       employer: 'Self-employed',
       duration: 'Mar 20 – Jun 21',
       location: 'Galiano Isl., BC',
+      accomplishments2: [
+        {
+          functionName: 'uiAndBrandConsultant',
+          steps: [
+            'help client refine, define and focus their branding',
+            'determine purpose of website (eg. increase sales, enhance web presence, showcase community talent)',
+            'develop outlines and strategies to achieving client goals',
+          ],
+          returnValue: 'empoweredClient',
+        },
+        {
+          functionName: 'buildCustomHooksAndStyles',
+          steps: [
+            'write custom Wordpress hook to meet client needs (eg. track sales, display floating add-to-cart button)',
+            'adapt Wordpress themes for more cohesive branding',
+          ],
+          returnValue: 'goodSiteHappyClient',
+        },
+      ],
       accomplishments: [
         {
           point: 'Consulted on UI for various Wordpress e-commerce and community project sites.',
@@ -40,26 +121,53 @@ const Experience = (props) => {
         {
           point: 'Built custom styles and hooks to increase sales and improve branding.',
         },
-
-        // {
-        //   point: 'Creating custom plugins for clients\' e-commerce stores',
-        //   subpoints: ['Building back-end portals on Wordpress for easy customization', 'Creating front-end components that seamlessly adapt various pre-established themes']
-        // }, {
-        //   point: 'Transferring sites from one host to another',
-        //   subpoints: ['Setting up SSL certificates', 'Resolving permission errors from transfer in SFTP']
-        // }, {
-        //   point: 'Clear, prompt, friendly communication with clients',
-        //   subpoints: ['Ensuring clients understand the work I\'ve done and how I\'ve done it, so clients remain in control of their site.']
-        // }, {
-        //   point: 'Providing consultation, feedback and advice on UX/UI, copy, and other customer-facing features',
-        //   subpoints: ['Serving as a "final eye" on many new features', 'Sketching wireframes for redesigns', 'Giving advice on email marketing, email capture, and brand-cohesion']
-        // }
       ]
     },
     {
       title: 'Junior Software Developer',
       employer: 'Manacan Enterprises',
       duration: 'Apr 19 – Mar 20',
+      accomplishments2: [
+        {
+          functionName: 'restyleEcommerceSites',
+          steps: [
+            'draft designs and wireframes',
+            'resolve cross-browser incompatibilities',
+            'build new custom features (eg. navigation bars, category sidebars, footers, product pages, modals)',
+            'improve UX of in-site promotions to optimize lead generation',
+            'refactor legacy CSS into organized SASS files',
+          ],
+          returnValue: 'betterLookingBetterPerformingECommerceSites'
+        },
+        {
+          functionName: 'improveInterteamOperations',
+          steps: [
+            'liaise with 3rd party consultants',
+            'develop better workflows between web teams and other departments',
+            'establish and analyze Google Analytics',
+          ],
+          returnValue: 'reduceFrustrationAndSaveTimeAndMoney',
+        },
+        {
+          functionName: 'reviseCustomerFacingCopy',
+          steps: [
+            'identify problematic, misleading and tonally harsh customer facing copy',
+            'write better copy',
+            'mentor copywriters on best copywriting practices',
+            'reduce customer frustration and confusion; reduce incoming calls',
+          ],
+          returnValue: 'happierCustomersHappierCustomerServiceTeam',
+        },
+        {
+          functionName: 'categorizeExistingInventory',
+          steps: [
+            'conceptualize architecture of new categories',
+            'create algorithm to programmatically assign products to categories by scraping descriptions for key words',
+            'write documentation for merchandising staff to ensure proper category assignment on new products',
+          ],
+          returnValue: 'hundredsOfHoursOfLabourOutsourcedToAMachine',
+        },
+      ],
       accomplishments: [{
         point: 'Led site-wide restyling on various client ecommerce sites to improve UX/UI and conversion:',
         subpoints: ['Wireframing and drafting designs', 'Resolving cross-browser compatibility issues', 'Building new custom features (navigation bars, category sidebars, footers, product pages, modals)', 'Optimizing lead generation', 'Refactoring legacy stylesheets following SMACSS architecture']
@@ -74,117 +182,190 @@ const Experience = (props) => {
         subpoints: ['Conceptualizing the architecture of the new categories', 'Programmatically assigning existing products into new categories, saving merchandisers hours of tedious labour', 'Ensuring consistent application of new categories while onboarding merch staff']
       }]
     },
-    // {
-    //   title: 'Owner & Web Developer',
-    //   employer: 'S. Ritchie Consulting',
-    //   duration: 'Jul 16 – Dec 18',
-    //   accomplishments: [{
-    //     point: 'Researched and applied best-practices in e-marketing:',
-    //     subpoints: ['Web design', 'Automated email streams', 'Content creation']
-    //   },{
-    //     point: 'Developed custom features to improve UX/UI with minimal overhead costs',
-    //     subpoints: []
-    //   },{
-    //     point: 'Supported clients in achieving their goals through education, goal setting and accountability',
-    //     subpoints: []
-    //   }]
-    // },
-    // {
-    //   title: 'Teacher & Program Manager',
-    //   employer: 'Avenir School Society',
-    //   duration: 'Feb 14 – Jun 15',
-    //   accomplishments: [{
-    //     point: 'Developed individualized education plans to improve learning outcomes of diverse students',
-    //     subpoints: []
-    //    },{
-    //     point: 'Liaised with parents and faculty to increase support and intervention for struggling and at-risk students',
-    //     subpoints: []
-    //    },{
-    //      point: 'Arranged field trips and school events to enrich students\' education',
-    //      subpoints: []
-    //    },{
-    //      point: 'Ran the school\'s lunch department to ensure students had access to varied, nutritious food',
-    //      subpoints: []
-    //    }]
-    // },
-    // {
-    //   title: 'Musician',
-    //   employer: 'The Organ / Keep Tidy',
-    //   duration: 'Nov\'04 – Sep\'12',
-    //   accomplishments: [{
-    //     point: 'Performed 100s of live shows in venues worldwide:',
-    //     subpoint: []
-    //    },{
-    //     point: 'Wrote and recorded original music:',
-    //     subpoints: []
-    //    }]
-    // }
   ]
+  const [jobToDisplay, setJobToDisplay] = useState(null)
+
+  function handleClickEmployer(employer) {
+    const job = jobs.find((job) => job.employer === employer)
+    setJobToDisplay(job ?? null)
+  }
+
 
   return (
     <div id="experience">
-      {/* <h2 className="content-title">Work History</h2> */}
       <div style={{
         border: '1px solid #ececec',
         borderRadius: 4,
-        marginTop: 20,
+        marginTop: 10,
         fontSize: 16,
         color: '#343434',
       }}>
-        <div style={{ borderBottom: '1px solid #ececec' }}>
-          <div style={{ display: 'flex', margin: 16, fontWeight: 700, lineHeight: 1.2 }}>/ work /</div>
+        <div
+          style={{
+            borderBottom: '1px solid #ececec',
+            display: 'flex',
+            fontWeight: 700
+          }}>
+          <button
+            onClick={() => setJobToDisplay(null)}
+            className="experience-button"
+            style={{
+              display: 'flex',
+              margin: 16,
+              marginRight: 0,
+              lineHeight: 1.2,
+            }}>/ work /</button>
+            <div style={{
+              margin: 16,
+              marginLeft: 0,
+              lineHeight: 1.2,
+            }}>{jobToDisplay ? jobToDisplay.employer.toLowerCase() : null}</div>
         </div>
-        {jobs.map((job, i) => {
-          return (
-            <div style={{ borderBottom: '1px solid #ececec', padding: 3, height: 34, display: 'flex', fontSize: 14, alignItems: 'center', fontWeight: 700 }}>
-              <div style={{ display: 'flex', width: '45%' }}>
-                <div style={{ paddingLeft: 8 }}><FontAwesomeIcon icon={faFolderClosed} /></div>
-                <div style={{ paddingLeft: 6 }}>{`${job.employer.toLowerCase()} /`}</div>
+        {jobToDisplay ? (
+          <pre
+            style={{
+              display: 'block',
+              background: 'white',
+              padding: '0.5em',
+              color: 'rgb(51, 51, 51)',
+              overflowX: 'auto',
+              fontSize: 12,
+            }}
+          >
+            <code>
+              <div>
+                <span style={{ color: 'rgb(167, 29, 93)' }}>class</span>
+                {` ${removeSpaces(jobToDisplay.title)} {`}
               </div>
-              <div style={{ width: '35%' }}>{job.title.toLowerCase()}</div>
-              <div style={{ textAlign: 'right', width: '20%', paddingRight: 12 }}>{job.duration}</div>
-            </div>
-          )
-        })}
+              <div style={{ marginLeft: 16 }}>
+                {jobToDisplay.accomplishments2.map((acc, i) => {
+                  return (
+                    <div key={i} style={{ marginBottom: i === jobToDisplay.accomplishments2.length - 1 ? 0 : 16 }}>
+                      <div>
+                        <span style={{ color: 'rgb(167, 29, 93)' }}>function</span>
+                        <span style={{ color: 'rgb(121, 93, 163)' }}>{` ${acc.functionName}() {`}</span>
+                      </div>
+                      <div style={{ marginLeft: 16 }}>
+                        {acc.steps.map((step, j) => {
+                            return (
+                              <div key={j}>
+                                {j === 0 ? <div>{`/**`}</div> : null}
+                                <div>{` * ${step}`}</div>
+                                {j === acc.steps.length - 1 ? <div>{`*/`}</div> : null}
+                              </div>
+                            )
+                        })}
+                        <div>
+                          <span style={{ color: 'rgb(167, 29, 93)' }}>return</span>
+                          <span style={{ color: 'rgb(0, 134, 179)' }}>{` ${acc.returnValue}`}</span>
+                        </div>
+                      </div>
+                      <div>{`}`}</div>
+                    </div>
+                  )
+                })}
+              </div>
+              <div>{`}`}</div>
+            </code>
+          </pre>
+        ) : (
+          <div>
+            {jobs.map((job, i) => {
+              return (
+                <div key={i} style={{ display: 'flex', fontWeight: 700 }}>
+                  <div>
+                    <div style={{ paddingLeft: 8 }}><FontAwesomeIcon icon={faFolderClosed} /></div>
+                    <button
+                      className="experience-button"
+                      onClick={() => handleClickEmployer(job.employer)}
+                    >{job.employer.toLowerCase()}</button>
+                  </div>
+                  <div>{job.title.toLowerCase()}</div>
+                  <div>{job.duration.toLowerCase()}</div>
+                </div>
+              )
+            })}
+          </div>
+        )}
       </div>
     </div>
   )
-  // const job = jobs.map(job => {
-  //   return (
-  //     <div key={ job.title } className="experience">
-  //       <div className="flex space-between job-underline">
-  //         <div className="job-title green">{job.title.toUpperCase()}</div>
-  //         <div className="job-location">{job.location ? job.location : 'Van, BC'}</div>
-  //       </div>
-  //       <div className="job-subline flex space-between">
-  //         <div className="job-employer">{job.employer}</div>
-  //         <div className="job-duration">{job.duration}</div>
-  //       </div>
-  //       {job.accomplishments.map((acc, i) => {
-  //         return (
-  //           <div key={i} style={{ margin: 16 }}>{acc.point}</div>
-  //         )
-  //       })}
-  //       {/* <ul className="job-accomplishments description-value">
-  //         {job.accomplishments.map((accomplishment, i) => {
-  //           return (
-  //             <li key={i}>
-  //               {accomplishment.point}
-  //               <ul>
-  //                 {accomplishment.subpoints ? accomplishment.subpoints.map((subpoint, i) => <li key={i}>{subpoint}</li>) : ''}
-  //               </ul>
-  //             </li>
-  //           )
-  //         })}
-  //       </ul> */}
-  //     </div>
-  //   )
-  // })
-
   // return (
   //   <div id="experience">
-  //     <h2 className="content-title">Work History</h2>
-  //     <div>{job}</div>
+  //     <div style={{
+  //       border: '1px solid #ececec',
+  //       borderRadius: 4,
+  //       marginTop: 20,
+  //       fontSize: 16,
+  //       color: '#343434',
+  //     }}>
+  //       <div style={{ borderBottom: '1px solid #ececec', display: 'flex' }}>
+  //         <button
+  //           onClick={() => setDisplayJobDetails(null)}
+  //           className="experience-button"
+  //           style={{
+  //             display: 'flex',
+  //             margin: 16,
+  //             marginRight: 0,
+  //             fontWeight: 700,
+  //             lineHeight: 1.2,
+  //             fontSize: 16
+  //           }}>/ work /</button>
+  //         <div style={{
+  //           display: 'flex',
+  //           margin: 16,
+  //           fontWeight: 700,
+  //           lineHeight: 1.2,
+  //           marginLeft: 0
+  //         }}>{displayJobDetails ? displayJobDetails.toLowerCase() : null}</div>
+  //       </div>
+  //       {experienceToDisplay.map((job, i) => {
+  //         return (
+  //           <div key={i}>
+  //             <div style={{
+  //               borderBottom: '1px solid #ececec',
+  //               padding: 3,
+  //               height: 34,
+  //               display: 'flex',
+  //               fontSize: 14,
+  //               alignItems: 'center',
+  //               fontWeight: 700
+  //             }}>
+  //               <div style={{
+  //                 display: 'flex',
+  //                 width: '45%',
+  //                 fontWeight: displayJobDetails ? 400 : 'bold'
+  //               }}>
+  //                 <div style={{ paddingLeft: 8 }}><FontAwesomeIcon icon={faFolderClosed} /></div>
+  //                 <button onClick={() => handleClick(displayJobDetails ? null : job.employer)} className="experience-button">{`${displayJobDetails ? ".." : job.employer.toLowerCase()}/`}</button>
+  //               </div>
+  //               {displayJobDetails ? null : (
+  //                 <>
+  //                   <div style={{ width: '35%' }}>{job.title.toLowerCase()}</div>
+  //                   <div style={{ textAlign: 'right', width: '20%', paddingRight: 12 }}>{job.duration}</div>
+  //                 </>
+  //               )}
+  //             </div>
+  //             {displayJobDetails === job.employer ? 
+  //               job.accomplishments.map((acc, j) => (
+  //                 <div key={j} style={{
+  //                   borderBottom: '1px solid #ececec',
+  //                   padding: 3,
+  //                   height: 34,
+  //                   display: 'flex',
+  //                   fontSize: 14,
+  //                   alignItems: 'center',
+  //                   fontWeight: 400
+  //                 }}>
+  //                   <div style={{ paddingLeft: 8 }}><FontAwesomeIcon icon={faFileLines} /></div>
+  //                   <button className="experience-button">{acc.point}</button>
+  //                 </div>
+  //               ))
+  //               : null}
+  //           </div>
+  //         )
+  //       })}
+  //     </div>
   //   </div>
   // )
 }
