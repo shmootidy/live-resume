@@ -24,8 +24,12 @@
   cursor: pointer;
   font-weight: inherit;
   font-size: inherit;
+  color: inherit;
   &:hover {
     text-decoration: underline;
+    .back {
+      text-decoration: underline;
+    }
   }
 }
 .project-title {

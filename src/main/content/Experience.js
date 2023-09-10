@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faFolderClosed, faFileLines } from '@fortawesome/free-regular-svg-icons'
+import { faChevronLeft } from '@fortawesome/free-solid-svg-icons'
 
 const Experience = (props) => {
   function camelCaseMe(input) {
@@ -222,6 +223,29 @@ const Experience = (props) => {
             }}>{jobToDisplay ? jobToDisplay.employer.toLowerCase() : null}</div>
         </div>
         {jobToDisplay ? (
+          <div style={{
+            background: '#fafafa',
+            borderBottom: '1px solid #ececec',
+            display: 'flex',
+            fontSize: 14,
+            justifyContent: 'space-between',
+            padding: '5px 10px',
+          }}>
+            <button
+              onClick={() => setJobToDisplay(null)}
+              className="experience-button"
+              style={{ textDecoration: 'none', display: 'flex', alignItems: 'center' }}
+            >
+              <span style={{ fontSize: 8, paddingRight: 6 }}>
+                <FontAwesomeIcon icon={faChevronLeft} />
+                <FontAwesomeIcon icon={faChevronLeft} />
+              </span>
+              <span className="back">Back</span>
+            </button>
+            <div>{jobToDisplay.duration.toLowerCase()}</div>
+          </div>
+        ) : null }
+        {jobToDisplay ? (
           <pre
             style={{
               display: 'block',
@@ -272,16 +296,23 @@ const Experience = (props) => {
           <div>
             {jobs.map((job, i) => {
               return (
-                <div key={i} style={{ display: 'flex', fontWeight: 700 }}>
-                  <div>
-                    <div style={{ paddingLeft: 8 }}><FontAwesomeIcon icon={faFolderClosed} /></div>
+                <div key={i} style={{
+                  display: 'flex',
+                  borderBottom: '1px solid #ececec',
+                  padding: '0 8px',
+                  height: 34,
+                  alignItems: 'center',
+                  fontSize: 14,
+                }}>
+                  <div style={{ display: 'flex', width: '40%' }}>
+                    <div><FontAwesomeIcon icon={faFileLines} /></div>
                     <button
                       className="experience-button"
                       onClick={() => handleClickEmployer(job.employer)}
                     >{job.employer.toLowerCase()}</button>
                   </div>
-                  <div>{job.title.toLowerCase()}</div>
-                  <div>{job.duration.toLowerCase()}</div>
+                  <div style={{ width: '40%' }}>{job.title.toLowerCase()}</div>
+                  <div style={{ width: '20%', textAlign: 'right' }}>{job.duration.toLowerCase()}</div>
                 </div>
               )
             })}
