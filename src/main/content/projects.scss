@@ -17,6 +17,60 @@
   padding-left: 0;
 }
 
+.experience-wrapper {
+  border: 1px solid #ececec;
+  border-radius: 4px;
+  margin-top: 10px;
+  font-size: 16px;
+  color: #343434;
+}
+.experience-head-item {
+  border-bottom: 1px solid #ececec;
+  display: flex;
+  font-weight: 700;
+  line-height: 1.2;
+  
+  button {
+    display: flex;
+    margin: 16px 0 16px 16px;
+    line-height: inherit;
+  }
+  div {
+    margin: 16px 16px 16px 0;
+    line-height: inherit;
+  }
+}
+.experience-job-item {
+  display: flex;
+  border-bottom: 1px solid #ececec;
+  padding: 0 8px;
+  height: 34px;
+  align-items: center;
+  font-size: 14px;
+  line-height: 1;
+}
+.experience-back-wrapper {
+  display: flex;
+  border-bottom: 1px solid #ececec;
+  background: #fafafa;
+  font-size: 12px;
+  justify-content: space-between;
+  padding: 5px 10px;
+}
+.experience-details-line-numbers {
+  display: block;
+  padding: 0.5em;
+  font-size: 12px;
+  min-width: 16px;
+  color: rgb(140, 140, 140);
+}
+.experience-details {
+  display: block;
+  padding: 0.5em;
+  color: rgb(51, 51, 51);
+  font-size: 12px;
+}
+
 .experience-button {
   padding-left: 6px;
   background: none;

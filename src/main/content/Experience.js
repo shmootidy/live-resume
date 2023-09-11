@@ -172,43 +172,20 @@ const Experience = (props) => {
 
   return (
     <div id="experience">
-      <div style={{
-        border: '1px solid #ececec',
-        borderRadius: 4,
-        marginTop: 10,
-        fontSize: 16,
-        color: '#343434',
-      }}>
-        <div
-          style={{
-            borderBottom: '1px solid #ececec',
-            display: 'flex',
-            fontWeight: 700
-          }}>
+      <div className='experience-wrapper'>
+        <div className='experience-head-item'>
           <button
             onClick={() => setJobToDisplay(null)}
             className="experience-button"
-            style={{
-              display: 'flex',
-              margin: 16,
-              marginRight: 0,
-              lineHeight: 1.2,
-            }}>/ work /</button>
-            <div style={{
-              margin: 16,
-              marginLeft: 0,
-              lineHeight: 1.2,
-            }}>{jobToDisplay ? jobToDisplay.employer.toLowerCase() : null}</div>
+          >
+            / work /
+          </button>
+          <div>
+            {jobToDisplay ? jobToDisplay.employer.toLowerCase() : null}
+          </div>
         </div>
         {jobToDisplay ? (
-          <div style={{
-            background: '#fafafa',
-            borderBottom: '1px solid #ececec',
-            display: 'flex',
-            fontSize: 14,
-            justifyContent: 'space-between',
-            padding: '5px 10px',
-          }}>
+          <div className="experience-back-wrapper">
             <button
               onClick={() => setJobToDisplay(null)}
               className="experience-button"
@@ -224,47 +201,29 @@ const Experience = (props) => {
           </div>
         ) : null }
         {jobToDisplay && linesOfCode ? (
-          <div style={{ display: 'flex' }}>
-            <pre
-            style={{
-              display: 'block',
-              background: 'white',
-              padding: '0.5em',
-              overflowX: 'auto',
-              fontSize: 12,
-              minWidth: 16,
-              color: 'rgb(140, 140, 140)',
-            }}>
+          <div style={{ display: 'flex', overflowX: 'auto' }}>
+            <pre className="experience-details-line-numbers">
               <code style={{ display: 'flex', flexDirection: 'column' }}>
                 {[...Array(linesOfCode).keys()].map((l) => {
                   return <div key={l}>{l + 1}</div>
                 })}
               </code>
             </pre>
-            <pre
-              style={{
-                display: 'block',
-                background: 'white',
-                padding: '0.5em',
-                color: 'rgb(51, 51, 51)',
-                overflowX: 'auto',
-                fontSize: 12,
-              }}
-            >
+            <pre className="experience-details">
               <code>
                 <div>
-                  <span style={{ color: 'rgb(167, 29, 93)' }}>{`import {`}</span>
+                  <span className="pink">{`import {`}</span>
                   {jobToDisplay.techStack.map((tech, i) => {
                     return <div style={{ marginLeft: 16 }} key={i}>{`${tech},`}</div>
                   })}
                   <div>
-                    <span style={{ color: 'rgb(167, 29, 93)' }}>{`} from `}</span>
+                    <span className="pink">{`} from `}</span>
                     <span>'techStack'</span>
                   </div>
                 </div>
                 <br />
                 <div>
-                  <span style={{ color: 'rgb(167, 29, 93)' }}>class</span>
+                  <span className="pink">class</span>
                   {` ${removeSpaces(jobToDisplay.title)} {`}
                 </div>
                 <div style={{ marginLeft: 16 }}>
@@ -272,8 +231,8 @@ const Experience = (props) => {
                     return (
                       <div key={i}>
                         <div>
-                          <span style={{ color: 'rgb(167, 29, 93)' }}>function</span>
-                          <span style={{ color: 'rgb(121, 93, 163)' }}>{` ${acc.functionName}() {`}</span>
+                          <span className="pink">function</span>
+                          <span className='purple'>{` ${acc.functionName}() {`}</span>
                         </div>
                         <div style={{ marginLeft: 16 }}>
                           {acc.steps.map((step, j) => {
@@ -286,8 +245,8 @@ const Experience = (props) => {
                               )
                           })}
                           <div>
-                            <span style={{ color: 'rgb(167, 29, 93)' }}>return</span>
-                            <span style={{ color: 'rgb(0, 134, 179)' }}>{` ${acc.returnValue}`}</span>
+                            <span className="pink">return</span>
+                            <span className="blue">{` ${acc.returnValue}`}</span>
                           </div>
                         </div>
                         <div>{`}`}</div>
@@ -304,15 +263,7 @@ const Experience = (props) => {
           <div>
             {jobs.map((job, i) => {
               return (
-                <div key={i} style={{
-                  display: 'flex',
-                  borderBottom: '1px solid #ececec',
-                  padding: '0 8px',
-                  height: 34,
-                  alignItems: 'center',
-                  fontSize: 14,
-                  lineHeight: 1,
-                }}>
+                <div key={i} className="experience-job-item">
                   <div style={{ display: 'flex', width: '40%', alignItems: 'center' }}>
                     <div><FontAwesomeIcon icon={faFileLines} /></div>
                     <button
