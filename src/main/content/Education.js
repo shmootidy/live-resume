@@ -28,19 +28,24 @@ const Education = (props) => {
       school: 'Lighthouse Labs',
       awarded: 'Diploma of Web Development',
       year: '2019',
-      skills: ['Led team of new developers in complex project with new tools under tight deadline', 'Awarded Best Final Project', 'Became adept at various programming languages', 'Learned web development fundamentals']
+      skills: [
+        'Awarded Best Final Project.',
+        'Learned fundamentals of web development.',
+        'Practiced various programming languages, including JavaScript, Ruby, SQL.',
+        'Led team of new developers in complex project with new tools under tight deadline.',
+      ],
     },
     {
       school: 'UBC',
       awarded: 'Bachelor of Education',
       year: '2012',
-      skills: ['Learned pedagogical models', 'Improved collaborative skills', 'Performed and facilitated hours of public speaking and group engagement']
+      skills: ['Learned pedagogical models.', 'Improved collaborative skills.', 'Performed and facilitated hours of public speaking and group engagement.']
     },
     {
       school: 'UBC',
       awarded: 'Bachelor of Arts',
       year: '2011',
-      skills: ['Honed critical thinking and communication skills', 'Broadened my historical and cultural understanding', 'Developed disciplined, independent working schedule']
+      skills: ['Honed critical thinking and communication skills.', 'Broadened my historical and cultural understanding.', 'Developed disciplined, independent working schedule.']
     }
   ]
 
@@ -52,17 +57,23 @@ const Education = (props) => {
           <span className="school">{education.school}</span>
           <span className="year">{education.year}</span>
         </span>
-        <ul>{education.skills.map((skill, j) => <li key={j}>{skill}</li> )}</ul>
-        {education.books ? 
-        (<div style={{ marginLeft: 36 }}>
-          {education.books.map((book, j) => {
+        <div style={{ marginLeft: 16 }}>
+          {education.skills.map((skill, j) => {
             return (
-              <div key={j}><i>{book.title}</i>, {book.author}</div>
+              <div key={j}>{skill}</div>
             )
-          })
-          }
-        </div>)
-        : null}
+          })}
+          {education.books ? 
+          (<div style={{ marginLeft: 24 }}>
+            {education.books.map((book, j) => {
+              return (
+                <div key={j}><i>{book.title}</i>, {book.author}</div>
+              )
+            })
+            }
+          </div>)
+          : null}
+        </div>
       </div>
     )
   })
