@@ -7,13 +7,18 @@ const Experience = (props) => {
   function removeSpaces(input) {
     return input.replace(/\s/g, '')
   }
+  function camelCaseMe(input) {
+    return input.replace(/(?:^\w|[A-Z]|\b\w)/g, function(word, index) {
+      return index === 0 ? word.toLowerCase() : word.toUpperCase()
+    }).replace(/\s+/g, '')
+  }
   const jobs = [
     {
       title: 'Intermediate Software Developer',
       employer: 'Clir Renewables',
       duration: 'Jun 21 – now',
       location: 'Vancouver, BC',
-      techStack: ['TypeScript', 'Python', 'ReactJS', 'CSS', 'Liquibase', 'SQL', 'ReactQuery', 'AWS', 'Jest', 'Cypress'],
+      techStack: ['TypeScript', 'Python', 'ReactJS', 'CSS', 'Liquibase', 'SQL', 'ReactQuery', 'AWS', 'Jest', 'Cypress', 'YAML'],
       accomplishments2: [
         {
           functionName: 'buildCustomFeatures',
@@ -91,6 +96,7 @@ const Experience = (props) => {
       employer: 'Self-employed',
       duration: 'Mar 20 – Jun 21',
       location: 'Galiano Isl., BC',
+      techStack: ['CSS', 'Wordpress', 'PHP', 'Figma', 'wireframe.cc'],
       accomplishments2: [
         {
           functionName: 'uiAndBrandConsultant',
@@ -125,6 +131,7 @@ const Experience = (props) => {
       title: 'Junior Software Developer',
       employer: 'Manacan Enterprises',
       duration: 'Apr 19 – Mar 20',
+      techStack: ['JavaScript', 'PHP', 'CSS', 'React', 'GoogleAnalytics', 'Wordpress'],
       accomplishments2: [
         {
           functionName: 'restyleEcommerceSites',
@@ -191,11 +198,16 @@ const Experience = (props) => {
 
   useEffect(() => {
     if (jobToDisplay) {
-      let lines = 2 // class start and end
+      // class open/close
+      let lines = 2
       jobToDisplay.accomplishments2.forEach((acc) => {
+        // function open/close + comments open/close + line break + returnValue
+        lines += 2 + 2 + 1 + 1
         lines += acc.steps.length
-        lines += 2 + 2 + 1 + 1 // function open/close + comments open/close + line break + returnValue
       })
+      // import open/close + line break
+      lines += 2 + 1
+      lines += jobToDisplay.techStack.length
       setLinesOfCode(lines)
     }
   }, [jobToDisplay])
@@ -282,6 +294,18 @@ const Experience = (props) => {
               }}
             >
               <code>
+                <div>
+                  <span style={{ color: 'rgb(167, 29, 93)' }}>{`import {`}</span>
+                  {jobToDisplay.techStack.map((tech, i) => {
+                    return <div style={{ marginLeft: 16 }} key={i}>{`${tech},`}</div>
+                  })}
+                  <div>
+                    <span style={{ color: 'rgb(167, 29, 93)' }}>{`} from `}</span>
+                    {/* <span>{`'${camelCaseMe(jobToDisplay.employer)}'`}</span> */}
+                    <span>'techStack'</span>
+                  </div>
+                </div>
+                <br />
                 <div>
                   <span style={{ color: 'rgb(167, 29, 93)' }}>class</span>
                   {` ${removeSpaces(jobToDisplay.title)} {`}
