@@ -129,6 +129,7 @@ li.not-selected {
     font-size: 14px;
     display: flex;
     flex-direction: column;
+    cursor: pointer;
 
     @media (min-width: 960px) {
       flex-direction: row;

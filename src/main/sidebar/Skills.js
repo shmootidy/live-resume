@@ -2,18 +2,20 @@ import React from 'react'
 
 const Skills = (props) => {
   const _skills = {
-    'general practices': ['DRY code', 'RESTful applications', 'Helpful commit messages'],
-    'web technologies': ['APIs (Wikipedia, Yelp, Github)', 'AJAX'],
-    'authentication': ['bcrpyt', 'session-cookies', 'md5'],
-    'middleware': ['body-parser', 'Babel'],
-    'languages': ['JavaScript', 'PHP', 'Ruby', 'HTML5', 'CSS3', 'SQL'],
-    'libraries & frameworks': ['ReactJS', 'jQuery', 'Rails', 'Knex', 'CraftyJS', 'EJS', 'SASS', 'JSX'],
-    'servers / routing': ['Express', 'Rails', 'React', 'Websocket', 'Axios'],
-    'testing': ['Mocha / Chai', 'RSpec'],
-    'database': ['PostgreSQL', 'mySqlite', 'MongoDB'],
-    'web debug tools': ['Chrome dev tools'],
-    'version control': ['git', 'github'],
-    'package managers': ['node', 'yarn', 'gems'],
+    'languages': ['TypeScript', 'JavaScript', 'Python', 'PHP', 'SQL', 'CSS', 'YAML'],
+    'libraries': ['liquibase', 'React', 'Sass'],
+    // 'general practices': ['documentation', 'DRY code', 'Helpful commit messages'],
+    // 'web technologies': ['APIs (Wikipedia, Yelp, Github)', 'AJAX'],
+    // 'authentication': ['bcrpyt', 'session-cookies', 'md5'],
+    // 'middleware': ['body-parser', 'Babel'],
+    // 'languages': ['JavaScript', 'PHP', 'Ruby', 'HTML5', 'CSS3', 'SQL'],
+    // 'libraries & frameworks': ['ReactJS', 'jQuery', 'Rails', 'Knex', 'CraftyJS', 'EJS', 'SASS', 'JSX'],
+    // 'servers / routing': ['Express', 'Rails', 'React', 'Websocket', 'Axios'],
+    // 'testing': ['Mocha / Chai', 'RSpec'],
+    // 'database': ['PostgreSQL', 'mySqlite', 'MongoDB'],
+    // 'web debug tools': ['Chrome dev tools'],
+    // 'version control': ['git', 'github', 'BitBucket'],
+    // 'package managers': ['node', 'yarn', 'gems'],
   }
   let skills = Object.entries(_skills).map(skill => {
     let skillType = makeTitleCase(skill[0])
@@ -21,7 +23,7 @@ const Skills = (props) => {
       .map(skillItem => <span key={ skillItem } className="skill-items">{skillItem}</span>)
 
     return (
-      <div key={ skillType } className="">
+      <div key={ skillType } style={{ marginLeft: 16 }}>
         <div className="skill-subtitle description-key">{skillType}</div>
         <div className="skills-list">{skillList}</div>
       </div>
@@ -30,7 +32,10 @@ const Skills = (props) => {
 
   return (
     <div id="skills">
-      <div className="sidebar-subtitle">Skills</div>
+      <h2 style={{
+        margin: 0,
+        borderBottom: '1px solid #ececec',
+      }}>Overview</h2>
       <div className="all-skills">{skills}</div>
     </div>
   )

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faChevronRight } from '@fortawesome/free-solid-svg-icons'
 
 const Contact = (props) => {
   const style = {
@@ -40,13 +41,19 @@ const Contact = (props) => {
         <div className="sidebar-subtitle">Contact <button onClick={handleToggle} style={{border: 0, background: 'white', color: 'inherit'}} className="see-more">{ seeMoreText }</button></div>
         <a href="mailto:shmooritchie@gmail.com?subject=I saw your resume!" className="contact-bar" id="email">
           <img className="contact-icon absolute" alt="Email icon" src={require("../../assets/email.png")} />
-          <span className="contact-info">> shmooritchie@gmail.com</span>
+          <span className="contact-info">
+            <FontAwesomeIcon icon={faChevronRight} style={{ fontSize: 12, opacity: 0.3, marginRight: 6 }} />
+            shmooritchie@gmail.com
+          </span>
         </a>
       </div>
       <div className={"contact collapseable-contact " + contactClass} >
         <a href="tel:+1-604-616-0247" className="contact-bar" id="phone">
           <img className="contact-icon absolute" alt="Phone icon" src={require("../../assets/phone.png")} />
-          <span className="contact-info">> 604.616.0247</span>
+          <span className="contact-info">
+            <FontAwesomeIcon icon={faChevronRight} style={{ fontSize: 12, opacity: 0.3, marginRight: 6 }} />
+            604.616.0247
+          </span>
         </a>
         <div style={{marginLeft: '.25rem'}}>
           <div style={{borderBottom: '1px solid #e1e1e1'}}>

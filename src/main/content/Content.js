@@ -30,7 +30,7 @@ const Content = (props) => {
   
   if (visibleTab === 0) {
     return (
-      <content ref={myRef}>
+      <div className="content-wrapper" ref={myRef}>
         <Contact 
           hideContact={hideContact} 
           toggleHideContact={setHideContact} 
@@ -39,11 +39,11 @@ const Content = (props) => {
           <Summary />
           {/* <Skills /> */}
         </div>
-      </content>
+      </div>
     )
   } else if (visibleTab === 2) {
     return (
-      <content ref={myRef}>
+      <div className="content-wrapper" ref={myRef}>
         <Contact 
           hideContact={hideContact} 
           toggleHideContact={setHideContact} 
@@ -51,11 +51,11 @@ const Content = (props) => {
         <div className="content">
           <Projects />
         </div>
-      </content>
+      </div>
     )
   } else if (visibleTab === 1) {
     return (
-      <content ref={myRef}>
+      <div className="content-wrapper" ref={myRef}>
         <Contact 
           hideContact={hideContact} 
           toggleHideContact={setHideContact} 
@@ -63,11 +63,11 @@ const Content = (props) => {
         <div className="content">
           <Experience />
         </div>
-      </content>
+      </div>
     )
   } else if (visibleTab === 3) {
     return (
-      <content ref={myRef}>
+      <div className="content-wrapper" ref={myRef}>
         <Contact 
           hideContact={hideContact} 
           toggleHideContact={setHideContact} 
@@ -75,7 +75,7 @@ const Content = (props) => {
         <div className="content">
           <Education />
         </div>
-      </content>
+      </div>
     )
   } else {
     return (
