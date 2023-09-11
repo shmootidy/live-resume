@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faFileLines } from '@fortawesome/free-regular-svg-icons'
 import { faChevronLeft } from '@fortawesome/free-solid-svg-icons'
@@ -182,12 +182,23 @@ const Experience = (props) => {
     },
   ]
   const [jobToDisplay, setJobToDisplay] = useState(null)
+  const [linesOfCode, setLinesOfCode] = useState(null)
 
   function handleClickEmployer(employer) {
     const job = jobs.find((job) => job.employer === employer)
     setJobToDisplay(job ?? null)
   }
 
+  useEffect(() => {
+    if (jobToDisplay) {
+      let lines = 2 // class start and end
+      jobToDisplay.accomplishments2.forEach((acc) => {
+        lines += acc.steps.length
+        lines += 2 + 2 + 1 + 1 // function open/close + comments open/close + line break + returnValue
+      })
+      setLinesOfCode(lines)
+    }
+  }, [jobToDisplay])
 
   return (
     <div id="experience">
@@ -242,53 +253,72 @@ const Experience = (props) => {
             <div>{jobToDisplay.duration.toLowerCase()}</div>
           </div>
         ) : null }
-        {jobToDisplay ? (
-          <pre
+        {jobToDisplay && linesOfCode ? (
+          <div style={{ display: 'flex' }}>
+            <pre
             style={{
               display: 'block',
               background: 'white',
               padding: '0.5em',
-              color: 'rgb(51, 51, 51)',
               overflowX: 'auto',
               fontSize: 12,
-            }}
-          >
-            <code>
-              <div>
-                <span style={{ color: 'rgb(167, 29, 93)' }}>class</span>
-                {` ${removeSpaces(jobToDisplay.title)} {`}
-              </div>
-              <div style={{ marginLeft: 16 }}>
-                {jobToDisplay.accomplishments2.map((acc, i) => {
-                  return (
-                    <div key={i} style={{ marginBottom: i === jobToDisplay.accomplishments2.length - 1 ? 0 : 16 }}>
-                      <div>
-                        <span style={{ color: 'rgb(167, 29, 93)' }}>function</span>
-                        <span style={{ color: 'rgb(121, 93, 163)' }}>{` ${acc.functionName}() {`}</span>
-                      </div>
-                      <div style={{ marginLeft: 16 }}>
-                        {acc.steps.map((step, j) => {
-                            return (
-                              <div key={j}>
-                                {j === 0 ? <div>{`/**`}</div> : null}
-                                <div>{` * ${step}`}</div>
-                                {j === acc.steps.length - 1 ? <div>{`*/`}</div> : null}
-                              </div>
-                            )
-                        })}
-                        <div>
-                          <span style={{ color: 'rgb(167, 29, 93)' }}>return</span>
-                          <span style={{ color: 'rgb(0, 134, 179)' }}>{` ${acc.returnValue}`}</span>
-                        </div>
-                      </div>
-                      <div>{`}`}</div>
-                    </div>
-                  )
+              minWidth: 16,
+              color: 'rgb(140, 140, 140)',
+            }}>
+              <code style={{ display: 'flex', flexDirection: 'column' }}>
+                {[...Array(linesOfCode).keys()].map((l) => {
+                  return <div key={l}>{l + 1}</div>
                 })}
-              </div>
-              <div>{`}`}</div>
-            </code>
-          </pre>
+              </code>
+            </pre>
+            <pre
+              style={{
+                display: 'block',
+                background: 'white',
+                padding: '0.5em',
+                color: 'rgb(51, 51, 51)',
+                overflowX: 'auto',
+                fontSize: 12,
+              }}
+            >
+              <code>
+                <div>
+                  <span style={{ color: 'rgb(167, 29, 93)' }}>class</span>
+                  {` ${removeSpaces(jobToDisplay.title)} {`}
+                </div>
+                <div style={{ marginLeft: 16 }}>
+                  {jobToDisplay.accomplishments2.map((acc, i) => {
+                    return (
+                      <div key={i}>
+                        <div>
+                          <span style={{ color: 'rgb(167, 29, 93)' }}>function</span>
+                          <span style={{ color: 'rgb(121, 93, 163)' }}>{` ${acc.functionName}() {`}</span>
+                        </div>
+                        <div style={{ marginLeft: 16 }}>
+                          {acc.steps.map((step, j) => {
+                              return (
+                                <div key={j}>
+                                  {j === 0 ? <div>{`/**`}</div> : null}
+                                  <div>{` * ${step}`}</div>
+                                  {j === acc.steps.length - 1 ? <div>{`*/`}</div> : null}
+                                </div>
+                              )
+                          })}
+                          <div>
+                            <span style={{ color: 'rgb(167, 29, 93)' }}>return</span>
+                            <span style={{ color: 'rgb(0, 134, 179)' }}>{` ${acc.returnValue}`}</span>
+                          </div>
+                        </div>
+                        <div>{`}`}</div>
+                        {i === jobToDisplay.accomplishments2.length - 1 ? null : <br />}
+                      </div>
+                    )
+                  })}
+                </div>
+                <div>{`}`}</div>
+              </code>
+            </pre>
+          </div>
         ) : (
           <div>
             {jobs.map((job, i) => {
