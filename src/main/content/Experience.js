@@ -7,11 +7,7 @@ const Experience = (props) => {
   function removeSpaces(input) {
     return input.replace(/\s/g, '')
   }
-  function camelCaseMe(input) {
-    return input.replace(/(?:^\w|[A-Z]|\b\w)/g, function(word, index) {
-      return index === 0 ? word.toLowerCase() : word.toUpperCase()
-    }).replace(/\s+/g, '')
-  }
+
   const jobs = [
     {
       title: 'Intermediate Software Developer',
@@ -73,23 +69,6 @@ const Experience = (props) => {
           returnValue: 'streamlinedStrategiesAndEnhancedTeamKnowledge',
         },
       ],
-      accomplishments: [
-        {
-          point: 'Building end-to-end custom features, including UI design consultation, API development, DB architecture, thorough unit & E2E testing, and code reviews.'
-        },
-        {
-          point: 'Creatively forcing third-party libraries (AgGrid, QuillJS, Highcharts) to bend to my will.'
-        },
-        {
-          point: 'Bug squasher extraordinaire, balancing speedy fixes with minimal side effects.',
-        },
-        {
-          point: 'Serving as SCRUM master and taking a leadership role within our projects.',
-        },
-        {
-          point: 'The "CSS Wizard" of our team.',
-        },
-      ],
     },
     {
       title: 'Web Developer & UI Consultant',
@@ -118,14 +97,6 @@ const Experience = (props) => {
           returnValue: 'goodSiteHappyClient',
         },
       ],
-      accomplishments: [
-        {
-          point: 'Consulted on UI for various Wordpress e-commerce and community project sites.',
-        },
-        {
-          point: 'Built custom styles and hooks to increase sales and improve branding.',
-        },
-      ]
     },
     {
       title: 'Junior Software Developer',
@@ -173,19 +144,6 @@ const Experience = (props) => {
           returnValue: 'hundredsOfHoursOfLabourOutsourcedToAMachine',
         },
       ],
-      accomplishments: [{
-        point: 'Led site-wide restyling on various client ecommerce sites to improve UX/UI and conversion:',
-        subpoints: ['Wireframing and drafting designs', 'Resolving cross-browser compatibility issues', 'Building new custom features (navigation bars, category sidebars, footers, product pages, modals)', 'Optimizing lead generation', 'Refactoring legacy stylesheets following SMACSS architecture']
-      }, {
-        point: 'Liaised with 3rd-party consultants to improve operations:',
-        subpoints: ['Developing better systems and workflows between the web team and other departments', 'Establishing and analysing analytics']
-      },{
-        point: 'Led initiative to increase sales and reduce customer service workload by improving content, flow, and management of customer-facing emails:',
-        subpoints: ['Trained marketing staff on setting up automated email streams', 'Audited emails for branding and tone consistency', 'Optimized email content to reduce file sizes']
-      },{
-        point: 'Spearheaded development of product filtering system for existing inventory:',
-        subpoints: ['Conceptualizing the architecture of the new categories', 'Programmatically assigning existing products into new categories, saving merchandisers hours of tedious labour', 'Ensuring consistent application of new categories while onboarding merch staff']
-      }]
     },
   ]
   const [jobToDisplay, setJobToDisplay] = useState(null)
@@ -301,7 +259,6 @@ const Experience = (props) => {
                   })}
                   <div>
                     <span style={{ color: 'rgb(167, 29, 93)' }}>{`} from `}</span>
-                    {/* <span>{`'${camelCaseMe(jobToDisplay.employer)}'`}</span> */}
                     <span>'techStack'</span>
                   </div>
                 </div>
@@ -373,84 +330,6 @@ const Experience = (props) => {
       </div>
     </div>
   )
-  // return (
-  //   <div id="experience">
-  //     <div style={{
-  //       border: '1px solid #ececec',
-  //       borderRadius: 4,
-  //       marginTop: 20,
-  //       fontSize: 16,
-  //       color: '#343434',
-  //     }}>
-  //       <div style={{ borderBottom: '1px solid #ececec', display: 'flex' }}>
-  //         <button
-  //           onClick={() => setDisplayJobDetails(null)}
-  //           className="experience-button"
-  //           style={{
-  //             display: 'flex',
-  //             margin: 16,
-  //             marginRight: 0,
-  //             fontWeight: 700,
-  //             lineHeight: 1.2,
-  //             fontSize: 16
-  //           }}>/ work /</button>
-  //         <div style={{
-  //           display: 'flex',
-  //           margin: 16,
-  //           fontWeight: 700,
-  //           lineHeight: 1.2,
-  //           marginLeft: 0
-  //         }}>{displayJobDetails ? displayJobDetails.toLowerCase() : null}</div>
-  //       </div>
-  //       {experienceToDisplay.map((job, i) => {
-  //         return (
-  //           <div key={i}>
-  //             <div style={{
-  //               borderBottom: '1px solid #ececec',
-  //               padding: 3,
-  //               height: 34,
-  //               display: 'flex',
-  //               fontSize: 14,
-  //               alignItems: 'center',
-  //               fontWeight: 700
-  //             }}>
-  //               <div style={{
-  //                 display: 'flex',
-  //                 width: '45%',
-  //                 fontWeight: displayJobDetails ? 400 : 'bold'
-  //               }}>
-  //                 <div style={{ paddingLeft: 8 }}><FontAwesomeIcon icon={faFolderClosed} /></div>
-  //                 <button onClick={() => handleClick(displayJobDetails ? null : job.employer)} className="experience-button">{`${displayJobDetails ? ".." : job.employer.toLowerCase()}/`}</button>
-  //               </div>
-  //               {displayJobDetails ? null : (
-  //                 <>
-  //                   <div style={{ width: '35%' }}>{job.title.toLowerCase()}</div>
-  //                   <div style={{ textAlign: 'right', width: '20%', paddingRight: 12 }}>{job.duration}</div>
-  //                 </>
-  //               )}
-  //             </div>
-  //             {displayJobDetails === job.employer ? 
-  //               job.accomplishments.map((acc, j) => (
-  //                 <div key={j} style={{
-  //                   borderBottom: '1px solid #ececec',
-  //                   padding: 3,
-  //                   height: 34,
-  //                   display: 'flex',
-  //                   fontSize: 14,
-  //                   alignItems: 'center',
-  //                   fontWeight: 400
-  //                 }}>
-  //                   <div style={{ paddingLeft: 8 }}><FontAwesomeIcon icon={faFileLines} /></div>
-  //                   <button className="experience-button">{acc.point}</button>
-  //                 </div>
-  //               ))
-  //               : null}
-  //           </div>
-  //         )
-  //       })}
-  //     </div>
-  //   </div>
-  // )
 }
 
 export default Experience

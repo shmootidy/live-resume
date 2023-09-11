@@ -4,38 +4,6 @@ import './projects.scss'
 
 const Projects = (props) => {
   const projects = [
-    // {
-    //   title: 'Categorization Algorithm',
-    //   subtitle: 'Product filtering system',
-    //   dateCompleted: 'Dec\'19',
-    //   description: {
-    //     process: ['conceived of and brought to life'],
-    //     teamwork: ['onboarded merch staff with in-person and written instruction']
-    //   },
-    //   techStack: {
-    //     CMS: 'Wordpress',
-    //     language: 'SQL'
-    //   },
-    //   url: '',
-    //   img: ''
-    // },
-    // {
-    //   title: 'Sliding Product Menu',
-    //   subtitle: 'Lightweight Navigation for Mobile',
-    //   dateCompleted: 'Jan\'20',
-    //   description: {
-    //     process: ['Brought static, 3rd-party designs to life.'],
-    //     development: []
-    //   },
-    //   techStack: {
-    //     library: 'jQuery',
-    //     styling: 'SASS',
-    //     CMS: 'Wordpress',
-    //     language: 'PHP'
-    //   },
-    //   url: '',
-    //   img: ''
-    // },
     {
       title: 'Medusa\'s Revenge',
       subtitle: 'Maze puzzle',
@@ -107,20 +75,6 @@ const Projects = (props) => {
       url: 'https://github.com/shmootidy/Smart-Cat',
       img: 'smart-cat.gif'
     },
-    // {
-    //   title: 'Tweeter',
-    //   subtitle: 'Twitter Clone',
-    //   dateCompleted: 'Jan \'19',
-    //   description: ['Full-stack development project', 'Styling and DOM manipulation', 'Mongo requests'],
-    //   techStack: ['jQuery', 'ExpressJS', 'BodyParser', 'MongoDB', 'Nodemon'] websocket (chatty)
-    // },
-    // {
-    //   title: 'Tiny App',
-    //   subtitle: 'URL-Shortening App',
-    //   dateCompleted: 'Jan \'19',
-    //   description: ['Text-shortening algorithm', 'Connect links', 'Create EJS partials', 'Protect user data with cookies and encryption software'],
-    //   techStack: ['NodeJS', 'EJS', 'bcrypt', 'cookie-session']
-    // }
   ]
 
   return (
