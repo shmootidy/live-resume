@@ -3,12 +3,11 @@ import Summary from './Summary'
 import Experience from './Experience'
 import Education from './Education'
 import Projects from './Projects'
-import Skills from '../sidebar/Skills'
+// import Skills from '../sidebar/Skills'
 import Contact from '../sidebar/Contact'
 
 import './content.scss'
 
-// const scrollToRef = (ref) => window.scroll({top:ref.current.offsetTop - 170, behavior: 'smooth'})
 const scrollToRef = (ref) => window.scrollTo(0, ref.current.offsetTop - 170)
 
 const Content = (props) => {
