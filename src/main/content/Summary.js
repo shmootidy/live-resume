@@ -31,10 +31,10 @@ const Summary = (props) => {
         <div style={{
           margin: '16px 0',
           fontSize: 16,
-            background: 'rgb(247, 247, 247)',
-            borderRadius: 2,
-            padding: '13px 15px',
-          }}>
+          background: 'rgb(247, 247, 247)',
+          borderRadius: 2,
+          padding: '13px 15px',
+        }}>
           <code>
             <div style={{ marginBottom: 16 }}>
               <span style={{ color: 'rgb(215, 58, 73)' }}>import</span>

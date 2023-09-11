@@ -300,8 +300,9 @@ const Experience = (props) => {
                   height: 34,
                   alignItems: 'center',
                   fontSize: 14,
+                  lineHeight: 1,
                 }}>
-                  <div style={{ display: 'flex', width: '40%' }}>
+                  <div style={{ display: 'flex', width: '40%', alignItems: 'center' }}>
                     <div><FontAwesomeIcon icon={faFileLines} /></div>
                     <button
                       className="experience-button"
