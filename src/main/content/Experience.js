@@ -15,7 +15,7 @@ const Experience = (props) => {
       duration: 'Jun 21 – now',
       location: 'Vancouver, BC',
       techStack: ['TypeScript', 'Python', 'ReactJS', 'CSS', 'Liquibase', 'SQL', 'ReactQuery', 'AWS', 'Jest', 'Cypress', 'YAML'],
-      accomplishments2: [
+      accomplishments: [
         {
           functionName: 'buildCustomFeatures',
           steps: [
@@ -76,7 +76,7 @@ const Experience = (props) => {
       duration: 'Mar 20 – Jun 21',
       location: 'Galiano Isl., BC',
       techStack: ['CSS', 'Wordpress', 'PHP', 'Figma', 'wireframe.cc'],
-      accomplishments2: [
+      accomplishments: [
         {
           functionName: 'uiAndBrandConsultant',
           steps: [
@@ -103,7 +103,7 @@ const Experience = (props) => {
       employer: 'Manacan Enterprises',
       duration: 'Apr 19 – Mar 20',
       techStack: ['JavaScript', 'PHP', 'CSS', 'React', 'GoogleAnalytics', 'Wordpress'],
-      accomplishments2: [
+      accomplishments: [
         {
           functionName: 'restyleEcommerceSites',
           steps: [
@@ -158,7 +158,7 @@ const Experience = (props) => {
     if (jobToDisplay) {
       // class open/close
       let lines = 2
-      jobToDisplay.accomplishments2.forEach((acc) => {
+      jobToDisplay.accomplishments.forEach((acc) => {
         // function open/close + comments open/close + line break + returnValue
         lines += 2 + 2 + 1 + 1
         lines += acc.steps.length
@@ -268,7 +268,7 @@ const Experience = (props) => {
                   {` ${removeSpaces(jobToDisplay.title)} {`}
                 </div>
                 <div style={{ marginLeft: 16 }}>
-                  {jobToDisplay.accomplishments2.map((acc, i) => {
+                  {jobToDisplay.accomplishments.map((acc, i) => {
                     return (
                       <div key={i}>
                         <div>
@@ -291,7 +291,7 @@ const Experience = (props) => {
                           </div>
                         </div>
                         <div>{`}`}</div>
-                        {i === jobToDisplay.accomplishments2.length - 1 ? null : <br />}
+                        {i === jobToDisplay.accomplishments.length - 1 ? null : <br />}
                       </div>
                     )
                   })}
