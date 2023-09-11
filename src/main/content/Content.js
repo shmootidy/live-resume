@@ -37,7 +37,7 @@ const Content = (props) => {
         />
         <div className="content">
           <Summary />
-          <Skills />
+          {/* <Skills /> */}
         </div>
       </content>
     )

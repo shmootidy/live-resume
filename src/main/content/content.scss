@@ -26,6 +26,19 @@ content {
     margin-top: 0;
   }
 }
+.contact-shmoo-button {
+  padding: 16px;
+  border: 1px solid #ececec;
+  border-radius: 4px;
+  background-color: white;
+  transition: background-color .5s;
+  &:hover {
+    background-color: #ececec;
+  }
+  &:active {
+    background-color: #454545;
+  }
+}
 /* 
 #summary-content {
   position: absolute;
