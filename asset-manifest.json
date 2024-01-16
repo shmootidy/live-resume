@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/live-resume/static/css/main.02847c18.css",
-    "main.js": "/live-resume/static/js/main.2e09eda5.js",
+    "main.css": "/live-resume/static/css/main.9fdd7752.css",
+    "main.js": "/live-resume/static/js/main.1a4564eb.js",
     "static/media/medusa.png": "/live-resume/static/media/medusa.a6c56e4404eb8ab47292.png",
     "static/media/dont-panic.gif": "/live-resume/static/media/dont-panic.119b4c02e2833fea0acd.gif",
     "static/media/smart-cat.gif": "/live-resume/static/media/smart-cat.668ccacefbc68d1d54c6.gif",
@@ -14,11 +14,11 @@
     "static/media/GUBBLABLO.ttf": "/live-resume/static/media/GUBBLABLO.27e668b312cfb08b9c50.ttf",
     "static/media/GUBBLABLO.woff": "/live-resume/static/media/GUBBLABLO.8f2fe33d4d4f7f003d42.woff",
     "index.html": "/live-resume/index.html",
-    "main.02847c18.css.map": "/live-resume/static/css/main.02847c18.css.map",
-    "main.2e09eda5.js.map": "/live-resume/static/js/main.2e09eda5.js.map"
+    "main.9fdd7752.css.map": "/live-resume/static/css/main.9fdd7752.css.map",
+    "main.1a4564eb.js.map": "/live-resume/static/js/main.1a4564eb.js.map"
   },
   "entrypoints": [
-    "static/css/main.02847c18.css",
-    "static/js/main.2e09eda5.js"
+    "static/css/main.9fdd7752.css",
+    "static/js/main.1a4564eb.js"
   ]
 }
