@@ -26,16 +26,19 @@ const Summary = (props) => {
 
         <p>
           Shmoo is a Software Developer with 5+ years of epxerience creating
-          intuitive, user-centric produst that align business priorities with
+          intuitive, user-centric products that align business priorities with
           customer needs.
         </p>
         <p>
           With an intuitive eye for clean interfaces and a deep understanding of
           the user experience, she excels in both leading and contributing to
           projects. Shmoo thrives in both collaborative and autonomous roles,
-          driving innovative solutions while ensuring practicality. Known for
-          her approachable and fun work style, she is passionate about building
-          products that not only function beatifully but bring joy to users.
+          driving innovative solutions while ensuring practicality.
+        </p>
+        <p>
+          Known for her approachable and fun work style, she is passionate about
+          building products that not only function beatifully but bring joy to
+          users.
         </p>
       </div>
       <div>
