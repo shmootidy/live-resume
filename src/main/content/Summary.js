@@ -18,10 +18,8 @@ const Summary = (props) => {
           }}
           className='highlight'>shmoo</code>
         </h1>
-        <p>Shmoo is a full-stack Intermediate Software Developer with 3+ years of professional experience. She has an eye for good design and interfaces, dubbed the "CSS Wizard" of her team.</p>
-        <p>The <span className="highlight">shmoo</span> package contains high standards for quality code, a good attitude, and a track record of developing quality custom end-to-end features.</p>
-        <p>Shmoo has a well-rounded background in customer service and education, bringing empathy, energy, and communication skills to your tech team.</p>
-        {/* <p><a href="mailto:shmooritchie@gmail.com?subject=I saw your resume!"><span className="highlight">Get in touch!</span></a></p> */}
+        <p>Shmoo is a Software Developer with 5+ years of epxerience creating intuitive, user-centric produst that align business priorities with customer needs.</p>
+        <p>With an intuitive eye for clean interfaces and a deep understanding of the user experience, she excels in both leading and contributing to projects. Shmoo thrives in both collaborative and autonomous roles, driving innovative solutions while ensuring practicality. Known for her approachable and fun work style, she is passionate about building products that not only function beatifully but bring joy to users.</p>
       </div>
       <div>
         <h2 style={{
