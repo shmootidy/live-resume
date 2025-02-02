@@ -23,23 +23,44 @@ const Summary = (props) => {
             shmoo
           </code>
         </h1>
-
         <p>
-          Shmoo is a Software Developer with 5+ years of experience creating
-          intuitive, user-centric products that align business priorities with
-          customer needs.
+          Hi! I'm Shmoo. I'm an energetic, friendly software developer with
+          dedicated to building beautiful and performant digital products that
+          users love to use and clean, maintainable code that fellow developers
+          love to build upon.
         </p>
         <p>
-          With an intuitive eye for clean interfaces and a deep understanding of
-          the user experience, she excels in leading and contributing to
-          projects. Shmoo thrives in both collaborative and autonomous roles,
-          driving innovative solutions while ensuring practicality.
+          I am passionate about:
+          <ul>
+            <li>
+              <strong>Debugging.</strong> Like a dog with a bone, I will track
+              you down and I will squash you. And then, unlike a dog with a
+              bone, I will write thorough tests and documentation to ensure the
+              bug stays squashed.
+            </li>
+            <li>
+              <strong>The quality of my code.</strong> I take great pride in
+              what I produce. I care about the end user's experience as much as
+              I care about developing, enforcing and following code conventions.
+              Consistent practices make development easier, faster and frankly
+              more enjoyable.
+            </li>
+            <li>
+              <strong>Teamwork and collaboration.</strong> This one is important
+              to me. I care about my teammates and believe that a strong sense
+              of personal and professional support within a team goes a long
+              way. A good team is a powerful force, but it doesn't happen by
+              accident.
+            </li>
+          </ul>
         </p>
         <p>
-          Known for her approachable and fun work style, she is passionate about
-          building products that not only function beautifully but bring joy to
-          users.
+          With 5+ years in the industry and a background in education, musical
+          performance, and customer service, I bring a unique set of skills to
+          my role. Excellent communication skills, the ability to anticipate the
+          needs of users, and a reflexive, creative approach to problem solving.
         </p>
+        <p>I love building software. Let's do it together!</p>
       </div>
       <div>
         <h2
