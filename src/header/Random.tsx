@@ -22,7 +22,7 @@ export default function Random() {
       style={{
         fontFamily: "Poppins",
         display: "flex",
-        padding: "10px 2rem",
+        padding: "16px 2rem",
         justifyContent: "space-between",
         alignItems: "center",
         fontSize: "14px",

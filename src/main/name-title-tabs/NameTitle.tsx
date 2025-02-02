@@ -45,7 +45,7 @@ export default function NameTitle(props: IProps) {
         setMainTab={props.setMainTab}
         nameTitleIsSticky={isSticky}
       /> */}
-      <Tabs
+      {/* <Tabs
         tabs={props.tabs}
         tabToggle={props.tabToggle}
         displayContent={props.displayContent}
@@ -53,7 +53,7 @@ export default function NameTitle(props: IProps) {
         setMainTab={props.setMainTab}
         largeScreenTabs={true}
         nameTitleIsSticky={false}
-      />
+      /> */}
     </span>
   );
 }
