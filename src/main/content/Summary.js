@@ -1,6 +1,7 @@
 import React from "react";
 
 const Summary = (props) => {
+  const libsAndFrames = ["react", "highcharts"];
   return (
     <div>
       <div id="summary">
@@ -63,10 +64,38 @@ const Summary = (props) => {
         <p>I love building software. Let's do it together!</p>
       </div>
       <div>
+        <h3
+          style={{
+            margin: 0,
+            borderBottom: "1px dotted #ececec",
+          }}
+        >
+          Libraries and Frameworks
+        </h3>
+        <p style={{ color: "#cb3837", fontWeight: 600, fontSize: 20 }}>
+          <ul style={{ paddingLeft: 0 }}>
+            {libsAndFrames.map((lF, i) => {
+              return (
+                <li
+                  key={i}
+                  style={{
+                    display: "inline-block",
+                    padding: 4,
+                    marginRight: 4,
+                  }}
+                >
+                  {lF}
+                </li>
+              );
+            })}
+          </ul>
+        </p>
+      </div>
+      <div>
         <h2
           style={{
             margin: 0,
-            borderBottom: "1px solid #ececec",
+            borderBottom: "1px dotted #ececec",
           }}
         >
           Usage
