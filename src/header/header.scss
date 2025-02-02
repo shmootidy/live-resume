@@ -7,22 +7,22 @@
 
 .header-section {
   border: 1px solid #d2d2d2;
-  padding: .5rem 0rem;
+  padding: 0.5rem 0rem;
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-  font-family: 'Poppins';
+  font-family: "Poppins";
   font-weight: 600;
 
   @media (min-width: 960px) {
     padding: 1rem;
   }
-  >span:first-child {
+  > span:first-child {
     display: flex;
     align-items: center;
     width: 100%;
     justify-content: space-between;
-    padding: 0 1rem .5rem;
+    padding: 0 1rem 0.5rem;
     padding: 0 1rem;
 
     a {
@@ -35,23 +35,16 @@
     display: flex;
     width: 100%;
     padding: 1rem;
-    border-top: 1px solid rgba(0,0,0, .1);
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
     display: none;
   }
 }
 
-#shmoo-npm {
-  font-family: 'GubBlaBlo';
-  font-size: 3rem;
-  position: relative;
-  top: 12px;
-}
-
 #shmoo-search {
-  font-family: 'Fira Mono';
+  font-family: "Fira Mono";
   color: rgba(0, 0, 0, 0.7);
   padding-left: 1.5rem;
-  font-size: .875rem;
+  font-size: 0.875rem;
   font-weight: lighter;
   background-color: rgba(12, 11, 11, 0.05);
   width: 100%;
@@ -60,9 +53,9 @@
 }
 
 #shmoo-button {
-  font-family: 'Poppins';
+  font-family: "Poppins";
   letter-spacing: 0.3px;
-  font-size: .875rem;
+  font-size: 0.875rem;
   font-stretch: 100%;
   font-weight: 600;
   line-height: 3.8;
