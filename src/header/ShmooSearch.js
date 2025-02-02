@@ -41,7 +41,7 @@ export default class ShmooSearch extends Component {
   M820 50 v200 h200 V50 z M920 100 h50 v100 h-50 z
   M1060 50 v200 h200 V50 z M1170 100 h50 v100 h-50 z
   "
-              stroke-width="5"
+              strokeWidth="5"
               stroke="#f7f7f7"
             ></path>
           </svg>

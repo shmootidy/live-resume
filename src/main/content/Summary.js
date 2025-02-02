@@ -30,31 +30,28 @@ const Summary = (props) => {
           users love to use and clean, maintainable code that fellow developers
           love to build upon.
         </p>
-        <p>
-          I am passionate about:
-          <ul>
-            <li>
-              <strong>Debugging.</strong> Like a dog with a bone, I will track
-              you down and I will squash you. And then, unlike a dog with a
-              bone, I will write thorough tests and documentation to ensure the
-              bug stays squashed.
-            </li>
-            <li>
-              <strong>The quality of my code.</strong> I take great pride in
-              what I produce. I care about the end user's experience as much as
-              I care about developing, enforcing and following code conventions.
-              Consistent practices make development easier, faster and frankly
-              more enjoyable.
-            </li>
-            <li>
-              <strong>Teamwork and collaboration.</strong> This one is important
-              to me. I care about my teammates and believe that a strong sense
-              of personal and professional support within a team goes a long
-              way. A good team is a powerful force, but it doesn't happen by
-              accident.
-            </li>
-          </ul>
-        </p>
+        <p>I am passionate about:</p>
+        <ul>
+          <li>
+            <strong>Debugging.</strong> Like a dog with a bone, I will track you
+            down and I will squash you. And then, unlike a dog with a bone, I
+            will write thorough tests and documentation to ensure the bug stays
+            squashed.
+          </li>
+          <li>
+            <strong>The quality of my code.</strong> I take great pride in what
+            I produce. I care about the end user's experience as much as I care
+            about developing, enforcing and following code conventions.
+            Consistent practices make development easier, faster and frankly
+            more enjoyable.
+          </li>
+          <li>
+            <strong>Teamwork and collaboration.</strong> This one is important
+            to me. I care about my teammates and believe that a strong sense of
+            personal and professional support within a team goes a long way. A
+            good team is a powerful force, but it doesn't happen by accident.
+          </li>
+        </ul>
         <p>
           With 5+ years in the industry and a background in education, musical
           performance, and customer service, I bring a unique set of skills to
@@ -72,24 +69,29 @@ const Summary = (props) => {
         >
           Libraries and Frameworks
         </h3>
-        <p style={{ color: "#cb3837", fontWeight: 600, fontSize: 20 }}>
-          <ul style={{ paddingLeft: 0 }}>
-            {libsAndFrames.map((lF, i) => {
-              return (
-                <li
-                  key={i}
-                  style={{
-                    display: "inline-block",
-                    padding: 4,
-                    marginRight: 4,
-                  }}
-                >
-                  {lF}
-                </li>
-              );
-            })}
-          </ul>
-        </p>
+        <ul
+          style={{
+            paddingLeft: 0,
+            color: "#cb3837",
+            fontWeight: 600,
+            fontSize: 20,
+          }}
+        >
+          {libsAndFrames.map((lF, i) => {
+            return (
+              <li
+                key={i}
+                style={{
+                  display: "inline-block",
+                  padding: 4,
+                  marginRight: 4,
+                }}
+              >
+                {lF}
+              </li>
+            );
+          })}
+        </ul>
       </div>
       <div>
         <h2
