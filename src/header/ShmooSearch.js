@@ -27,7 +27,11 @@ export default class ShmooSearch extends Component {
       <div className="header-section flex">
         <span>
           {/* <span id="shmoo-npm">shmoo</span> */}
-          <svg viewBox="0 0 1260 250" xmlns="http://www.w3.org/2000/svg">
+          <svg
+            viewBox="0 0 1260 250"
+            xmlns="http://www.w3.org/2000/svg"
+            style={{ width: 110 }}
+          >
             <path
               fill="#231F20"
               d="
