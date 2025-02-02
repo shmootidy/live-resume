@@ -1,6 +1,6 @@
 import React from "react";
 
-const Summary = (props) => {
+const Summary = () => {
   const libsAndFrames = ["react", "highcharts"];
   return (
     <div>

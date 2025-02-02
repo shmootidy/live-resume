@@ -3,12 +3,27 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFileLines } from "@fortawesome/free-regular-svg-icons";
 import { faChevronLeft } from "@fortawesome/free-solid-svg-icons";
 
-const Experience = (props) => {
-  function removeSpaces(input) {
+interface Accomplishment {
+  functionName: string;
+  steps: string[];
+  returnValue: string;
+}
+
+interface Job {
+  title: string;
+  employer: string;
+  duration: string;
+  location?: string;
+  techStack: string[];
+  accomplishments: Accomplishment[];
+}
+
+const Experience = () => {
+  function removeSpaces(input: string) {
     return input.replace(/\s/g, "");
   }
 
-  const jobs = [
+  const jobs: Job[] = [
     {
       title: "Software Developer",
       employer: "Clir Renewables",
@@ -165,10 +180,10 @@ const Experience = (props) => {
       ],
     },
   ];
-  const [jobToDisplay, setJobToDisplay] = useState(null);
-  const [linesOfCode, setLinesOfCode] = useState(null);
+  const [jobToDisplay, setJobToDisplay] = useState<Job | null>(null);
+  const [linesOfCode, setLinesOfCode] = useState<number | null>(null);
 
-  function handleClickEmployer(employer) {
+  function handleClickEmployer(employer: string) {
     const job = jobs.find((job) => job.employer === employer);
     setJobToDisplay(job ?? null);
   }
