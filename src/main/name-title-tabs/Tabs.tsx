@@ -77,6 +77,7 @@ const Tab = styled.li<{
   borderColor: string;
   fontColor: string;
 }>`
+  cursor: pointer;
   flex-grow: 1;
   text-align: center;
   border-radius: 5px 5px 0 0;
