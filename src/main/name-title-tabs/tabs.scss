@@ -9,7 +9,7 @@ ul {
   flex-wrap: wrap;
 
   @media (min-width: 960px) {
-    display: none!important;
+    display: none !important;
   }
 }
 
@@ -27,13 +27,13 @@ li.tab {
   }
 }
 #tabs svg {
-  margin-right: .5rem;
+  margin-right: 0.5rem;
 }
 
 li.tab1 {
-  color: rgb(158, 119, 0);
-  border-color: #FFCD3A!important;
-  background-color: rgba(255, 205, 58, 0.2);
+  color: #9e7700;
+  border-color: #ffcd3a !important;
+  background-color: #ffcd3a33;
 }
 li.tab1.not-selected:hover {
   background-color: rgb(255, 249, 229);
@@ -41,26 +41,26 @@ li.tab1.not-selected:hover {
 
 li.tab2 {
   color: #cb3837;
-  border-color: #cb3837!important;
+  border-color: #cb3837 !important;
   background-color: rgba(203, 56, 55, 0.2);
 }
 li.tab2.not-selected:hover {
-  background: rgb(250, 235, 235);
+  background: #faebeb;
 }
 
 li.tab3 {
-  color: rgb(120, 33, 117);
-  border-color: #C836C3!important;
-  background-color: rgba(200, 54, 195, 0.2);
+  color: #782175;
+  border-color: #c836c3 !important;
+  background-color: #c836c333;
 }
 li.tab3.not-selected:hover {
   background: rgb(250, 235, 249);
 }
 
 li.tab4 {
-  color: rgb(41, 0, 138);
-  border-color: #8956FF!important;
-  background-color: rgba(137, 86, 255, 0.2);
+  color: #29008a;
+  border-color: #8956ff !important;
+  background-color: #8956ff33;
 }
 li.tab4.not-selected:hover {
   background: rgb(237, 229, 255);
@@ -81,13 +81,13 @@ li.not-selected {
   top: -51px;
   height: 0;
   margin: 0;
-  transition: all .5s;
+  transition: all 0.5s;
   background: white;
   max-width: 1200px;
 
   &.large-screen {
     display: none;
-    @media(min-width: 960px) {
+    @media (min-width: 960px) {
       display: flex;
       &.name-title-is-sticky {
         display: none;
@@ -95,7 +95,7 @@ li.not-selected {
     }
   }
   &.reg-tabs {
-    @media(min-width: 960px) {
+    @media (min-width: 960px) {
       display: none;
       &.name-title-is-sticky {
         display: flex;
@@ -104,28 +104,28 @@ li.not-selected {
   }
   &.at-top {
     top: 0;
-    margin: .5rem auto;
+    margin: 0.5rem auto;
     height: 40px;
-    transition: top .5s;
+    transition: top 0.5s;
     z-index: 1;
   }
   @media (min-width: 960px) {
     top: 0;
-    margin: .5rem auto;
+    margin: 0.5rem auto;
     height: 40px;
-    transition: top .5s;
+    transition: top 0.5s;
     z-index: 1;
   }
   li.tab {
     border: 0;
     border-bottom: 3px solid black;
-    padding: .25rem 0 0;
+    padding: 0.25rem 0 0;
     height: 40px;
     width: 25%;
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: .25rem .25rem 0 0;
+    border-radius: 0.25rem 0.25rem 0 0;
     font-size: 14px;
     display: flex;
     flex-direction: column;
@@ -135,7 +135,7 @@ li.not-selected {
       flex-direction: row;
 
       svg {
-        margin-right: .5rem;
+        margin-right: 0.5rem;
       }
     }
     svg {

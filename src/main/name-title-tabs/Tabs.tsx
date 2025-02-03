@@ -1,12 +1,14 @@
 import React, { useEffect } from "react";
-import Tab from "./Tab";
 import { faFileAlt } from "@fortawesome/free-regular-svg-icons";
 import {
   faTags,
   faGraduationCap,
   faCubes,
 } from "@fortawesome/free-solid-svg-icons";
-import "./tabs.scss";
+
+import styled from "@emotion/styled";
+
+// import "./tabs.scss";
 
 interface IProps {
   selectedTab: number;
@@ -49,29 +51,43 @@ export default function Tabs(props: IProps) {
 
   return (
     <div>
-      <ul style={{ display: "flex", width: "100%" }}>
+      <ul style={{ display: "flex", width: "100%", margin: 0, padding: 0 }}>
         {TABS.map((tab, i) => {
-          const isSelected = i === selectedTab;
           return (
-            <li
+            <Tab
               key={i}
               onClick={() => onChangeTab(i)}
-              style={{
-                flexGrow: 1,
-                textAlign: "center",
-                borderRadius: "5px 5px 0 0",
-                background: isSelected ? tab.backgroundColor : "white",
-                color: tab.fontColor,
-                border: `1px solid ${
-                  isSelected ? tab.borderColor : "transparent"
-                }`,
-              }}
+              isSelected={i === selectedTab}
+              borderColor={tab.borderColor}
+              backgroundColor={tab.backgroundColor}
+              fontColor={tab.fontColor}
             >
               {tab.label}
-            </li>
+            </Tab>
           );
         })}
       </ul>
     </div>
   );
 }
+
+const Tab = styled.li<{
+  isSelected: boolean;
+  backgroundColor: string;
+  borderColor: string;
+  fontColor: string;
+}>`
+  flex-grow: 1;
+  text-align: center;
+  border-radius: 5px 5px 0 0;
+  background: ${(props) =>
+    props.isSelected ? props.backgroundColor : "white"};
+  color: ${(props) => props.fontColor};
+  border: ${(props) =>
+    props.isSelected ? `1px solid ${props.borderColor}` : ""};
+  border-bottom: ${(props) =>
+    `${props.isSelected ? "1px" : "2px"} solid ${props.borderColor}`};
+  &:hover {
+    background: ${(props) => props.backgroundColor};
+  }
+`;
