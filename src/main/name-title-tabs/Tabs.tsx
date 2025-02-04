@@ -7,6 +7,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 import styled from "@emotion/styled";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 // import "./tabs.scss";
 
@@ -62,6 +63,7 @@ export default function Tabs(props: IProps) {
               backgroundColor={tab.backgroundColor}
               fontColor={tab.fontColor}
             >
+              {<FontAwesomeIcon icon={tab.icon} style={{ marginRight: 8 }} />}
               {tab.label}
             </Tab>
           );
@@ -81,6 +83,7 @@ const Tab = styled.li<{
   flex-grow: 1;
   text-align: center;
   border-radius: 5px 5px 0 0;
+  font-weight: bold;
   background: ${(props) =>
     props.isSelected ? props.backgroundColor : "white"};
   color: ${(props) => props.fontColor};

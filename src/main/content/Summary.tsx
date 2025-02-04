@@ -4,7 +4,7 @@ const Summary = () => {
   const libsAndFrames = ["react", "highcharts"];
   return (
     <div>
-      <div id="summary">
+      <div id="summary" style={{ marginTop: 16 }}>
         <h1
           style={{
             margin: 0,
