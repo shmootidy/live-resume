@@ -4,6 +4,7 @@ import {
   faTags,
   faGraduationCap,
   faCubes,
+  faFileZipper,
 } from "@fortawesome/free-solid-svg-icons";
 
 import styled from "@emotion/styled";
@@ -29,7 +30,8 @@ export default function Tabs(props: IProps) {
     },
     {
       label: "Work",
-      icon: faTags,
+      // icon: faTags,
+      icon: faFileZipper,
       fontColor: "#cb3837",
       backgroundColor: "#cb383733",
       borderColor: "#cb3837",
