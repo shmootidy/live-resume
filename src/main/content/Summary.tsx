@@ -1,10 +1,131 @@
 import React from 'react'
+import styled from '@emotion/styled'
 import { H1, H2 } from '../../style/SharedComponents/SharedComponents'
 
 import useGetTimeProgramming from './useGetTimeProgramming'
 
 export default function Summary() {
-  const libsAndFrames = ['react', 'highcharts']
+  const frameworks = [
+    {
+      label: 'react',
+      link: 'https://www.npmjs.com/package/react',
+    },
+    {
+      label: 'remix',
+      link: 'https://remix.run/',
+    },
+    {
+      label: 'rails',
+      link: 'https://rubyonrails.org/', // update this link to the recipe app once it's up
+    },
+  ]
+
+  const libraries = [
+    {
+      label: 'marshmallow',
+      link: '',
+    },
+    {
+      label: 'react-query',
+      link: '',
+    },
+    {
+      label: 'highcharts',
+      link: 'https://www.highcharts.com/demo/', // update to my demo when/if i get the license
+    },
+    {
+      label: 'ag-grid',
+      link: '',
+    },
+    {
+      label: 'react-query',
+      link: '',
+    },
+  ]
+
+  const testingLibraries = [
+    {
+      label: 'pytest',
+      link: '',
+    },
+    {
+      label: 'cypress',
+      link: '',
+    },
+    {
+      label: 'react testing library',
+      link: '',
+    },
+  ]
+
+  const languages = [
+    {
+      label: 'typescript',
+      link: 'https://www.typescriptlang.org/',
+    },
+    {
+      label: 'python',
+      link: 'https://www.python.org/',
+    },
+    {
+      label: 'css',
+      link: 'https://css-tricks.com/',
+    },
+    {
+      label: 'javascript',
+      link: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript',
+    },
+    {
+      label: 'ruby',
+      link: 'https://rubyapi.org/',
+    },
+    {
+      label: 'sql',
+      link: 'https://www.mysql.com/',
+    },
+    {
+      label: 'yml',
+      link: '',
+    },
+  ]
+
+  const databaseManagementSystems = [
+    {
+      label: 'mysql',
+      link: '',
+    },
+    {
+      label: 'mariadb',
+      link: '',
+    },
+    {
+      label: 'liquibase',
+      link: '',
+    },
+  ]
+
+  const summarySkills = [
+    {
+      title: 'Languages',
+      list: languages,
+    },
+    {
+      title: 'Frameworks',
+      list: frameworks,
+    },
+    {
+      title: 'Libraries',
+      list: libraries,
+    },
+    {
+      title: 'Database Management Systems',
+      list: databaseManagementSystems,
+    },
+    {
+      title: 'Testing Libraries',
+      list: testingLibraries,
+    },
+  ]
 
   const { years } = useGetTimeProgramming()
 
@@ -62,30 +183,33 @@ export default function Summary() {
         <p>I love building software. Let's do it together!</p>
       </div>
       <div>
-        <H2>Libraries and Frameworks</H2>
-        <ul
-          style={{
-            paddingLeft: 0,
-            color: '#cb3837',
-            fontWeight: 600,
-            fontSize: 20,
-          }}
-        >
-          {libsAndFrames.map((lF, i) => {
-            return (
-              <li
-                key={i}
-                style={{
-                  display: 'inline-block',
-                  padding: 4,
-                  marginRight: 4,
-                }}
-              >
-                {lF}
-              </li>
-            )
-          })}
-        </ul>
+        {summarySkills.map((s, i) => {
+          return (
+            <div key={i}>
+              <H2>{s.title}</H2>
+              <RedLinkList>
+                {s.list.map((l, j) => {
+                  return (
+                    <RedLinkItem key={`${i}${j}`}>
+                      <a
+                        href={l.link}
+                        target='_blank'
+                        rel='noreferrer'
+                        title={
+                          l.link.includes('npmjs.com')
+                            ? "This will take you to a lookalike page. Don't be alarmed!"
+                            : ''
+                        }
+                      >
+                        {l.label}
+                      </a>
+                    </RedLinkItem>
+                  )
+                })}
+              </RedLinkList>
+            </div>
+          )
+        })}
       </div>
       <div>
         <H2>Usage</H2>
@@ -134,3 +258,15 @@ export default function Summary() {
     </div>
   )
 }
+
+const RedLinkList = styled.ul`
+  padding-left: 0;
+  color: #cb3837;
+  font-weight: 600;
+  font-size: 20px;
+`
+const RedLinkItem = styled.li`
+  display: inline-block;
+  padding: 4px;
+  margin-right: 4px;
+`
