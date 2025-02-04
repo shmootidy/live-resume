@@ -1,21 +1,26 @@
-import React from "react";
-import { H1, H2 } from "../../style/SharedComponents/SharedComponents";
+import React from 'react'
+import { H1, H2 } from '../../style/SharedComponents/SharedComponents'
+
+import useGetTimeProgramming from './useGetTimeProgramming'
 
 export default function Summary() {
-  const libsAndFrames = ["react", "highcharts"];
+  const libsAndFrames = ['react', 'highcharts']
+
+  const { years } = useGetTimeProgramming()
+
   return (
     <div>
-      <div id="summary" style={{ marginTop: 16 }}>
+      <div id='summary' style={{ marginTop: 16 }}>
         <H1>
           <code
             style={{
               fontSize: 36,
-              background: "rgb(247, 247, 247)",
+              background: 'rgb(247, 247, 247)',
               fontWeight: 700,
-              padding: "0 5px",
-              color: "rgb(17, 17, 17)",
+              padding: '0 5px',
+              color: 'rgb(17, 17, 17)',
             }}
-            className="highlight"
+            className='highlight'
           >
             shmoo
           </code>
@@ -49,10 +54,10 @@ export default function Summary() {
           </li>
         </ul>
         <p>
-          With 5+ years in the industry and a background in education, musical
+          {`With ${years}+ years in the industry and a background in education, musical
           performance, and customer service, I bring a unique set of skills to
           my role. Excellent communication skills, the ability to anticipate the
-          needs of users, and a reflexive, creative approach to problem solving.
+          needs of users, and a reflexive, creative approach to problem solving.`}
         </p>
         <p>I love building software. Let's do it together!</p>
       </div>
@@ -61,7 +66,7 @@ export default function Summary() {
         <ul
           style={{
             paddingLeft: 0,
-            color: "#cb3837",
+            color: '#cb3837',
             fontWeight: 600,
             fontSize: 20,
           }}
@@ -71,14 +76,14 @@ export default function Summary() {
               <li
                 key={i}
                 style={{
-                  display: "inline-block",
+                  display: 'inline-block',
                   padding: 4,
                   marginRight: 4,
                 }}
               >
                 {lF}
               </li>
-            );
+            )
           })}
         </ul>
       </div>
@@ -86,38 +91,38 @@ export default function Summary() {
         <H2>Usage</H2>
         <div
           style={{
-            margin: "16px 0",
+            margin: '16px 0',
             fontSize: 16,
-            background: "rgb(247, 247, 247)",
+            background: 'rgb(247, 247, 247)',
             borderRadius: 2,
-            padding: "13px 15px",
+            padding: '13px 15px',
           }}
         >
           <code>
             <div style={{ marginBottom: 16 }}>
-              <span style={{ color: "rgb(215, 58, 73)" }}>import</span>
+              <span style={{ color: 'rgb(215, 58, 73)' }}>import</span>
               {` { shmoosNumber, shmoosEmail } `}
-              <span style={{ color: "rgb(215, 58, 73)" }}>from</span>
+              <span style={{ color: 'rgb(215, 58, 73)' }}>from</span>
               {` 'shmoos-live-resume'`}
             </div>
             <div>
-              <span style={{ color: "rgb(215, 58, 73)" }}>{`function `}</span>
-              <span style={{ color: "rgb(227, 98, 9)" }}>contactShmoo</span>
+              <span style={{ color: 'rgb(215, 58, 73)' }}>{`function `}</span>
+              <span style={{ color: 'rgb(227, 98, 9)' }}>contactShmoo</span>
               <span>{`() {`}</span>
               <div
                 style={{
                   margin: 16,
-                  display: "flex",
-                  justifyContent: "space-evenly",
+                  display: 'flex',
+                  justifyContent: 'space-evenly',
                 }}
               >
                 <a
-                  href="mailto:shmooritchie@gmail.com?subject=I saw your resume!"
-                  className="contact-shmoo-button"
+                  href='mailto:shmooritchie@gmail.com?subject=I saw your resume!'
+                  className='contact-shmoo-button'
                 >
                   Click to email Shmoo
                 </a>
-                <a href="tel:+1-604-616-0247" className="contact-shmoo-button">
+                <a href='tel:+1-604-616-0247' className='contact-shmoo-button'>
                   Click to call Shmoo
                 </a>
               </div>
@@ -127,5 +132,5 @@ export default function Summary() {
         </div>
       </div>
     </div>
-  );
+  )
 }
