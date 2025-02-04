@@ -18,7 +18,7 @@ interface IProps {
 export default function Content(props: IProps) {
   const { visibleTab } = props;
   console.log(visibleTab);
-  const myRef = useRef(null);
+  const myRef = useRef(null); // pretty sure i can kill this
   // const executeScroll = () => scrollToRef(myRef)
   const [previousTab, setPreviousTab] = useState(props.visibleTab);
   const [hideContact, setHideContact] = useState(true);

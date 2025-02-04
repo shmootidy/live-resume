@@ -1,14 +1,14 @@
 .content-wrapper {
   font-size: 18px;
-  color: rgba(0, 0, 0, .85);
+  color: rgba(0, 0, 0, 0.85);
   line-height: 1.65;
   letter-spacing: 0.1px;
-  padding: 0 .75rem;
+  // padding: 0 .75rem;
   @media (min-width: 960px) {
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-between;
-    padding: 0 1.25rem;
+    // padding: 0 1.25rem;
   }
 }
 .content {
@@ -19,7 +19,7 @@
 }
 .content-title {
   padding-bottom: 8px;
-  border-bottom: 1px solid rgba(0, 0, 0, .1);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   margin-bottom: 0;
 
   @media (min-width: 960px) {
@@ -31,7 +31,7 @@
   border: 1px solid #ececec;
   border-radius: 4px;
   background-color: white;
-  transition: background-color .5s;
+  transition: background-color 0.5s;
   text-align: center;
   &:hover {
     background-color: #ececec;

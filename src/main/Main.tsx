@@ -54,7 +54,15 @@ export default function Main() {
 
   return (
     <main style={{ minHeight: "100vh" }}>
-      <div style={{ marginTop: 48, padding: "0 16px" }}>
+      <div
+        style={{
+          marginTop: 48,
+          padding: "0 16px",
+          maxWidth: 1200,
+          marginRight: "auto",
+          marginLeft: "auto",
+        }}
+      >
         <div>
           <h2
             style={{
