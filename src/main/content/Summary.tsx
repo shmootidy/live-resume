@@ -56,6 +56,14 @@ export default function Summary() {
       label: 'react testing library',
       link: '',
     },
+    {
+      label: 'vitest',
+      link: '',
+    },
+    {
+      label: 'jest',
+      link: '',
+    },
   ]
 
   const languages = [
