@@ -1,16 +1,12 @@
 import React from "react";
+import { H1, H2 } from "../../style/SharedComponents/SharedComponents";
 
-const Summary = () => {
+export default function Summary() {
   const libsAndFrames = ["react", "highcharts"];
   return (
     <div>
       <div id="summary" style={{ marginTop: 16 }}>
-        <h1
-          style={{
-            margin: 0,
-            borderBottom: "1px solid #ececec",
-          }}
-        >
+        <H1>
           <code
             style={{
               fontSize: 36,
@@ -23,7 +19,7 @@ const Summary = () => {
           >
             shmoo
           </code>
-        </h1>
+        </H1>
         <p>
           Hi! I'm Shmoo. I'm an energetic, friendly software developer with
           dedicated to building beautiful and performant digital products that
@@ -61,14 +57,7 @@ const Summary = () => {
         <p>I love building software. Let's do it together!</p>
       </div>
       <div>
-        <h3
-          style={{
-            margin: 0,
-            borderBottom: "1px dotted #ececec",
-          }}
-        >
-          Libraries and Frameworks
-        </h3>
+        <H2>Libraries and Frameworks</H2>
         <ul
           style={{
             paddingLeft: 0,
@@ -94,14 +83,7 @@ const Summary = () => {
         </ul>
       </div>
       <div>
-        <h2
-          style={{
-            margin: 0,
-            borderBottom: "1px dotted #ececec",
-          }}
-        >
-          Usage
-        </h2>
+        <H2>Usage</H2>
         <div
           style={{
             margin: "16px 0",
@@ -146,6 +128,4 @@ const Summary = () => {
       </div>
     </div>
   );
-};
-
-export default Summary;
+}
