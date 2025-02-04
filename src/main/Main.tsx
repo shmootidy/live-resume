@@ -83,7 +83,8 @@ export default function Main() {
               marginBottom: 8,
             }}
           >
-            1.4.3 • Software Dev • Vancouver, BC
+            1.4.3 • <span style={{ color: "#14865c" }}>Software Dev</span> •
+            Vancouver, BC
           </div>
         </div>
         {/* <NameTitle
