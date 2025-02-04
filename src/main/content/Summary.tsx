@@ -26,10 +26,10 @@ export default function Summary() {
           </code>
         </H1>
         <p>
-          Hi! I'm Shmoo. I'm an energetic, friendly software developer with
-          dedicated to building beautiful and performant digital products that
-          users love to use and clean, maintainable code that fellow developers
-          love to build upon.
+          Hi! I'm Shmoo. I'm an energetic, friendly software developer dedicated
+          to building beautiful and performant digital products that users love
+          to use, and clean, maintainable code that fellow developers love to
+          build upon.
         </p>
         <p>I am passionate about:</p>
         <ul>
