@@ -17,7 +17,7 @@ export default function Main() {
       <div
         style={{
           marginTop: 48,
-          padding: '0 16px',
+          padding: '0 0.75rem',
           maxWidth: 1200,
           marginRight: 'auto',
           marginLeft: 'auto',

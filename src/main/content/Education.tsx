@@ -12,20 +12,20 @@ export default function Education() {
       <div>
         {education.map((education, i) => {
           return (
-            <div className='education' key={i}>
+            <div
+              className='education'
+              key={i}
+              style={{
+                marginTop: 16,
+                paddingTop: 8,
+                fontSize: 16,
+              }}
+            >
               <Awarded>{education.awarded.toUpperCase()}</Awarded>
-              <span
-                style={{
-                  margin: 0,
-                  fontFamily: 'Fira Mono',
-                  fontSize: '0.875rem',
-                  paddingBottom: '0.5rem',
-                }}
-                className='flex space-between'
-              >
-                <span className='school'>{education.school}</span>
-                <span className='year'>{education.year}</span>
-              </span>
+              <SchoolAndYear>
+                <strong>{education.school}</strong>
+                <span>{education.year}</span>
+              </SchoolAndYear>
               <div style={{ marginLeft: 16 }}>
                 {education.skills.map((skill, j) => {
                   return <div key={j}>{skill}</div>
@@ -51,7 +51,16 @@ export default function Education() {
 }
 
 const Awarded = styled(GreenText)`
+  display: block;
   font-weight: bold;
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
   font-size: 18px;
+`
+const SchoolAndYear = styled.div`
+  display: flex;
+  justify-content: space-between;
+  margin: 0px;
+  font-family: 'Fira Mono';
+  font-size: 14px;
+  padding-botom: 8px;
 `
