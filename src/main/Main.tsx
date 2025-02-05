@@ -9,7 +9,7 @@ import './_responsive.scss'
 import './sidebar/sidebar.scss'
 
 export default function Main() {
-  const [selectedTab, setSelectedTab] = useState<number>(0)
+  const [selectedTabIndex, setSelectedTabIndex] = useState<number>(0)
   const { years, months, days } = useGetTimeProgramming()
 
   return (
@@ -52,8 +52,11 @@ export default function Main() {
           </div>
         </div>
         <div className='flex flex-column' id='main'>
-          <Tabs selectedTab={selectedTab} onChangeTab={setSelectedTab} />
-          <Content visibleTab={selectedTab} />
+          <Tabs
+            selectedTab={selectedTabIndex}
+            onChangeTab={setSelectedTabIndex}
+          />
+          <Content visibleTab={selectedTabIndex} />
         </div>
       </div>
     </main>

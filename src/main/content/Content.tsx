@@ -10,7 +10,7 @@ import Contact from '../sidebar/Contact'
 import './content.scss'
 
 interface IProps {
-  visibleTab: any
+  visibleTab: number
 }
 
 export default function Content(props: IProps) {
@@ -18,6 +18,7 @@ export default function Content(props: IProps) {
   const [previousTab, setPreviousTab] = useState(props.visibleTab)
   const [hideContact, setHideContact] = useState(true)
 
+  // this collapses the small-screen contact field when switching tabs
   if (previousTab !== visibleTab) {
     setPreviousTab(visibleTab)
     setHideContact(true)
