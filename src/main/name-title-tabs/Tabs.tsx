@@ -1,3 +1,4 @@
+import styled from '@emotion/styled'
 import { faFileAlt } from '@fortawesome/free-regular-svg-icons'
 import {
   // faTags,
@@ -15,7 +16,6 @@ import {
   // faTableList,
 } from '@fortawesome/free-solid-svg-icons'
 
-import styled from '@emotion/styled'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 interface IProps {
@@ -69,7 +69,7 @@ export default function Tabs(props: IProps) {
 
   return (
     <div>
-      <ul style={{ display: 'flex', width: '100%', margin: 0, padding: 0 }}>
+      <TabsList>
         {TABS.map((tab, i) => {
           return (
             <Tab
@@ -85,7 +85,7 @@ export default function Tabs(props: IProps) {
             </Tab>
           )
         })}
-      </ul>
+      </TabsList>
     </div>
   )
 }
@@ -99,16 +99,38 @@ const Tab = styled.li<{
   cursor: pointer;
   flex-grow: 1;
   text-align: center;
-  border-radius: 5px 5px 0 0;
   font-weight: bold;
   background: ${(props) =>
     props.isSelected ? props.backgroundColor : 'white'};
   color: ${(props) => props.fontColor};
   border: ${(props) =>
     props.isSelected ? `1px solid ${props.borderColor}` : ''};
-  border-bottom: ${(props) =>
-    `${props.isSelected ? '1px' : '2px'} solid ${props.borderColor}`};
+
+  @media (max-width: 960px) {
+    border-radius: 0 5px 5px 0;
+    border-left: ${(props) =>
+      `${props.isSelected ? '1px' : '2px'} solid ${props.borderColor}`};
+  }
+
+  @media (min-width: 960px) {
+    border-radius: 5px 5px 0 0;
+    border-bottom: ${(props) =>
+      `${props.isSelected ? '1px' : '2px'} solid ${props.borderColor}`};
+  }
   &:hover {
     background: ${(props) => props.backgroundColor};
+  }
+`
+
+const TabsList = styled.ul`
+  display: flex;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  list-style-type: none;
+  flex-direction: column;
+
+  @media (min-width: 960px) {
+    flex-direction: row;
   }
 `

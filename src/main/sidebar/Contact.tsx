@@ -1,8 +1,9 @@
+import styled from '@emotion/styled'
 import { useState, useEffect } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faChevronRight } from '@fortawesome/free-solid-svg-icons'
 
-const Contact = (props: any) => {
+export default function Contact(props: any) {
   const style = {
     fontSize: '18px',
     fontWeight: 'bold',
@@ -37,8 +38,8 @@ const Contact = (props: any) => {
   }
   return (
     <div className='sidebar'>
-      <div className='contact'>
-        <div className='sidebar-subtitle'>
+      <div style={{ margin: 0 }}>
+        <SidebarSubtitle>
           Contact{' '}
           <button
             onClick={handleToggle}
@@ -47,7 +48,7 @@ const Contact = (props: any) => {
           >
             {seeMoreText}
           </button>
-        </div>
+        </SidebarSubtitle>
         <a
           href='mailto:shmooritchie@gmail.com?subject=I saw your resume!'
           className='contact-bar'
@@ -121,4 +122,19 @@ const Contact = (props: any) => {
   )
 }
 
-export default Contact
+const SidebarSubtitle = styled.div`
+  color: rgba(0, 0, 0, 0.5);
+  margin: 1rem 0 0.875rem;
+  -webkit-font-smoothing: antialiased;
+  font-weight: 700;
+  font-size: 1rem;
+
+  .see-more {
+    border: 0;
+    background: white;
+    color: inherit;
+    @media (min-width: 960px) {
+      display: none;
+    }
+  }
+`
