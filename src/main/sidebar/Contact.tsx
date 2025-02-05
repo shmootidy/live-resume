@@ -10,12 +10,7 @@ interface IProps {
 
 export default function Contact(props: IProps) {
   const { isContactCollapsed, onToggleCollapseContact } = props
-  const style = {
-    fontSize: '18px',
-    fontWeight: 'bold',
-    margin: '.5rem 0 1rem',
-    color: 'rgba(0,0,0,.8)',
-  }
+
   const [seeMoreText, setText] = useState('[ see more + ]')
   const [contactClass, setClass] = useState('see-more')
   const [hideContact, setHideContact] = useState(true)
@@ -93,8 +88,7 @@ export default function Contact(props: IProps) {
         <div style={{ marginLeft: '.25rem' }}>
           <div style={{ borderBottom: '1px solid #e1e1e1' }}>
             <div className='sidebar-subtitle'>Linked In</div>
-            <a
-              style={style}
+            <ContactLink
               href='https://www.linkedin.com/in/shmoo-ritchie'
               target='_blank'
               rel='noopener noreferrer'
@@ -103,19 +97,18 @@ export default function Contact(props: IProps) {
               <span style={{ marginLeft: '.5rem' }}>
                 linkedin.com/in/shmoo-ritchie
               </span>
-            </a>
+            </ContactLink>
           </div>
           <div style={{ borderBottom: '1px solid #e1e1e1' }}>
             <div className='sidebar-subtitle'>Repository</div>
-            <a
-              style={style}
+            <ContactLink
               href='https://www.github.com/shmootidy'
               target='_blank'
               rel='noopener noreferrer'
             >
               <FontAwesomeIcon icon={['fab', 'github']} />
               <span style={{ marginLeft: '.5rem' }}>github.com/shmootidy</span>
-            </a>
+            </ContactLink>
           </div>
           {/* <div>
             <div className="sidebar-subtitle">Collaborators</div>
@@ -144,4 +137,11 @@ const SidebarSubtitle = styled.div`
       display: none;
     }
   }
+`
+
+const ContactLink = styled.a`
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0.5rem 0 1rem;
+  color: rgba(0, 0, 0, 0.8);
 `
