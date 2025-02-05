@@ -40,7 +40,7 @@ export default function Content(props: IProps) {
   return (
     <ContentWrapper>
       <Contact hideContact={hideContact} toggleHideContact={setHideContact} />
-      <div className='content'>{getVisibleTabContents()}</div>
+      <TabContents>{getVisibleTabContents()}</TabContents>
     </ContentWrapper>
   )
 }
@@ -56,5 +56,11 @@ const ContentWrapper = styled.div`
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-between;
+  }
+`
+const TabContents = styled.div`
+  @media (min-width: 960px) {
+    width: 66%;
+    margin-right: 3rem;
   }
 `
