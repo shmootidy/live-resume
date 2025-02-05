@@ -52,40 +52,27 @@ export default function Projects() {
             </ImageTechBox>
             {Object.entries(project.description).map((description, i) => {
               let key = description[0]
-              let value = description[1]
-              let note = value.map((note, i) => (
-                <li key={i} className='description-value'>
-                  {note}
-                </li>
-              ))
               return (
-                <div className='description' key={i}>
-                  <div className='description-key'>
+                <div key={i} style={{ margin: '0 0.5rem 0.5rem' }}>
+                  <div
+                    style={{
+                      borderBottom: '1px solid rgba(0,0,0,0.2)',
+                      fontWeight: 600,
+                    }}
+                  >
                     {key.replace(
                       key.substring(0, 1),
                       key.substring(0, 1).toUpperCase()
                     )}
                   </div>
-                  <ul>{note}</ul>
+                  <ul>
+                    {description[1].map((note, i) => (
+                      <li key={i}>{note}</li>
+                    ))}
+                  </ul>
                 </div>
               )
             })}
-            {/* {Object.entries(project.description).map((description, i) => {
-              let key = description[0]
-              let value = description[1]
-              let note = value.map((note, i) => <li key={i}>{note}</li>)
-              return (
-                <div key={i}>
-                  <div>
-                    {key.replace(
-                      key.substring(0, 1),
-                      key.substring(0, 1).toUpperCase()
-                    )}
-                  </div>
-                  <ul>{note}</ul>
-                </div>
-              )
-            })} */}
           </div>
         )
         const projectWithOuter = project.url ? (

@@ -100,6 +100,8 @@ const Tab = styled.li<{
   flex-grow: 1;
   text-align: center;
   font-weight: bold;
+  display: block;
+  padding: 0.7rem 2rem;
   background: ${(props) =>
     props.isSelected ? props.backgroundColor : 'white'};
   color: ${(props) => props.fontColor};

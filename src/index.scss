@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: 'Source Sans Pro', sans-serif;
   color: rgba(0, 0, 0, 0.85);
   -webkit-font-smoothing: antialiased;
 }
@@ -12,8 +12,8 @@ a {
 }
 
 li {
-  padding: 0.7rem 2rem;
-  display: block;
+  // padding: 0.7rem 2rem;
+  // display: block;
   // text-align: center;
 }
 
@@ -60,7 +60,7 @@ li {
 }
 
 .highlight {
-  font-family: "Fira Mono";
+  font-family: 'Fira Mono';
   font-size: 0.875rem;
   line-height: 1.15;
   padding: 0.125rem 0.25rem;
