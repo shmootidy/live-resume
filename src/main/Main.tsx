@@ -1,12 +1,12 @@
-import { useEffect, useState } from 'react'
-import { DateTime } from 'luxon'
+import { useState } from 'react'
+
 import Content from './content/Content'
 import Tabs from './name-title-tabs/Tabs'
+import useGetTimeProgramming from './content/useGetTimeProgramming'
 
 import './main.scss'
 import './_responsive.scss'
 import './sidebar/sidebar.scss'
-import useGetTimeProgramming from './content/useGetTimeProgramming'
 
 export default function Main() {
   const [selectedTab, setSelectedTab] = useState<number>(0)

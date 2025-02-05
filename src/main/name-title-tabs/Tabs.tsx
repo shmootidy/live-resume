@@ -1,12 +1,17 @@
-import { useEffect } from 'react'
 import { faFileAlt } from '@fortawesome/free-regular-svg-icons'
 import {
-  faTags,
+  // faTags,
   faGraduationCap,
   faCubes,
   faFileZipper,
-  faLightbulb,
-  faTimeline,
+  // faLightbulb,
+  // faTimeline,
+  // faLaptopCode,
+  // faChartPie,
+  // faBugs,
+  // faBugSlash,
+  // faFolderOpen,
+  // faGears,
   faTableList,
 } from '@fortawesome/free-solid-svg-icons'
 
