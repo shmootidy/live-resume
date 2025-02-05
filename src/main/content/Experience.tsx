@@ -1,8 +1,14 @@
+import styled from '@emotion/styled'
 import { useState, useEffect } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faFileLines } from '@fortawesome/free-regular-svg-icons'
 import { faChevronLeft } from '@fortawesome/free-solid-svg-icons'
 import useGetWorkExperience, { Job } from '../../Hooks/useGetWorkExperience'
+import {
+  BlueText,
+  PinkText,
+  PurpleText,
+} from '../../SharedComponents/StyledComponents'
 
 export default function Experience() {
   const jobs = useGetWorkExperience()
@@ -33,21 +39,17 @@ export default function Experience() {
 
   return (
     <div id='experience'>
-      <div className='experience-wrapper'>
-        <div className='experience-head-item'>
-          <button
-            onClick={() => setJobToDisplay(null)}
-            className='experience-button'
-          >
+      <ExperienceWrapper>
+        <ExperienceHeadItem>
+          <ExperienceButton onClick={() => setJobToDisplay(null)}>
             / work /
-          </button>
+          </ExperienceButton>
           <div>{jobToDisplay ? jobToDisplay.employer.toLowerCase() : null}</div>
-        </div>
+        </ExperienceHeadItem>
         {jobToDisplay ? (
-          <div className='experience-back-wrapper'>
-            <button
+          <ExperienceBackWrapper>
+            <ExperienceButton
               onClick={() => setJobToDisplay(null)}
-              className='experience-button'
               style={{
                 textDecoration: 'none',
                 display: 'flex',
@@ -58,37 +60,38 @@ export default function Experience() {
                 <FontAwesomeIcon icon={faChevronLeft} />
                 <FontAwesomeIcon icon={faChevronLeft} />
               </span>
+              {/* this one is ok */}
               <span className='back'>Back</span>
-            </button>
+            </ExperienceButton>
             <div>{jobToDisplay.duration.toLowerCase()}</div>
-          </div>
+          </ExperienceBackWrapper>
         ) : null}
         {jobToDisplay && linesOfCode ? (
           <div style={{ display: 'flex', overflowX: 'auto' }}>
-            <pre className='experience-details-line-numbers'>
+            <ExperienceDetailsLineNumbers>
               <code style={{ display: 'flex', flexDirection: 'column' }}>
                 {[...Array(linesOfCode).keys()].map((l) => {
                   return <div key={l}>{l + 1}</div>
                 })}
               </code>
-            </pre>
-            <pre className='experience-details'>
+            </ExperienceDetailsLineNumbers>
+            <ExperienceDetails>
               <code>
                 <div>
-                  <span className='pink'>{`import {`}</span>
+                  <PinkText>{`import {`}</PinkText>
                   {jobToDisplay.techStack.map((tech, i) => {
                     return (
                       <div style={{ marginLeft: 16 }} key={i}>{`${tech},`}</div>
                     )
                   })}
                   <div>
-                    <span className='pink'>{`} from `}</span>
+                    <PinkText>{`} from `}</PinkText>
                     <span>'techStack'</span>
                   </div>
                 </div>
                 <br />
                 <div>
-                  <span className='pink'>class</span>
+                  <PinkText>class</PinkText>
                   {` ${jobToDisplay.title.replace(/\s/g, '')} {`}
                 </div>
                 <div style={{ marginLeft: 16 }}>
@@ -96,8 +99,8 @@ export default function Experience() {
                     return (
                       <div key={i}>
                         <div>
-                          <span className='pink'>function</span>
-                          <span className='purple'>{` ${acc.functionName}() {`}</span>
+                          <PinkText>function</PinkText>
+                          <PurpleText>{` ${acc.functionName}() {`}</PurpleText>
                         </div>
                         <div style={{ marginLeft: 16 }}>
                           {acc.steps.map((step, j) => {
@@ -112,8 +115,8 @@ export default function Experience() {
                             )
                           })}
                           <div>
-                            <span className='pink'>return</span>
-                            <span className='blue'>{` ${acc.returnValue}`}</span>
+                            <PinkText>return</PinkText>
+                            <BlueText>{` ${acc.returnValue}`}</BlueText>
                           </div>
                         </div>
                         <div>{`}`}</div>
@@ -127,13 +130,13 @@ export default function Experience() {
                 </div>
                 <div>{`}`}</div>
               </code>
-            </pre>
+            </ExperienceDetails>
           </div>
         ) : (
           <div>
             {jobs.map((job, i) => {
               return (
-                <div key={i} className='experience-job-item'>
+                <ExperienceJobItem key={i}>
                   <div
                     style={{
                       display: 'flex',
@@ -144,23 +147,93 @@ export default function Experience() {
                     <div>
                       <FontAwesomeIcon icon={faFileLines} />
                     </div>
-                    <button
-                      className='experience-button'
+                    <ExperienceButton
                       onClick={() => handleClickEmployer(job.employer)}
                     >
                       {job.employer.toLowerCase()}
-                    </button>
+                    </ExperienceButton>
                   </div>
                   <div style={{ width: '40%' }}>{job.title.toLowerCase()}</div>
                   <div style={{ width: '20%', textAlign: 'right' }}>
                     {job.duration.toLowerCase()}
                   </div>
-                </div>
+                </ExperienceJobItem>
               )
             })}
           </div>
         )}
-      </div>
+      </ExperienceWrapper>
     </div>
   )
 }
+
+const ExperienceJobItem = styled.div`
+  display: flex;
+  border-bottom: 1px solid #ececec;
+  padding: 0 8px;
+  height: 34px;
+  align-items: center;
+  font-size: 14px;
+  line-height: 1;
+`
+const ExperienceButton = styled.button`
+  padding-left: 6px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-weight: inherit;
+  font-size: inherit;
+  color: inherit;
+  text-align: left;
+  &:hover {
+    text-decoration: underline;
+    .back {
+      text-decoration: underline;
+    }
+  }
+`
+const ExperienceWrapper = styled.div`
+  border: 1px solid #ececec;
+  border-radius: 4px;
+  margin-top: 10px;
+  font-size: 16px;
+  color: #343434;
+`
+const ExperienceHeadItem = styled.div`
+  border-bottom: 1px solid #ececec;
+  display: flex;
+  font-weight: 700;
+  line-height: 1.2;
+
+  button {
+    display: flex;
+    margin: 16px 0 16px 16px;
+    line-height: inherit;
+  }
+  div {
+    margin: 16px 16px 16px 0;
+    line-height: inherit;
+  }
+`
+const ExperienceBackWrapper = styled.div`
+  display: flex;
+  border-bottom: 1px solid #ececec;
+  background: #fafafa;
+  font-size: 12px;
+  justify-content: space-between;
+  padding: 5px 10px;
+`
+
+const ExperienceDetailsLineNumbers = styled.pre`
+  display: block;
+  padding: 0.5em;
+  font-size: 12px;
+  min-width: 16px;
+  color: rgb(140, 140, 140);
+`
+const ExperienceDetails = styled.pre`
+  display: block;
+  padding: 0.5em;
+  color: rgb(51, 51, 51);
+  font-size: 12px;
+`

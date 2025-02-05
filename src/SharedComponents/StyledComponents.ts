@@ -15,3 +15,18 @@ export const ColouredBanner = styled.div`
   border-style: solid;
   border-width: 10px 0 0;
 `
+
+export const GreenText = styled.span`
+  color: rgb(25, 169, 116);
+  letter-spacing: 0;
+`
+
+export const PinkText = styled.span`
+  color: rgb(167, 29, 93);
+`
+export const PurpleText = styled.span`
+  color: rgb(121, 93, 163);
+`
+export const BlueText = styled.span`
+  color: rgb(0, 134, 179);
+`

@@ -1,5 +1,7 @@
+import styled from '@emotion/styled'
+
 import { useGetEducation } from '../../Hooks/useGetEducation'
-import { H2 } from '../../SharedComponents/StyledComponents'
+import { GreenText, H2 } from '../../SharedComponents/StyledComponents'
 
 export default function Education() {
   const education = useGetEducation()
@@ -11,9 +13,7 @@ export default function Education() {
         {education.map((education, i) => {
           return (
             <div className='education' key={i}>
-              <div className='awarded green'>
-                {education.awarded.toUpperCase()}
-              </div>
+              <Awarded>{education.awarded.toUpperCase()}</Awarded>
               <span
                 style={{
                   margin: 0,
@@ -49,3 +49,9 @@ export default function Education() {
     </div>
   )
 }
+
+const Awarded = styled(GreenText)`
+  font-weight: bold;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  font-size: 18px;
+`

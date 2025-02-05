@@ -2,7 +2,7 @@ import styled from '@emotion/styled'
 // import useGetGithubRepos from '../../Hooks/useGetGithubRepos'
 import useGetProjects from '../../Hooks/useGetProjects'
 import './projects.scss'
-import { H2 } from '../../SharedComponents/StyledComponents'
+import { GreenText, H2 } from '../../SharedComponents/StyledComponents'
 
 export default function Projects() {
   // const { starredReadmes, starredRepos, isLoading, hasError } =
@@ -20,7 +20,7 @@ export default function Projects() {
         const award = project.award ? 'Award Winner!' : ''
         const image = project.img ? (
           <img
-            className='project-img'
+            style={{ maxWidth: '90%' }}
             src={require('../../assets/' + project.img)}
             alt={project.img}
           />
@@ -35,7 +35,7 @@ export default function Projects() {
             <ProjectSubtitle>
               {project.subtitle}
               {awardDot}
-              <span className='green'>{award}</span> • {project.dateCompleted}
+              <GreenText>{award}</GreenText> • {project.dateCompleted}
             </ProjectSubtitle>
             <ImageTechBox>
               {image}
@@ -81,7 +81,7 @@ export default function Projects() {
         )
 
         return (
-          <div className='project' key={i}>
+          <div style={{ padding: '0.5rem 0', marginTop: 16 }} key={i}>
             {projectContents}
           </div>
         )
