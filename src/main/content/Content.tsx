@@ -16,12 +16,12 @@ interface IProps {
 export default function Content(props: IProps) {
   const { visibleTab } = props
   const [previousTab, setPreviousTab] = useState(props.visibleTab)
-  const [hideContact, setHideContact] = useState(true)
+  const [isContactCollapsed, setIsContactCollapsed] = useState(true)
 
   // this collapses the small-screen contact field when switching tabs
   if (previousTab !== visibleTab) {
     setPreviousTab(visibleTab)
-    setHideContact(true)
+    setIsContactCollapsed(true)
   }
 
   function getVisibleTabContents() {
@@ -37,9 +37,13 @@ export default function Content(props: IProps) {
       return <div>This tab has no data.</div>
     }
   }
+
   return (
     <ContentWrapper>
-      <Contact hideContact={hideContact} toggleHideContact={setHideContact} />
+      <Contact
+        isContactCollapsed={isContactCollapsed}
+        onToggleCollapseContact={setIsContactCollapsed}
+      />
       <TabContents>{getVisibleTabContents()}</TabContents>
     </ContentWrapper>
   )

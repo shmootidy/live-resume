@@ -3,7 +3,13 @@ import { useState, useEffect } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faChevronRight } from '@fortawesome/free-solid-svg-icons'
 
-export default function Contact(props: any) {
+interface IProps {
+  isContactCollapsed: boolean
+  onToggleCollapseContact: (value: boolean) => void
+}
+
+export default function Contact(props: IProps) {
+  const { isContactCollapsed, onToggleCollapseContact } = props
   const style = {
     fontSize: '18px',
     fontWeight: 'bold',
@@ -15,15 +21,15 @@ export default function Contact(props: any) {
   const [hideContact, setHideContact] = useState(true)
 
   useEffect(() => {
-    if (props.hideContact !== hideContact) {
+    if (isContactCollapsed !== hideContact) {
       collapseContact()
     }
   })
 
   function handleToggle() {
-    if (props.hideContact) {
+    if (isContactCollapsed) {
       setText('[ see less - ]')
-      props.toggleHideContact(false)
+      onToggleCollapseContact(false)
       setHideContact(false)
       setClass('see-less')
     } else {
@@ -32,12 +38,13 @@ export default function Contact(props: any) {
   }
   function collapseContact() {
     setText('[ see more + ]')
-    props.toggleHideContact(true)
+    onToggleCollapseContact(true)
     setHideContact(true)
     setClass('see-more')
   }
+
   return (
-    <div className='sidebar'>
+    <div>
       <div style={{ margin: 0 }}>
         <SidebarSubtitle>
           Contact{' '}
