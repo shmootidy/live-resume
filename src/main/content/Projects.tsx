@@ -50,7 +50,6 @@ export default function Projects() {
                 </div>
               </div>
             </ImageTechBox>
-            {/* <ProjectDescription descriptions={descriptions} /> */}
             {Object.entries(project.description).map((description, i) => {
               let key = description[0]
               let value = description[1]
@@ -71,6 +70,22 @@ export default function Projects() {
                 </div>
               )
             })}
+            {/* {Object.entries(project.description).map((description, i) => {
+              let key = description[0]
+              let value = description[1]
+              let note = value.map((note, i) => <li key={i}>{note}</li>)
+              return (
+                <div key={i}>
+                  <div>
+                    {key.replace(
+                      key.substring(0, 1),
+                      key.substring(0, 1).toUpperCase()
+                    )}
+                  </div>
+                  <ul>{note}</ul>
+                </div>
+              )
+            })} */}
           </div>
         )
         const projectWithOuter = project.url ? (
