@@ -1,4 +1,4 @@
-import { useState, useRef } from 'react'
+import { useState } from 'react'
 import styled from '@emotion/styled'
 
 import Summary from './Summary'
@@ -15,7 +15,6 @@ interface IProps {
 
 export default function Content(props: IProps) {
   const { visibleTab } = props
-  const myRef = useRef(null) // pretty sure i can kill this
   const [previousTab, setPreviousTab] = useState(props.visibleTab)
   const [hideContact, setHideContact] = useState(true)
 
@@ -26,7 +25,7 @@ export default function Content(props: IProps) {
 
   if (visibleTab === 0) {
     return (
-      <ContentWrapper className='content-wrapper' ref={myRef}>
+      <ContentWrapper>
         <Contact hideContact={hideContact} toggleHideContact={setHideContact} />
         <div className='content'>
           <Summary />
@@ -36,7 +35,7 @@ export default function Content(props: IProps) {
     )
   } else if (visibleTab === 2) {
     return (
-      <ContentWrapper className='content-wrapper' ref={myRef}>
+      <ContentWrapper>
         <Contact hideContact={hideContact} toggleHideContact={setHideContact} />
         <div className='content'>
           <Projects />
@@ -45,7 +44,7 @@ export default function Content(props: IProps) {
     )
   } else if (visibleTab === 1) {
     return (
-      <ContentWrapper className='content-wrapper' ref={myRef}>
+      <ContentWrapper>
         <Contact hideContact={hideContact} toggleHideContact={setHideContact} />
         <div className='content'>
           <Experience />
@@ -54,7 +53,7 @@ export default function Content(props: IProps) {
     )
   } else if (visibleTab === 3) {
     return (
-      <ContentWrapper className='content-wrapper' ref={myRef}>
+      <ContentWrapper>
         <Contact hideContact={hideContact} toggleHideContact={setHideContact} />
         <div className='content'>
           <Education />
@@ -68,4 +67,14 @@ export default function Content(props: IProps) {
 
 const ContentWrapper = styled.div`
   margin-top: 16px;
+  font-size: 18px;
+  color: rgba(0, 0, 0, 0.85);
+  line-height: 1.65;
+  letter-spacing: 0.1px;
+
+  @media (min-width: 960px) {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
 `
