@@ -1,11 +1,12 @@
 import { useGetEducation } from '../../Hooks/useGetEducation'
+import { H2 } from '../../SharedComponents/StyledComponents'
 
 export default function Education() {
   const education = useGetEducation()
 
   return (
     <div id='education'>
-      <h2 className='content-title'>Education</h2>
+      <H2>Education</H2>
       <div>
         {education.map((education, i) => {
           return (
@@ -14,8 +15,13 @@ export default function Education() {
                 {education.awarded.toUpperCase()}
               </div>
               <span
-                style={{ margin: 0 }}
-                className='flex space-between project-subtitle'
+                style={{
+                  margin: 0,
+                  fontFamily: 'Fira Mono',
+                  fontSize: '0.875rem',
+                  paddingBottom: '0.5rem',
+                }}
+                className='flex space-between'
               >
                 <span className='school'>{education.school}</span>
                 <span className='year'>{education.year}</span>

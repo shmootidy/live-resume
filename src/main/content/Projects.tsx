@@ -1,6 +1,8 @@
+import styled from '@emotion/styled'
 // import useGetGithubRepos from '../../Hooks/useGetGithubRepos'
 import useGetProjects from '../../Hooks/useGetProjects'
 import './projects.scss'
+import { H2 } from '../../SharedComponents/StyledComponents'
 
 export default function Projects() {
   // const { starredReadmes, starredRepos, isLoading, hasError } =
@@ -11,8 +13,8 @@ export default function Projects() {
   const projects = useGetProjects()
 
   return (
-    <div id='projects'>
-      <h2 className='content-title'>Projects</h2>
+    <div>
+      <H2>Projects</H2>
       {projects.map((project, i) => {
         const awardDot = project.award ? ' • ' : ''
         const award = project.award ? 'Award Winner!' : ''
@@ -25,33 +27,29 @@ export default function Projects() {
         ) : null
         const projectContents = (
           <div>
-            <h3 className='project-title'>{project.title.toUpperCase()}</h3>
-            <div className='project-subtitle'>
+            <h3 style={{ margin: '0 8px' }}>{project.title.toUpperCase()}</h3>
+            <ProjectSubtitle>
               {project.subtitle}
               {awardDot}
               <span className='green'>{award}</span> • {project.dateCompleted}
-            </div>
-            <div className='img-tech-box flex flex-column'>
+            </ProjectSubtitle>
+            <ImageTechBox>
               {image}
-              <div className='project-tech'>
-                <div id='tech-stack'>
-                  <div className='flex flex-wrap'>
-                    {/* <TechStack techStack={project.techStack} /> */}
+              <div style={{ margin: 0 }}>
+                <div>
+                  <div style={{ display: 'flex', flexWrap: 'wrap' }}>
                     {Object.entries(project.techStack).map((tech, i) => {
-                      let techValueColor = i % 2 === 0 ? 'red' : 'green'
-                      let techValueClass = 'tech tech-value-' + techValueColor
-
                       return (
-                        <div className='project-tech' key={i}>
-                          <span className='tech-key tech'>{tech[0]}</span>
-                          <span className={techValueClass}>{tech[1]}</span>
-                        </div>
+                        <ProjectTech key={i}>
+                          <TechKey>{tech[0]}</TechKey>
+                          <TechValue isOdd={i % 2 === 0}>{tech[1]}</TechValue>
+                        </ProjectTech>
                       )
                     })}
                   </div>
                 </div>
               </div>
-            </div>
+            </ImageTechBox>
             {/* <ProjectDescription descriptions={descriptions} /> */}
             {Object.entries(project.description).map((description, i) => {
               let key = description[0]
@@ -92,3 +90,40 @@ export default function Projects() {
     </div>
   )
 }
+
+const ProjectSubtitle = styled.h4`
+  font-family: 'Fira Mono';
+  font-size: 0.875rem;
+  padding-bottom: 0.5rem;
+  margin: 0 0.5rem;
+  font-weight: 400;
+`
+
+const ImageTechBox = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  margin-left: 8px;
+`
+
+const ProjectTech = styled.div`
+  font-family: 'Source Sans Pro';
+  font-size: 0.875rem;
+  color: white;
+  margin: 0.8rem 0.2rem 0.5rem 0rem;
+`
+
+const Tech = styled.span`
+  padding: 2px 5px;
+  text-shadow: 0 1px rgba(0, 0, 0, 0.3);
+`
+
+const TechKey = styled(Tech)`
+  background: #5b5b5b;
+  border-radius: 3px 0 0 3px;
+`
+
+const TechValue = styled(Tech)<{ isOdd: boolean }>`
+  background: ${(props) => (props.isOdd ? '#E45637' : '#04C504')};
+  border-radius: 0 3px 3px 0;
+`
