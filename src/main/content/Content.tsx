@@ -1,4 +1,6 @@
 import { useState, useRef } from 'react'
+import styled from '@emotion/styled'
+
 import Summary from './Summary'
 import Experience from './Experience'
 import Education from './Education'
@@ -24,42 +26,46 @@ export default function Content(props: IProps) {
 
   if (visibleTab === 0) {
     return (
-      <div className='content-wrapper' ref={myRef}>
+      <ContentWrapper className='content-wrapper' ref={myRef}>
         <Contact hideContact={hideContact} toggleHideContact={setHideContact} />
         <div className='content'>
           <Summary />
           {/* <Skills /> */}
         </div>
-      </div>
+      </ContentWrapper>
     )
   } else if (visibleTab === 2) {
     return (
-      <div className='content-wrapper' ref={myRef}>
+      <ContentWrapper className='content-wrapper' ref={myRef}>
         <Contact hideContact={hideContact} toggleHideContact={setHideContact} />
         <div className='content'>
           <Projects />
         </div>
-      </div>
+      </ContentWrapper>
     )
   } else if (visibleTab === 1) {
     return (
-      <div className='content-wrapper' ref={myRef}>
+      <ContentWrapper className='content-wrapper' ref={myRef}>
         <Contact hideContact={hideContact} toggleHideContact={setHideContact} />
         <div className='content'>
           <Experience />
         </div>
-      </div>
+      </ContentWrapper>
     )
   } else if (visibleTab === 3) {
     return (
-      <div className='content-wrapper' ref={myRef}>
+      <ContentWrapper className='content-wrapper' ref={myRef}>
         <Contact hideContact={hideContact} toggleHideContact={setHideContact} />
         <div className='content'>
           <Education />
         </div>
-      </div>
+      </ContentWrapper>
     )
   } else {
     return <div>This tab has no data.</div>
   }
 }
+
+const ContentWrapper = styled.div`
+  margin-top: 16px;
+`

@@ -138,7 +138,7 @@ export default function Summary() {
 
   return (
     <div>
-      <div id='summary' style={{ marginTop: 16 }}>
+      <div id='summary'>
         <H1>
           <code
             style={{
