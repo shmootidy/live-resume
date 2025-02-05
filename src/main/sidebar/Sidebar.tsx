@@ -1,14 +1,14 @@
 // contains Contact, CurrentObsession, Skills
 
-import React, { Component } from "react";
-import Contact from "./Contact";
-import Skills from "./Skills";
-import CurrentObsession from "./CurrentObsession";
+import { Component } from 'react'
+import Contact from './Contact'
+import Skills from './Skills'
+import CurrentObsession from './CurrentObsession'
 
-import "./sidebar.scss";
+import './sidebar.scss'
 
 export default function Sidebar() {
-  return <div>nope</div>;
+  return <div>nope</div>
 }
 // export default class Sidebar extends Component {
 //   constructor(props) {

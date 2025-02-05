@@ -1,21 +1,6 @@
-// contains random faux-acronym and heart
-import React, { useState, useEffect } from 'react'
+import { useState, useEffect } from 'react'
 
 export default function Random() {
-  const randomQualities = [
-    'Thorough',
-    'Proactive',
-    'Concise',
-    'Reliable',
-    'Approachable',
-    'Creative',
-    'Resourceful',
-    'Knowledgeable',
-  ]
-    .map((a) => ({ sort: Math.random(), value: a }))
-    .sort((a, b) => a.sort - b.sort)
-    .map((a) => a.value)
-
   const testimonials = [
     'You make my job easy.', // Eric
     'I miss working with you.', // David

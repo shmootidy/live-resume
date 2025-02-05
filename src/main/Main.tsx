@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import { DateTime } from 'luxon'
 import Content from './content/Content'
 import Tabs from './name-title-tabs/Tabs'

@@ -1,64 +1,64 @@
-import React, { useState, useEffect } from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
+import { useState, useEffect } from 'react'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faChevronRight } from '@fortawesome/free-solid-svg-icons'
 
 const Contact = (props: any) => {
   const style = {
-    fontSize: "18px",
-    fontWeight: "bold",
-    margin: ".5rem 0 1rem",
-    color: "rgba(0,0,0,.8)",
-  };
-  const [seeMoreText, setText] = useState("[ see more + ]");
-  const [contactClass, setClass] = useState("see-more");
-  const [hideContact, setHideContact] = useState(true);
+    fontSize: '18px',
+    fontWeight: 'bold',
+    margin: '.5rem 0 1rem',
+    color: 'rgba(0,0,0,.8)',
+  }
+  const [seeMoreText, setText] = useState('[ see more + ]')
+  const [contactClass, setClass] = useState('see-more')
+  const [hideContact, setHideContact] = useState(true)
 
   useEffect(() => {
     if (props.hideContact !== hideContact) {
-      collapseContact();
+      collapseContact()
     }
-  });
+  })
 
   function handleToggle() {
     if (props.hideContact) {
-      setText("[ see less - ]");
-      props.toggleHideContact(false);
-      setHideContact(false);
-      setClass("see-less");
+      setText('[ see less - ]')
+      props.toggleHideContact(false)
+      setHideContact(false)
+      setClass('see-less')
     } else {
-      collapseContact();
+      collapseContact()
     }
   }
   function collapseContact() {
-    setText("[ see more + ]");
-    props.toggleHideContact(true);
-    setHideContact(true);
-    setClass("see-more");
+    setText('[ see more + ]')
+    props.toggleHideContact(true)
+    setHideContact(true)
+    setClass('see-more')
   }
   return (
-    <div className="sidebar">
-      <div className="contact">
-        <div className="sidebar-subtitle">
-          Contact{" "}
+    <div className='sidebar'>
+      <div className='contact'>
+        <div className='sidebar-subtitle'>
+          Contact{' '}
           <button
             onClick={handleToggle}
-            style={{ border: 0, background: "white", color: "inherit" }}
-            className="see-more"
+            style={{ border: 0, background: 'white', color: 'inherit' }}
+            className='see-more'
           >
             {seeMoreText}
           </button>
         </div>
         <a
-          href="mailto:shmooritchie@gmail.com?subject=I saw your resume!"
-          className="contact-bar"
-          id="email"
+          href='mailto:shmooritchie@gmail.com?subject=I saw your resume!'
+          className='contact-bar'
+          id='email'
         >
           <img
-            className="contact-icon absolute"
-            alt="Email icon"
-            src={require("../../assets/email.png")}
+            className='contact-icon absolute'
+            alt='Email icon'
+            src={require('../../assets/email.png')}
           />
-          <span className="contact-info">
+          <span className='contact-info'>
             <FontAwesomeIcon
               icon={faChevronRight}
               style={{ fontSize: 12, opacity: 0.3, marginRight: 6 }}
@@ -67,14 +67,14 @@ const Contact = (props: any) => {
           </span>
         </a>
       </div>
-      <div className={"contact collapseable-contact " + contactClass}>
-        <a href="tel:+1-604-616-0247" className="contact-bar" id="phone">
+      <div className={'contact collapseable-contact ' + contactClass}>
+        <a href='tel:+1-604-616-0247' className='contact-bar' id='phone'>
           <img
-            className="contact-icon absolute"
-            alt="Phone icon"
-            src={require("../../assets/phone.png")}
+            className='contact-icon absolute'
+            alt='Phone icon'
+            src={require('../../assets/phone.png')}
           />
-          <span className="contact-info">
+          <span className='contact-info'>
             <FontAwesomeIcon
               icon={faChevronRight}
               style={{ fontSize: 12, opacity: 0.3, marginRight: 6 }}
@@ -82,31 +82,31 @@ const Contact = (props: any) => {
             604.616.0247
           </span>
         </a>
-        <div style={{ marginLeft: ".25rem" }}>
-          <div style={{ borderBottom: "1px solid #e1e1e1" }}>
-            <div className="sidebar-subtitle">Linked In</div>
+        <div style={{ marginLeft: '.25rem' }}>
+          <div style={{ borderBottom: '1px solid #e1e1e1' }}>
+            <div className='sidebar-subtitle'>Linked In</div>
             <a
               style={style}
-              href="https://www.linkedin.com/in/shmoo-ritchie"
-              target="_blank"
-              rel="noopener noreferrer"
+              href='https://www.linkedin.com/in/shmoo-ritchie'
+              target='_blank'
+              rel='noopener noreferrer'
             >
-              <FontAwesomeIcon icon={["fab", "linkedin"]} />
-              <span style={{ marginLeft: ".5rem" }}>
+              <FontAwesomeIcon icon={['fab', 'linkedin']} />
+              <span style={{ marginLeft: '.5rem' }}>
                 linkedin.com/in/shmoo-ritchie
               </span>
             </a>
           </div>
-          <div style={{ borderBottom: "1px solid #e1e1e1" }}>
-            <div className="sidebar-subtitle">Repository</div>
+          <div style={{ borderBottom: '1px solid #e1e1e1' }}>
+            <div className='sidebar-subtitle'>Repository</div>
             <a
               style={style}
-              href="https://www.github.com/shmootidy"
-              target="_blank"
-              rel="noopener noreferrer"
+              href='https://www.github.com/shmootidy'
+              target='_blank'
+              rel='noopener noreferrer'
             >
-              <FontAwesomeIcon icon={["fab", "github"]} />
-              <span style={{ marginLeft: ".5rem" }}>github.com/shmootidy</span>
+              <FontAwesomeIcon icon={['fab', 'github']} />
+              <span style={{ marginLeft: '.5rem' }}>github.com/shmootidy</span>
             </a>
           </div>
           {/* <div>
@@ -118,7 +118,7 @@ const Contact = (props: any) => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Contact;
+export default Contact

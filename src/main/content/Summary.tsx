@@ -1,4 +1,3 @@
-import React from 'react'
 import styled from '@emotion/styled'
 import { H1, H2 } from '../../style/SharedComponents/SharedComponents'
 

@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react'
+import { useState, useRef } from 'react'
 import Summary from './Summary'
 import Experience from './Experience'
 import Education from './Education'

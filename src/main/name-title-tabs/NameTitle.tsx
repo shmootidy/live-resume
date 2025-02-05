@@ -1,13 +1,13 @@
-import React, { useEffect, useState } from "react";
-import Tabs from "./Tabs";
+import { useEffect, useState } from 'react'
+import Tabs from './Tabs'
 
-import "./name-title-tabs.scss";
+import './name-title-tabs.scss'
 
 interface IProps {
-  tabs: any;
-  tabToggle: any;
-  displayContent: any;
-  setMainTab: any;
+  tabs: any
+  tabToggle: any
+  displayContent: any
+  setMainTab: any
 }
 
 export default function NameTitle(props: IProps) {
@@ -29,12 +29,12 @@ export default function NameTitle(props: IProps) {
   // })
 
   return (
-    <span className="flex flex-column responsive-padding sticky name-title ntt">
-      <div className="flex flex-column name">
-        <span id="name">susannah ritchie (shmoo)</span>
-        <span id="title">
-          1.4.3 • <span className="green">Web Developer</span> • Van
-          <span className="hide-for-tiny-screens">couver</span>, BC
+    <span className='flex flex-column responsive-padding sticky name-title ntt'>
+      <div className='flex flex-column name'>
+        <span id='name'>susannah ritchie (shmoo)</span>
+        <span id='title'>
+          1.4.3 • <span className='green'>Web Developer</span> • Van
+          <span className='hide-for-tiny-screens'>couver</span>, BC
         </span>
       </div>
       {/* <Tabs 
@@ -55,5 +55,5 @@ export default function NameTitle(props: IProps) {
         nameTitleIsSticky={false}
       /> */}
     </span>
-  );
+  )
 }
