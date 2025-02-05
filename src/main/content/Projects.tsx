@@ -27,7 +27,11 @@ export default function Projects() {
         ) : null
         const projectContents = (
           <div>
-            <h3 style={{ margin: '0 8px' }}>{project.title.toUpperCase()}</h3>
+            <h3 style={{ margin: '0 8px' }}>
+              <a href={project.url} target='_blank' rel='nooopener noreferrer'>
+                {project.title.toUpperCase()}
+              </a>
+            </h3>
             <ProjectSubtitle>
               {project.subtitle}
               {awardDot}
@@ -75,17 +79,10 @@ export default function Projects() {
             })}
           </div>
         )
-        const projectWithOuter = project.url ? (
-          <a href={project.url} target='_blank' rel='nooopener noreferrer'>
-            {projectContents}
-          </a>
-        ) : (
-          <div>{projectContents}</div>
-        )
 
         return (
           <div className='project' key={i}>
-            {projectWithOuter}
+            {projectContents}
           </div>
         )
       })}
