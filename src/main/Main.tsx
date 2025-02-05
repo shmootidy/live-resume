@@ -2,7 +2,7 @@ import { useState } from 'react'
 
 import Content from './content/Content'
 import Tabs from './name-title-tabs/Tabs'
-import useGetTimeProgramming from './content/useGetTimeProgramming'
+import useGetTimeProgramming from '../Hooks/useGetTimeProgramming'
 
 import './main.scss'
 import './_responsive.scss'
