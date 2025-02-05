@@ -5,10 +5,6 @@ import { faChevronLeft } from '@fortawesome/free-solid-svg-icons'
 import useGetWorkExperience, { Job } from '../../Hooks/useGetWorkExperience'
 
 const Experience = () => {
-  function removeSpaces(input: string) {
-    return input.replace(/\s/g, '')
-  }
-
   const jobs = useGetWorkExperience()
 
   const [jobToDisplay, setJobToDisplay] = useState<Job | null>(null)
@@ -93,7 +89,7 @@ const Experience = () => {
                 <br />
                 <div>
                   <span className='pink'>class</span>
-                  {` ${removeSpaces(jobToDisplay.title)} {`}
+                  {` ${jobToDisplay.title.replace(/\s/g, '')} {`}
                 </div>
                 <div style={{ marginLeft: 16 }}>
                   {jobToDisplay.accomplishments.map((acc, i) => {
