@@ -24,46 +24,25 @@ export default function Content(props: IProps) {
     setHideContact(true)
   }
 
-  if (visibleTab === 0) {
-    return (
-      <ContentWrapper>
-        <Contact hideContact={hideContact} toggleHideContact={setHideContact} />
-        <div className='content'>
-          <Summary />
-          {/* <Skills /> */}
-        </div>
-      </ContentWrapper>
-    )
-  } else if (visibleTab === 2) {
-    return (
-      <ContentWrapper>
-        <Contact hideContact={hideContact} toggleHideContact={setHideContact} />
-        <div className='content'>
-          <Projects />
-        </div>
-      </ContentWrapper>
-    )
-  } else if (visibleTab === 1) {
-    return (
-      <ContentWrapper>
-        <Contact hideContact={hideContact} toggleHideContact={setHideContact} />
-        <div className='content'>
-          <Experience />
-        </div>
-      </ContentWrapper>
-    )
-  } else if (visibleTab === 3) {
-    return (
-      <ContentWrapper>
-        <Contact hideContact={hideContact} toggleHideContact={setHideContact} />
-        <div className='content'>
-          <Education />
-        </div>
-      </ContentWrapper>
-    )
-  } else {
-    return <div>This tab has no data.</div>
+  function getVisibleTabContents() {
+    if (visibleTab === 0) {
+      return <Summary />
+    } else if (visibleTab === 2) {
+      return <Projects />
+    } else if (visibleTab === 1) {
+      return <Experience />
+    } else if (visibleTab === 3) {
+      return <Education />
+    } else {
+      return <div>This tab has no data.</div>
+    }
   }
+  return (
+    <ContentWrapper>
+      <Contact hideContact={hideContact} toggleHideContact={setHideContact} />
+      <div className='content'>{getVisibleTabContents()}</div>
+    </ContentWrapper>
+  )
 }
 
 const ContentWrapper = styled.div`
