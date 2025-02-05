@@ -74,7 +74,7 @@ export default function Contact(props: IProps) {
       >
         <div style={{ marginLeft: '.25rem' }}>
           <div style={{ borderBottom: '1px solid #e1e1e1' }}>
-            <div className='sidebar-subtitle'>Linked In</div>
+            <SidebarSubtitle>Linked In</SidebarSubtitle>
             <ContactLink
               href='https://www.linkedin.com/in/shmoo-ritchie'
               target='_blank'
@@ -87,7 +87,7 @@ export default function Contact(props: IProps) {
             </ContactLink>
           </div>
           <div style={{ borderBottom: '1px solid #e1e1e1' }}>
-            <div className='sidebar-subtitle'>Repository</div>
+            <SidebarSubtitle>Repository</SidebarSubtitle>
             <ContactLink
               href='https://www.github.com/shmootidy'
               target='_blank'
