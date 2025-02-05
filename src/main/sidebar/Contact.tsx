@@ -11,7 +11,6 @@ interface IProps {
 export default function Contact(props: IProps) {
   const { isContactCollapsed, onToggleCollapseContact } = props
 
-  const [contactClass, setClass] = useState('see-more')
   const [hideContact, setHideContact] = useState(true)
 
   useEffect(() => {
@@ -24,15 +23,14 @@ export default function Contact(props: IProps) {
     if (isContactCollapsed) {
       onToggleCollapseContact(false)
       setHideContact(false)
-      setClass('see-less')
     } else {
       collapseContact()
     }
   }
+
   function collapseContact() {
     onToggleCollapseContact(true)
     setHideContact(true)
-    setClass('see-more')
   }
 
   return (
@@ -45,7 +43,7 @@ export default function Contact(props: IProps) {
             style={{ border: 0, background: 'white', color: 'inherit' }}
             className='see-more'
           >
-            {`[ see ${isContactCollapsed ? 'less -' : 'more +'} ]`}
+            {`[ see ${isContactCollapsed ? 'more +' : 'less -'} ]`}
           </button>
         </SidebarSubtitle>
         <a
@@ -67,7 +65,9 @@ export default function Contact(props: IProps) {
           </span>
         </a>
       </div>
-      <div className={'contact collapseable-contact ' + contactClass}>
+      <CollapseableContact
+        className={isContactCollapsed ? 'see-more' : 'see-less'}
+      >
         <div style={{ marginLeft: '.25rem' }}>
           <div style={{ borderBottom: '1px solid #e1e1e1' }}>
             <div className='sidebar-subtitle'>Linked In</div>
@@ -93,14 +93,8 @@ export default function Contact(props: IProps) {
               <span style={{ marginLeft: '.5rem' }}>github.com/shmootidy</span>
             </ContactLink>
           </div>
-          {/* <div>
-            <div className="sidebar-subtitle">Collaborators</div>
-            <div style={style}>
-              <img style={{width: '42px', height: '42px', minWidth: '42px', borderRadius: '4%'}} alt="avatar" src={require('../../assets/headshot.png')} />
-            </div>
-          </div> */}
         </div>
-      </div>
+      </CollapseableContact>
     </div>
   )
 }
@@ -127,4 +121,20 @@ const ContactLink = styled.a`
   font-weight: 600;
   margin: 0.5rem 0 1rem;
   color: rgba(0, 0, 0, 0.8);
+`
+
+const CollapseableContact = styled.div`
+  transition: max-height 0.2s ease-out;
+  background: white;
+  overflow: hidden;
+
+  &.see-more {
+    max-height: 0;
+    @media (min-width: 960px) {
+      max-height: unset;
+    }
+  }
+  &.see-less {
+    max-height: 345px;
+  }
 `
