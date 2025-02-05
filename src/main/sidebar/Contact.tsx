@@ -11,7 +11,6 @@ interface IProps {
 export default function Contact(props: IProps) {
   const { isContactCollapsed, onToggleCollapseContact } = props
 
-  const [seeMoreText, setText] = useState('[ see more + ]')
   const [contactClass, setClass] = useState('see-more')
   const [hideContact, setHideContact] = useState(true)
 
@@ -23,7 +22,6 @@ export default function Contact(props: IProps) {
 
   function handleToggle() {
     if (isContactCollapsed) {
-      setText('[ see less - ]')
       onToggleCollapseContact(false)
       setHideContact(false)
       setClass('see-less')
@@ -32,7 +30,6 @@ export default function Contact(props: IProps) {
     }
   }
   function collapseContact() {
-    setText('[ see more + ]')
     onToggleCollapseContact(true)
     setHideContact(true)
     setClass('see-more')
@@ -48,7 +45,7 @@ export default function Contact(props: IProps) {
             style={{ border: 0, background: 'white', color: 'inherit' }}
             className='see-more'
           >
-            {seeMoreText}
+            {`[ see ${isContactCollapsed ? 'less -' : 'more +'} ]`}
           </button>
         </SidebarSubtitle>
         <a
