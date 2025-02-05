@@ -7,13 +7,12 @@ export default function Education() {
   const education = useGetEducation()
 
   return (
-    <div id='education'>
+    <div>
       <H2>Education</H2>
       <div>
         {education.map((education, i) => {
           return (
             <div
-              className='education'
               key={i}
               style={{
                 marginTop: 16,
