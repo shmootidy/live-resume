@@ -2,6 +2,15 @@ import { useEffect, useState } from 'react'
 import { Octokit } from '@octokit/rest'
 import './projects.scss'
 
+const octokit = new Octokit()
+
+type GitHubRepo = Awaited<
+  ReturnType<typeof octokit.repos.listForUser>
+>['data'][0]
+type GitHubStarredRepo = Awaited<
+  ReturnType<typeof octokit.activity.listReposStarredByUser>
+>['data'][0]
+
 export interface Project {
   title: string
   subtitle: string
@@ -14,40 +23,53 @@ export interface Project {
 }
 
 export default function Projects() {
-  const [repos, setRepos] = useState<any>([])
-  const [readmes, setReadmes] = useState<any>([])
+  const [repos, setRepos] = useState<GitHubRepo[]>([])
+  const [starredRepos, setStarredRepos] = useState<GitHubStarredRepo[]>([])
+  const [readmes, setReadmes] = useState<{ [key: string]: string }>({})
+  const [starredReadmes, setStarredReadmes] = useState<{
+    [key: string]: string
+  }>({})
 
   useEffect(() => {
-    const octokit = new Octokit()
     octokit.repos
       .listForUser({ username: 'shmootidy' })
       .then(({ data }) => {
-        const filteredRepos = data.filter((repo) => !repo.fork)
-        setRepos(filteredRepos)
-        fetchReadmes(filteredRepos, octokit)
+        setRepos(data)
+        fetchReadmes(data, octokit, false)
       })
       .catch((err) => console.error('Error fetching repos!', err))
-    // fetch('https://api.github.com/users/shmootidy/repos')
-    //   .then((res) => res.json())
-    //   .then((data) => {
-    //     setRepos(data.filter((repo: any) => !repo.fork))
-    //   })
-    //   .catch((err) => console.error('error!', err))
+
+    octokit.activity
+      .listReposStarredByUser({ username: 'shmootidy' })
+      .then(({ data }) => {
+        setStarredRepos(data)
+        fetchReadmes(data, octokit, true)
+      })
+      .catch((err) => console.error('Error fetching repos!', err))
   }, [])
 
-  function fetchReadmes(repos, octokit) {
+  function fetchReadmes(repos, octokit, isStarred) {
     repos.forEach((repo) => {
       octokit.repos
         .getReadme({ owner: 'shmootidy', repo: repo.name })
         .then(({ data }) => {
           const decodedContent = atob(data.content)
-          setReadmes((prev) => ({ ...prev, [repo.name]: decodedContent }))
+          if (isStarred) {
+            setStarredReadmes((prev) => ({
+              ...prev,
+              [repo.name]: decodedContent,
+            }))
+          } else {
+            setReadmes((prev) => ({ ...prev, [repo.name]: decodedContent }))
+          }
         })
-        .catch((err) => console.error(`Error fetching README for ${repo.name}`))
+        .catch((err) =>
+          console.error(`Error fetching README for ${repo.name}.`, err)
+        )
     })
   }
 
-  console.log(repos, readmes) // .map((r) => r.name))
+  console.log(repos, readmes, starredRepos, starredReadmes)
   const projects: Project[] = [
     {
       title: "Medusa's Revenge",
