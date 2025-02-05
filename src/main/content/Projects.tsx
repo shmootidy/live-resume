@@ -1,3 +1,5 @@
+import { useEffect, useState } from 'react'
+import { Octokit } from '@octokit/rest'
 import './projects.scss'
 
 export interface Project {
@@ -12,6 +14,40 @@ export interface Project {
 }
 
 export default function Projects() {
+  const [repos, setRepos] = useState<any>([])
+  const [readmes, setReadmes] = useState<any>([])
+
+  useEffect(() => {
+    const octokit = new Octokit()
+    octokit.repos
+      .listForUser({ username: 'shmootidy' })
+      .then(({ data }) => {
+        const filteredRepos = data.filter((repo) => !repo.fork)
+        setRepos(filteredRepos)
+        fetchReadmes(filteredRepos, octokit)
+      })
+      .catch((err) => console.error('Error fetching repos!', err))
+    // fetch('https://api.github.com/users/shmootidy/repos')
+    //   .then((res) => res.json())
+    //   .then((data) => {
+    //     setRepos(data.filter((repo: any) => !repo.fork))
+    //   })
+    //   .catch((err) => console.error('error!', err))
+  }, [])
+
+  function fetchReadmes(repos, octokit) {
+    repos.forEach((repo) => {
+      octokit.repos
+        .getReadme({ owner: 'shmootidy', repo: repo.name })
+        .then(({ data }) => {
+          const decodedContent = atob(data.content)
+          setReadmes((prev) => ({ ...prev, [repo.name]: decodedContent }))
+        })
+        .catch((err) => console.error(`Error fetching README for ${repo.name}`))
+    })
+  }
+
+  console.log(repos, readmes) // .map((r) => r.name))
   const projects: Project[] = [
     {
       title: "Medusa's Revenge",
