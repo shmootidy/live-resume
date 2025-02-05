@@ -1,7 +1,7 @@
 import styled from '@emotion/styled'
 import { useState, useEffect } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faChevronRight } from '@fortawesome/free-solid-svg-icons'
+import { faChevronRight, faAt } from '@fortawesome/free-solid-svg-icons'
 
 interface IProps {
   isContactCollapsed: boolean
@@ -38,32 +38,44 @@ export default function Contact(props: IProps) {
       <div style={{ margin: 0 }}>
         <SidebarSubtitle>
           Contact{' '}
-          <button
-            onClick={handleToggle}
-            style={{ border: 0, background: 'white', color: 'inherit' }}
-            className='see-more'
-          >
+          <SeeMoreButton onClick={handleToggle}>
             {`[ see ${isContactCollapsed ? 'more +' : 'less -'} ]`}
-          </button>
+          </SeeMoreButton>
         </SidebarSubtitle>
-        <a
+        <EmailBarLink
           href='mailto:shmooritchie@gmail.com?subject=I saw your resume!'
-          className='contact-bar'
           id='email'
         >
-          <img
-            className='contact-icon absolute'
-            alt='Email icon'
-            src={require('../../assets/email.png')}
-          />
-          <span className='contact-info'>
+          <div
+            style={{
+              color: 'white',
+              background: '#e1e1e1',
+              width: 35,
+              display: 'flex',
+              alignContent: 'center',
+            }}
+          >
+            <FontAwesomeIcon
+              icon={faAt}
+              style={{ height: 20, margin: 'auto' }}
+            />
+          </div>
+          <span
+            className='contact-info'
+            style={{
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              margin: 'auto',
+            }}
+          >
             <FontAwesomeIcon
               icon={faChevronRight}
               style={{ fontSize: 12, opacity: 0.3, marginRight: 6 }}
             />
             shmooritchie@gmail.com
           </span>
-        </a>
+        </EmailBarLink>
       </div>
       <CollapseableContact
         className={isContactCollapsed ? 'see-more' : 'see-less'}
@@ -105,14 +117,14 @@ const SidebarSubtitle = styled.div`
   -webkit-font-smoothing: antialiased;
   font-weight: 700;
   font-size: 1rem;
+`
 
-  .see-more {
-    border: 0;
-    background: white;
-    color: inherit;
-    @media (min-width: 960px) {
-      display: none;
-    }
+const SeeMoreButton = styled.button`
+  border: 0;
+  background: white;
+  color: inherit;
+  @media (min-width: 960px) {
+    display: none;
   }
 `
 
@@ -137,4 +149,21 @@ const CollapseableContact = styled.div`
   &.see-less {
     max-height: 345px;
   }
+`
+
+const EmailBarLink = styled.a`
+  border: 1px #e8e8e8 solid;
+  font-family: 'Fira Mono';
+  max-width: 95vw;
+  line-height: 24px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  font-size: 0.875rem;
+  margin-bottom: 1rem;
+  color: rgba(0, 0, 0, 0.8);
+  letter-spacing: 0px;
+  border-radius: 0.25rem;
+  position: relative;
+  display: flex;
+  height: 35px;
 `
