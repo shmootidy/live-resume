@@ -1,6 +1,7 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faAt, faPhoneSquare } from '@fortawesome/free-solid-svg-icons'
 import './footer.scss'
+import { ColouredBanner } from '../SharedComponents/StyledComponents'
 
 export default function Footer() {
   // const points = "5.8,6.06 21.52,6.06 21.52,9.98 17.58,9.98 17.59,13 21.52,13 21.52,21.75 5.8,21.75 5.8,18.5 13.67,18.5 13.67,15.5 5.8,15.5"
@@ -43,7 +44,7 @@ export default function Footer() {
           <FontAwesomeIcon icon={['fab', 'github']} />
         </a>
       </div>
-      <div id='footer-banner'></div>
+      <ColouredBanner />
     </div>
   )
 }

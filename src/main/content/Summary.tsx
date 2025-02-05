@@ -1,5 +1,5 @@
 import styled from '@emotion/styled'
-import { H1, H2 } from '../../style/SharedComponents/SharedComponents'
+import { H1, H2 } from '../../SharedComponents/StyledComponents'
 
 import useGetTimeProgramming from './useGetTimeProgramming'
 
