@@ -1,15 +1,5 @@
-import { useEffect, useState } from 'react'
-import { Octokit } from '@octokit/rest'
+import useGetGithubRepos from '../../Hooks/useGetGithubRepos'
 import './projects.scss'
-
-const octokit = new Octokit()
-
-type GitHubRepo = Awaited<
-  ReturnType<typeof octokit.repos.listForUser>
->['data'][0]
-type GitHubStarredRepo = Awaited<
-  ReturnType<typeof octokit.activity.listReposStarredByUser>
->['data'][0]
 
 export interface Project {
   title: string
@@ -23,53 +13,10 @@ export interface Project {
 }
 
 export default function Projects() {
-  const [repos, setRepos] = useState<GitHubRepo[]>([])
-  const [starredRepos, setStarredRepos] = useState<GitHubStarredRepo[]>([])
-  const [readmes, setReadmes] = useState<{ [key: string]: string }>({})
-  const [starredReadmes, setStarredReadmes] = useState<{
-    [key: string]: string
-  }>({})
+  const { starredReadmes, starredRepos, isLoading, hasError } =
+    useGetGithubRepos()
 
-  useEffect(() => {
-    octokit.repos
-      .listForUser({ username: 'shmootidy' })
-      .then(({ data }) => {
-        setRepos(data)
-        fetchReadmes(data, octokit, false)
-      })
-      .catch((err) => console.error('Error fetching repos!', err))
-
-    octokit.activity
-      .listReposStarredByUser({ username: 'shmootidy' })
-      .then(({ data }) => {
-        setStarredRepos(data)
-        fetchReadmes(data, octokit, true)
-      })
-      .catch((err) => console.error('Error fetching repos!', err))
-  }, [])
-
-  function fetchReadmes(repos, octokit, isStarred) {
-    repos.forEach((repo) => {
-      octokit.repos
-        .getReadme({ owner: 'shmootidy', repo: repo.name })
-        .then(({ data }) => {
-          const decodedContent = atob(data.content)
-          if (isStarred) {
-            setStarredReadmes((prev) => ({
-              ...prev,
-              [repo.name]: decodedContent,
-            }))
-          } else {
-            setReadmes((prev) => ({ ...prev, [repo.name]: decodedContent }))
-          }
-        })
-        .catch((err) =>
-          console.error(`Error fetching README for ${repo.name}.`, err)
-        )
-    })
-  }
-
-  console.log(repos, readmes, starredRepos, starredReadmes)
+  console.log(starredRepos, starredReadmes, isLoading, hasError)
   const projects: Project[] = [
     {
       title: "Medusa's Revenge",
