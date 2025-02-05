@@ -13,18 +13,7 @@ export default function Summary() {
     <div>
       <div id='summary'>
         <H1>
-          <code
-            style={{
-              fontSize: 36,
-              background: 'rgb(247, 247, 247)',
-              fontWeight: 700,
-              padding: '0 5px',
-              color: 'rgb(17, 17, 17)',
-            }}
-            className='highlight'
-          >
-            shmoo
-          </code>
+          <CodeShmoo>shmoo</CodeShmoo>
         </H1>
         <p>
           Hi! I'm Shmoo. I'm an energetic, friendly software developer dedicated
@@ -97,15 +86,7 @@ export default function Summary() {
       </div>
       <div>
         <H2>Usage</H2>
-        <div
-          style={{
-            margin: '16px 0',
-            fontSize: 16,
-            background: 'rgb(247, 247, 247)',
-            borderRadius: 2,
-            padding: '13px 15px',
-          }}
-        >
+        <Usage>
           <code>
             <div style={{ marginBottom: 16 }}>
               <span style={{ color: 'rgb(215, 58, 73)' }}>import</span>
@@ -137,7 +118,7 @@ export default function Summary() {
               <div>{`}`}</div>
             </div>
           </code>
-        </div>
+        </Usage>
       </div>
     </div>
   )
@@ -149,8 +130,28 @@ const RedLinkList = styled.ul`
   font-weight: 600;
   font-size: 20px;
 `
+
 const RedLinkItem = styled.li`
   display: inline-block;
   padding: 4px;
   margin-right: 4px;
+`
+
+const CodeShmoo = styled.code`
+  font-family: 'Fira Mono';
+  line-height: 1.15;
+  border-radius: 3px;
+  font-size: 36px;
+  background: #f7f7f7;
+  font-weight: 700;
+  padding: 0 5px;
+  color: #111111;
+`
+
+const Usage = styled.div`
+  margin: 16px 0;
+  font-size: 16px;
+  background: #f7f7f7;
+  border-radius: 2px;
+  padding: 13px 15px;
 `
