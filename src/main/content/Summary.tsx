@@ -198,18 +198,22 @@ export default function Summary() {
                 {s.list.map((l, j) => {
                   return (
                     <RedLinkItem key={`${i}${j}`}>
-                      <a
-                        href={l.link}
-                        target='_blank'
-                        rel='noreferrer'
-                        title={
-                          l.link.includes('npmjs.com')
-                            ? "This will take you to a lookalike page. Don't be alarmed!"
-                            : ''
-                        }
-                      >
-                        {l.label}
-                      </a>
+                      {l.link ? (
+                        <a
+                          href={l.link}
+                          target='_blank'
+                          rel='noreferrer'
+                          title={
+                            l.link.includes('npmjs.com')
+                              ? "This will take you to a lookalike page. Don't be alarmed!"
+                              : ''
+                          }
+                        >
+                          {l.label}
+                        </a>
+                      ) : (
+                        l.label
+                      )}
                     </RedLinkItem>
                   )
                 })}
