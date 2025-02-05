@@ -105,12 +105,9 @@ export default function Summary() {
                   justifyContent: 'space-evenly',
                 }}
               >
-                <a
-                  href='mailto:shmooritchie@gmail.com?subject=I saw your resume!'
-                  className='contact-shmoo-button'
-                >
+                <ContactShmooButton href='mailto:shmooritchie@gmail.com?subject=I saw your resume!'>
                   Click to email Shmoo
-                </a>
+                </ContactShmooButton>
               </div>
               <div>{`}`}</div>
             </div>
@@ -151,4 +148,19 @@ const Usage = styled.div`
   background: #f7f7f7;
   border-radius: 2px;
   padding: 13px 15px;
+`
+
+const ContactShmooButton = styled.a`
+  padding: 16px;
+  border: 1px solid #ececec;
+  border-radius: 4px;
+  background-color: white;
+  transition: background-color 0.5s;
+  text-align: center;
+  &:hover {
+    background-color: #ececec;
+  }
+  &:active {
+    background-color: #454545;
+  }
 `
