@@ -198,7 +198,7 @@ export default function Summary() {
                 {s.list.map((l, j) => {
                   return (
                     <RedLinkItem key={`${i}${j}`}>
-                      {l.link ? (
+                      {/* {l.link ? (
                         <a
                           href={l.link}
                           target='_blank'
@@ -211,9 +211,9 @@ export default function Summary() {
                         >
                           {l.label}
                         </a>
-                      ) : (
-                        l.label
-                      )}
+                      ) : ( */}
+                      {l.label}
+                      {/* )} */}
                     </RedLinkItem>
                   )
                 })}
