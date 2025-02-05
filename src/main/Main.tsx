@@ -44,7 +44,7 @@ export default function Main() {
             }}
           >
             <span
-              title={`I've been a developing software for ${years} years, ${months} months and ${days} days. After long, careful consideration, I decided to leave teaching and start a new career path. In October 2018, I started prepping for bootcamp at Lighthouse Labs. I was instantly obsessed.`}
+              title={`I've been a developing software for ${years} years, ${months} months and ${days} days. After careful consideration, I decided to leave teaching and start a new career path. In October 2018, I started prepping for bootcamp at Lighthouse Labs. I was instantly obsessed.`}
               style={{ cursor: 'help' }}
             >{`${years}.${months}.${days}`}</span>{' '}
             • <span style={{ color: '#14865c' }}>Software Dev</span> •
