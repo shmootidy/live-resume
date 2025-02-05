@@ -7,7 +7,7 @@ import Education from './Education'
 import Projects from './Projects'
 import Contact from '../sidebar/Contact'
 
-import './content.scss'
+// import './content.scss'
 
 interface IProps {
   visibleTab: number

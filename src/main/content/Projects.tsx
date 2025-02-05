@@ -1,7 +1,7 @@
 import styled from '@emotion/styled'
 // import useGetGithubRepos from '../../Hooks/useGetGithubRepos'
 import useGetProjects from '../../Hooks/useGetProjects'
-import './projects.scss'
+// import './projects.scss'
 import { GreenText, H2 } from '../../SharedComponents/StyledComponents'
 
 export default function Projects() {

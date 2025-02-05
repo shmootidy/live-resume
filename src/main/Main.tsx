@@ -4,9 +4,9 @@ import Content from './content/Content'
 import Tabs from './name-title-tabs/Tabs'
 import useGetTimeProgramming from '../Hooks/useGetTimeProgramming'
 
-import './main.scss'
-import './_responsive.scss'
-import './sidebar/sidebar.scss'
+// import './main.scss'
+// import './_responsive.scss'
+// import './sidebar/sidebar.scss'
 
 export default function Main() {
   const [selectedTabIndex, setSelectedTabIndex] = useState<number>(0)
@@ -51,7 +51,7 @@ export default function Main() {
             Vancouver, BC
           </div>
         </div>
-        <div className='flex flex-column' id='main'>
+        <div style={{ display: 'flex', flexDirection: 'column' }} id='main'>
           <Tabs
             selectedTab={selectedTabIndex}
             onChangeTab={setSelectedTabIndex}
