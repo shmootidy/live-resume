@@ -111,9 +111,6 @@ export default function Summary() {
                 >
                   Click to email Shmoo
                 </a>
-                <a href='tel:+1-604-616-0247' className='contact-shmoo-button'>
-                  Click to call Shmoo
-                </a>
               </div>
               <div>{`}`}</div>
             </div>

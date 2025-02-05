@@ -1,6 +1,6 @@
 .sidebar-subtitle {
-  color: rgba(0, 0, 0, .5);
-  margin: 1rem 0 .875rem;
+  color: rgba(0, 0, 0, 0.5);
+  margin: 1rem 0 0.875rem;
   -webkit-font-smoothing: antialiased;
   font-weight: 700;
   font-size: 1rem;
@@ -18,7 +18,7 @@
   margin: 0;
 }
 .collapseable-contact {
-  transition: max-height .2s ease-out;
+  transition: max-height 0.2s ease-out;
   background: white;
   overflow: hidden;
 
@@ -29,55 +29,55 @@
     }
   }
   &.see-less {
-    max-height: 345px;;
+    max-height: 345px;
   }
 }
 .contact-bar {
   border: 1px #e8e8e8 solid;
   border-left: 35px #e1e1e1 solid;
-  font-family: "Fira Mono";
+  font-family: 'Fira Mono';
   max-width: 95vw;
   line-height: 24px;
   white-space: nowrap;
   text-overflow: ellipsis;
-  font-size: .875rem;
+  font-size: 0.875rem;
   margin-bottom: 1rem;
-  color: rgba(0, 0, 0, .8);
+  color: rgba(0, 0, 0, 0.8);
   letter-spacing: 0px;
-  padding: .35rem 1rem .2rem;
-  border-radius: .25rem;
+  padding: 0.35rem 1rem 0.2rem;
+  border-radius: 0.25rem;
   position: relative;
 }
-.mobile-contact {
-  .contact {
-    display: flex;
-    justify-content: space-around;
-    overflow: hidden;
-    position: relative;
-    top: -40px;
-    height: 0;
-    margin: 0;
-    transition: all .5s;
-  }
-  .sidebar-subtitle {
-    display: none;
-  }
-  .contact-bar {
-    border: 0;
-    background: #e1e1e1;
-    margin: 0;
-    padding: .35rem .5rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .contact-info {
-    display: none;
-  }
-  img.contact-icon.absolute {
-    position: static;
-  }
-}
+// .mobile-contact {
+//   .contact {
+//     display: flex;
+//     justify-content: space-around;
+//     overflow: hidden;
+//     position: relative;
+//     top: -40px;
+//     height: 0;
+//     margin: 0;
+//     transition: all .5s;
+//   }
+//   .sidebar-subtitle {
+//     display: none;
+//   }
+//   .contact-bar {
+//     border: 0;
+//     background: #e1e1e1;
+//     margin: 0;
+//     padding: .35rem .5rem;
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//   }
+//   .contact-info {
+//     display: none;
+//   }
+//   img.contact-icon.absolute {
+//     position: static;
+//   }
+// }
 
 .contact-icon {
   height: 1.5rem;
@@ -85,8 +85,8 @@
 }
 
 .current-obsession {
-  padding: 0 .5rem .25rem 0;
-  border-bottom: 2px solid #EAD4FF;
+  padding: 0 0.5rem 0.25rem 0;
+  border-bottom: 2px solid #ead4ff;
   /* darker purple: #9826FF or maybe #8956FF */
   /* more specifically: rgb(137, 86, 255) and rgba(137, 86, 255, .2) */
 }
@@ -94,7 +94,7 @@
 .obsession-text {
   text-align: left;
   font-size: 1.25rem;
-  color: rgba(0, 0, 0, .8);
+  color: rgba(0, 0, 0, 0.8);
   font-family: 'Source Sans Pro';
   font-weight: 600;
 }
@@ -108,19 +108,19 @@
 }
 
 .skill-subtitle {
-  padding-bottom: .5rem;
-  margin: .5rem 0;
+  padding-bottom: 0.5rem;
+  margin: 0.5rem 0;
 }
 
 .skills-list {
-  padding-bottom: .5rem;
+  padding-bottom: 0.5rem;
   color: red;
   display: flex;
   flex-wrap: wrap;
 }
 
 .skill-items {
-  margin-right: .875rem;
+  margin-right: 0.875rem;
 }
 
 #sidebar {

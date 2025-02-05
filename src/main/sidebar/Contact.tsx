@@ -68,20 +68,6 @@ export default function Contact(props: IProps) {
         </a>
       </div>
       <div className={'contact collapseable-contact ' + contactClass}>
-        <a href='tel:+1-604-616-0247' className='contact-bar' id='phone'>
-          <img
-            className='contact-icon absolute'
-            alt='Phone icon'
-            src={require('../../assets/phone.png')}
-          />
-          <span className='contact-info'>
-            <FontAwesomeIcon
-              icon={faChevronRight}
-              style={{ fontSize: 12, opacity: 0.3, marginRight: 6 }}
-            />
-            604.616.0247
-          </span>
-        </a>
         <div style={{ marginLeft: '.25rem' }}>
           <div style={{ borderBottom: '1px solid #e1e1e1' }}>
             <div className='sidebar-subtitle'>Linked In</div>

@@ -1,6 +1,6 @@
 import styled from '@emotion/styled'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faAt, faPhoneSquare } from '@fortawesome/free-solid-svg-icons'
+import { faAt } from '@fortawesome/free-solid-svg-icons'
 
 import { ColouredBanner } from '../SharedComponents/StyledComponents'
 
@@ -19,15 +19,11 @@ export default function Footer() {
           <a href='mailto:shmooritchie@gmail.com?subject=I saw your resume!'>
             shmooritchie@gmail.com
           </a>
-          <a href='tel:+1-604-616-0247'>604.616.0247</a>
         </FooterColumn>
       </FooterContent>
       <FooterIcons>
         <a href='mailto:shmooritchie@gmail.com?subject=I saw your resume!'>
           <FontAwesomeIcon icon={faAt} />
-        </a>
-        <a href='tel:+1-604-616-0247'>
-          <FontAwesomeIcon icon={faPhoneSquare} />
         </a>
         <a
           href='https://www.linkedin.com/in/shmoo-ritchie'
