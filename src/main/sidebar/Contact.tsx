@@ -61,12 +61,10 @@ export default function Contact(props: IProps) {
             />
           </div>
           <span
-            className='contact-info'
             style={{
               display: 'flex',
               alignItems: 'center',
-              justifyContent: 'center',
-              margin: 'auto',
+              margin: 10,
             }}
           >
             <FontAwesomeIcon
