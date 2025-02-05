@@ -50,8 +50,8 @@ export default function useGetProjects() {
         // new thing I learned: svg, React Hooks, IntersectionObserver, FontAwesome components
       },
       techStack: {
-        framework: 'react.js',
-        styling: 'SASS',
+        framework: 'react19',
+        styling: 'emotion',
         hosting: 'github',
       },
       url: 'https://shmootidy.github.io/live-resume/',
