@@ -12,7 +12,7 @@ import {
   // faBugSlash,
   // faFolderOpen,
   // faGears,
-  faTableList,
+  // faTableList,
 } from '@fortawesome/free-solid-svg-icons'
 
 import styled from '@emotion/styled'
