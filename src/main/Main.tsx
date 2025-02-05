@@ -4,10 +4,6 @@ import Content from './content/Content'
 import Tabs from './name-title-tabs/Tabs'
 import useGetTimeProgramming from '../Hooks/useGetTimeProgramming'
 
-// import './main.scss'
-// import './_responsive.scss'
-// import './sidebar/sidebar.scss'
-
 export default function Main() {
   const [selectedTabIndex, setSelectedTabIndex] = useState<number>(0)
   const { years, months, days } = useGetTimeProgramming()
