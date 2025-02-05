@@ -1,6 +1,6 @@
 import { useGetEducation } from '../../Hooks/useGetEducation'
 
-const Education = () => {
+export default function Education() {
   const education = useGetEducation()
 
   return (
@@ -43,5 +43,3 @@ const Education = () => {
     </div>
   )
 }
-
-export default Education

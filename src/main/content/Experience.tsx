@@ -4,7 +4,7 @@ import { faFileLines } from '@fortawesome/free-regular-svg-icons'
 import { faChevronLeft } from '@fortawesome/free-solid-svg-icons'
 import useGetWorkExperience, { Job } from '../../Hooks/useGetWorkExperience'
 
-const Experience = () => {
+export default function Experience() {
   const jobs = useGetWorkExperience()
 
   const [jobToDisplay, setJobToDisplay] = useState<Job | null>(null)
@@ -164,5 +164,3 @@ const Experience = () => {
     </div>
   )
 }
-
-export default Experience
