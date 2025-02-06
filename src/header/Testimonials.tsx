@@ -25,15 +25,21 @@ export default function Testimonials() {
         <Heart>❤</Heart>
         <MessyHair>Messy Hair • Tidy Code</MessyHair>
       </div>
-      <div
-        style={{
-          fontWeight: 600,
-          cursor: 'help',
-        }}
+      <span
+        style={{ cursor: 'help', textAlign: 'right' }}
         title='Some lovely things former colleagues, team leads and product managers have said to me over the years.'
       >
-        {testimonials[testimonialIndex]}
-      </div>
+        <div
+          style={{
+            fontWeight: 600,
+          }}
+        >
+          {testimonials[testimonialIndex].quote}
+        </div>
+        <div style={{ fontSize: 8 }}>
+          {`- a former ${testimonials[testimonialIndex].speaker}`}
+        </div>
+      </span>
     </TestimonialBanner>
   )
 }
