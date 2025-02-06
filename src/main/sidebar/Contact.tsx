@@ -46,9 +46,7 @@ export default function Contact(props: IProps) {
           href='mailto:shmooritchie@gmail.com?subject=I saw your resume!'
           id='email'
         >
-          <span
-            className='at-icon' // this one is new
-          >
+          <span className='at-icon'>
             <FontAwesomeIcon
               icon={faAt}
               style={{ height: 20, margin: 'auto' }}
@@ -70,7 +68,7 @@ export default function Contact(props: IProps) {
         </EmailBarLink>
       </div>
       <CollapseableContact
-        className={isContactCollapsed ? 'see-more' : 'see-less'} // these are fine too
+        className={isContactCollapsed ? 'see-more' : 'see-less'}
       >
         <div style={{ marginLeft: '.25rem' }}>
           <div style={{ borderBottom: '1px solid #e1e1e1' }}>

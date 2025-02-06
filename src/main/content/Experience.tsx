@@ -60,7 +60,6 @@ export default function Experience() {
                 <FontAwesomeIcon icon={faChevronLeft} />
                 <FontAwesomeIcon icon={faChevronLeft} />
               </span>
-              {/* this one is ok */}
               <span className='back'>Back</span>
             </ExperienceButton>
             <div>{jobToDisplay.duration.toLowerCase()}</div>
