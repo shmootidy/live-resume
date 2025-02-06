@@ -1,9 +1,8 @@
-import React from 'react'
-import ReactDOM from 'react-dom'
+import { createRoot } from 'react-dom/client'
 import Header from './header/Header'
 import Main from './main/Main'
-import Footer from './footer/Footer';
-import './index.scss'
+import Footer from './footer/Footer'
+import './index.css'
 // polyfills
 import './polyfill'
 import 'intersection-observer'
@@ -23,4 +22,6 @@ const Resume = () => {
   )
 }
 
-ReactDOM.render(<Resume />, document.getElementById('root'))
+const container = document.getElementById('root')
+const root = createRoot(container)
+root.render(<Resume />)
