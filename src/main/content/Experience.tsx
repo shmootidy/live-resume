@@ -7,18 +7,27 @@ import {
 } from '@fortawesome/free-regular-svg-icons'
 import { faChevronLeft } from '@fortawesome/free-solid-svg-icons'
 import ExperienceFileNavigation from './ExperienceFileNavigation'
+import ExperienceFileDetails from './ExperienceFileDetails'
 
 export default function Experience() {
   const [selectedDir, setSelectedDir] = useState('')
   const [selectedFile, setSelectedFile] = useState('')
 
   return (
-    <ExperienceFileNavigation
-      selectedDir={selectedDir}
-      selectedFile={selectedFile}
-      onSelectDir={setSelectedDir}
-      onSelectFile={setSelectedFile}
-    />
+    <>
+      <ExperienceFileNavigation
+        selectedDir={selectedDir}
+        selectedFile={selectedFile}
+        onSelectDir={setSelectedDir}
+        onSelectFile={setSelectedFile}
+      />
+      {selectedFile ? (
+        <ExperienceFileDetails
+          selectedDir={selectedDir}
+          selectedFile={selectedFile}
+        />
+      ) : null}
+    </>
   )
 }
 const ExperienceDetailsLineNumbers = styled.pre`
