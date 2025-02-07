@@ -33,18 +33,28 @@ const SkullIcon = styled(FontAwesomeIcon)<{ color: string }>`
   font-size: 100px;
   color: ${({ color }) => color};
 
-  --a1: conic-gradient(rgba(0, 0, 0, 1) 0deg 90deg, transparent 90deg 360deg);
+  --a1: conic-gradient(
+    from 0deg at 50% 60%,
+    rgba(0, 0, 0, 1) 0deg 70deg,
+    transparent 70deg 360deg
+  );
   --a2: conic-gradient(
-    transparent 0deg 90deg,
-    rgba(0, 0, 0, 1) 90deg 180deg,
-    transparent 180deg 90deg
+    from 0deg at 50% 60%,
+    transparent 0deg 70deg,
+    rgba(0, 0, 0, 1) 70deg 180deg,
+    transparent 180deg 70deg
   );
   --a3: conic-gradient(
+    from 0deg at 50% 60%,
     transparent 0deg 180deg,
-    rgba(0, 0, 0, 1) 180deg 270deg,
-    transparent 270deg 360deg
+    rgba(0, 0, 0, 1) 180deg 290deg,
+    transparent 290deg 360deg
   );
-  --a4: conic-gradient(transparent 0deg 270deg, rgba(0, 0, 0, 1) 270deg 360deg);
+  --a4: conic-gradient(
+    from 0deg at 50% 60%,
+    transparent 0deg 290deg,
+    rgba(0, 0, 0, 1) 290deg 360deg
+  );
 
   &:nth-child(1) {
     mask-image: var(--a1);
