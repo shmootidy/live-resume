@@ -1,22 +1,13 @@
 import styled from '@emotion/styled'
+import { MessageWrapper } from './StyledComponents'
 
 export default function LoadingSquares() {
   return (
-    <DotsWrapper>
+    <MessageWrapper>
       <Dots />
-    </DotsWrapper>
+    </MessageWrapper>
   )
 }
-
-const DotsWrapper = styled.div`
-  display: grid;
-  place-content: center;
-  margin-top: 16px;
-
-  @media (min-width: 960px) {
-    margin-top: 250px;
-  }
-`
 
 const Dots = styled.div`
   --c1: #ffcd3a33;

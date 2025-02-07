@@ -1,6 +1,7 @@
 import styled from '@emotion/styled'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSkullCrossbones } from '@fortawesome/free-solid-svg-icons'
+import { MessageWrapper } from './StyledComponents'
 
 export default function ErrorSkull() {
   return (
@@ -11,23 +12,13 @@ export default function ErrorSkull() {
   )
 }
 
-const ErrorSkullWrapper = styled.div`
+const ErrorSkullWrapper = styled(MessageWrapper)`
   --c1: #ffcd3a33;
   --c2: #c836c333;
   --c3: #cb383733;
   --c4: #8956ff33;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin-top: 16px;
   border-radius: 50%;
   background: white;
-
-  @media (min-width: 960px) {
-    margin-top: 250px;
-  }
 
   color: var(--c1);
   animation: color-change 5s linear infinite;

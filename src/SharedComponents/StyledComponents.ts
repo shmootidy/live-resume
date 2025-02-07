@@ -30,3 +30,15 @@ export const PurpleText = styled.span`
 export const BlueText = styled.span`
   color: rgb(0, 134, 179);
 `
+
+export const MessageWrapper = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 16px;
+
+  @media (min-width: 960px) {
+    margin-top: 250px;
+  }
+`
