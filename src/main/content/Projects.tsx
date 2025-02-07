@@ -3,16 +3,12 @@ import ReactMarkdown from 'react-markdown'
 import remarkGfm from 'remark-gfm'
 
 import useGetGithubRepos from '../../Hooks/useGetGithubRepos'
-import useGetProjects from '../../Hooks/useGetProjects'
 import { GreenText, H2 } from '../../SharedComponents/StyledComponents'
+import LoadingSpinner from '../../SharedComponents/LoadingSpinner'
 
 export default function Projects() {
   const { starredReadmes, starredRepos, isLoading, hasError } =
     useGetGithubRepos()
-
-  console.log(starredRepos, starredReadmes, isLoading, hasError)
-
-  const projects = useGetProjects()
 
   const getGitHubRawUrl = (repoName: string, src: string) => {
     if (!src.startsWith('http')) {
@@ -21,28 +17,35 @@ export default function Projects() {
     return src
   }
 
+  function getReadmeTextDisplay(readmeText: string, repoName: string) {
+    console.log(repoName)
+    // console.log(readmeText.split('\n'))
+    const lines = readmeText.split('\n')
+    return lines.slice(0, 5).join('\n')
+    // return readmeText
+  }
+
   return (
     <div>
       <H2>Projects</H2>
+      {!isLoading ? <LoadingSpinner /> : null}
       {Object.keys(starredReadmes).map((repoName) => {
         return (
           <div key={repoName}>
-            <details>
-              <ReactMarkdown
-                remarkPlugins={[remarkGfm]}
-                components={{
-                  img: ({ src, alt }) => (
-                    <img
-                      src={getGitHubRawUrl(repoName, src || '')}
-                      alt={alt || ''}
-                      style={{ maxWidth: '100%' }}
-                    />
-                  ),
-                }}
-              >
-                {starredReadmes[repoName]}
-              </ReactMarkdown>
-            </details>
+            <ReactMarkdown
+              remarkPlugins={[remarkGfm]}
+              components={{
+                img: ({ src, alt }) => (
+                  <img
+                    src={getGitHubRawUrl(repoName, src || '')}
+                    alt={alt || ''}
+                    style={{ maxWidth: '100%' }}
+                  />
+                ),
+              }}
+            >
+              {getReadmeTextDisplay(starredReadmes[repoName], repoName)}
+            </ReactMarkdown>
           </div>
         )
       })}
