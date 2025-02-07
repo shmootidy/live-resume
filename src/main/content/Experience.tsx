@@ -38,131 +38,128 @@ export default function Experience() {
   }, [jobToDisplay])
 
   return (
-    <div id='experience'>
-      <ExperienceWrapper>
-        <ExperienceHeadItem>
-          <ExperienceButton onClick={() => setJobToDisplay(null)}>
-            / work /
+    <ExperienceWrapper>
+      <ExperienceHeadItem>
+        <ExperienceButton onClick={() => setJobToDisplay(null)}>
+          / work /
+        </ExperienceButton>
+        <div>{jobToDisplay ? jobToDisplay.employer.toLowerCase() : null}</div>
+      </ExperienceHeadItem>
+      {jobToDisplay ? (
+        <ExperienceBackWrapper>
+          <ExperienceButton
+            onClick={() => setJobToDisplay(null)}
+            style={{
+              textDecoration: 'none',
+              display: 'flex',
+              alignItems: 'center',
+            }}
+          >
+            <span style={{ fontSize: 8, paddingRight: 6 }}>
+              <FontAwesomeIcon icon={faChevronLeft} />
+              <FontAwesomeIcon icon={faChevronLeft} />
+            </span>
+            <span className='back'>Back</span>
           </ExperienceButton>
-          <div>{jobToDisplay ? jobToDisplay.employer.toLowerCase() : null}</div>
-        </ExperienceHeadItem>
-        {jobToDisplay ? (
-          <ExperienceBackWrapper>
-            <ExperienceButton
-              onClick={() => setJobToDisplay(null)}
-              style={{
-                textDecoration: 'none',
-                display: 'flex',
-                alignItems: 'center',
-              }}
-            >
-              <span style={{ fontSize: 8, paddingRight: 6 }}>
-                <FontAwesomeIcon icon={faChevronLeft} />
-                <FontAwesomeIcon icon={faChevronLeft} />
-              </span>
-              <span className='back'>Back</span>
-            </ExperienceButton>
-            <div>{jobToDisplay.duration.toLowerCase()}</div>
-          </ExperienceBackWrapper>
-        ) : null}
-        {jobToDisplay && linesOfCode ? (
-          <div style={{ display: 'flex', overflowX: 'auto' }}>
-            <ExperienceDetailsLineNumbers>
-              <code style={{ display: 'flex', flexDirection: 'column' }}>
-                {[...Array(linesOfCode).keys()].map((l) => {
-                  return <div key={l}>{l + 1}</div>
+          <div>{jobToDisplay.duration.toLowerCase()}</div>
+        </ExperienceBackWrapper>
+      ) : null}
+      {jobToDisplay && linesOfCode ? (
+        <div style={{ display: 'flex', overflowX: 'auto' }}>
+          <ExperienceDetailsLineNumbers>
+            <code style={{ display: 'flex', flexDirection: 'column' }}>
+              {[...Array(linesOfCode).keys()].map((l) => {
+                return <div key={l}>{l + 1}</div>
+              })}
+            </code>
+          </ExperienceDetailsLineNumbers>
+          <ExperienceDetails>
+            <code>
+              <div>
+                <PinkText>{`import {`}</PinkText>
+                {jobToDisplay.techStack.map((tech, i) => {
+                  return (
+                    <div style={{ marginLeft: 16 }} key={i}>{`${tech},`}</div>
+                  )
                 })}
-              </code>
-            </ExperienceDetailsLineNumbers>
-            <ExperienceDetails>
-              <code>
                 <div>
-                  <PinkText>{`import {`}</PinkText>
-                  {jobToDisplay.techStack.map((tech, i) => {
-                    return (
-                      <div style={{ marginLeft: 16 }} key={i}>{`${tech},`}</div>
-                    )
-                  })}
-                  <div>
-                    <PinkText>{`} from `}</PinkText>
-                    <span>'techStack'</span>
-                  </div>
+                  <PinkText>{`} from `}</PinkText>
+                  <span>'techStack'</span>
                 </div>
-                <br />
-                <div>
-                  <PinkText>class</PinkText>
-                  {` ${jobToDisplay.title.replace(/\s/g, '')} {`}
-                </div>
-                <div style={{ marginLeft: 16 }}>
-                  {jobToDisplay.accomplishments.map((acc, i) => {
-                    return (
-                      <div key={i}>
-                        <div>
-                          <PinkText>function</PinkText>
-                          <PurpleText>{` ${acc.functionName}() {`}</PurpleText>
-                        </div>
-                        <div style={{ marginLeft: 16 }}>
-                          {acc.steps.map((step, j) => {
-                            return (
-                              <div key={j}>
-                                {j === 0 ? <div>{`/**`}</div> : null}
-                                <div>{` * ${step}`}</div>
-                                {j === acc.steps.length - 1 ? (
-                                  <div>{`*/`}</div>
-                                ) : null}
-                              </div>
-                            )
-                          })}
-                          <div>
-                            <PinkText>return</PinkText>
-                            <BlueText>{` ${acc.returnValue}`}</BlueText>
-                          </div>
-                        </div>
-                        <div>{`}`}</div>
-                        {i ===
-                        jobToDisplay.accomplishments.length - 1 ? null : (
-                          <br />
-                        )}
+              </div>
+              <br />
+              <div>
+                <PinkText>class</PinkText>
+                {` ${jobToDisplay.title.replace(/\s/g, '')} {`}
+              </div>
+              <div style={{ marginLeft: 16 }}>
+                {jobToDisplay.accomplishments.map((acc, i) => {
+                  return (
+                    <div key={i}>
+                      <div>
+                        <PinkText>function</PinkText>
+                        <PurpleText>{` ${acc.functionName}() {`}</PurpleText>
                       </div>
-                    )
-                  })}
-                </div>
-                <div>{`}`}</div>
-              </code>
-            </ExperienceDetails>
-          </div>
-        ) : (
-          <div>
-            {jobs.map((job, i) => {
-              return (
-                <ExperienceJobItem key={i}>
-                  <div
-                    style={{
-                      display: 'flex',
-                      width: '40%',
-                      alignItems: 'center',
-                    }}
-                  >
-                    <div>
-                      <FontAwesomeIcon icon={faFileLines} />
+                      <div style={{ marginLeft: 16 }}>
+                        {acc.steps.map((step, j) => {
+                          return (
+                            <div key={j}>
+                              {j === 0 ? <div>{`/**`}</div> : null}
+                              <div>{` * ${step}`}</div>
+                              {j === acc.steps.length - 1 ? (
+                                <div>{`*/`}</div>
+                              ) : null}
+                            </div>
+                          )
+                        })}
+                        <div>
+                          <PinkText>return</PinkText>
+                          <BlueText>{` ${acc.returnValue}`}</BlueText>
+                        </div>
+                      </div>
+                      <div>{`}`}</div>
+                      {i === jobToDisplay.accomplishments.length - 1 ? null : (
+                        <br />
+                      )}
                     </div>
-                    <ExperienceButton
-                      onClick={() => handleClickEmployer(job.employer)}
-                    >
-                      {job.employer.toLowerCase()}
-                    </ExperienceButton>
+                  )
+                })}
+              </div>
+              <div>{`}`}</div>
+            </code>
+          </ExperienceDetails>
+        </div>
+      ) : (
+        <div>
+          {jobs.map((job, i) => {
+            return (
+              <ExperienceJobItem key={i}>
+                <div
+                  style={{
+                    display: 'flex',
+                    width: '40%',
+                    alignItems: 'center',
+                  }}
+                >
+                  <div>
+                    <FontAwesomeIcon icon={faFileLines} />
                   </div>
-                  <div style={{ width: '40%' }}>{job.title.toLowerCase()}</div>
-                  <div style={{ width: '20%', textAlign: 'right' }}>
-                    {job.duration.toLowerCase()}
-                  </div>
-                </ExperienceJobItem>
-              )
-            })}
-          </div>
-        )}
-      </ExperienceWrapper>
-    </div>
+                  <ExperienceButton
+                    onClick={() => handleClickEmployer(job.employer)}
+                  >
+                    {job.employer.toLowerCase()}
+                  </ExperienceButton>
+                </div>
+                <div style={{ width: '40%' }}>{job.title.toLowerCase()}</div>
+                <div style={{ width: '20%', textAlign: 'right' }}>
+                  {job.duration.toLowerCase()}
+                </div>
+              </ExperienceJobItem>
+            )
+          })}
+        </div>
+      )}
+    </ExperienceWrapper>
   )
 }
 
