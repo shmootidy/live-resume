@@ -2,18 +2,21 @@ import styled from '@emotion/styled'
 
 export default function LoadingSquares() {
   return (
-    <div
-      style={{
-        margin: 0,
-        minHeight: '200px',
-        display: 'grid',
-        placeContent: 'center',
-      }}
-    >
+    <DotsWrapper>
       <Dots />
-    </div>
+    </DotsWrapper>
   )
 }
+
+const DotsWrapper = styled.div`
+  display: grid;
+  place-content: center;
+  margin-top: 16px;
+
+  @media (min-width: 960px) {
+    margin-top: 250px;
+  }
+`
 
 const Dots = styled.div`
   --c1: #ffcd3a33;
@@ -25,7 +28,7 @@ const Dots = styled.div`
   --c4: #8956ff33;
   --c4a: #8956ff;
 
-    width: 180px; /* control the size */
+  width: 100px;
   aspect-ratio: 8/5;
   --_g: no-repeat radial-gradient(#000 100%,#0000 71%);
   -webkit-mask: var(--_g),var(--_g),var(--_g);

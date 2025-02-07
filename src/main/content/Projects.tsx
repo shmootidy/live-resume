@@ -27,99 +27,33 @@ export default function Projects() {
 
   return (
     <div>
-      <H2>Projects</H2>
-      {!isLoading ? <LoadingSquares /> : null}
-      {Object.keys(starredReadmes).map((repoName) => {
-        return (
-          <div key={repoName}>
-            <ReactMarkdown
-              remarkPlugins={[remarkGfm]}
-              components={{
-                img: ({ src, alt }) => (
-                  <img
-                    src={getGitHubRawUrl(repoName, src || '')}
-                    alt={alt || ''}
-                    style={{ maxWidth: '100%' }}
-                  />
-                ),
-              }}
-            >
-              {getReadmeTextDisplay(starredReadmes[repoName], repoName)}
-            </ReactMarkdown>
-          </div>
-        )
-      })}
-      {/* {projects.map((project, i) => {
-        const awardDot = project.award ? ' • ' : ''
-        const award = project.award ? 'Award Winner!' : ''
-        const image = project.img ? (
-          <img
-            style={{ maxWidth: '90%' }}
-            src={require('../../assets/' + project.img)}
-            alt={project.img}
-          />
-        ) : null
-        const projectContents = (
-          <div>
-            <h3 style={{ margin: '0 8px' }}>
-              <a href={project.url} target='_blank' rel='nooopener noreferrer'>
-                {project.title.toUpperCase()}
-              </a>
-            </h3>
-            <ProjectSubtitle>
-              {project.subtitle}
-              {awardDot}
-              <GreenText>{award}</GreenText> • {project.dateCompleted}
-            </ProjectSubtitle>
-            <ImageTechBox>
-              {image}
-              <div style={{ margin: 0 }}>
-                <div>
-                  <div style={{ display: 'flex', flexWrap: 'wrap' }}>
-                    {Object.entries(project.techStack).map((tech, i) => {
-                      return (
-                        <ProjectTech key={i}>
-                          <TechKey>{tech[0]}</TechKey>
-                          <TechValue isOdd={i % 2 === 0}>{tech[1]}</TechValue>
-                        </ProjectTech>
-                      )
-                    })}
-                  </div>
-                </div>
+      {!isLoading ? (
+        <LoadingSquares />
+      ) : (
+        <>
+          <H2>Projects</H2>
+          {Object.keys(starredReadmes).map((repoName) => {
+            return (
+              <div key={repoName}>
+                <ReactMarkdown
+                  remarkPlugins={[remarkGfm]}
+                  components={{
+                    img: ({ src, alt }) => (
+                      <img
+                        src={getGitHubRawUrl(repoName, src || '')}
+                        alt={alt || ''}
+                        style={{ maxWidth: '100%' }}
+                      />
+                    ),
+                  }}
+                >
+                  {getReadmeTextDisplay(starredReadmes[repoName], repoName)}
+                </ReactMarkdown>
               </div>
-            </ImageTechBox>
-            {Object.entries(project.description).map((description, i) => {
-              let key = description[0]
-              return (
-                <div key={i} style={{ margin: '0 0.5rem 0.5rem' }}>
-                  <div
-                    style={{
-                      borderBottom: '1px solid rgba(0,0,0,0.2)',
-                      fontWeight: 600,
-                    }}
-                  >
-                    {key.replace(
-                      key.substring(0, 1),
-                      key.substring(0, 1).toUpperCase()
-                    )}
-                  </div>
-                  <ul>
-                    {description[1].map((note, i) => (
-                      <li key={i}>{note}</li>
-                    ))}
-                  </ul>
-                </div>
-              )
-            })}
-          </div>
-        )
-
-        return (
-          <div style={{ padding: '0.5rem 0', marginTop: 16 }} key={i}>
-            {projectContents}
-          </div>
-        )
-      })} */}
+            )
+          })}
+        </>
+      )}
     </div>
   )
 }

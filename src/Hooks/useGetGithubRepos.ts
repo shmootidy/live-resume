@@ -12,7 +12,7 @@ export default function useGetGithubRepos() {
   const [starredReadmes, setStarredReadmes] = useState<{
     [key: string]: string
   }>({})
-  const [isLoading, setIsLoading] = useState(false)
+  const [isLoading, setIsLoading] = useState(true)
   const [hasError, setHasError] = useState(false)
 
   function fetchReadmes(repos, octokit) {
