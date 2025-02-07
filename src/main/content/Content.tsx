@@ -2,7 +2,7 @@ import { useState } from 'react'
 import styled from '@emotion/styled'
 
 import Summary from './Summary'
-import Experience from './Experience'
+import Jobs from './Jobs'
 import Education from './Education'
 import Projects from './Projects'
 import Contact from '../sidebar/Contact'
@@ -28,7 +28,7 @@ export default function Content(props: IProps) {
     } else if (visibleTab === 2) {
       return <Projects />
     } else if (visibleTab === 1) {
-      return <Experience />
+      return <Jobs />
     } else if (visibleTab === 3) {
       return <Education />
     } else {

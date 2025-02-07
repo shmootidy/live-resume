@@ -10,7 +10,7 @@ import {
   PurpleText,
 } from '../../SharedComponents/StyledComponents'
 
-export default function Experience() {
+export default function Jobs() {
   const jobs = useGetWorkExperience()
 
   const [jobToDisplay, setJobToDisplay] = useState<Job | null>(null)
