@@ -31,6 +31,7 @@ const ErrorSkullWrapper = styled.div`
 const SkullIcon = styled(FontAwesomeIcon)`
   position: absolute;
   font-size: 100px;
+  opacity: 0.1;
 
   --c1: #ffcd3a;
   --c2: #c836c3;
@@ -39,48 +40,48 @@ const SkullIcon = styled(FontAwesomeIcon)`
 
   --a1: conic-gradient(
     from 0deg at 50% 67.5%,
-    var(--c1) 0deg 60deg,
+    rgba(0, 0, 0, 1) 0deg 60deg,
     transparent 60deg 360deg
   );
   --a1a: conic-gradient(
     from 0deg at 50% 67.5%,
     transparent 0deg 50deg,
-    var(--c1) 50deg 117deg,
+    rgba(0, 0, 0, 1) 50deg 117deg,
     transparent 117deg 50deg
   );
   --a2: conic-gradient(
     from 0deg at 50% 67.5%,
     transparent 0deg 60deg,
-    var(--c1) 60deg 180deg,
+    rgba(0, 0, 0, 1) 60deg 180deg,
     transparent 180deg 60deg
   );
   --a2a: conic-gradient(
     from 0deg at 50% 67.5%,
     transparent 0deg 117deg,
-    var(--c1) 117deg 243deg,
+    rgba(0, 0, 0, 1) 117deg 243deg,
     transparent 243deg 117deg
   );
   --a3: conic-gradient(
     from 0deg at 50% 67.5%,
     transparent 0deg 180deg,
-    var(--c1) 180deg 300deg,
+    rgba(0, 0, 0, 1) 180deg 300deg,
     transparent 300deg 360deg
   );
   --a3a: conic-gradient(
     from 0deg at 50% 67.5%,
     transparent 0deg 243deg,
-    var(--c1) 243deg 300deg,
+    rgba(0, 0, 0, 1) 243deg 300deg,
     transparent 300deg 360deg
   );
   --a4: conic-gradient(
     from 0deg at 50% 67.5%,
     transparent 0deg 300deg,
-    var(--c1) 300deg 360deg
+    rgba(0, 0, 0, 1) 300deg 360deg
   );
   --a4a: conic-gradient(
     from 50deg at 50% 67.5%,
     transparent 70deg 260deg,
-    var(--c1) 260deg 70deg
+    rgba(0, 0, 0, 1) 260deg 70deg
   );
 
   &:nth-child(1) {
