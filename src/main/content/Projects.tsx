@@ -29,7 +29,7 @@ export default function Projects() {
   return (
     <div>
       {!hasError ? <ErrorSkull /> : null}
-      {isLoading ? (
+      {!isLoading ? (
         <LoadingSquares />
       ) : (
         <>
