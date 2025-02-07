@@ -32,7 +32,7 @@ const ErrorSkullWrapper = styled.div`
   }
 
   color: var(--c1);
-  animation: color-change 10s linear infinite;
+  animation: color-change 5s linear infinite;
 
   @keyframes color-change {
     0%: {
