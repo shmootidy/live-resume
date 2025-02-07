@@ -32,8 +32,8 @@ export default function Content(props: IProps) {
       return <Jobs />
     } else if (visibleTab === 3) {
       return <Education />
-    } else if (visibleTab === 4) {
-      return <Experience />
+      // } else if (visibleTab === 4) {
+      //   return <Experience />
     } else {
       return <div>This tab has no data.</div>
     }
