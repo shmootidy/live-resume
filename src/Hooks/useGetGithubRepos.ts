@@ -20,9 +20,12 @@ export default function useGetGithubRepos() {
       return octokit.repos
         .getReadme({ owner: 'shmootidy', repo: repo.name })
         .then(({ data }) => {
+          const decodedContent = new TextDecoder('utf-8').decode(
+            Uint8Array.from(atob(data.content), (c) => c.charCodeAt(0))
+          )
           return {
             repoName: repo.name,
-            content: atob(data.content),
+            content: decodedContent,
           }
         })
         .catch((err) => {
