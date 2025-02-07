@@ -28,8 +28,8 @@ export default function Projects() {
 
   return (
     <div>
-      {!hasError ? <ErrorSkull /> : null}
-      {!isLoading ? (
+      {hasError ? <ErrorSkull /> : null}
+      {isLoading ? (
         <LoadingSquares />
       ) : (
         <>
