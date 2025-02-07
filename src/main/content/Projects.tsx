@@ -1,20 +1,52 @@
 import styled from '@emotion/styled'
-// import useGetGithubRepos from '../../Hooks/useGetGithubRepos'
+import ReactMarkdown from 'react-markdown'
+import remarkGfm from 'remark-gfm'
+
+import useGetGithubRepos from '../../Hooks/useGetGithubRepos'
 import useGetProjects from '../../Hooks/useGetProjects'
 import { GreenText, H2 } from '../../SharedComponents/StyledComponents'
 
 export default function Projects() {
-  // const { starredReadmes, starredRepos, isLoading, hasError } =
-  //   useGetGithubRepos()
+  const { starredReadmes, starredRepos, isLoading, hasError } =
+    useGetGithubRepos()
 
-  // console.log(starredRepos, starredReadmes, isLoading, hasError)
+  console.log(starredRepos, starredReadmes, isLoading, hasError)
 
   const projects = useGetProjects()
+
+  const getGitHubRawUrl = (repoName: string, src: string) => {
+    if (!src.startsWith('http')) {
+      return `https://raw.githubusercontent.com/shmootidy/${repoName}/master/${src}`
+    }
+    return src
+  }
 
   return (
     <div>
       <H2>Projects</H2>
-      {projects.map((project, i) => {
+      {Object.keys(starredReadmes).map((repoName) => {
+        return (
+          <div key={repoName}>
+            <details>
+              <ReactMarkdown
+                remarkPlugins={[remarkGfm]}
+                components={{
+                  img: ({ src, alt }) => (
+                    <img
+                      src={getGitHubRawUrl(repoName, src || '')}
+                      alt={alt || ''}
+                      style={{ maxWidth: '100%' }}
+                    />
+                  ),
+                }}
+              >
+                {starredReadmes[repoName]}
+              </ReactMarkdown>
+            </details>
+          </div>
+        )
+      })}
+      {/* {projects.map((project, i) => {
         const awardDot = project.award ? ' • ' : ''
         const award = project.award ? 'Award Winner!' : ''
         const image = project.img ? (
@@ -84,7 +116,7 @@ export default function Projects() {
             {projectContents}
           </div>
         )
-      })}
+      })} */}
     </div>
   )
 }

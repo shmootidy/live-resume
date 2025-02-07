@@ -28,7 +28,6 @@ export default function useGetGithubRepos() {
         .catch((err) => {
           console.error(`Error fetching README for ${repo.name}.`, err)
           return { repoName: repo.name, content: 'Error loading README' }
-          // setHasError(true)
         })
     })
 
