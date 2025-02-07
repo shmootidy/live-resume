@@ -7,7 +7,6 @@ export default function ErrorSkull() {
     <ErrorSkullWrapper>
       <SkullIcon icon={faSkullCrossbones} color='#ffcd3a33' />
       <SkullIcon icon={faSkullCrossbones} color='#cb383733' />
-      {/* <SkullIcon icon={faSkullCrossbones} color='black' /> */}
       <SkullIcon icon={faSkullCrossbones} color='#c836c333' />
       <SkullIcon icon={faSkullCrossbones} color='#8956ff33' />
     </ErrorSkullWrapper>
@@ -29,55 +28,54 @@ const ErrorSkullWrapper = styled.div`
   }
 `
 
-const SkullIcon = styled(FontAwesomeIcon)<{ color: string }>`
+const SkullIcon = styled(FontAwesomeIcon)`
   position: absolute;
   font-size: 100px;
-  color: ${({ color }) => color};
 
   --a1: conic-gradient(
     from 0deg at 50% 67.5%,
-    rgba(0, 0, 0, 1) 0deg 70deg,
-    transparent 70deg 360deg
+    rgba(0, 0, 0, 1) 0deg 60deg,
+    transparent 60deg 360deg
   );
   --a1a: conic-gradient(
     from 0deg at 50% 67.5%,
-    transparent 0deg 35deg,
-    rgba(0, 0, 0, 1) 35deg 115deg,
-    transparent 115deg 35deg
+    transparent 0deg 50deg,
+    rgba(0, 0, 0, 1) 50deg 117deg,
+    transparent 117deg 50deg
   );
   --a2: conic-gradient(
     from 0deg at 50% 67.5%,
-    transparent 0deg 70deg,
-    rgba(0, 0, 0, 1) 70deg 180deg,
-    transparent 180deg 70deg
+    transparent 0deg 60deg,
+    rgba(0, 0, 0, 1) 60deg 180deg,
+    transparent 180deg 60deg
   );
   --a2a: conic-gradient(
     from 0deg at 50% 67.5%,
-    transparent 0deg 115deg,
-    rgba(0, 0, 0, 1) 115deg 225deg,
-    transparent 225deg 115deg
+    transparent 0deg 117deg,
+    rgba(0, 0, 0, 1) 117deg 243deg,
+    transparent 243deg 117deg
   );
   --a3: conic-gradient(
     from 0deg at 50% 67.5%,
     transparent 0deg 180deg,
-    rgba(0, 0, 0, 1) 180deg 290deg,
-    transparent 290deg 360deg
+    rgba(0, 0, 0, 1) 180deg 300deg,
+    transparent 300deg 360deg
   );
   --a3a: conic-gradient(
     from 0deg at 50% 67.5%,
-    transparent 0deg 225deg,
-    rgba(0, 0, 0, 1) 225deg 325deg,
-    transparent 325deg 360deg
+    transparent 0deg 243deg,
+    rgba(0, 0, 0, 1) 243deg 300deg,
+    transparent 300deg 360deg
   );
   --a4: conic-gradient(
     from 0deg at 50% 67.5%,
-    transparent 0deg 290deg,
-    rgba(0, 0, 0, 1) 290deg 360deg
+    transparent 0deg 300deg,
+    rgba(0, 0, 0, 1) 300deg 360deg
   );
   --a4a: conic-gradient(
-    from 35deg at 50% 67.5%,
-    transparent 35deg 290deg,
-    rgb(27, 23, 23) 290deg 35deg
+    from 50deg at 50% 67.5%,
+    transparent 70deg 260deg,
+    rgba(0, 0, 0, 1) 260deg 70deg
   );
 
   &:nth-child(1) {
