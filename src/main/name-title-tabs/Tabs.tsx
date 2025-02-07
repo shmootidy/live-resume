@@ -13,7 +13,7 @@ import {
   // faBugSlash,
   // faFolderOpen,
   // faGears,
-  // faTableList,
+  faTableList,
 } from '@fortawesome/free-solid-svg-icons'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -56,15 +56,15 @@ export default function Tabs(props: IProps) {
       backgroundColor: '#8956ff33',
       borderColor: '#8956ff',
     },
-    // {
-    //   label: 'Another One',
-    //   // icon: faLightbulb,
-    //   // icon: faTimeline,
-    //   icon: faTableList,
-    //   fontColor: '#146c91',
-    //   backgroundColor: '#29abe233',
-    //   borderColor: '#29abe2',
-    // },
+    {
+      label: 'Another One',
+      // icon: faLightbulb,
+      // icon: faTimeline,
+      icon: faTableList,
+      fontColor: '#146c91',
+      backgroundColor: '#29abe233',
+      borderColor: '#29abe2',
+    },
   ]
 
   return (

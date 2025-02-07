@@ -6,6 +6,7 @@ import Jobs from './Jobs'
 import Education from './Education'
 import Projects from './Projects'
 import Contact from '../sidebar/Contact'
+import Experience from './Experience'
 
 interface IProps {
   visibleTab: number
@@ -31,6 +32,8 @@ export default function Content(props: IProps) {
       return <Jobs />
     } else if (visibleTab === 3) {
       return <Education />
+    } else if (visibleTab === 4) {
+      return <Experience />
     } else {
       return <div>This tab has no data.</div>
     }
