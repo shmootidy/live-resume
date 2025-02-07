@@ -20,13 +20,9 @@ const DotsWrapper = styled.div`
 
 const Dots = styled.div`
   --c1: #ffcd3a33;
-  --c1a: #ffcd3a;
   --c2: #c836c333;
-  --c2a: #c836c3;
   --c3: #cb383733;
-  --c3a: #cb3837;
   --c4: #8956ff33;
-  --c4a: #8956ff;
 
   width: 100px;
   aspect-ratio: 8/5;

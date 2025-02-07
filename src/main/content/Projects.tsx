@@ -5,11 +5,12 @@ import remarkGfm from 'remark-gfm'
 import useGetGithubRepos from '../../Hooks/useGetGithubRepos'
 import { GreenText, H2 } from '../../SharedComponents/StyledComponents'
 import LoadingSquares from '../../SharedComponents/LoadingSquares'
+import ErrorSkull from '../../SharedComponents/ErrorSkull'
 
 export default function Projects() {
   const { starredReadmes, starredRepos, isLoading, hasError } =
     useGetGithubRepos()
-
+  console.log(starredRepos)
   const getGitHubRawUrl = (repoName: string, src: string) => {
     if (!src.startsWith('http')) {
       return `https://raw.githubusercontent.com/shmootidy/${repoName}/master/${src}`
@@ -27,6 +28,7 @@ export default function Projects() {
 
   return (
     <div>
+      {!hasError ? <ErrorSkull /> : null}
       {isLoading ? (
         <LoadingSquares />
       ) : (
