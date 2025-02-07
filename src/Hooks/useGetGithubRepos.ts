@@ -65,7 +65,7 @@ export default function useGetGithubRepos() {
     console.log('Fetching from Github API...')
     let fetchedRepos: GitHubStarredRepo[] = []
     octokit.activity
-      .listReposStarredByUser({ username: 'shmootidy' })
+      .listReposStarredByUser({ username: 'shmootidy', sort: 'updated' })
       .then(({ data }) => {
         setStarredRepos(data)
         fetchedRepos = data
