@@ -5,14 +5,21 @@ import { faSkullCrossbones } from '@fortawesome/free-solid-svg-icons'
 export default function ErrorSkull() {
   return (
     <ErrorSkullWrapper>
-      <StyledIcon icon={faSkullCrossbones} />
+      <FontAwesomeIcon icon={faSkullCrossbones} style={{ fontSize: 100 }} />
+      <ErrorMessage>Oh no! The data didn't load!</ErrorMessage>
     </ErrorSkullWrapper>
   )
 }
 
 const ErrorSkullWrapper = styled.div`
+  --c1: #ffcd3a33;
+  --c2: #c836c333;
+  --c3: #cb383733;
+  --c4: #8956ff33;
+
   position: relative;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 130px;
@@ -23,15 +30,7 @@ const ErrorSkullWrapper = styled.div`
   @media (min-width: 960px) {
     margin-top: 250px;
   }
-`
 
-const StyledIcon = styled(FontAwesomeIcon)`
-  --c1: #ffcd3a33;
-  --c2: #c836c333;
-  --c3: #cb383733;
-  --c4: #8956ff33;
-
-  font-size: 100px;
   color: var(--c1);
   animation: color-change 10s linear infinite;
 
@@ -49,4 +48,11 @@ const StyledIcon = styled(FontAwesomeIcon)`
       color: var(--c4);
     }
   }
+`
+
+const ErrorMessage = styled.div`
+  font-weight: 700;
+  font-family: 'Source Sans Pro';
+  margin-top: 16px;
+  font-size: 36px;
 `
