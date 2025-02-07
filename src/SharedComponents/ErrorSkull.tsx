@@ -17,12 +17,10 @@ const ErrorSkullWrapper = styled.div`
   --c3: #cb383733;
   --c4: #8956ff33;
 
-  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 130px;
   margin-top: 16px;
   border-radius: 50%;
   background: white;
