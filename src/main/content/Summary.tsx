@@ -13,7 +13,7 @@ export default function Summary() {
     <div>
       <div id='summary'>
         <H1>
-          <CodeShmoo>shmoo</CodeShmoo>
+          <CodeShmoo>shmoo-ritchie</CodeShmoo>
         </H1>
         <p>
           Hi! I'm Shmoo. I'm an energetic, friendly software developer dedicated
