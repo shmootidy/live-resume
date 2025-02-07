@@ -4,8 +4,7 @@ import remarkGfm from 'remark-gfm'
 
 import useGetGithubRepos from '../../Hooks/useGetGithubRepos'
 import { GreenText, H2 } from '../../SharedComponents/StyledComponents'
-import LoadingSpinner from '../../SharedComponents/LoadingSpinner'
-import LoadingDots from '../../SharedComponents/LoadingDots'
+import LoadingSquares from '../../SharedComponents/LoadingSquares'
 
 export default function Projects() {
   const { starredReadmes, starredRepos, isLoading, hasError } =
@@ -29,8 +28,7 @@ export default function Projects() {
   return (
     <div>
       <H2>Projects</H2>
-      {!isLoading ? <LoadingSpinner /> : null}
-      {!isLoading ? <LoadingDots /> : null}
+      {!isLoading ? <LoadingSquares /> : null}
       {Object.keys(starredReadmes).map((repoName) => {
         return (
           <div key={repoName}>
