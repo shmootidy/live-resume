@@ -3,15 +3,32 @@ import ReactMarkdown from 'react-markdown'
 import remarkGfm from 'remark-gfm'
 
 import useGetGithubRepos from '../../Hooks/useGetGithubRepos'
-import { GreenText, H2 } from '../../SharedComponents/StyledComponents'
+import { H2 } from '../../SharedComponents/StyledComponents'
 import LoadingSquares from '../../SharedComponents/LoadingSquares'
 import ErrorSkull from '../../SharedComponents/ErrorSkull'
+import { useEffect, useState } from 'react'
+
+const MAX_LINES = 3
 
 export default function Projects() {
   const { starredReadmes, starredRepos, isLoading, hasError } =
     useGetGithubRepos()
-  console.log(starredRepos)
-  const getGitHubRawUrl = (repoName: string, src: string) => {
+  const [expandedReadmes, setExpandedReadmes] = useState<{
+    [repoName: string]: boolean
+  }>({})
+
+  useEffect(() => {
+    if (Object.keys(starredReadmes).length) {
+      setExpandedReadmes(
+        Object.keys(starredReadmes).reduce((acc, key) => {
+          acc[key] = false
+          return acc
+        }, {})
+      )
+    }
+  }, [starredReadmes])
+
+  function getGitHubRawUrl(repoName: string, src: string) {
     if (!src.startsWith('http')) {
       return `https://raw.githubusercontent.com/shmootidy/${repoName}/master/${src}`
     }
@@ -19,11 +36,21 @@ export default function Projects() {
   }
 
   function getReadmeTextDisplay(readmeText: string, repoName: string) {
-    console.log(repoName)
-    // console.log(readmeText.split('\n'))
     const lines = readmeText.split('\n')
-    return lines.slice(0, 5).join('\n')
-    // return readmeText
+    const isReadmeExpanded = expandedReadmes[repoName]
+    if (isReadmeExpanded) {
+      return readmeText
+    }
+    return lines.slice(0, MAX_LINES).join('\n')
+  }
+
+  function handleToggleShowMore(repoName: string) {
+    setExpandedReadmes((prev) => {
+      return {
+        ...prev,
+        [repoName]: !prev[repoName],
+      }
+    })
   }
 
   return (
@@ -51,6 +78,11 @@ export default function Projects() {
                 >
                   {getReadmeTextDisplay(starredReadmes[repoName], repoName)}
                 </ReactMarkdown>
+                {starredReadmes[repoName].split('\n').length > MAX_LINES ? (
+                  <button onClick={() => handleToggleShowMore(repoName)}>
+                    boop
+                  </button>
+                ) : null}
               </div>
             )
           })}
