@@ -10,14 +10,14 @@ export default function Footer() {
     '5.8 6.06 21.52 6.06 21.52 9.98 17.58 9.98 17.59 13 21.52 13 21.52 21.75 5.8 21.75 5.8 18.5 13.67 18.5 13.67 15.5 5.8 15.5'
   return (
     <FooterWrapper>
-      <div style={{ maxWidth: HEADER_MAX_WIDTH }}>
+      <div style={{ maxWidth: HEADER_MAX_WIDTH, margin: 'auto' }}>
         <FooterContent>
-          <div style={{ flexGrow: 1 }}>
+          <FooterIconWrapper>
             <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 27.23 27.23'>
               <rect fill='#333333' width='27.23' height='27.23' rx='2'></rect>
               <polygon fill='#fff' points={points}></polygon>
             </svg>
-          </div>
+          </FooterIconWrapper>
           <div>
             <FooterHeading>Contact Me</FooterHeading>
             <FooterLink href='mailto:shmooritchie@gmail.com?subject=I saw your resume!'>
@@ -63,7 +63,7 @@ const FooterContent = styled.div`
   margin: 2rem 7rem 1rem 4rem;
 
   @media (min-width: 500px) {
-    margin: 4rem 7rem 1rem 4rem;
+    margin: 4rem 2rem 1rem;
   }
 
   svg {
@@ -71,6 +71,12 @@ const FooterContent = styled.div`
     overflow: unset;
     width: 50px;
   }
+`
+
+const FooterIconWrapper = styled.div`
+  flex-grow: 1;
+  padding: 16px;
+  min-width: 100px;
 `
 
 const FooterLink = styled.a`
