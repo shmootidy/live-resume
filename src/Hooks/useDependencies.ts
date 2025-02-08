@@ -20,8 +20,11 @@ export default function useDependencies() {
     'focus music',
     'muttering to myself',
   ]
+  const dependents = ['human child', 'cat 1 (small)', 'cat 2 (large)']
+
   return {
     dependencies,
     devDependencies,
+    dependents,
   }
 }

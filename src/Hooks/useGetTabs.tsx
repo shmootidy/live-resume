@@ -26,7 +26,7 @@ import useDependencies from './useDependencies'
 
 export default function useGetTabs() {
   const { starredReadmes } = useGetGithubRepos()
-  const { dependencies } = useDependencies()
+  const { dependencies, dependents } = useDependencies()
 
   return [
     {
@@ -48,9 +48,16 @@ export default function useGetTabs() {
       component: <Dependencies />,
     },
     {
+      label: `${dependents.length} Dependents`,
+      value: 'dependents',
+      icon: faCubes,
+      component: <Dependencies isDependents />,
+    },
+    {
       label: `${Object.keys(starredReadmes).length} Projects`,
       value: 'projects',
-      icon: faCubes,
+      // icon: faCubes,
+      icon: faTags,
       component: <Projects />,
     },
     // {
@@ -59,11 +66,11 @@ export default function useGetTabs() {
     //   icon: faGraduationCap,
     //   component: <Education />,
     // },
-    {
-      label: 'Fun Stuff',
-      value: 'funStuff',
-      icon: faTags,
-      component: <ExtraStuff />,
-    },
+    // {
+    //   label: 'Fun Stuff',
+    //   value: 'funStuff',
+    //   icon: faTags,
+    //   component: <ExtraStuff />,
+    // },
   ]
 }
