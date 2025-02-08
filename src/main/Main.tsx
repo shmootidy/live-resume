@@ -1,7 +1,7 @@
 import { useState } from 'react'
 
 import Content from './content/Content'
-import Tabs from './name-title-tabs/Tabs'
+import Tabs from './content/Tabs'
 import useGetTimeProgramming from '../Hooks/useGetTimeProgramming'
 import useGetTabs from '../Hooks/useGetTabs'
 

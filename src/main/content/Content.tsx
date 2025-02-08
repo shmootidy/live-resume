@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import styled from '@emotion/styled'
 
-import Contact from '../sidebar/Contact'
+import Contact from './Contact'
 import useGetTabs from '../../Hooks/useGetTabs'
 
 interface IProps {
