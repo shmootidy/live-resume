@@ -11,7 +11,7 @@ export default function Main() {
   const { years, months, days } = useGetTimeProgramming()
 
   return (
-    <main style={{ minHeight: '100vh' }}>
+    <main style={{ paddingBottom: 64, flexGrow: 1 }}>
       <div
         style={{
           marginTop: 48,
