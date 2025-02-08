@@ -18,7 +18,7 @@ export default function Tabs(props: IProps) {
     <div>
       <TabsList>
         {tabs.map((tab, i) => {
-          const tabColors = npmSequentialColors[i]
+          const tabColors = npmSequentialColors[i % npmSequentialColors.length]
           return (
             <Tab
               key={i}
