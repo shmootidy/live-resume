@@ -18,12 +18,12 @@ export default function Footer() {
               <polygon fill='#fff' points={points}></polygon>
             </svg>
           </div>
-          <FooterColumn>
+          <div>
             <FooterHeading>Contact Me</FooterHeading>
-            <a href='mailto:shmooritchie@gmail.com?subject=I saw your resume!'>
+            <FooterLink href='mailto:shmooritchie@gmail.com?subject=I saw your resume!'>
               shmooritchie@gmail.com
-            </a>
-          </FooterColumn>
+            </FooterLink>
+          </div>
         </FooterContent>
         <FooterIcons>
           <a href='mailto:shmooritchie@gmail.com?subject=I saw your resume!'>
@@ -73,18 +73,13 @@ const FooterContent = styled.div`
   }
 `
 
-const FooterColumn = styled.div`
-  // width: 30%;
-  // min-width: 212px;
-
-  a {
-    margin: 0.5rem 0;
-    color: rgba(0, 0, 0, 0.7);
-    line-height: 2;
-    font-size: 18px;
-    &:hover {
-      color: rgba(0, 0, 0, 0.9);
-    }
+const FooterLink = styled.a`
+  margin: 0.5rem 0;
+  color: rgba(0, 0, 0, 0.7);
+  line-height: 2;
+  font-size: 18px;
+  &:hover {
+    color: rgba(0, 0, 0, 0.9);
   }
 `
 
