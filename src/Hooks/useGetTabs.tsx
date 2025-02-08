@@ -53,8 +53,8 @@ export default function useGetTabs() {
     //   component: <Education />,
     // },
     {
-      label: 'Another One',
-      value: 'anotherOne',
+      label: 'Fun Stuff',
+      value: 'funStuff',
       icon: faTableList,
       component: <ExtraStuff />,
     },

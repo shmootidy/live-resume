@@ -57,7 +57,6 @@ export default function useGetGithubRepos() {
       const isExpired = Date.now() - timestamp > 60 * 60 * 1000
 
       if (!isExpired) {
-        console.log('Loading from cache...')
         setStarredRepos(data.starredRepos)
         setStarredReadmes(data.starredReadmes)
         setIsLoading(false)
@@ -65,7 +64,6 @@ export default function useGetGithubRepos() {
       }
     }
 
-    console.log('Fetching from Github API...')
     let fetchedRepos: GitHubStarredRepo[] = []
     octokit.activity
       .listReposStarredByUser({ username: 'shmootidy', sort: 'updated' })
