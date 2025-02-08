@@ -8,7 +8,8 @@ import LoadingSquares from '../../SharedComponents/LoadingSquares'
 import ErrorSkull from '../../SharedComponents/ErrorSkull'
 
 export default function Projects() {
-  const { starredReadmes, isLoading, hasError } = useGetGithubRepos()
+  const { starredReadmes, starredRepos, isLoading, hasError } =
+    useGetGithubRepos()
 
   function getGitHubRawUrl(repoName: string, src: string) {
     if (!src.startsWith('http')) {
@@ -46,6 +47,9 @@ export default function Projects() {
               starredReadmes[repoName],
               repoName
             )
+            const repoUrl = starredRepos.find(
+              (r) => r.name === repoName
+            )?.html_url
             return (
               <div style={{ marginBottom: 60 }} key={repoName}>
                 <H2 style={{ flexGrow: 1 }}>{repoName}</H2>
@@ -64,7 +68,7 @@ export default function Projects() {
                   {getReadmeTextDisplay(starredReadmes[repoName], repoName)}
                 </ReactMarkdown>
                 {firstImageSrc ? <ProjectImage src={firstImageSrc} /> : null}
-                <VisitRepoLink href={'#'} target='_blank'>
+                <VisitRepoLink href={repoUrl} target='_blank'>
                   visit repo
                 </VisitRepoLink>
               </div>

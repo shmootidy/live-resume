@@ -3,9 +3,7 @@ import { useEffect, useState } from 'react'
 
 const octokit = new Octokit()
 
-type GitHubStarredRepo = Awaited<
-  ReturnType<typeof octokit.activity.listReposStarredByUser>
->['data'][0]
+type GitHubStarredRepo = Awaited<ReturnType<Octokit['repos']['get']>>['data']
 
 export default function useGetGithubRepos() {
   const [starredRepos, setStarredRepos] = useState<GitHubStarredRepo[]>([])
@@ -68,9 +66,10 @@ export default function useGetGithubRepos() {
     octokit.activity
       .listReposStarredByUser({ username: 'shmootidy', sort: 'updated' })
       .then(({ data }) => {
-        setStarredRepos(data)
-        fetchedRepos = data
-        return fetchReadmes(data, octokit)
+        const singleTypeRepoData = data.map((r) => ('repo' in r ? r.repo : r))
+        setStarredRepos(singleTypeRepoData)
+        fetchedRepos = singleTypeRepoData
+        return fetchReadmes(singleTypeRepoData, octokit)
       })
       .then((readmesObject) => {
         localStorage.setItem(
