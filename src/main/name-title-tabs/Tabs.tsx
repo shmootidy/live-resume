@@ -2,6 +2,7 @@ import styled from '@emotion/styled'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import useGetTabs from '../../Hooks/useGetTabs'
+import useNpmSequentialColors from '../../Hooks/useNpmSequentialColors'
 
 interface IProps {
   selectedTab: string
@@ -11,19 +12,21 @@ interface IProps {
 export default function Tabs(props: IProps) {
   const { selectedTab, onChangeTab } = props
   const tabs = useGetTabs()
+  const npmSequentialColors = useNpmSequentialColors()
 
   return (
     <div>
       <TabsList>
         {tabs.map((tab, i) => {
+          const tabColors = npmSequentialColors[i]
           return (
             <Tab
               key={i}
               onClick={() => onChangeTab(tab.value)}
               isSelected={tab.value === selectedTab}
-              borderColor={tab.borderColor}
-              backgroundColor={tab.backgroundColor}
-              fontColor={tab.fontColor}
+              borderColor={tabColors.borderColor}
+              backgroundColor={tabColors.backgroundColor}
+              fontColor={tabColors.fontColor}
             >
               {<FontAwesomeIcon icon={tab.icon} style={{ marginRight: 8 }} />}
               {tab.label}
