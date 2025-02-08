@@ -18,12 +18,11 @@ export default function Main() {
         <div>
           <MainTitle>susannah ritchie (shmoo)</MainTitle>
           <MainSubtitle>
-            {/* <span
+            <span
               title={`I've been a developing software for ${years} years, ${months} months and ${days} days. After careful consideration, I decided to leave teaching and start a new career path. In October 2018, I started prepping for bootcamp at Lighthouse Labs. I was instantly obsessed.`}
               style={{ cursor: 'help' }}
-            >{`${years}.${months}.${days}`}</span>{' '} */}
-            <span>1.4.3</span> • <GreenText>Software Dev</GreenText> •
-            Vancouver, BC
+            >{`${years}.${months}.${days}`}</span>{' '}
+            • <GreenText>Software Dev</GreenText> • Vancouver, BC
           </MainSubtitle>
         </div>
         <div style={{ display: 'flex', flexDirection: 'column' }} id='main'>
