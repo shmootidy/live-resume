@@ -17,6 +17,8 @@ export default function useDependencies() {
     'mentorship',
     'retros',
     'version control',
+    'focus music',
+    'muttering to myself',
   ]
   return {
     dependencies,
