@@ -2,21 +2,28 @@ import styled from '@emotion/styled'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSkullCrossbones } from '@fortawesome/free-solid-svg-icons'
 import { MessageWrapper } from './StyledComponents'
+import useNpmSequentialColors, {
+  NpmSequentialColors,
+} from '../Hooks/useNpmSequentialColors'
 
 export default function ErrorSkull() {
+  const npmSequentialColors = useNpmSequentialColors()
+
   return (
-    <ErrorSkullWrapper>
+    <ErrorSkullWrapper npmSequentialColors={npmSequentialColors}>
       <FontAwesomeIcon icon={faSkullCrossbones} style={{ fontSize: 100 }} />
       <ErrorMessage>Oh no! The data didn't load!</ErrorMessage>
     </ErrorSkullWrapper>
   )
 }
 
-const ErrorSkullWrapper = styled(MessageWrapper)`
-  --c1: #ffcd3a33;
-  --c2: #c836c333;
-  --c3: #cb383733;
-  --c4: #8956ff33;
+const ErrorSkullWrapper = styled(MessageWrapper)<{
+  npmSequentialColors: NpmSequentialColors[]
+}>`
+  --c1: ${(props) => props.npmSequentialColors[0].backgroundColor};
+  --c2: ${(props) => props.npmSequentialColors[1].backgroundColor};
+  --c3: ${(props) => props.npmSequentialColors[2].backgroundColor};
+  --c4: ${(props) => props.npmSequentialColors[3].backgroundColor};
   border-radius: 50%;
   background: white;
 

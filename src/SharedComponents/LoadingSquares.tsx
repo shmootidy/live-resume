@@ -1,20 +1,27 @@
 import styled from '@emotion/styled'
 import { MessageWrapper } from './StyledComponents'
+import useNpmSequentialColors, {
+  NpmSequentialColors,
+} from '../Hooks/useNpmSequentialColors'
 
 export default function LoadingSquares() {
+  const npmSequentialColors = useNpmSequentialColors()
+
   return (
     <MessageWrapper>
-      <Dots />
+      <Dots npmSequentialColors={npmSequentialColors} />
     </MessageWrapper>
   )
 }
 
-const Dots = styled.div`
-  --c1: #ffcd3a33;
-  --c2: #c836c333;
-  --c3: #cb383733;
-  --c4: #8956ff33;
-
+const Dots = styled.div<{
+  npmSequentialColors: NpmSequentialColors[]
+}>`
+  --c1: ${(props) => props.npmSequentialColors[0].backgroundColor};
+  --c2: ${(props) => props.npmSequentialColors[1].backgroundColor};
+  --c3: ${(props) => props.npmSequentialColors[2].backgroundColor};
+  --c4: ${(props) => props.npmSequentialColors[3].backgroundColor};
+  
   width: 100px;
   aspect-ratio: 8/5;
   --_g: no-repeat radial-gradient(#000 100%,#0000 71%);

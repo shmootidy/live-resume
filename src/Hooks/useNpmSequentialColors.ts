@@ -1,4 +1,10 @@
-export default function useNpmSequentialColors() {
+export interface NpmSequentialColors {
+  fontColor: string
+  backgroundColor: string
+  borderColor: string
+}
+
+export default function useNpmSequentialColors(): NpmSequentialColors[] {
   return [
     {
       fontColor: '#9e7700',
