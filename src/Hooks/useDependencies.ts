@@ -7,6 +7,7 @@ export default function useDependencies() {
     'trees',
     'nethack',
     'cats',
+    'education',
   ]
   const devDependencies = [
     'challenges',
