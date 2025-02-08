@@ -18,8 +18,6 @@ import {
 import Summary from '../main/content/Summary'
 import Jobs from '../main/content/Jobs'
 import Projects from '../main/content/Projects'
-// import Education from '../main/content/Education'
-import ExtraStuff from '../main/content/ExtraStuff'
 import Dependencies from '../main/content/Dependencies'
 import useGetGithubRepos from './useGetGithubRepos'
 import useDependencies from './useDependencies'

@@ -1,5 +1,5 @@
-import { useEffect, useState } from 'react'
 import styled from '@emotion/styled'
+import { useEffect, useState } from 'react'
 import useGetTestimonials from '../Hooks/useGetTestimonials'
 
 export default function Testimonials() {
@@ -49,7 +49,6 @@ export default function Testimonials() {
 const TestimonialBanner = styled.div`
   font-family: 'Poppins';
   display: flex;
-  padding: 16px 2rem;
   justify-content: space-between;
   align-items: center;
   font-size: 14px;
