@@ -1,5 +1,10 @@
 import styled from '@emotion/styled'
-import { H1, H2 } from '../../SharedComponents/StyledComponents'
+import {
+  H1,
+  H2,
+  RedLinkItem,
+  RedLinkList,
+} from '../../SharedComponents/StyledComponents'
 
 import useGetTimeProgramming from '../../Hooks/useGetTimeProgramming'
 import useGetSkills from '../../Hooks/useGetSkills'
@@ -117,19 +122,6 @@ export default function Summary() {
     </div>
   )
 }
-
-const RedLinkList = styled.ul`
-  padding-left: 0;
-  color: #cb3837;
-  font-weight: 600;
-  font-size: 20px;
-`
-
-const RedLinkItem = styled.li`
-  display: inline-block;
-  padding: 4px;
-  margin-right: 4px;
-`
 
 const CodeShmoo = styled.code`
   font-family: 'Fira Mono';

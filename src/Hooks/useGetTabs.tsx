@@ -20,6 +20,7 @@ import Jobs from '../main/content/Jobs'
 import Projects from '../main/content/Projects'
 // import Education from '../main/content/Education'
 import ExtraStuff from '../main/content/ExtraStuff'
+import Dependencies from '../main/content/Dependencies'
 
 export default function useGetTabs() {
   return [
@@ -39,6 +40,7 @@ export default function useGetTabs() {
       label: 'Dependencies',
       value: 'dependencies',
       icon: faCube,
+      component: <Dependencies />,
     },
     {
       label: 'Projects',

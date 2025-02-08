@@ -10,6 +10,14 @@ export const H2 = styled.h2`
   border-bottom: 1px solid #ececec;
 `
 
+export const H3 = styled.h3`
+  margin: 0;
+  font-size: 20px;
+  color: rgb(17, 17, 17);
+  padding: 8px 0 16px;
+  border-bottom: 1px solid #ececec;
+`
+
 export const ColouredBanner = styled.div`
   border-image: linear-gradient(139deg, #fb8817, #ff4b01, #c12127, #e02aff) 3;
   border-style: solid;
@@ -41,4 +49,17 @@ export const MessageWrapper = styled.div`
   @media (min-width: 960px) {
     margin-top: 250px;
   }
+`
+
+export const RedLinkList = styled.ul`
+  padding-left: 0;
+  color: #cb3837;
+  font-weight: 600;
+  font-size: 20px;
+`
+
+export const RedLinkItem = styled.li`
+  display: inline-block;
+  padding: 4px;
+  margin-right: 4px;
 `
