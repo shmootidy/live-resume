@@ -31,7 +31,7 @@ export default function Tabs(props: IProps) {
               {
                 <FontAwesomeIcon
                   icon={tab.icon}
-                  style={{ fontSize: 20, marginRight: 8 }}
+                  style={{ fontSize: 18, marginRight: 8 }}
                 />
               }
               {tab.label}
