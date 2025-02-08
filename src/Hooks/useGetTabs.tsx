@@ -14,6 +14,11 @@ import {
   // faGears,
   faTableList,
 } from '@fortawesome/free-solid-svg-icons'
+import Summary from '../main/content/Summary'
+import Jobs from '../main/content/Jobs'
+import Projects from '../main/content/Projects'
+import Education from '../main/content/Education'
+import ExtraStuff from '../main/content/ExtraStuff'
 
 export default function useGetTabs() {
   return [
@@ -24,6 +29,7 @@ export default function useGetTabs() {
       fontColor: '#9e7700',
       backgroundColor: '#ffcd3a33',
       borderColor: '#FFCD3A',
+      component: <Summary />,
     },
     {
       label: 'Work',
@@ -33,6 +39,7 @@ export default function useGetTabs() {
       fontColor: '#cb3837',
       backgroundColor: '#cb383733',
       borderColor: '#cb3837',
+      component: <Jobs />,
     },
     {
       label: 'Projects',
@@ -41,6 +48,7 @@ export default function useGetTabs() {
       fontColor: '#782175',
       backgroundColor: '#c836c333',
       borderColor: '#C836C3',
+      component: <Projects />,
     },
     {
       label: 'Education',
@@ -49,6 +57,7 @@ export default function useGetTabs() {
       fontColor: '#29008a',
       backgroundColor: '#8956ff33',
       borderColor: '#8956ff',
+      component: <Education />,
     },
     {
       label: 'Another One',
@@ -59,6 +68,7 @@ export default function useGetTabs() {
       fontColor: '#146c91',
       backgroundColor: '#29abe233',
       borderColor: '#29abe2',
+      component: <ExtraStuff />,
     },
   ]
 }
