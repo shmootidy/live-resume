@@ -25,7 +25,7 @@ export const ColouredBanner = styled.div`
 `
 
 export const GreenText = styled.span`
-  color: rgb(25, 169, 116);
+  color: #14865c;
   letter-spacing: 0;
 `
 

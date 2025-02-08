@@ -1,6 +1,4 @@
 import styled from '@emotion/styled'
-import { useEffect, useState } from 'react'
-import useGetTestimonials from '../Hooks/useGetTestimonials'
 
 import Testimonials from './Testimonials'
 import { ColouredBanner } from '../SharedComponents/StyledComponents'
@@ -9,21 +7,6 @@ import shmooSvg from '../assets/shmoo.svg'
 const HEADER_MAX_WIDTH = 1536
 
 export default function Header() {
-  const testimonials = useGetTestimonials()
-  const [testimonialIndex, setTestimonialIndex] = useState(0)
-
-  useEffect(() => {
-    const timeout = setTimeout(() => {
-      setTestimonialIndex((prev) => {
-        if (prev + 1 >= testimonials.length) {
-          return 0
-        }
-        return prev + 1
-      })
-    }, 10000)
-
-    return () => clearTimeout(timeout)
-  })
   return (
     <header
       style={{
