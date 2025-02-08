@@ -2,19 +2,16 @@ import styled from '@emotion/styled'
 
 export const H1 = styled.h1`
   margin: 0;
-  font-weight: inherit;
   border-bottom: 1px solid #ececec;
 `
 
 export const H2 = styled.h2`
   margin: 0;
-  font-weight: inherit;
   border-bottom: 1px solid #ececec;
 `
 
 export const H3 = styled.h3`
   margin: 0;
-  font-weight: inherit;
   font-size: 20px;
   color: rgb(17, 17, 17);
   padding: 8px 0 16px;

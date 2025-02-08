@@ -1,3 +1,4 @@
+import useDependencies from '../../Hooks/useDependencies'
 import {
   H3,
   RedLinkItem,
@@ -5,25 +6,8 @@ import {
 } from '../../SharedComponents/StyledComponents'
 
 export default function Dependencies() {
-  const dependencies = [
-    'food',
-    'water',
-    'friends',
-    'family',
-    'trees',
-    'nethack',
-    'cats',
-  ]
-  const devDependencies = [
-    'challenges',
-    'automony',
-    'teamwork',
-    'collaboration',
-    'support',
-    'mentorship',
-    'retros',
-    'version control',
-  ]
+  const { dependencies, devDependencies } = useDependencies()
+
   return (
     <>
       <H3>{`Dependencies (${dependencies.length})`}</H3>

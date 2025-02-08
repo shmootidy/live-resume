@@ -21,8 +21,13 @@ import Projects from '../main/content/Projects'
 // import Education from '../main/content/Education'
 import ExtraStuff from '../main/content/ExtraStuff'
 import Dependencies from '../main/content/Dependencies'
+import useGetGithubRepos from './useGetGithubRepos'
+import useDependencies from './useDependencies'
 
 export default function useGetTabs() {
+  const { starredReadmes } = useGetGithubRepos()
+  const { dependencies } = useDependencies()
+
   return [
     {
       label: 'Readme',
@@ -37,13 +42,13 @@ export default function useGetTabs() {
       component: <Jobs />,
     },
     {
-      label: 'Dependencies',
+      label: `${dependencies.length} Dependencies`,
       value: 'dependencies',
       icon: faCube,
       component: <Dependencies />,
     },
     {
-      label: 'Projects',
+      label: `${Object.keys(starredReadmes).length} Projects`,
       value: 'projects',
       icon: faCubes,
       component: <Projects />,
