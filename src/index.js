@@ -14,7 +14,7 @@ library.add(fab)
 
 const Resume = () => {
   return (
-    <div>
+    <div style={{ display: 'flex', flexDirection: 'column', height: '100vh' }}>
       <Header />
       <Main />
       <Footer />

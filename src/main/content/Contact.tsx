@@ -126,7 +126,7 @@ const ContactLink = styled.a`
 `
 
 const CollapseableContact = styled.div`
-  transition: max-height 0.2s ease-out;
+  transition: max-height 0.5s ease-out;
   background: white;
   overflow: hidden;
 

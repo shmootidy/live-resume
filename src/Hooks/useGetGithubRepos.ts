@@ -3,16 +3,14 @@ import { useEffect, useState } from 'react'
 
 const octokit = new Octokit()
 
-type GitHubStarredRepo = Awaited<
-  ReturnType<typeof octokit.activity.listReposStarredByUser>
->['data'][0]
+type GitHubStarredRepo = Awaited<ReturnType<Octokit['repos']['get']>>['data']
 
 export default function useGetGithubRepos() {
   const [starredRepos, setStarredRepos] = useState<GitHubStarredRepo[]>([])
   const [starredReadmes, setStarredReadmes] = useState<{
     [key: string]: string
   }>({})
-  const [isLoading, setIsLoading] = useState(false)
+  const [isLoading, setIsLoading] = useState(true)
   const [hasError, setHasError] = useState(false)
 
   function fetchReadmes(repos, octokit) {
@@ -20,15 +18,17 @@ export default function useGetGithubRepos() {
       return octokit.repos
         .getReadme({ owner: 'shmootidy', repo: repo.name })
         .then(({ data }) => {
+          const decodedContent = new TextDecoder('utf-8').decode(
+            Uint8Array.from(atob(data.content), (c) => c.charCodeAt(0))
+          )
           return {
             repoName: repo.name,
-            content: atob(data.content),
+            content: decodedContent,
           }
         })
         .catch((err) => {
           console.error(`Error fetching README for ${repo.name}.`, err)
           return { repoName: repo.name, content: 'Error loading README' }
-          // setHasError(true)
         })
     })
 
@@ -55,7 +55,6 @@ export default function useGetGithubRepos() {
       const isExpired = Date.now() - timestamp > 60 * 60 * 1000
 
       if (!isExpired) {
-        console.log('Loading from cache...')
         setStarredRepos(data.starredRepos)
         setStarredReadmes(data.starredReadmes)
         setIsLoading(false)
@@ -63,14 +62,14 @@ export default function useGetGithubRepos() {
       }
     }
 
-    console.log('Fetching from Github API...')
     let fetchedRepos: GitHubStarredRepo[] = []
     octokit.activity
-      .listReposStarredByUser({ username: 'shmootidy' })
+      .listReposStarredByUser({ username: 'shmootidy', sort: 'updated' })
       .then(({ data }) => {
-        setStarredRepos(data)
-        fetchedRepos = data
-        return fetchReadmes(data, octokit)
+        const singleTypeRepoData = data.map((r) => ('repo' in r ? r.repo : r))
+        setStarredRepos(singleTypeRepoData)
+        fetchedRepos = singleTypeRepoData
+        return fetchReadmes(singleTypeRepoData, octokit)
       })
       .then((readmesObject) => {
         localStorage.setItem(

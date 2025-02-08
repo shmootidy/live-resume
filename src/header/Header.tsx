@@ -4,6 +4,8 @@ import Testimonials from './Testimonials'
 import { ColouredBanner } from '../SharedComponents/StyledComponents'
 import shmooSvg from '../assets/shmoo.svg'
 
+const HEADER_MAX_WIDTH = 1536
+
 export default function Header() {
   return (
     <header
@@ -14,25 +16,39 @@ export default function Header() {
       }}
     >
       <ColouredBanner />
-      <Testimonials />
-      <HeaderContactBar>
-        <img src={shmooSvg} alt='shmoo logo' width={110} />
-        <HeaderContactButton href='mailto:shmooritchie@gmail.com?subject=I saw your resume!'>
-          Contact Me
-        </HeaderContactButton>
-      </HeaderContactBar>
+      <div
+        style={{
+          maxWidth: HEADER_MAX_WIDTH,
+          margin: 'auto',
+          padding: '16px 32px',
+        }}
+      >
+        <Testimonials />
+      </div>
+      <HeaderInnerWrapper>
+        <HeaderContactBar>
+          <img src={shmooSvg} alt='shmoo logo' width={110} />
+          <HeaderContactButton href='mailto:shmooritchie@gmail.com?subject=I saw your resume!'>
+            Contact Me
+          </HeaderContactButton>
+        </HeaderContactBar>
+      </HeaderInnerWrapper>
     </header>
   )
 }
 
+const HeaderInnerWrapper = styled.div`
+  border-top: 1px solid #d2d2d2;
+`
 const HeaderContactBar = styled.div`
+  max-width: ${HEADER_MAX_WIDTH}px;
+  margin: auto;
   display: flex;
   padding: 16px 32px;
   align-items: center;
   justify-content: space-between;
   font-family: 'Poppins';
   font-weight: 600;
-  border-top: 1px solid #d2d2d2;
 `
 
 const HeaderContactButton = styled.a`

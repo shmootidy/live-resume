@@ -1,20 +1,18 @@
 import { useState } from 'react'
 import styled from '@emotion/styled'
 
-import Summary from './Summary'
-import Experience from './Experience'
-import Education from './Education'
-import Projects from './Projects'
-import Contact from '../sidebar/Contact'
+import Contact from './Contact'
+import useGetTabs from '../../Hooks/useGetTabs'
 
 interface IProps {
-  visibleTab: number
+  visibleTab: string
 }
 
 export default function Content(props: IProps) {
   const { visibleTab } = props
   const [previousTab, setPreviousTab] = useState(props.visibleTab)
   const [isContactCollapsed, setIsContactCollapsed] = useState(true)
+  const tabs = useGetTabs()
 
   // this collapses the small-screen contact field when switching tabs
   if (previousTab !== visibleTab) {
@@ -22,19 +20,7 @@ export default function Content(props: IProps) {
     setIsContactCollapsed(true)
   }
 
-  function getVisibleTabContents() {
-    if (visibleTab === 0) {
-      return <Summary />
-    } else if (visibleTab === 2) {
-      return <Projects />
-    } else if (visibleTab === 1) {
-      return <Experience />
-    } else if (visibleTab === 3) {
-      return <Education />
-    } else {
-      return <div>This tab has no data.</div>
-    }
-  }
+  const selectedTab = tabs.find((t) => t.value === visibleTab)?.component
 
   return (
     <ContentWrapper>
@@ -42,7 +28,11 @@ export default function Content(props: IProps) {
         isContactCollapsed={isContactCollapsed}
         onToggleCollapseContact={setIsContactCollapsed}
       />
-      <TabContents>{getVisibleTabContents()}</TabContents>
+      {selectedTab ? (
+        <TabContents>{selectedTab}</TabContents>
+      ) : (
+        <div>This tab has no component.</div>
+      )}
     </ContentWrapper>
   )
 }

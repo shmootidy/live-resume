@@ -1,60 +1,56 @@
+import styled from '@emotion/styled'
 import { useState } from 'react'
 
 import Content from './content/Content'
-import Tabs from './name-title-tabs/Tabs'
+import Tabs from './content/Tabs'
 import useGetTimeProgramming from '../Hooks/useGetTimeProgramming'
+import useGetTabs from '../Hooks/useGetTabs'
+import { GreenText } from '../SharedComponents/StyledComponents'
 
 export default function Main() {
-  const [selectedTabIndex, setSelectedTabIndex] = useState<number>(0)
+  const tabs = useGetTabs()
+  const [selectedTab, setSelectedTab] = useState<string>(tabs[0].value)
   const { years, months, days } = useGetTimeProgramming()
 
   return (
-    <main style={{ minHeight: '100vh' }}>
-      <div
-        style={{
-          marginTop: 48,
-          padding: '0 0.75rem',
-          maxWidth: 1200,
-          marginRight: 'auto',
-          marginLeft: 'auto',
-        }}
-      >
+    <main style={{ paddingBottom: 64, flexGrow: 1 }}>
+      <MainWrapper>
         <div>
-          <h2
-            style={{
-              fontFamily: 'Source Sans Pro',
-              fontWeight: 600,
-              fontSize: 24,
-              margin: 0,
-            }}
-          >
-            susannah ritchie (shmoo)
-          </h2>
-          <div
-            style={{
-              fontFamily: 'Fira Mono',
-              fontSize: 14,
-              opacity: 0.8,
-              padding: '8px 0',
-              marginBottom: 8,
-            }}
-          >
+          <MainTitle>susannah ritchie (shmoo)</MainTitle>
+          <MainSubtitle>
             <span
               title={`I've been a developing software for ${years} years, ${months} months and ${days} days. After careful consideration, I decided to leave teaching and start a new career path. In October 2018, I started prepping for bootcamp at Lighthouse Labs. I was instantly obsessed.`}
               style={{ cursor: 'help' }}
             >{`${years}.${months}.${days}`}</span>{' '}
-            • <span style={{ color: '#14865c' }}>Software Dev</span> •
-            Vancouver, BC
-          </div>
+            • <GreenText>Software Dev</GreenText> • Vancouver, BC
+          </MainSubtitle>
         </div>
         <div style={{ display: 'flex', flexDirection: 'column' }} id='main'>
-          <Tabs
-            selectedTab={selectedTabIndex}
-            onChangeTab={setSelectedTabIndex}
-          />
-          <Content visibleTab={selectedTabIndex} />
+          <Tabs selectedTab={selectedTab} onChangeTab={setSelectedTab} />
+          <Content visibleTab={selectedTab} />
         </div>
-      </div>
+      </MainWrapper>
     </main>
   )
 }
+
+const MainWrapper = styled.div`
+  margin-top: 48px;
+  padding: 0 0.75rem;
+  max-width: 1200px;
+  margin-right: auto;
+  margin-left: auto;
+`
+
+const MainTitle = styled.h2`
+  font-weight: 600;
+  font-size: 24px;
+  margin: 0;
+`
+const MainSubtitle = styled.div`
+  font-family: 'Fira Mono';
+  font-size: 14px;
+  opacity: 0.8;
+  padding: 8px 0;
+  margin-bottom: 8px;
+`

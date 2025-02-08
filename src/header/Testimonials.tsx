@@ -1,5 +1,5 @@
-import { useEffect, useState } from 'react'
 import styled from '@emotion/styled'
+import { useEffect, useState } from 'react'
 import useGetTestimonials from '../Hooks/useGetTestimonials'
 
 export default function Testimonials() {
@@ -21,10 +21,12 @@ export default function Testimonials() {
 
   return (
     <TestimonialBanner>
-      <div style={{ display: 'flex', alignItems: 'center' }}>
-        <Heart>❤</Heart>
-        <MessyHair>Messy Hair • Tidy Code</MessyHair>
-      </div>
+      <span>
+        <HeartHairWrapper>
+          <Heart>❤</Heart>
+          <MessyHair>Messy Hair • Tidy Code</MessyHair>
+        </HeartHairWrapper>
+      </span>
       <span
         style={{ cursor: 'help', textAlign: 'right' }}
         title='Some lovely things former colleagues, team leads and product managers have said to me over the years.'
@@ -47,10 +49,18 @@ export default function Testimonials() {
 const TestimonialBanner = styled.div`
   font-family: 'Poppins';
   display: flex;
-  padding: 16px 2rem;
   justify-content: space-between;
   align-items: center;
   font-size: 14px;
+`
+
+const HeartHairWrapper = styled.div`
+  display: flex;
+  align-items: center;
+
+  @media (max-width: 500px) {
+    display: none;
+  }
 `
 
 const Heart = styled.span`
@@ -63,8 +73,4 @@ const MessyHair = styled.span`
   margin-right: 2rem;
   font-weight: 100;
   letter-spacing: 0.21875;
-
-  @media (max-width: 500px) {
-    display: none;
-  }
 `
