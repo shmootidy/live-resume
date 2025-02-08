@@ -5,8 +5,25 @@ import {
 } from '../../SharedComponents/StyledComponents'
 
 export default function Dependencies() {
-  const dependencies = ['hi']
-  const devDependencies = ['bye']
+  const dependencies = [
+    'food',
+    'water',
+    'friends',
+    'family',
+    'trees',
+    'nethack',
+    'cats',
+  ]
+  const devDependencies = [
+    'challenges',
+    'automony',
+    'teamwork',
+    'collaboration',
+    'support',
+    'mentorship',
+    'retros',
+    'version control',
+  ]
   return (
     <>
       <H3>{`Dependencies (${dependencies.length})`}</H3>

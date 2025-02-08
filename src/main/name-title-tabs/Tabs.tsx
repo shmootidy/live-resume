@@ -28,7 +28,12 @@ export default function Tabs(props: IProps) {
               backgroundColor={tabColors.backgroundColor}
               fontColor={tabColors.fontColor}
             >
-              {<FontAwesomeIcon icon={tab.icon} style={{ marginRight: 8 }} />}
+              {
+                <FontAwesomeIcon
+                  icon={tab.icon}
+                  style={{ fontSize: 20, marginRight: 8 }}
+                />
+              }
               {tab.label}
             </Tab>
           )

@@ -1,6 +1,6 @@
 import { faFileAlt } from '@fortawesome/free-regular-svg-icons'
 import {
-  // faTags,
+  faTags,
   // faGraduationCap,
   faCubes,
   faFileZipper,
@@ -12,7 +12,7 @@ import {
   // faBugSlash,
   // faFolderOpen,
   // faGears,
-  faTableList,
+  // faTableList,
   faCube,
 } from '@fortawesome/free-solid-svg-icons'
 import Summary from '../main/content/Summary'
@@ -57,7 +57,7 @@ export default function useGetTabs() {
     {
       label: 'Fun Stuff',
       value: 'funStuff',
-      icon: faTableList,
+      icon: faTags,
       component: <ExtraStuff />,
     },
   ]
