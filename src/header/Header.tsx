@@ -4,7 +4,7 @@ import Testimonials from './Testimonials'
 import { ColouredBanner } from '../SharedComponents/StyledComponents'
 import shmooSvg from '../assets/shmoo.svg'
 
-const HEADER_MAX_WIDTH = 1536
+export const HEADER_MAX_WIDTH = 1536
 
 export default function Header() {
   return (
