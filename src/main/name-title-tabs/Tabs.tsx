@@ -1,81 +1,26 @@
 import styled from '@emotion/styled'
-import { faFileAlt } from '@fortawesome/free-regular-svg-icons'
-import {
-  // faTags,
-  faGraduationCap,
-  faCubes,
-  faFileZipper,
-  // faLightbulb,
-  // faTimeline,
-  // faLaptopCode,
-  // faChartPie,
-  // faBugs,
-  // faBugSlash,
-  // faFolderOpen,
-  // faGears,
-  faTableList,
-} from '@fortawesome/free-solid-svg-icons'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import useGetTabs from '../../Hooks/useGetTabs'
 
 interface IProps {
-  selectedTab: number
-  onChangeTab: (tabIndex: number) => void
+  selectedTab: string
+  onChangeTab: (tabValue: string) => void
 }
 
 export default function Tabs(props: IProps) {
   const { selectedTab, onChangeTab } = props
-
-  const TABS = [
-    {
-      label: 'Readme',
-      icon: faFileAlt,
-      fontColor: '#9e7700',
-      backgroundColor: '#ffcd3a33',
-      borderColor: '#FFCD3A',
-    },
-    {
-      label: 'Work',
-      // icon: faTags,
-      icon: faFileZipper,
-      fontColor: '#cb3837',
-      backgroundColor: '#cb383733',
-      borderColor: '#cb3837',
-    },
-    {
-      label: 'Projects',
-      icon: faCubes,
-      fontColor: '#782175',
-      backgroundColor: '#c836c333',
-      borderColor: '#C836C3',
-    },
-    {
-      label: 'Education',
-      icon: faGraduationCap,
-      fontColor: '#29008a',
-      backgroundColor: '#8956ff33',
-      borderColor: '#8956ff',
-    },
-    {
-      label: 'Another One',
-      // icon: faLightbulb,
-      // icon: faTimeline,
-      icon: faTableList,
-      fontColor: '#146c91',
-      backgroundColor: '#29abe233',
-      borderColor: '#29abe2',
-    },
-  ]
+  const tabs = useGetTabs()
 
   return (
     <div>
       <TabsList>
-        {TABS.map((tab, i) => {
+        {tabs.map((tab, i) => {
           return (
             <Tab
               key={i}
-              onClick={() => onChangeTab(i)}
-              isSelected={i === selectedTab}
+              onClick={() => onChangeTab(tab.value)}
+              isSelected={tab.value === selectedTab}
               borderColor={tab.borderColor}
               backgroundColor={tab.backgroundColor}
               fontColor={tab.fontColor}

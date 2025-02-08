@@ -3,9 +3,11 @@ import { useState } from 'react'
 import Content from './content/Content'
 import Tabs from './name-title-tabs/Tabs'
 import useGetTimeProgramming from '../Hooks/useGetTimeProgramming'
+import useGetTabs from '../Hooks/useGetTabs'
 
 export default function Main() {
-  const [selectedTabIndex, setSelectedTabIndex] = useState<number>(0)
+  const tabs = useGetTabs()
+  const [selectedTab, setSelectedTab] = useState<string>(tabs[0].value)
   const { years, months, days } = useGetTimeProgramming()
 
   return (
@@ -48,11 +50,8 @@ export default function Main() {
           </div>
         </div>
         <div style={{ display: 'flex', flexDirection: 'column' }} id='main'>
-          <Tabs
-            selectedTab={selectedTabIndex}
-            onChangeTab={setSelectedTabIndex}
-          />
-          <Content visibleTab={selectedTabIndex} />
+          <Tabs selectedTab={selectedTab} onChangeTab={setSelectedTab} />
+          <Content visibleTab={selectedTab} />
         </div>
       </div>
     </main>

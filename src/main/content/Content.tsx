@@ -9,7 +9,7 @@ import Contact from '../sidebar/Contact'
 import ExtraStuff from './ExtraStuff'
 
 interface IProps {
-  visibleTab: number
+  visibleTab: string
 }
 
 export default function Content(props: IProps) {
@@ -23,16 +23,17 @@ export default function Content(props: IProps) {
     setIsContactCollapsed(true)
   }
 
+  // don't do this by index
   function getVisibleTabContents() {
-    if (visibleTab === 0) {
+    if (visibleTab === 'readme') {
       return <Summary />
-    } else if (visibleTab === 2) {
+    } else if (visibleTab === 'projects') {
       return <Projects />
-    } else if (visibleTab === 1) {
+    } else if (visibleTab === 'work') {
       return <Jobs />
-    } else if (visibleTab === 3) {
+    } else if (visibleTab === 'education') {
       return <Education />
-    } else if (visibleTab === 4) {
+    } else if (visibleTab === 'anotherOne') {
       return <ExtraStuff />
     } else {
       return <div>This tab has no data.</div>
