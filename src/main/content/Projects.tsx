@@ -6,27 +6,10 @@ import useGetGithubRepos from '../../Hooks/useGetGithubRepos'
 import { H2 } from '../../SharedComponents/StyledComponents'
 import LoadingSquares from '../../SharedComponents/LoadingSquares'
 import ErrorSkull from '../../SharedComponents/ErrorSkull'
-import { useEffect, useState } from 'react'
-
-const MAX_LINES = 3
 
 export default function Projects() {
   const { starredReadmes, starredRepos, isLoading, hasError } =
     useGetGithubRepos()
-  const [expandedReadmes, setExpandedReadmes] = useState<{
-    [repoName: string]: boolean
-  }>({})
-
-  useEffect(() => {
-    if (Object.keys(starredReadmes).length) {
-      setExpandedReadmes(
-        Object.keys(starredReadmes).reduce((acc, key) => {
-          acc[key] = false
-          return acc
-        }, {})
-      )
-    }
-  }, [starredReadmes])
 
   function getGitHubRawUrl(repoName: string, src: string) {
     if (!src.startsWith('http')) {
@@ -36,21 +19,20 @@ export default function Projects() {
   }
 
   function getReadmeTextDisplay(readmeText: string, repoName: string) {
-    const lines = readmeText.split('\n')
-    const isReadmeExpanded = expandedReadmes[repoName]
-    if (isReadmeExpanded) {
-      return readmeText
-    }
-    return lines.slice(0, MAX_LINES).join('\n')
+    const lines = readmeText
+      .replace(/^#.*\n?/, '')
+      .trim()
+      .split('\n')
+    return lines.slice(0, 1).join('\n')
   }
 
-  function handleToggleShowMore(repoName: string) {
-    setExpandedReadmes((prev) => {
-      return {
-        ...prev,
-        [repoName]: !prev[repoName],
-      }
-    })
+  function getFirstImageSrc(readmeText: string, repoName: string) {
+    const firstImageMatch = readmeText.match(/!\[.*?\]\((.*?)\)/)
+    const firstImageUrl = firstImageMatch ? firstImageMatch[1] : null
+    const firstImgSrc = firstImageUrl
+      ? getGitHubRawUrl(repoName, firstImageUrl)
+      : null
+    return firstImgSrc
   }
 
   return (
@@ -60,10 +42,14 @@ export default function Projects() {
         <LoadingSquares />
       ) : (
         <>
-          <H2>Projects</H2>
           {Object.keys(starredReadmes).map((repoName) => {
+            const firstImageSrc = getFirstImageSrc(
+              starredReadmes[repoName],
+              repoName
+            )
             return (
-              <div key={repoName}>
+              <div style={{ marginBottom: 60 }} key={repoName}>
+                <H2 style={{ flexGrow: 1 }}>{repoName}</H2>
                 <ReactMarkdown
                   remarkPlugins={[remarkGfm]}
                   components={{
@@ -78,11 +64,10 @@ export default function Projects() {
                 >
                   {getReadmeTextDisplay(starredReadmes[repoName], repoName)}
                 </ReactMarkdown>
-                {starredReadmes[repoName].split('\n').length > MAX_LINES ? (
-                  <button onClick={() => handleToggleShowMore(repoName)}>
-                    boop
-                  </button>
-                ) : null}
+                {firstImageSrc ? <ProjectImage src={firstImageSrc} /> : null}
+                <VisitRepoLink href={'#'} target='_blank'>
+                  visit repo
+                </VisitRepoLink>
               </div>
             )
           })}
@@ -91,6 +76,16 @@ export default function Projects() {
     </div>
   )
 }
+
+const ProjectImage = styled.img`
+  width: 100%;
+`
+const VisitRepoLink = styled.a`
+  // border-bottom: 1px solid #ececec;
+  color: #cb3837;
+  font-weight: 600;
+  font-size: 20px;
+`
 
 const ProjectSubtitle = styled.h4`
   font-family: 'Fira Mono';
