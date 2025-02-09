@@ -1,7 +1,8 @@
 import styled from '@emotion/styled'
 import { useState, useEffect } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faChevronRight, faAt } from '@fortawesome/free-solid-svg-icons'
+import { faChevronRight } from '@fortawesome/free-solid-svg-icons'
+import { faCopy } from '@fortawesome/free-regular-svg-icons'
 
 interface IProps {
   isContactCollapsed: boolean
@@ -44,27 +45,22 @@ export default function Contact(props: IProps) {
             {`[ see ${isContactCollapsed ? 'more +' : 'less -'} ]`}
           </SeeMoreButton>
         </SidebarSubtitle>
-        <EmailBarLink href={MAIL_TO} id='email'>
-          <span className='at-icon'>
-            <FontAwesomeIcon
-              icon={faAt}
-              style={{ height: 20, margin: 'auto' }}
-            />
-          </span>
-          <span
-            style={{
-              display: 'flex',
-              alignItems: 'center',
-              margin: 10,
+        <ShmooCopyBar>
+          <FontAwesomeIcon
+            icon={faChevronRight}
+            style={{ fontSize: 12, opacity: 0.3, marginRight: 6 }}
+          />
+          <div style={{ flexGrow: 1, paddingLeft: 4 }}>
+            shmooritchie@gmail.com
+          </div>
+          <button
+            onClick={() => {
+              navigator.clipboard.writeText('shmooritchie@gmail.com')
             }}
           >
-            <FontAwesomeIcon
-              icon={faChevronRight}
-              style={{ fontSize: 12, opacity: 0.3, marginRight: 6 }}
-            />
-            shmooritchie@gmail.com
-          </span>
-        </EmailBarLink>
+            <FontAwesomeIcon icon={faCopy} />
+          </button>
+        </ShmooCopyBar>
       </div>
       <CollapseableContact
         className={isContactCollapsed ? 'see-more' : 'see-less'}
@@ -139,28 +135,23 @@ const CollapseableContact = styled.div`
     max-height: 345px;
   }
 `
-
-const EmailBarLink = styled.a`
-  border: 1px #e8e8e8 solid;
+const ShmooCopyBar = styled.div`
+  border: 1px #cccccc solid;
+  padding: 10px 16px 10px 18px;
+  border-radius: 5px;
+  margin: 14px 0 16px;
   font-family: 'Fira Mono';
-  max-width: 95vw;
-  line-height: 24px;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  font-size: 0.875rem;
-  margin-bottom: 1rem;
+  font-size: 14px;
   color: rgba(0, 0, 0, 0.8);
-  letter-spacing: 0px;
-  border-radius: 0.25rem;
-  position: relative;
   display: flex;
-  height: 35px;
+  justify-content: space-between;
+  align-items: center;
+  width: 290px;
 
-  .at-icon {
-    color: #fff;
-    background: #e1e1e1;
-    width: 35px;
-    display: flex;
-    align-content: center;
+  button {
+    cursor: pointer;
+    border: none;
+    background: none;
+    color: rgba(0, 0, 0, 0.5);
   }
 `
