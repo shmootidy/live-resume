@@ -58,7 +58,7 @@ const HeartHairWrapper = styled.div`
   display: flex;
   align-items: center;
 
-  @media (max-width: 500px) {
+  @media (max-width: 600px) {
     display: none;
   }
 `
