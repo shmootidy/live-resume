@@ -16,8 +16,13 @@ export default function useGetTimeProgramming() {
     ])
 
     const { years, months, days } = timeProgramming.toObject()
+    const dataeStartedFirstJob = DateTime.fromISO('2019-04-01')
+
+    const timeWorking = now.diff(dataeStartedFirstJob, ['years', 'months'])
+    const { years: yearsWorking } = timeWorking
 
     return {
+      yearsWorking,
       years,
       months,
       days: days ? Math.ceil(days) : days,
