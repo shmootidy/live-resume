@@ -8,6 +8,7 @@ import {
 
 import useGetTimeProgramming from '../../Hooks/useGetTimeProgramming'
 import useGetSkills from '../../Hooks/useGetSkills'
+import { MAIL_TO } from './Contact'
 
 export default function Summary() {
   const summarySkills = useGetSkills()
@@ -110,7 +111,7 @@ export default function Summary() {
                   justifyContent: 'space-evenly',
                 }}
               >
-                <ContactShmooButton href='mailto:shmooritchie@gmail.com?subject=I saw your resume!'>
+                <ContactShmooButton href={MAIL_TO}>
                   Click to email Shmoo
                 </ContactShmooButton>
               </div>

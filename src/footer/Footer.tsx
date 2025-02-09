@@ -4,6 +4,7 @@ import { faAt } from '@fortawesome/free-solid-svg-icons'
 
 import { ColouredBanner } from '../SharedComponents/StyledComponents'
 import { HEADER_MAX_WIDTH } from '../header/Header'
+import { MAIL_TO } from '../main/content/Contact'
 
 export default function Footer() {
   const points =
@@ -18,15 +19,13 @@ export default function Footer() {
               <polygon fill='#fff' points={points}></polygon>
             </svg>
           </FooterIconWrapper>
-          <div>
+          <div style={{ overflow: 'hidden' }}>
             <FooterHeading>Contact Me</FooterHeading>
-            <FooterLink href='mailto:shmooritchie@gmail.com?subject=I saw your resume!'>
-              shmooritchie@gmail.com
-            </FooterLink>
+            <FooterLink href={MAIL_TO}>shmooritchie@gmail.com</FooterLink>
           </div>
         </FooterContent>
         <FooterIcons>
-          <a href='mailto:shmooritchie@gmail.com?subject=I saw your resume!'>
+          <a href={MAIL_TO}>
             <FontAwesomeIcon icon={faAt} />
           </a>
           <a
@@ -84,6 +83,8 @@ const FooterLink = styled.a`
   color: rgba(0, 0, 0, 0.7);
   line-height: 2;
   font-size: 18px;
+  overflow: hidden;
+  text-overflow: ellipsis;
   &:hover {
     color: rgba(0, 0, 0, 0.9);
   }
