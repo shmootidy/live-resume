@@ -31,10 +31,6 @@ export default function useGetSkills() {
       label: 'ag-grid',
       link: '',
     },
-    {
-      label: 'react-query',
-      link: '',
-    },
   ]
 
   const testingLibraries = [
