@@ -46,19 +46,18 @@ export default function Contact(props: IProps) {
             {`[ see ${isContactCollapsed ? 'more +' : 'less -'} ]`}
           </SeeMoreButton>
         </SidebarSubtitle>
-        <ShmooCopyBar>
+        <ShmooCopyBar isHovered={hoverHighlight}>
           <FontAwesomeIcon
             icon={faChevronRight}
             style={{ fontSize: 12, opacity: 0.3, marginRight: 6 }}
           />
-          <div
+          <span
             style={{
               marginLeft: 4,
-              background: hoverHighlight ? 'rgba(180,215,255,255)' : '',
             }}
           >
             shmooritchie@gmail.com
-          </div>
+          </span>
           <div
             style={{
               flexGrow: 1,
@@ -148,7 +147,7 @@ const CollapseableContact = styled.div`
     max-height: 345px;
   }
 `
-const ShmooCopyBar = styled.div`
+const ShmooCopyBar = styled.div<{ isHovered: boolean }>`
   border: 1px #cccccc solid;
   padding: 10px 16px 10px 18px;
   border-radius: 5px;
@@ -160,6 +159,17 @@ const ShmooCopyBar = styled.div`
   justify-content: space-between;
   align-items: center;
   width: 290px;
+
+  span {
+    background: ${(props) =>
+      props.isHovered ? 'rgba(180,215,255,255)' : 'none'};
+
+    @media (max-width: 960px) {
+      background: ${(props) =>
+        props.isHovered ? 'rgba(181,225,245,255)' : 'none'};
+      color: ${(props) => (props.isHovered ? 'white' : 'inherit')};
+    }
+  }
 
   button {
     cursor: pointer;
