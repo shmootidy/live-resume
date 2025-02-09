@@ -48,9 +48,10 @@ const HeaderContactBar = styled.div`
   justify-content: space-between;
   font-family: 'Poppins';
   font-weight: 600;
+  padding: 0 32px;
 
   img {
-    margin: 16px 32px;
+    margin: 16px 0;
   }
 `
 
@@ -60,7 +61,7 @@ const HeaderContactButton = styled.a`
   padding: 13px 28px;
   opacity: 1;
   transition: opacity 0.15s ease-in;
-  margin: 16px 32px;
+  margin: 16px 0;
 
   :hover {
     opacity: 0.8;
