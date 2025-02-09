@@ -3,6 +3,7 @@ import styled from '@emotion/styled'
 import Testimonials from './Testimonials'
 import { ColouredBanner } from '../SharedComponents/StyledComponents'
 import shmooSvg from '../assets/shmoo.svg'
+import { MAIL_TO } from '../main/content/Contact'
 
 export const HEADER_MAX_WIDTH = 1536
 
@@ -28,9 +29,7 @@ export default function Header() {
       <HeaderInnerWrapper>
         <HeaderContactBar>
           <img src={shmooSvg} alt='shmoo logo' width={110} />
-          <HeaderContactButton href='mailto:shmooritchie@gmail.com?subject=I saw your resume!'>
-            Contact Me
-          </HeaderContactButton>
+          <HeaderContactButton href={MAIL_TO}>Contact Me</HeaderContactButton>
         </HeaderContactBar>
       </HeaderInnerWrapper>
     </header>

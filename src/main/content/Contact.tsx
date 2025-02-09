@@ -8,6 +8,8 @@ interface IProps {
   onToggleCollapseContact: (value: boolean) => void
 }
 
+export const MAIL_TO = 'mailto:shmooritchie@gmail.com?subject=Hi, Shmoo :)'
+
 export default function Contact(props: IProps) {
   const { isContactCollapsed, onToggleCollapseContact } = props
 
@@ -42,10 +44,7 @@ export default function Contact(props: IProps) {
             {`[ see ${isContactCollapsed ? 'more +' : 'less -'} ]`}
           </SeeMoreButton>
         </SidebarSubtitle>
-        <EmailBarLink
-          href='mailto:shmooritchie@gmail.com?subject=I saw your resume!'
-          id='email'
-        >
+        <EmailBarLink href={MAIL_TO} id='email'>
           <span className='at-icon'>
             <FontAwesomeIcon
               icon={faAt}

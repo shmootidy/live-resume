@@ -4,6 +4,7 @@ import { faAt } from '@fortawesome/free-solid-svg-icons'
 
 import { ColouredBanner } from '../SharedComponents/StyledComponents'
 import { HEADER_MAX_WIDTH } from '../header/Header'
+import { MAIL_TO } from '../main/content/Contact'
 
 export default function Footer() {
   const points =
@@ -20,13 +21,11 @@ export default function Footer() {
           </FooterIconWrapper>
           <div>
             <FooterHeading>Contact Me</FooterHeading>
-            <FooterLink href='mailto:shmooritchie@gmail.com?subject=I saw your resume!'>
-              shmooritchie@gmail.com
-            </FooterLink>
+            <FooterLink href={MAIL_TO}>shmooritchie@gmail.com</FooterLink>
           </div>
         </FooterContent>
         <FooterIcons>
-          <a href='mailto:shmooritchie@gmail.com?subject=I saw your resume!'>
+          <a href={MAIL_TO}>
             <FontAwesomeIcon icon={faAt} />
           </a>
           <a
