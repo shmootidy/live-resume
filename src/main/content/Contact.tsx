@@ -51,13 +51,7 @@ export default function Contact(props: IProps) {
             icon={faChevronRight}
             style={{ fontSize: 12, opacity: 0.3, marginRight: 6 }}
           />
-          <span
-            style={{
-              marginLeft: 4,
-            }}
-          >
-            shmooritchie@gmail.com
-          </span>
+          <span>shmooritchie@gmail.com</span>
           <div
             style={{
               flexGrow: 1,
@@ -158,9 +152,16 @@ const ShmooCopyBar = styled.div<{ isHovered: boolean }>`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 290px;
+
+  @media (min-width: 960px) {
+    min-width: 290px;
+  }
 
   span {
+    margin-left: 4px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+
     background: ${(props) =>
       props.isHovered ? 'rgba(180,215,255,255)' : 'none'};
 
