@@ -12,7 +12,7 @@ import useGetSkills from '../../Hooks/useGetSkills'
 export default function Summary() {
   const summarySkills = useGetSkills()
 
-  const { years } = useGetTimeProgramming()
+  const { yearsWorking } = useGetTimeProgramming()
 
   return (
     <div>
@@ -49,7 +49,7 @@ export default function Summary() {
           </li>
         </ul>
         <p>
-          {`With ${years}+ years in the industry and a background in education, musical
+          {`With ${yearsWorking}+ years in the industry and a background in education, musical
           performance, and customer service, I bring a unique set of skills to
           my role. Excellent communication skills, the ability to anticipate the
           needs of users, and a reflexive, creative approach to problem solving.`}
