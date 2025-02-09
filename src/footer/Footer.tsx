@@ -19,7 +19,7 @@ export default function Footer() {
               <polygon fill='#fff' points={points}></polygon>
             </svg>
           </FooterIconWrapper>
-          <div>
+          <div style={{ overflow: 'hidden' }}>
             <FooterHeading>Contact Me</FooterHeading>
             <FooterLink href={MAIL_TO}>shmooritchie@gmail.com</FooterLink>
           </div>
@@ -83,6 +83,8 @@ const FooterLink = styled.a`
   color: rgba(0, 0, 0, 0.7);
   line-height: 2;
   font-size: 18px;
+  overflow: hidden;
+  text-overflow: ellipsis;
   &:hover {
     color: rgba(0, 0, 0, 0.9);
   }
