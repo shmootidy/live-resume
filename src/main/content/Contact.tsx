@@ -14,6 +14,7 @@ export const MAIL_TO = 'mailto:shmooritchie@gmail.com?subject=Hi, Shmoo :)'
 export default function Contact(props: IProps) {
   const { isContactCollapsed, onToggleCollapseContact } = props
 
+  const [hoverHighlight, setHoverHighlight] = useState(false)
   const [hideContact, setHideContact] = useState(true)
 
   useEffect(() => {
@@ -50,13 +51,25 @@ export default function Contact(props: IProps) {
             icon={faChevronRight}
             style={{ fontSize: 12, opacity: 0.3, marginRight: 6 }}
           />
-          <div style={{ flexGrow: 1, paddingLeft: 4 }}>
+          <div
+            style={{
+              marginLeft: 4,
+              background: hoverHighlight ? 'rgba(180,215,255,255)' : '',
+            }}
+          >
             shmooritchie@gmail.com
           </div>
+          <div
+            style={{
+              flexGrow: 1,
+            }}
+          />
           <button
             onClick={() => {
               navigator.clipboard.writeText('shmooritchie@gmail.com')
             }}
+            onMouseEnter={() => setHoverHighlight(true)}
+            onMouseLeave={() => setHoverHighlight(false)}
           >
             <FontAwesomeIcon icon={faCopy} />
           </button>
